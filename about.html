@@ -27,6 +27,7 @@
           <div class="container-fluid">
             <img src="http://marinesanzvico.com/img/Bad%20boy%20bangers/bbb_pic2.jpg"/>
           </div>
+          <h1 id="title">About</h1>
         </section> <!-- /#container -->
       </div> <!-- /#content-ajax -->
   </div> <!-- /#wrapper -->
@@ -45,7 +46,7 @@ $('nav a').on('click', function(event){
   var url = this.href;
   var $container = $('#container');
   var $content = $('#content-ajax');
-  var title = document.title;
+  var title = $('h1#title');
   
   $('#container').remove();
 
@@ -54,8 +55,7 @@ $('nav a').on('click', function(event){
     url: url,
     timout: 3000,
     beforeSend: function() {
-
-      // $container.html('<div class="loader">Loading...</div>');
+      $container.html('<div class="loader">Loading...</div>');
     },
     complete: function() {
       $('.name').text(title);
