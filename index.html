@@ -34,7 +34,6 @@
             <img src="http://marinesanzvico.com/img/Bad%20boy%20bangers/bbb_pic4.jpg"/>
             <img src="http://marinesanzvico.com/img/Bad%20boy%20bangers/bbb_pic5.jpg"/>
             <img src="http://marinesanzvico.com/img/Bad%20boy%20bangers/bbb_pic6.jpg"/>
-            <img src="http://marinesanzvico.com/img/Bad%20boy%20bangers/bbb_pic7s.jpg"/>
             <h1 id="title">Project Name</h1>
       		</div>
       	</section> <!-- /#container -->
@@ -80,12 +79,14 @@
 // 	});
 // });
 
-$(window).load(function() {
-  setTimeout(function() {
-    $('#preloader').fadeOut(100);
-    $('.loader-wrapper').fadeOut(500);
-    $('body').fadeIn('slow');
-  });
+
+$(document).ready(function(){
+  alert('loaded!');
+    setTimeout(function(){
+      $("#preloader").fadeOut(100);      
+      $(".loader-wrapper").fadeOut(500);             
+    },1000);
 });
+
 </script>
 </html>
