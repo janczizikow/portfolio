@@ -5,6 +5,9 @@
 </head>
 <link rel="stylesheet" href="css/style.css">
 <body>
+  <div class="loader-wrapper">
+    <div id="preloader"></div>
+  </div>
   <div id="wrapper">
     <div id="sidebar-filter"></div>
       <nav id="project-nav">
@@ -26,6 +29,12 @@
       	<section id="container">
       		<div class="container-fluid">
             <img src="http://marinesanzvico.com/img/Bad%20boy%20bangers/bbb_pic1.jpg"/>
+            <img src="http://marinesanzvico.com/img/Bad%20boy%20bangers/bbb_pic2.jpg"/>
+            <img src="http://marinesanzvico.com/img/Bad%20boy%20bangers/bbb_pic3.jpg"/>
+            <img src="http://marinesanzvico.com/img/Bad%20boy%20bangers/bbb_pic4.jpg"/>
+            <img src="http://marinesanzvico.com/img/Bad%20boy%20bangers/bbb_pic5.jpg"/>
+            <img src="http://marinesanzvico.com/img/Bad%20boy%20bangers/bbb_pic6.jpg"/>
+            <img src="http://marinesanzvico.com/img/Bad%20boy%20bangers/bbb_pic7s.jpg"/>
             <h1 id="title">Project Name</h1>
       		</div>
       	</section> <!-- /#container -->
@@ -41,34 +50,42 @@
 // });
 
 
-$('nav a').on('click', function(event){
-	event.preventDefault();
-	var url = this.href;
-	var $container = $('#container');
-  var $content = $('#content-ajax');
-  var title = $('#title');
+// $('nav a').on('click', function(event){
+// 	event.preventDefault();
+// 	var url = this.href;
+// 	var $container = $('#container');
+//   var $content = $('#content-ajax');
+//   var title = $('h1#title');
   
-	$('#container').remove();
+// 	$('#container').remove();
 
-	$.ajax({
-		type: "GET",
-		url: url,
-		timout: 3000,
-		beforeSend: function() {
-      $container.html('<div class="loader">Loading...</div>');
-      $('.name').text('loading...');
-		},
-		complete: function() {
-			$('.loader').remove();
-		},
-		success: function(data) {
-      $('#content-ajax').html( $(data).find('#container') ).hide().fadeIn('slow');
-      $('.name').text(title);
-		},
-		error: function() {
-      $content.html('<p>Error</p>');
-		}
-	});
+// 	$.ajax({
+// 		type: "GET",
+// 		url: url,
+// 		timout: 3000,
+// 		beforeSend: function() {
+//       $container.html('<div class="loader">Loading...</div>');
+//       $('.name').text('loading...');
+// 		},
+// 		complete: function() {
+// 			$('.loader').remove();
+// 		},
+// 		success: function(data) {
+//       $('#content-ajax').html( $(data).find('#container') ).hide().fadeIn('slow');
+//       $('.name').text(title);
+// 		},
+// 		error: function() {
+//       $content.html('<p>Error</p>');
+// 		}
+// 	});
+// });
+
+$(window).load(function() {
+  setTimeout(function() {
+    $('#preloader').fadeOut(100);
+    $('.loader-wrapper').fadeOut(500);
+    $('body').fadeIn('slow');
+  });
 });
 </script>
 </html>
