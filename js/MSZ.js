@@ -485,12 +485,12 @@ $(document).ready(function() {
         }, 750, 'easeInOutQuad')
     });
     $('#arrow-back')
-        .mouseover(function() {
+        .mouseenter(function() {
             $('.prev-project').animate({
                  'left': '30%'
             }, 'slow');
         })
-        .mouseout(function() {
+        .mouseleave(function() {
             $('.prev-project').animate({
                 'left': '35%'
             }, 500);
