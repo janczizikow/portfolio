@@ -471,6 +471,15 @@ $(window).scroll(function() {
         $(".navbar-fixed-top").removeClass("top-nav-collapse")
     }
 });
+    $(window).keydown(function(){
+
+    if (e.keyCode == 37) { 
+       $('.prev-project').click();
+    }
+    else if (e.keyCode == 39) { 
+       $('.next-project').click();
+    }
+});
 $(document).ready(function() {
     $('.navbar-brand').on('click', function() {
         if ($('.nav li:eq(0)').hasClass('active')) {
