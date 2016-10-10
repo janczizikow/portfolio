@@ -84,22 +84,22 @@
 
 @font-face {
   font-family: 'Gotham';
-  src: url('fonts/Gotham-Bold.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/Gotham-Bold.eot'); /* IE9 Compat Modes */
   src: 
-     url('fonts/Gotham-Bold.woff') format('woff'), /* Modern Browsers */
-     url('fonts/Gotham-Bold.ttf')  format('truetype'), /* Safari, Android, iOS */
-     url('fonts/Gotham-Bold.svg') format('svg'); /* Legacy iOS */
+     url('../fonts/Gotham-Bold.woff') format('woff'), /* Modern Browsers */
+     url('../fonts/Gotham-Bold.ttf')  format('truetype'), /* Safari, Android, iOS */
+     url('../fonts/Gotham-Bold.svg') format('svg'); /* Legacy iOS */
    font-weight: 700;
    font-style: normal;
  }
 
 @font-face{
     font-family: 'Gotham';
-    src: url('fonts/Gotham-Book.eot');
+    src: url('../fonts/Gotham-Book.eot');
     src:
-        url('fonts/Gotham-Book.woff') format('woff'),
-        url('fonts/Gotham-Book.ttf') format('truetype')
-        url('fonts/Gotham-Book.svg') format('svg');
+        url('../fonts/Gotham-Book.woff') format('woff'),
+        url('../fonts/Gotham-Book.ttf') format('truetype')
+        url('../fonts/Gotham-Book.svg') format('svg');
     font-weight: 400;
     font-style: normal;
 }
@@ -108,17 +108,22 @@ html {
 	position: relative;
 	width: 100%;
     height: 100%;
-	color: #292a2a;
-	font-size: 12px;
-	font-family: "Gotham",sans-serif!important;
-	background: #fff;
-    -webkit-font-smoothing: antialiased;
 }
 
 body {
-	width: 100%;
-    height: 100%;
-	margin-bottom: 60px; /* Footer height */
+    color: #292a2a;
+    font-size: 14px;
+    font-family: "Gotham",sans-serif!important;
+    background: #fff;
+    -webkit-font-smoothing: antialiased;
+    width: 100%;
+    min-height: 100%; /* Sticky footer */
+    position: relative; /* Sticky footer */
+    padding-bottom: 60px; /* Footer height */
+}
+
+#content-ajax {
+    padding-top: 75px;
 }
 
 a {
@@ -246,12 +251,12 @@ a:hover {
 /*////////////// 3. PROJECTS //////////////////*/
 
 .projects-section {
-	padding-top: 240px;
+	padding-top: 165px;
 }
 
 @media(max-width: 767px) {
 	.projects-section {
-		padding-top: 100px;	
+		padding-top: 25px;	
 	}
 }
 
@@ -770,7 +775,7 @@ ul.share, li{
 /*////////////// FOOTER //////////////////*/
 
 .footer {
-  position: relative;
+  position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
@@ -787,103 +792,6 @@ ul.share, li{
 
 /*////////////////////////////////*/
 
-/*////////////// BLOG //////////////////*/
-
-.blog-section {
-    padding-top: 240px;
-}
-
-@media(max-width: 767px) {
-    .blog-section {
-        padding-top: 100px; 
-    }
-}
-
-.carousel {
-  height: 550px;
-  margin-bottom: 60px;
-}
-/* Since positioning the image, we need to help out the caption */
-.carousel-caption {
-  z-index: 10;
-}
-
-/* Declare heights because of positioning of img element */
-.carousel .item {
-  height: 550px;
-  background-color: #777;
-}
-.carousel-inner > .item > img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  min-width: 100%;
-  height: 550px;
-}
-
-.blog-content {
-    padding-top: 100px;
-}
-
-.blog-post {
-    margin-bottom: 30px;
-}
-
-.panel {
-    border-radius: 2px;
-    border: 0;
-    -webkit-box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.12), 0 1px 6px 0 rgba(0, 0, 0, 0.12);
-    box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.12), 0 1px 6px 0 rgba(0, 0, 0, 0.12);
-}
-
-.blog-post .panel-body {
-    padding: 0;
-}
-
-.blog-post-header {
-    padding: 16px 22px;
-    color: #999;
-    display: block;
-    border-bottom: 1px solid #EDEDED;
-}
-
-.blog-post .panel > img {
-    border-top-left-radius: 2px;
-    border-top-right-radius: 2px;
-}
-
-.blog-post p {
-    font-size: 13px;
-    font-weight: 400;
-}
-
-.blog-post-date {
-    margin: 6px auto;
-}
-
-.blog-post-content {
-    padding: 16px 22px;
-}
-
-.blog-post-title {
-    margin-bottom: 5px;
-    font-size: 24px;
-    font-weight: 400;
-    color: #333;
-}
-
-.blog-post-content p {
-    color: #999;
-    margin: 18px auto;
-}
-
-.blog-post a {
-    text-decoration: none;
-}
-
-.label {
-    color: #1D1D1B;
-}
 
 /*////////////// 404 //////////////////*/
 
