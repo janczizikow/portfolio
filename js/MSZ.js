@@ -487,7 +487,7 @@ $(document).ready(function() {
     $('#arrow-back')
         .mouseenter(function() {
             $('.prev-project').animate({
-                 'left': '30%'
+                 'left': '33%'
             }, 'slow');
         })
         .mouseleave(function() {
