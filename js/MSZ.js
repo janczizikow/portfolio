@@ -529,7 +529,7 @@ $(function() {
     $('#wrapper').on('click', '#trigger', function(){
         $('#sidebar').css('position', 'relative').addClass('open'),
         $('#content-ajax').css('position', 'fixed'),
-        $('body').css('padding-bottom', '0');
+        $('body').css('padding-bottom', '0px');
 
         $('#sidebar-filter').fadeIn(750, function(){
             $(this).addClass('open-filter');
@@ -540,7 +540,7 @@ $(function() {
     $('#wrapper').on('click', '#sidebar #btnclose', function(event) {
         $('#sidebar').css('position', 'fixed').removeClass('open'),
         $('#content-ajax').css('position', 'relative'),
-        $('body').css('padding-bottom', '60');
+        $('body').css('padding-bottom', '60px');
         
         $('#sidebar-filter').fadeOut(750, function() {
             $(this).removeClass('open-filter')
@@ -551,7 +551,7 @@ $(function() {
     $('#wrapper').on('click', '#sidebar-filter', function(event) {
         $('#sidebar').css('position', 'fixed').removeClass('open'),
         $('#content-ajax').css('position', 'relative'),
-        $('body').css('padding-bottom', '60');
+        $('body').css('padding-bottom', '60px');
         
         $('#sidebar-filter').fadeOut(750, function() {
             $(this).removeClass('open-filter')
