@@ -484,11 +484,18 @@ $(document).ready(function() {
             scrollTop: 0
         }, 750, 'easeInOutQuad')
     });
-    $('.prev-project').on('mouseover', function(){
-        $('.prev-project').animate({
-             'left': '30%'
-        }, 'slow');
+    $('.prev-project')
+        .mouseover(function() {
+            $('.prev-project').animate({
+                 'left': '30%'
+            }, 'slow');
+        })
+        .mouseout(function() {
+            $('.prev-project').animate({
+                'left': '35%'
+            }, 500);
     });
+    
     $('figure').hover(function() {
         $(this).find('.caption').fadeIn(250)
     }, function() {
