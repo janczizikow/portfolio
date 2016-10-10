@@ -374,19 +374,23 @@ hr.small {
     height: 75px;
     text-align: center;
 }
-
-#arrow-back {
-    position: absolute;
+.prev-project {
+	position: absolute;
     left: 35%;
     top: 28%;
+}
+#arrow-back {
     height: 33px;
     transform: rotate(180deg);
 }
 
-#arrow-next {
+.next-project {
     position: absolute;
     right: 35%;
     top: 28%;
+}
+
+#arrow-next {
     height: 33px;
 }
 
