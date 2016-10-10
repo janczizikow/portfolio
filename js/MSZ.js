@@ -65,23 +65,23 @@ $(document).ready(function() {
         },750, 'easeInOutQuad');
     });
 
-    $('nav li').on('click', function(event) {
-        event.preventDefault();
-        var url = this.href;
+//     $('nav li').on('click', function(event) {
+//         event.preventDefault();
+//         var url = this.href;
  
-        $.ajax({
-            beforeSend: function(xhr) {
-                if (xhr.overrideMimeType) {
-                    xhr.overrideMimeType("application/json")
-                }
-            }
-        });
+//         $.ajax({
+//             beforeSend: function(xhr) {
+//                 if (xhr.overrideMimeType) {
+//                     xhr.overrideMimeType("application/json")
+//                 }
+//             }
+//         });
 
-        $('nav li.active').removeClass('active');
-        $(this).addClass('active');
-        $('#container').remove();
-        $('#content-ajax').load(url + ' #container').hide().fadeIn('slow');
-    });
+//         $('nav li.active').removeClass('active');
+//         $(this).addClass('active');
+//         $('#container').remove();
+//         $('#content-ajax').load(url + ' #container').hide().fadeIn('slow');
+//     });
 
     // // * LOAD HOME
     // $('.img-project').addClass('loaded-img');
