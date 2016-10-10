@@ -477,12 +477,10 @@ var a1 = $('a.prev-project')[0],
 
 $(document).keydown(function(e) {
     if (e.which == 37) {
-        alert('Arrow back pressed');
-        $('a.prev-project').trigger('click');
+        $('a .prev-project').trigger('click');
     }
     else if (e.which == 39) {
-    		alert('Arrow next pressed');
-    		$('a.next-project').trigger('click');
+    		$('a .next-project').trigger('click');
     }
 });
 $(document).ready(function() {
