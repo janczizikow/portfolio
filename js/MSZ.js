@@ -9,8 +9,6 @@
     = SCROLL TOP / LOAD HOME / LOAD ABOUT
     = SIDEBAR
 */
-
-
 /*!
  * Bootstrap v3.3.7 (http://getbootstrap.com)
  * Copyright 2011-2016 Twitter, Inc.
@@ -18,8 +16,8 @@
  */
 
 /*!
- * Generated using the Bootstrap Customizer (http://getbootstrap.com/customize/?id=57cb58fda721139e5fbc41d6dd3e25e7)
- * Config saved to config.json and https://gist.github.com/57cb58fda721139e5fbc41d6dd3e25e7
+ * Generated using the Bootstrap Customizer (http://getbootstrap.com/customize/?id=940c042bb89d92551f768237d01ec537)
+ * Config saved to config.json and https://gist.github.com/940c042bb89d92551f768237d01ec537
  */
 if (typeof jQuery === 'undefined') {
   throw new Error('Bootstrap\'s JavaScript requires jQuery')
@@ -410,6 +408,7 @@ if (typeof jQuery === 'undefined') {
   })
 
 }(jQuery);
+
 
 /* ---------------------------------------------- /*
     * PRELOADER
