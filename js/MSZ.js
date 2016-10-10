@@ -475,11 +475,14 @@ $(window).scroll(function() {
 var a1 = $('a.prev-project')[0],
     a2 = $('a.next-project')[0];
 
-$(window).keydown(function (e) {
-    if ( e.which === 37 ) {
-        window.location.href = a1.href;        
-    } else if ( e.which === 39 ) {
-        window.location.href = a2.href; 
+$(document).keydown(function(e) {
+    if (e.which == 37) {
+        alert('Arrow back pressed');
+        $('a.prev-project').trigger('click');
+    }
+    else if (e.which == 39) {
+    		alert('Arrow next pressed');
+    		$('a.next-project').trigger('click');
     }
 });
 $(document).ready(function() {
