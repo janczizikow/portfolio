@@ -484,13 +484,13 @@ $(document).ready(function() {
             scrollTop: 0
         }, 750, 'easeInOutQuad')
     });
-    $('#arrow-back')
-        .mouseenter(function() {
+    $('.prev-project')
+        .mouseover(function() {
             $('.prev-project').animate({
                  'left': '30%'
             }, 'slow');
         })
-        .mouseleave(function() {
+        .mouseout(function() {
             $('.prev-project').animate({
                 'left': '35%'
             }, 500);
