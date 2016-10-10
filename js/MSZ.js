@@ -471,13 +471,15 @@ $(window).scroll(function() {
         $(".navbar-fixed-top").removeClass("top-nav-collapse")
     }
 });
-    $(window).keydown(function(e){
 
-    if (e.keyCode == 37) { 
-       $('.prev-project').click();
-    }
-    else if (e.keyCode == 39) { 
-       $('.next-project').click();
+var a1 = $('a.prev-project')[0],
+    a2 = $('a.next-project')[0];
+
+$(window).keydown(function (e) {
+    if ( e.which === 37 ) {
+        window.location.href = a1.href;        
+    } else if ( e.which === 39 ) {
+        window.location.href = a2.href; 
     }
 });
 $(document).ready(function() {
