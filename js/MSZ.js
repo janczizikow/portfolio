@@ -57,9 +57,6 @@ $(document).ready(function() {
                 scrollTop: 0
             }, 750, 'easeInOutQuad')
             }
-        else {
-            return default;
-        }
     });
 
     $('.name').on('click', function() {
