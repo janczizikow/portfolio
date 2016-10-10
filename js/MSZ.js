@@ -471,7 +471,7 @@ $(window).scroll(function() {
         $(".navbar-fixed-top").removeClass("top-nav-collapse")
     }
 });
-    $(window).keydown(function(){
+    $(window).keydown(function(e){
 
     if (e.keyCode == 37) { 
        $('.prev-project').click();
