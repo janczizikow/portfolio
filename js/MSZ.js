@@ -486,7 +486,7 @@ $(document).ready(function() {
     });
     $('.prev-project').on('mouseover', function(){
         $('.prev-project').animate({
-             'left', '30%'
+             'left': '30%'
         }, 'slow');
     });
     $('figure').hover(function() {
