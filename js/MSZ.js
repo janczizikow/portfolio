@@ -523,17 +523,25 @@ $(document).ready(function() {
         opacity: 1.0,
     }, 750, 'easeInOutQuad')
 });
-$(function() {
-    $('#wrapper').on('click', '#trigger', function() {
+//Sidebar
+$(function() {  
+ 
+    $('#wrapper').on('click', '#trigger', function(){
         $('#sidebar').addClass('open');
-        $('#sidebar-filter').fadeIn(750, function() {
-            $(this).addClass('open-filter')
-        })
-    })
+        $('#content-ajax').css({'position': 'fixed' });
+        $('body').css({'maring-bottom: 0'})
+        $('sidebar').css({'position', 'relative'});
+
+        $('#sidebar-filter').fadeIn(750, function(){
+            $(this).addClass('open-filter');
+        });
+    });
 });
 $(function() {
     $('#wrapper').on('click', '#sidebar #btnclose', function(event) {
-        $('#sidebar').removeClass('open');
+        $('#sidebar').css('position', 'fixed').removeClass('open');
+        $('#content-ajax').css({'position': 'relative' });
+        $('body').css({'maring-bottom: 0'})
         $('#sidebar-filter').fadeOut(750, function() {
             $(this).removeClass('open-filter')
         })
@@ -541,7 +549,9 @@ $(function() {
 });
 $(function() {
     $('#wrapper').on('click', '#sidebar-filter', function(event) {
-        $('#sidebar').removeClass('open');
+        $('#sidebar').css('position', 'fixed').removeClass('open');
+        $('#content-ajax').css({'position': 'relative' });
+        $('body').css({'maring-bottom: 0'})
         $('#sidebar-filter').fadeOut(750, function() {
             $(this).removeClass('open-filter')
         })
