@@ -484,7 +484,7 @@ $(document).ready(function() {
             scrollTop: 0
         }, 750, 'easeInOutQuad')
     });
-    $('.prev-project')
+    $('#arrow-back')
         .mouseover(function() {
             $('.prev-project').animate({
                  'left': '30%'
