@@ -43,13 +43,13 @@ body a {
   cursor: pointer;
 }
 
-/* line 41, partials/_typography.scss */
+/* line 60, partials/_typography.scss */
 .logo {
   font-weight: 900;
 }
 
 /* line 8, main.scss */
-ul, li {
+li {
   list-style: none;
   display: inline-block;
 }
