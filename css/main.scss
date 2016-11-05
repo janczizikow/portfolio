@@ -1,0 +1,25 @@
+@import "vendor/normalize";
+@import "partials/grid";
+@import "partials/typography";
+@import "modules/modules";
+
+// General
+
+ul, li {
+  list-style: none;
+  display: inline-block;
+}
+
+header {
+  .logo {
+    float: left;
+  }
+  .menu {
+    float: right;
+    @include clearfix;
+    li {
+      margin-right: 10px;
+    }
+  }
+  @include clearfix;
+}
