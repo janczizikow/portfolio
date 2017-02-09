@@ -22,7 +22,6 @@ header {
       line-height: inherit;
       font-weight: 500;
       color: rgba(0,0,0,.5);
-      // @extend %heading-font;
       &:after {
         content: '';
         display: table;
