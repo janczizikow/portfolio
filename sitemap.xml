@@ -6,12 +6,12 @@
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
 <url>
-  <loc>http://www.janczizikow.com/</loc>
+  <loc>https://www.janczizikow.com/</loc>
   <lastmod>2016-11-13T16:02:15+00:00</lastmod>
   <priority>0.8</priority>
 </url>
 <url>
-  <loc>http://www.janczizikow.com/assets/other/CV.pdf</loc>
+  <loc>https://www.janczizikow.com/assets/other/CV.pdf</loc>
   <lastmod>2016-11-13T16:02:15+00:00</lastmod>
 </url>
 </urlset>
