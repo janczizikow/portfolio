@@ -1,0 +1,25 @@
+projects:
+- {name: the clinic, cat: 'email', folder: 'the-clinic', file: 'projects/the-clinic.html'}
+- {name: Marine Sanz Vico, cat: 'email', folder: 'marine-sanz-vico', file: 'projects/marine-sanz-vico.html'}
+# - {name: Crispy Icons, cat: 'email', folder: 'proj-3', file: 'project/proj-3.html'}
+
+#-------------------------------
+# Hero Area Settings
+
+tagline: >
+  I build websites and do digital marketing magic.
+
+cta: >
+  Got an idea? Start here
+
+#-------------------------------
+# About Site Settings
+
+about: >
+  Currently a senior undergraduate business student in Donghua University,
+  living in China since 2012. Passionate about marketing, PR, branding and
+  serious about future career in related business field. Highly motivated,
+  proactive and adaptable fast-learner, eager to further develop his skills
+  through a challenging experience. Believing that education is based on
+  two pillars: theory and practice, I engaged in a couple of part-time positions
+  throughout studies.
