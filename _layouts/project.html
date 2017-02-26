@@ -1,0 +1,59 @@
+---
+layout: project
+---
+<!DOCTYPE html>
+<html lang="en">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>{{ site.data.settings.title }}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="{{ site.data.settings.seo.description }}">
+  <meta rel="author" href="{{ site.data.settings.seo.rel-author }}">
+  <meta rel="publisher" href="{{ site.data.settings.seo.rel-publisher }}">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="/assets/css/main.css">
+
+</head>
+  <body>
+
+    {% include header.html %}
+    <main>
+      <section class="project">
+        <div class="container">
+          <a class="return" href="/">
+            <svg class="arrow" version="1.1" id="arrow-back" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+               viewBox="0 0 50 50" style="enable-background:new 0 0 50 50;" xml:space="preserve">
+            <g>
+              <path class="st1" d="M31.7,37.4L18.3,24 M31.7,12.6L18.3,26"/>
+            </g>
+            </svg>
+          </a>
+          <div class="center">
+
+            <h2 class="project-title">{{ page.title }}</h2>
+
+            {{ content }}
+          </div>
+        </div>
+      </section>
+      <section class="showcase">
+        <div class="container">
+          <div class="center">
+            {% for project in site.data.settings.projects %}
+
+              <img src="/assets/img/projects/{{project.folder}}/{{project.name}}.png" alt="{{ project.name }}">
+
+            {% endfor%}
+          </div>
+        </div>
+      </section>
+    </main>
+
+    {% include footer.html %}
+
+  </body>
+</html>

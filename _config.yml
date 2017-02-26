@@ -1,0 +1,26 @@
+# Site settings
+title: Jan Czizikow
+tagline: "Jan Czizikow - a senior BBA student with passion for digital marketing based in Shanghai, China. Let's work together - email or view CV to get in touch."
+url: "https://www.janczizikow.com" # The base hostname & protocol for your site. Use it if you need absolute URL's
+
+# Social
+socialimg: /img/social.jpg # 1200 x 630 pixels
+facebook: johnny.czizikow
+twitter: jan_czizikow
+github: janczizikow
+googleplus: 106682453870996888295
+instagram: shanlongjj
+
+# Contact
+phone: "+86 131-6700-7112"
+email: "jan.czizikow@gmail.com"
+
+#Others
+markdown: kramdown
+highlighter: rouge # or pygments or null
+exclude: [README.md, .scss, assets/css/pages, "node_modules", "bower_components", "gulpfile.js", "package.json", "bower.json"]
+include: ['_pages']
+permalink: /:title/
+# Gems
+gems:
+  - jekyll-paginate

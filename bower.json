@@ -1,0 +1,29 @@
+{
+  "name": "janczizikow.github.io",
+  "homepage": "https://www.janczizikow.com",
+  "authors": [
+    "Jan Czizikow"
+  ],
+  "description": "Personal portfolio",
+  "main": "gulp.js",
+  "keywords": [
+    "gulp",
+    "susy",
+    "breakpoint",
+    "jekyll",
+    "browserssync"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "breakpoint-sass": "^2.7.0",
+    "susy": "^2.2.12"
+  }
+}

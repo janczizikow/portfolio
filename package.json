@@ -1,0 +1,34 @@
+{
+  "name": "janczizikow.github.io",
+  "version": "1.0.0",
+  "description": "Jan Czizikow - Personal Website",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "browser-sync": "^2.18.8",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.4.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/janczizikow/janczizikow.github.io.git"
+  },
+  "keywords": [
+    "jekyll",
+    "gulp",
+    "sass",
+    "browsersync",
+    "autoprefixer"
+  ],
+  "author": "Jan Czizikow",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/janczizikow/janczizikow.github.io/issues"
+  },
+  "homepage": "https://github.com/janczizikow/janczizikow.github.io#readme"
+}

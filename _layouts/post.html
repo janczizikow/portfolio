@@ -1,0 +1,64 @@
+---
+layout: post
+comments: true
+---
+<!DOCTYPE html>
+<html lang="en">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>{{ site.data.settings.title }}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="{{ site.data.settings.seo.description }}">
+  <meta rel="author" href="{{ site.data.settings.seo.rel-author }}">
+  <meta rel="publisher" href="{{ site.data.settings.seo.rel-publisher }}">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="/assets/css/main.css">
+
+</head>
+  <body>
+
+    {% include header.html %}
+    <main>
+      <section>
+        <div class="container">
+          <h2>{{ page.title }}</h2>
+          <p class="meta">{{ page.date | date_to_string }}</p>
+
+          <div class="post">
+          {{ content }}
+          </div>
+
+
+
+        <div id="disqus_thread"></div>
+        <script>
+
+        /**
+        *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+        *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+
+        var disqus_config = function () {
+        this.page.url = 'http://www.janczizikow.com';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = '/jekyll/update/2014/04/20/welcome-to-jekyll.html'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        };
+
+        (function() {
+        var d = document, s = d.createElement('script');
+        s.src = '//EXAMPLE.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+        })();
+        </script>
+        <noscript>Please enable JavaScript to view the comments</noscript>
+        </div>
+      </section>
+    </main>
+
+    {% include footer.html %}
+
+  </body>
+</html>
