@@ -1,0 +1,40 @@
+<section id="projects">
+  <h1 class="title">projects</h1>
+  <div class="container">
+    <div class="projects-wrap">
+      <div class="thumb-wrap">
+          <ul class="image-container">
+            {% for project in site.data.settings.projects %}
+            <li data-folder="{{ project.folder }}">
+              <a class="project-item" href="{{ site.github.url }}/projects/{{ project.folder }}">
+                <figure>
+                  <img src="assets/img/projects/{{project.folder}}/{{project.folder}}.png" alt="{{ project.name }}">
+                  <figcaption>
+                    <h3>{{ project.name }}</h3>
+                    <p>{{ project.cat }}</p>
+                  </figcaption>
+                </figure>
+              </a>
+              {% endfor%}
+            </li>
+          </ul>
+      </div>
+
+      <div class="project-wrap">
+        <div class="project-container">
+          <div class="return"><?xml version="1.0" encoding="utf-8"?>
+            <svg class="arrow" version="1.1" id="arrow-back" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+            	 viewBox="0 0 50 50" style="enable-background:new 0 0 50 50;" xml:space="preserve">
+            <g>
+            	<path class="st1" d="M31.7,37.4L18.3,24 M31.7,12.6L18.3,26"/>
+            </g>
+            </svg>
+          </div>
+          <h4 class="project-title">do work</h4>
+          <div class="project-load"></div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
