@@ -16,13 +16,6 @@ instagram: shanlongjj
 phone: "+86 131-6700-7112"
 email: "jan.czizikow@gmail.com"
 
-#Assets
-assets:
-  sources:
-    - _assets/fonts
-    - _assets/javascripts
-    - _assets/stylesheets
-
 #Others
 markdown: kramdown
 highlighter: rouge # or pygments or null
