@@ -1,4 +1,34 @@
-@import "1_base/base";
-@import "2_modules/modules";
-@import "3_pages/pages";
-@import "4_vendor/vendor";
+@charset 'UTF-8';
+
+// 1. Configuration and helpers
+@import
+  'abstracts/variables',
+  'abstracts/mixins';
+
+// 2. Vendors
+@import
+  'vendor/normalize',
+  'vendor/susy';
+
+// 3. Base
+@import
+  'base/base',
+  'base/fonts',
+  'base/typography',
+  'base/helpers';
+
+// 4. Layout
+@import
+  'layout/nav',
+  'layout/footer',
+  'layout/grid';
+
+// 5. Components
+@import
+  'components/btn',
+  'components/syntax',
+  'components/title';
+
+// 6. Page-specific styles
+@import
+  'pages/pages';

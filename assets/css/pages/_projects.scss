@@ -1,0 +1,59 @@
+#projects {
+  background-color: rgba(249,249,251,1);
+  overflow-x: hidden;
+  figure {
+    position: relative;
+    margin: 0;
+    color: $bg-color;
+    h3, p {
+      margin: 0;
+      padding: 0;
+    }
+    h3 {
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      position: relative;
+      &:after {
+        position: absolute;
+        height: 1px;
+        width: 100%;
+      }
+    }
+  }
+  a {
+    cursor: pointer;
+    figcaption {
+      position: absolute;
+      top:0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      opacity: 0;
+      background-color: rgba(33, 33, 33, 1);
+      padding: 70px 0;
+      text-align: center;
+      transition: all .3s ease-in-out;
+      &:hover {
+        display: block;
+        opacity: .8;
+      }
+      h3, p {
+        color: $bg-color;
+      }
+    }
+  }
+}
+
+
+// SVG
+
+.arrow {
+  width: 50px;
+  height: auto;
+}
+.st1 {
+  fill:none;
+  stroke:#333333;
+  stroke-width:2.912;
+  stroke-miterlimit:10;
+}

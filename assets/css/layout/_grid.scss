@@ -1,0 +1,203 @@
+$susy: (
+  global-box-sizing: border-box,
+
+);
+// Container
+.container {
+  padding: 0px 15px 0px 15px;
+  @include breakpoint($xs) {
+    @include container(auto);
+  }
+  @include breakpoint($sm) {
+    @include container(540px);
+  }
+  @include breakpoint($md) {
+    @include container(720px);
+  }
+  @include breakpoint($lg) {
+    @include container(960px);
+  }
+  @include breakpoint($xl) {
+    @include container(1170px);
+  }
+}
+
+section {
+  padding: 120px 0 100px;
+}
+
+#hero {
+  .effect {
+    font-size: 1.9rem;
+    @include breakpoint($md) {
+      font-size: 3.1rem!important;
+    }
+    @include breakpoint($lg) {
+      font-size: 4.1rem!important;
+    }
+  }
+  .lead {
+    font-size: 1rem;
+    padding: 0 15%;
+    span {
+      display: block;
+    }
+    @include breakpoint($md) {
+      font-size: 1.1rem!important;
+    }
+    @include breakpoint($lg) {
+      font-size: 1.2rem!important;
+    }
+  }
+}
+// About
+#about {
+  @include clearfix;
+  .about-left {
+    @include breakpoint($xs) {
+      @include span(full);
+    }
+    @include breakpoint($sm) {
+      @include span(full);
+    }
+    @include breakpoint($md) {
+      @include span(6 of 12);
+    }
+    @include breakpoint($lg) {
+      @include span(6 of 12);
+    }
+    @include breakpoint($xl) {
+      @include span(8 of 12);
+    }
+  }
+  .about-right {
+    @include breakpoint($xs) {
+      @include span(full);
+      padding: 0 span(3 of 10);
+    }
+    @include breakpoint($sm) {
+      @include span(full);
+      padding: 0 span(4 of 12);
+
+    }
+    @include breakpoint($md) {
+      @include span(4 of 12 last);
+      padding: 0 0;
+    }
+    @include breakpoint($lg) {
+      @include span(4 of 12 last);
+    }
+    @include breakpoint($xl) {
+      padding: 0 span(1 wide of 12);
+      @include span(4 of 12 last);
+    }
+  }
+}
+
+
+#exp {
+
+}
+// SKILLS
+#skills {
+  .skills {
+    @include breakpoint($xs) {
+      @include span(full);
+    }
+    @include breakpoint($sm) {
+      @include gallery(6 of 12);
+    }
+    @include breakpoint($md) {
+      @include gallery(6 of 12);
+    }
+    @include breakpoint($lg) {
+      @include gallery(3 of 12);
+    }
+    @include breakpoint($xl) {
+      @include gallery(3 of 12);
+    }
+  }
+}
+// PROJECTS
+
+#projects {
+  margin-top: span(1 wide of 12);
+  ul {
+    padding-left: 0;
+    list-style: none;
+    @include clearfix;
+    li {
+      @include breakpoint($xs) {
+        @include span (full);
+        margin-bottom: gutter();
+      }
+      @include breakpoint($sm) {
+        @include span (full);
+        margin-bottom: gutter();
+      }
+      @include breakpoint($md) {
+        @include gallery (6 of 12);
+        margin-bottom: gutter();
+      }
+      @include breakpoint($lg) {
+        @include gallery (4 of 12);
+        margin-bottom: gutter();
+      }
+      @include breakpoint($xl) {
+        @include gallery (4 of 12);
+        margin-bottom: gutter();
+      }
+    }
+  }
+}
+
+
+// CONTACT
+#contact {
+  .contact-left {
+    @include clearfix;
+    @include breakpoint($xs) {
+      @include span (full);
+      margin-bottom: 50px;
+    }
+    @include breakpoint($sm) {
+      @include span (full);
+    }
+    @include breakpoint($md) {
+      @include span (7 of 12);
+      margin-bottom: 0;
+    }
+    @include breakpoint($lg) {
+      @include span (8 of 12);
+        .half {
+        @include span (4 of 8);
+        &:nth-child(2n) {
+          @include last;
+        }
+        .full {
+          @include full;
+        }
+      }
+    }
+    @include breakpoint($xl) {
+      @include span (8 of 12);
+    }
+  }
+  .contact-right {
+    @include breakpoint($xs) {
+      @include span (full);
+    }
+    @include breakpoint($sm) {
+      @include span (full);
+    }
+    @include breakpoint($md) {
+      @include span (3 of 12 last);
+    }
+    @include breakpoint($lg) {
+      @include span (4 of 12 last);
+    }
+    @include breakpoint($xl) {
+      @include last;
+    }
+  }
+}
