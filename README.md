@@ -1,1 +1,4 @@
-# hollow3d.github.io
+# Jan Czizikow - Personal Portfolio
+To do list:
+* AJAX
+* PROJECTS
