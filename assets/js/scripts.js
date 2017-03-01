@@ -84,15 +84,15 @@ function ShowHideNav() {
   }, 100);
 
   function hasScrolled() {
-      var st = $(this).scrollTop();
+      var currentScroll = $(this).scrollTop();
 
       // Make sure they scroll more than delta
-      if(Math.abs(lastScrollTop - st) <= delta)
+      if(Math.abs(lastScrollTop - currentScroll) <= delta)
           return;
 
       // If they scrolled down and are past the navbar, add class .hide-nav.
       // This is necessary so you never see what is "behind" the navbar.
-      if (st > lastScrollTop && st > navbarHeight){
+      if (currentScroll > lastScrollTop && currentScroll > navbarHeight){
           // Scroll Down
           $('header').removeClass('show-nav').addClass('hide-nav');
           $('.nav-toggle').removeClass('open');
@@ -101,12 +101,12 @@ function ShowHideNav() {
           $('#expanded').prop('checked', false);
       } else {
           // Scroll Up
-          if(st + $(window).height() < $(document).height()) {
+          if(currentScroll + $(window).height() < $(document).height()) {
               $('header').removeClass('hide-nav').addClass('show-nav');
           }
       }
 
-      lastScrollTop = st;
+      lastScrollTop = currentScroll;
   }
 }
 
