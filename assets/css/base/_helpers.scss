@@ -3,16 +3,27 @@ img {
   max-width: 100%;
   height: auto;
 }
-// Reboot
-h1, h2, h3, h4, h5, h6 {
-  margin-top: 0;
-  margin-bottom: .5rem;
+img::selection {
+  background: transparent
 }
 
-p {
-  margin-top: 0;
-  margin-bottom: 1rem;
+.title {
+  position: relative;
+  margin: 0 0 85px 0;
+  text-align: center;
+  text-transform: capitalize;
+  &:after {
+    position: absolute;
+    content: '';
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -8px;
+    width: 50px;
+    height: 2px;
+    background-color: $primary;
+  }
 }
+
 .not-active {
   color: #777;
   text-decoration: none;

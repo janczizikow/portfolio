@@ -3,7 +3,8 @@
 // 1. Configuration and helpers
 @import
   'abstracts/variables',
-  'abstracts/mixins';
+  'abstracts/mixins',
+  'abstracts/placeholders';
 
 // 2. Vendors
 @import
@@ -26,9 +27,8 @@
 // 5. Components
 @import
   'components/btn',
-  'components/syntax',
-  'components/title',
-  'components/top';
+  'components/top',
+  'components/syntax';
 
 // 6. Page-specific styles
 @import

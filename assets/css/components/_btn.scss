@@ -1,18 +1,20 @@
 .btn + .btn {
   margin-left: 2em;
 }
-.btn, button {
+.btn, button, input[type="submit"],input[type="reset"],input[type="button"] {
     position: relative;
     display: inline-block;
     padding: 18px 30px;
     font-size: 11px;
+    line-height: 1.5;
     // font-size: 1.1rem;
     letter-spacing: 0.2em;
     text-decoration: none;
     text-transform: uppercase;
+    white-space: nowrap;
+    cursor: pointer;
     color: $bg-color;
     background-color: $button-dark;
-    line-height: 1.5;
     text-align: center;
     border: 1px solid transparent;
     transition: all 0.45s cubic-bezier(0.25, 1, 0.33, 1);
@@ -22,9 +24,7 @@
     &:hover, :focus, :active {
       color: $bg-color;
       box-shadow: 0 40px 60px rgba(0,0,0,.15);
-    }
-    &:focus {
-      outline: none;
+      outline: 0;
     }
 }
 .btn-lg {
