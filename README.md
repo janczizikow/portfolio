@@ -10,3 +10,5 @@ To do list:
     * Add script to define if homepage or no (if homepage -> scroll, if no -> link)
     * Fix the form styles + make them global
     * Add on form submit script
+* Navigation
+    * Fix padding on header

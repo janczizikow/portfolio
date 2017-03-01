@@ -3,7 +3,7 @@ var browserSync = require('browser-sync');
 var sass        = require('gulp-sass');
 var prefix      = require('gulp-autoprefixer');
 var cp          = require('child_process');
-var sourcemaps  = require('gulp-sourcemaps');
+var deploy       = require("gulp-gh-pages");
 
 var jekyll   = process.platform === 'win32' ? 'jekyll.bat' : 'jekyll';
 var messages = {
@@ -17,6 +17,11 @@ gulp.task('jekyll-build', function (done) {
     browserSync.notify(messages.jekyllBuild);
     return cp.spawn( jekyll , ['build'], {stdio: 'inherit'})
         .on('close', done);
+});
+
+gulp.task("deploy", ["jekyll-build"], function () {
+    return gulp.src("./_site/**/*")
+        .pipe(deploy());
 });
 
 /**
