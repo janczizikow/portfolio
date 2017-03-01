@@ -35,8 +35,9 @@ comments: true
 
     {% include header.html %}
     <main>
-      <section>
+      <section id="blog">
         <div class="container">
+          <article>
           <h2>{{ page.title }}</h2>
           <p class="meta">{{ page.date | date_to_string }}</p>
 
@@ -66,6 +67,7 @@ comments: true
         })();
         </script>
         <noscript>Please enable JavaScript to view the comments</noscript>
+        </article>
         </div>
       </section>
     </main>
