@@ -23,6 +23,10 @@ img::selection {
     background-color: $primary;
   }
 }
+//svg fix
+.st0{
+  fill:#1D1D1B;
+}
 
 .not-active {
   color: #777;
