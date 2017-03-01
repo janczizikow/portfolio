@@ -63,9 +63,6 @@ section {
     @include breakpoint($md) {
       @include span(6 of 12);
     }
-    @include breakpoint($lg) {
-      @include span(6 of 12);
-    }
     @include breakpoint($xl) {
       @include span(8 of 12);
     }
@@ -83,9 +80,6 @@ section {
     @include breakpoint($md) {
       @include span(4 of 12 last);
       padding: 0 0;
-    }
-    @include breakpoint($lg) {
-      @include span(4 of 12 last);
     }
     @include breakpoint($xl) {
       padding: 0 span(1 wide of 12);
@@ -113,9 +107,6 @@ section {
     @include breakpoint($lg) {
       @include gallery(3 of 12);
     }
-    @include breakpoint($xl) {
-      @include gallery(3 of 12);
-    }
   }
 }
 // PROJECTS
@@ -131,19 +122,11 @@ section {
         @include span (full);
         margin-bottom: gutter();
       }
-      @include breakpoint($sm) {
-        @include span (full);
-        margin-bottom: gutter();
-      }
       @include breakpoint($md) {
         @include gallery (6 of 12);
         margin-bottom: gutter();
       }
       @include breakpoint($lg) {
-        @include gallery (4 of 12);
-        margin-bottom: gutter();
-      }
-      @include breakpoint($xl) {
         @include gallery (4 of 12);
         margin-bottom: gutter();
       }
@@ -159,9 +142,6 @@ section {
     @include breakpoint($xs) {
       @include span (full);
       margin-bottom: 50px;
-    }
-    @include breakpoint($sm) {
-      @include span (full);
     }
     @include breakpoint($md) {
       @include span (7 of 12);
@@ -187,9 +167,6 @@ section {
     @include breakpoint($xs) {
       @include span (full);
     }
-    @include breakpoint($sm) {
-      @include span (full);
-    }
     @include breakpoint($md) {
       @include span (3 of 12 last);
     }
@@ -198,6 +175,18 @@ section {
     }
     @include breakpoint($xl) {
       @include last;
+    }
+  }
+}
+
+#blog {
+  article {
+    @include breakpoint($xs) {
+      @include span(full);
+    }
+    @include breakpoint($lg) {
+      @include span(8 of 12);
+      margin-left: span(2 wide of 12);
     }
   }
 }
