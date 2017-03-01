@@ -1,5 +1,9 @@
 .btn + .btn {
-  margin-left: 2em;
+  margin-top: 2em;
+  @include breakpoint($sm) {
+    margin-top: 0;
+    margin-left: 2em;
+  }
 }
 .btn, button, input[type="submit"],input[type="reset"],input[type="button"] {
     position: relative;
@@ -7,7 +11,6 @@
     padding: 18px 30px;
     font-size: 11px;
     line-height: 1.5;
-    // font-size: 1.1rem;
     letter-spacing: 0.2em;
     text-decoration: none;
     text-transform: uppercase;
