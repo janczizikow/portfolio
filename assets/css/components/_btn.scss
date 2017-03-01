@@ -1,6 +1,6 @@
 .btn + .btn {
   margin-top: 2em;
-  @include breakpoint($sm) {
+  @include breakpoint(350px) {
     margin-top: 0;
     margin-left: 2em;
   }
