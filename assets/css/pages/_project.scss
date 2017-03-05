@@ -9,23 +9,6 @@
   text-align: center;
 }
 
-.project-title {
-  position: relative;
-  margin: 0 0 85px 0;
-  text-align: center;
-  text-transform: capitalize;
-  &:after {
-    position: absolute;
-    content: '';
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: -8px;
-    width: 50px;
-    height: 1px;
-    background-color: $heading-color;
-  }
-}
-
 .showcase {
   background-color: #F6F6F6;
 }
