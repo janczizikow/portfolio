@@ -3,21 +3,45 @@ $(document).ready(function() {
     ShowHideNav();
     smoothScroll(750);
     burger();
+    scrollTop();
     $('.effect').each(function() {
       $(this).addClass('active');
     })
     $('.fade').addClass('active');
 });
 
-// NAVIGATION LOGO SCROLL TOP
-$('.logo').on('click', function(e) {
+//SCROLL TOP
+function scrollTop() {
+  var page = $('html, body');
+
+  $('#to-top').on('click', function(e){
+    e.preventDefault();
+    page.on('scroll mousedown wheel DOMMouseScroll mousewheel keyup touchmove', function(){
+      page.stop();
+    });
+    page.animate({
+      scrollTop: 0
+    }, 750, 'easeInOutQuad')
+
+    // O
+    // if (('.nav-toggle').hasClass('open') && ('.menu-left').hasClass('collapse') && ('.overlay').hasClass('show') ) {
+    //   $(this).removeClass('open', 'collapse', 'show');
+    // }
+    // else {
+    //   return false;
+    // }
+  });
+  return false;
+}
+
+$('#to-top')
+.on('mouseenter', function(e) {
   e.preventDefault();
-  $('.nav-toggle').removeClass('open');
-  $('.menu-left').removeClass('collapse');
-  $('.overlay').removeClass('show');
-  $('html, body').animate({
-    scrollTop: 0
-  }, 750, 'easeInOutQuad')
+  $('#to-top').css('background-color', '#277cea' );
+})
+.on('mouseleave', function(e){
+  e.preventDefault();
+  $(this).css('background-color', '#676767');
 });
 // LINKS TO ANCHORS
 function smoothScroll (duration) {
@@ -109,6 +133,24 @@ function ShowHideNav() {
       lastScrollTop = currentScroll;
   }
 }
+
+// AJAX Forms
+
+$.ajax({
+  url: 'https://formspree.io/jan.czizikow@gmail.com',
+  method: 'Post',
+  data: $('#contactForm').serialize(),
+  dataType: 'json',
+  beforeSend: function() {
+    console.log('loading');
+  },
+  sucess: function(data) {
+    console.log(data);
+  },
+  error: function(err) {
+    console.log('error');
+  }
+});
 
 // ALERT
 $('#hero').append('<div class="alert">Thanks for stopping by! The website is still under development, click to dismiss warning.</div>');
