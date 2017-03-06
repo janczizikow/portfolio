@@ -1,9 +1,9 @@
 $(document).ready(function() {
     $('body').removeClass('no-js');
     ShowHideNav();
+    scrollTop();
     smoothScroll(750);
     burger();
-    scrollTop();
     $('.effect').each(function() {
       $(this).addClass('active');
     })
@@ -12,37 +12,30 @@ $(document).ready(function() {
 
 //SCROLL TOP
 function scrollTop() {
+	var toTop = $('#to-top');
   var page = $('html, body');
 
-  $('#to-top').on('click', function(e){
+	$(window).scroll(function() {
+		if ( $(this).scrollTop() > 350 ) {
+			toTop.addClass('show');
+		} else {
+			toTop.removeClass('show');
+		}
+
+	});
+
+  toTop.on('click', function(e){
     e.preventDefault();
     page.on('scroll mousedown wheel DOMMouseScroll mousewheel keyup touchmove', function(){
       page.stop();
     });
     page.animate({
       scrollTop: 0
-    }, 750, 'easeInOutQuad')
-
-    // O
-    // if (('.nav-toggle').hasClass('open') && ('.menu-left').hasClass('collapse') && ('.overlay').hasClass('show') ) {
-    //   $(this).removeClass('open', 'collapse', 'show');
-    // }
-    // else {
-    //   return false;
-    // }
+    }, 800, 'easeOutQuad')
   });
   return false;
 }
 
-$('#to-top')
-.on('mouseenter', function(e) {
-  e.preventDefault();
-  $('#to-top').css('background-color', '#277cea' );
-})
-.on('mouseleave', function(e){
-  e.preventDefault();
-  $(this).css('background-color', '#676767');
-});
 // LINKS TO ANCHORS
 function smoothScroll (duration) {
   $('a[href^="#"]').on('click', function(event) {
@@ -123,7 +116,11 @@ function ShowHideNav() {
           $('.menu-left').removeClass('collapse');
           $('.overlay').removeClass('show');
           $('#expanded').prop('checked', false);
-      } else {
+      }
+      else if ($(window).scrollTop > 350) {
+        toTopBind();
+      }
+      else {
           // Scroll Up
           if(currentScroll + $(window).height() < $(document).height()) {
               $('header').removeClass('hide-nav').addClass('show-nav');
