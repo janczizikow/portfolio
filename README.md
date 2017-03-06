@@ -7,7 +7,7 @@ To do list:
     * Create all the images
     * Think of how to loop things better within project page
 * AJAX
-    * Add script to define if homepage or no (if homepage -> scroll, if no -> link)
+    * <s>Add script to define if homepage or no (if homepage -> scroll, if no -> link)</s>
     * Fix the form styles + make them global
     * Add on form submit script
 * Navigation
