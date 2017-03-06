@@ -131,24 +131,24 @@ function ShowHideNav() {
   }
 }
 
-// AJAX Forms
-
-$.ajax({
-  url: 'https://formspree.io/jan.czizikow@gmail.com',
-  method: 'Post',
-  data: $('#contactForm').serialize(),
-  dataType: 'json',
-  beforeSend: function() {
-    console.log('loading');
-  },
-  sucess: function(data) {
-    console.log(data);
-  },
-  error: function(err) {
-    console.log('error');
-  }
-});
-
+// // AJAX Forms
+//
+// $.ajax({
+//   url: 'https://formspree.io/jan.czizikow@gmail.com',
+//   method: 'Post',
+//   data: $('#contactForm').serialize(),
+//   dataType: 'json',
+//   beforeSend: function() {
+//     console.log('loading');
+//   },
+//   sucess: function(data) {
+//     console.log(data);
+//   },
+//   error: function(err) {
+//     console.log('error');
+//   }
+// });
+//
 // ALERT
 $('#hero').append('<div class="alert">Thanks for stopping by! The website is still under development, click to dismiss warning.</div>');
 $('.alert').on('click', function(){
