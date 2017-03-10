@@ -19,9 +19,12 @@ email: "jan.czizikow@gmail.com"
 #Others
 markdown: kramdown
 highlighter: rouge # or pygments or null
-exclude: [README.md, .scss, assets/css/pages, "node_modules", "bower_components", Gemfile, "package.json", "bower.json"]
+exclude: [README.md, assets/css/pages, "node_modules", "bower_components", Gemfile, "package.json", "bower.json"]
 include: ['_pages']
 permalink: /:title/
 # Gems
 gems:
   - jekyll-paginate
+
+compress_html:
+  clippings: all

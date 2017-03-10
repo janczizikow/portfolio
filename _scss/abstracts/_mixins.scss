@@ -1,0 +1,16 @@
+@mixin clearfix {
+  &:after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin heading-font {
+  font-family: 'Brown', sans-serif;
+  font-weight: 400;
+}
+@mixin text-font {
+  font-family: 'Brown', sans-serif;
+  font-weight: 300;
+ }

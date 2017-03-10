@@ -3,7 +3,7 @@ body {
   background-color: $bg-color;
   font-size: 1rem;
   line-height: 1.5;
-  @extend %text-font;
+  @include text-font;
   color: $text-color;
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: 100%;
@@ -29,7 +29,7 @@ p {
 }
 // Typography
 h1, h2, h3, h4, h5, h6 {
-  @extend %heading-font;
+  @include heading-font;
   color: $heading-color;
   margin-top: 0;
   margin-bottom: .5rem;
