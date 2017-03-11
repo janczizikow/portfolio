@@ -179,7 +179,7 @@ section {
   }
 }
 
-#blog {
+.post {
   article {
     @include breakpoint($xs) {
       @include span(full);
@@ -188,5 +188,15 @@ section {
       @include span(8 of 12);
       margin-left: span(2 wide of 12);
     }
+  }
+}
+
+.post-nav {
+  @include breakpoint($xs) {
+    @include span(full);
+  }
+  @include breakpoint($lg) {
+    @include span(8 of 12);
+    margin-left: span(2 wide of 12);
   }
 }
