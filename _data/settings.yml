@@ -1,7 +1,7 @@
 seo:
   rel-author: 'Jan Czizikow'
   rel-publisher: 'https://plus.google.com/u/0/106682453870996888295'
-
+  
 projects:
 - {name: the clinic, cat: 'email', folder: 'the-clinic', file: 'projects/the-clinic.html'}
 - {name: Marine Sanz Vico, cat: 'email', folder: 'marine-sanz-vico', file: 'projects/marine-sanz-vico.html'}

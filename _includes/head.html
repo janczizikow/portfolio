@@ -13,30 +13,26 @@
 	<!-- End Google Tag Manager -->
 
 	<!-- Plain Description -->
-	<title>{{ site.title }}</title>
-	<meta name="description" content="{% if page.excerpt %}{{page.excerpt}}{% else %}{{site.tagline}}{% endif %}">
+	<title>{%if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+	<meta name="description" content="{% if page.description %}{{page.description}}{% else %}{{site.description}}{% endif %}">
 	<link rel="image/x-icon" href="/assets/img/favicons/favicon.ico">
 	<meta rel="author" content="{{ site.data.settings.seo.rel-author }}">
 	<meta rel="publisher" href="{{ site.data.settings.seo.rel-publisher }}">
 
-	<!-- Google+ -->
-	<link rel="publisher" href="https://plus.google.com/{{site.googleplus}}"/>
-	<meta itemprop="name" content="{% if page.fulltitle %}{{page.fulltitle}}{% else %}{{page.title}} | {{ site.title }} {% endif %}">
-	<meta itemprop="description" content="{% if page.excerpt %}{{page.excerpt}}{% else %}{{site.tagline}}{% endif %}">
-	<meta itemprop="image" content="{% if page.image %}{{site.url}}{{page.image}}{% else %}{{site.url}}{{site.socialimg}}{% endif %}">
 
 	<!-- Facebook -->
 	<meta property="og:type" content="website"/>
 	<meta property="og:title" content="{% if page.fulltitle %}{{page.fulltitle}}{% else %}{{page.title}} | {{ site.title }} {% endif %}"/>
-	<meta property="og:description" content="{% if page.excerpt %}{{page.excerpt}}{% else %}{{site.tagline}}{% endif %}"/>
+	<meta property="og:description" content="{% if page.description %}{{page.description}}{% else %}{{site.description}}{% endif %}"/>
 	<meta property="og:image" content="{% if page.image %}{{site.url}}{{page.image}}{% else %}{{site.url}}{{site.socialimg}}{% endif %}"/>
 	<meta property="og:url" content="{{site.url}}{{page.url}}"/>
 	<meta property="og:site_name" content="{{ site.title }} "/>
 
+
 	<!-- Twitter -->
 	<meta name="twitter:card" content="summary">
 	<meta name="twitter:title" content="{% if page.fulltitle %}{{page.fulltitle}}{% else %}{{page.title}} | {{ site.title }} {% endif %}">
-	<meta name="twitter:description" content="{% if page.excerpt %}{{page.excerpt}}{% else %}{{site.tagline}}{% endif %}">
+	<meta name="twitter:description" content="{% if page.description %}{{page.description}}{% else %}{{site.description}}{% endif %}">
 	<meta name="twitter:image" content="{{site.url}}{{site.socialimg}}">
 	<meta name="twitter:url" content="{{site.url}}{{page.url}}">
 

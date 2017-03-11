@@ -1,6 +1,7 @@
 ---
+layout: page
 title: Privacy policy
-layout: blog
+description: Jan Czizikow - a senior BBA student with passion for digital marketing based in Shanghai, China. Let's work together - email or view CV to get in touch.
 permalink: "/privacy/"
 ---
 Jan Czizikow grants the rights to access content on janczizikow.com but does not grant any right to reproduce, copy or replicate content or images unless specifically stated. Users may link to articles and information contained on janczizikow.com but this does not constitute any grant of rights otherwise.
@@ -22,4 +23,4 @@ Jan Czizikow reserves the right to make changes to this privacy policy at any ti
 Comments Policy
 Jan Czizikow reserves the right to monitor, delete and block comments and users from the comment system at janczizikow.com.
 
-If you have any questions the personal information held about you and how that information is used, please contact the webmaster at [jan.czizikow@gmail.com](mailto:jan.czizikow@gmail.com).
+If you have any questions the personal information held about you and how that information is used, please contact the webmaster at [{{site.email}}](mailto:{{site.email}}).

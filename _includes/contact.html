@@ -3,11 +3,11 @@
   <div class="container">
     <div class="pre-contact">
       <h3>Let's work on something creative together!</h3>
-      <p>Fill in the form or <a href="mailto:jan.czizikow@gmail.com">email me</a>
+      <p>Fill in the form or <a href="mailto:{{site.email}}">email me</a>
         to discuss your next project.</p>
     </div>
     <div class="contact-left">
-      <form id="contactForm" action="https://formspree.io/jan.czizikow@gmail.com" method="post">
+      <form id="contactForm" action="https://formspree.io/{{site.email}}" method="post">
       <div class="inner-container">
 
 
@@ -36,10 +36,10 @@
 
 
         <h4>email</h4>
-        <p>jan.czizikow@gmail.com</p>
+        <p>{{ site.email }}</p>
 
         <h4>phone</h4>
-        <p>+86 131-6700-7112</p>
+        <p>{{ site.phone }}</p>
 
         <h4>location</h4>
         <p>Shangai, China</p>

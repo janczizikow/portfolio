@@ -2,7 +2,8 @@
 To do list:
 * Button styles
     * Define the styles of all buttons
-    * Optimize how buttons render for mobile
+    * <s>Optimize how buttons render for mobile</s>
+    * Still need fix hero & sticky hover buttons
 * PROJECTS
     * Create all the images & copy
     * Think of how to loop things better within project page

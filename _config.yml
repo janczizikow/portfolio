@@ -1,8 +1,8 @@
 # Site settings
 title: Jan Czizikow
-tagline: "Jan Czizikow - a senior BBA student with passion for digital marketing based in Shanghai, China. Let's work together - email or view CV to get in touch."
+description: Jan Czizikow - a senior BBA student with passion for digital marketing based in Shanghai, China. Let's work together - email or view CV to get in touch.
 baseurl: ""
-url: "https://www.janczizikow.com" # The base hostname & protocol for your site. Use it if you need absolute URL's
+url: "https://www.janczizikow.com"
 
 # Social
 socialimg: /img/social.jpg # 1200 x 630 pixels
@@ -13,7 +13,7 @@ googleplus: 106682453870996888295
 instagram: shanlongjj
 
 # Contact
-phone: "+86 131-6700-7112"
+phone: "(+86) 131-6700-7112"
 email: "jan.czizikow@gmail.com"
 
 #Others
