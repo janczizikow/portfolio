@@ -1,6 +1,7 @@
 ---
-title: Marine Sanz Vico
 layout: project
+title: Minimal Portfolio
+description: Showcase of a simple and minimal portfolio website built using some of the bootstrap components. Featuring CSS3 animations jQuery and more.
 permalink: "projects/marine-sanz-vico/"
 ---
 
