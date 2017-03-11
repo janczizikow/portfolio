@@ -4,72 +4,57 @@ comments: true
 ---
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <!-- Google Tag Manager -->
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-NBBVPGQ');</script>
-  <!-- End Google Tag Manager -->
-  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-  <script>
-    (adsbygoogle = window.adsbygoogle || []).push({
-      google_ad_client: "ca-pub-5868968321883019",
-      enable_page_level_ads: true
-    });
-  </script>
-  <meta charset="utf-8">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>{{ site.data.settings.title }}</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="{{ site.data.settings.seo.description }}">
-  <meta rel="author" href="{{ site.data.settings.seo.rel-author }}">
-  <meta rel="publisher" href="{{ site.data.settings.seo.rel-publisher }}">
 
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="/assets/css/main.css">
+  {% include head.html %}
 
-</head>
   <body>
 
     {% include header.html %}
     <main>
-      <section id="blog">
+      <section class="post">
         <div class="container">
           <article>
           <h2>{{ page.title }}</h2>
           <p class="meta">{{ page.date | date_to_string }}</p>
-
-          <div class="post">
           {{ content }}
-          </div>
 
-
-
-        <div id="disqus_thread"></div>
-        <script>
-
-        /**
-        *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-        *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
-
-        var disqus_config = function () {
-        this.page.url = 'http://www.janczizikow.com';  // Replace PAGE_URL with your page's canonical URL variable
-        this.page.identifier = '/jekyll/update/2014/04/20/welcome-to-jekyll.html'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-        };
-
-        (function() {
-        var d = document, s = d.createElement('script');
-        s.src = '//EXAMPLE.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-        })();
-        </script>
-        <noscript>Please enable JavaScript to view the comments</noscript>
-        </article>
+          </article>
         </div>
       </section>
+      <div class="controls">
+        <div class="container">
+          <div class="post-nav">
+            {% if page.previous.url %}
+              <a class="prev" href="{{page.previous.url}}">&laquo; {{page.previous.title}}</a>
+            {% endif %}
+            <a href="/" class="home">Home</a>
+            {% if page.next.url %}
+              <a class="next" href="{{page.next.url}}">{{page.next.title}} &raquo;</a>
+            {% endif %}
+          </div>
+          <div id="disqus_thread"></div>
+          <script>
+
+          /**
+          *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+          *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+
+          var disqus_config = function () {
+          this.page.url = 'https://www.janczizikow.com';  // Replace PAGE_URL with your page's canonical URL variable
+          this.page.identifier = '{{page.id}}'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+          };
+
+          (function() {
+          var d = document, s = d.createElement('script');
+          s.src = '//EXAMPLE.disqus.com/embed.js';
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+          })();
+          </script>
+          <noscript>Please enable JavaScript to view the comments</noscript>
+        </div>
+      </div>
+
     </main>
 
     {% include footer.html %}
