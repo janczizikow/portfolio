@@ -15,7 +15,7 @@
 	<!-- Plain Description -->
 	<title>{%if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
 	<meta name="description" content="{% if page.description %}{{page.description}}{% else %}{{site.description}}{% endif %}">
-	<link rel="image/x-icon" href="/assets/img/favicons/favicon.ico">
+	<link rel="image/x-icon" href="{{site.url}}/assets/img/favicons/favicon.ico">
 	<meta rel="author" content="{{ site.data.settings.seo.rel-author }}">
 	<meta rel="publisher" href="{{ site.data.settings.seo.rel-publisher }}">
 
