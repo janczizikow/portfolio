@@ -3,12 +3,12 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  padding: 0.625rem 0;
   z-index: 4;
   will-change: transform;
   transition: transform .30s ease;
   transform: translateY(0%);
   -webkit-transform: translateY(0%);
+  @include clearfix;
   .bg-head {
     position: absolute;
     left: 0;
@@ -18,6 +18,8 @@ header {
     z-index: -1;
   }
   nav {
+    padding: 0.625rem 0;
+    @include clearfix;
     .logo {
       float: left;
       padding-top: .25rem;

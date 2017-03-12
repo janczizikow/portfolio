@@ -5,7 +5,7 @@ layout: compress
 <html lang="en">
 
   {% include head.html %}
-  
+
   <body>
 
     {% include header.html %}
@@ -25,6 +25,7 @@ layout: compress
             <h2 class="title">{{ page.title }}</h2>
 
             {{ content }}
+
           </div>
         </div>
       </section>
@@ -32,11 +33,26 @@ layout: compress
         <div class="container">
           <div class="center">
 
-            add images here
+            {% for image in page.image %}
+              <img src="{{page.image[forloop.index0]}}">
+            {% endfor%}
 
           </div>
         </div>
       </section>
+      <div class="controls">
+        <div class="container">
+          <div class="post-nav">
+            {% if page.previous %}
+              <a class="prev" href="{{prev}}">&laquo; Previous project</a>
+            {% endif %}
+            <a href="/" class="home">Home</a>
+            {% if page.next %}
+              <a class="next" href="{{next}}">Next project &raquo;</a>
+            {% endif %}
+          </div>
+        </div>
+      </div>
     </main>
 
     {% include footer.html %}

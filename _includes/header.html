@@ -14,10 +14,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <span></span>
       </label>
         <ul class="menu-left">
-          <li><a href="#about">About</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
+          {% for item in site.data.settings.menu %}
+            <li><a href="{{site.url}}{{ item.link }}">{{ item.name }}</a></li>
+          {% endfor %}
         </ul>
     </nav>
   </div>

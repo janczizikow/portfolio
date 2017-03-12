@@ -1,10 +1,16 @@
 seo:
   rel-author: 'Jan Czizikow'
   rel-publisher: 'https://plus.google.com/u/0/106682453870996888295'
-  
+
+menu:
+  - {name: 'About', link: '#about'}
+  - {name: 'Skills', link: '#skills'}
+  - {name: 'Projects', link: '#projects'}
+  - {name: 'Contact', link: '#contact'}
+
 projects:
 - {name: the clinic, cat: 'email', folder: 'the-clinic', file: 'projects/the-clinic.html'}
-- {name: Marine Sanz Vico, cat: 'email', folder: 'marine-sanz-vico', file: 'projects/marine-sanz-vico.html'}
+- {name: Minimal Portfolio, cat: 'website', folder: 'minimal-portfolio', file: 'projects/minimal-portfolio.html'}
 
 #-------------------------------
 # Hero Area Settings
@@ -26,5 +32,3 @@ about: >
   through a challenging experience. Believing that education is based on
   two pillars: theory and practice, I engaged in a couple of part-time positions
   throughout studies.
-#-------------------------------
-# Skills Site Settings

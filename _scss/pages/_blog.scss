@@ -1,0 +1,53 @@
+#blog {
+  background-color: $light-bg-color;
+  ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    li {
+      margin-bottom: gutter();
+      @include breakpoint($xs) {
+        @include span(full);
+      }
+      @include breakpoint($sm) {
+        @include gallery(6 of 12);
+      }
+      @include breakpoint($lg) {
+        @include gallery(4 of 12);
+      }
+      .post-outer {
+        border: 1px solid $outline;
+        border-radius: 4px;
+        .img-link {
+          display: block;
+          line-height: 0;
+        }
+        .post-inner {
+          background-color: $bg-color;
+          border: none;
+          .post-inner-contianer {
+            padding: 30px 20px;
+            .post-inner-header {
+              font-size: 0.75em;
+              margin-bottom: 12px;
+            }
+            .post-title {
+              display: block;
+              font-size: 1.56em;
+              font-weight: 400;
+              color: $heading-color;
+              &:hover {
+                color: $primary;
+              }
+            }
+          }
+          .meta {
+            font-size: 0.75em;
+            border-top: 1px solid $outline;
+          }
+        }
+      }
+    }
+  }
+
+}

@@ -1,0 +1,19 @@
+.controls {
+  padding: 40px 0;
+  background-color: $light-bg-color;
+  .post-nav {
+    text-align: center;
+  }
+}
+
+.prev {
+  float: left;
+  @include clearfix;
+}
+.home {
+  transform: translateX(-50%);
+}
+.next {
+  float: right;
+  @include clearfix;
+}
