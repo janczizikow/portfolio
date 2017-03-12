@@ -1,10 +1,30 @@
 <section id="blog">
   <div class="container">
-    <h1>Blog Posts</h1>
+    <h1 class="title">Blog</h1>
 
     <ul class="posts">
       {% for post in site.posts %}
-        <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
+        <li>
+          <div class="post-outer">
+            <a href="{{ post.url }}">
+              <span class="img-link">
+                <img src="http://themenectar.com/demo/salient-corporate/wp-content/uploads/2013/04/post-2-600x403.jpg" alt="">
+              </span>
+            </a>
+            <div class="post-inner">
+              <div class="post-inner-contianer">
+                <div class="post-inner-header">
+                  {{ post.date | date_to_string }}
+                  <a class="post-title" href="{{ post.url }}">{{ post.title }}</a>
+                </div>
+                {{ post.excerpt }}
+              </div>
+              <div class="meta">
+                {{ site.data.settings.seo.rel-author }}
+              </div>
+            </div>
+          </div>
+        </li>
       {% endfor %}
     </ul>
   </div>

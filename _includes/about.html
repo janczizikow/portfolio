@@ -1,7 +1,13 @@
 <section id="about">
   <div class="container">
     <div class="about-right">
-      <img src="{{ site.baseurl }}assets/img/profile.jpg" alt="">
+      <picture>
+        <source media="(min-width: 1200px)" srcset="assets/img/profile_xl.jpg, assets/img/profile_xl@2x.jpg 2x">
+        <source media="(min-width: 992px)" srcset="assets/img/profile_lg.jpg, assets/img/profile_lg@2x.jpg 2x">
+        <source media="(min-width: 76px)" srcset="assets/img/profile_md.jpg, assets/img/profile_md@2x.jpg 2x">
+        <source media="(min-width: 0)" srcset="assets/img/profile_sm.jpg, assets/img/profile_sm@2x.jpg 2x">
+        <img src="{{ site.baseurl }}assets/img/profile.jpg" alt="Jan Czizikow" style="width:auto;">
+      </picture>
       <h3>Personal details</h3>
       <ul>
         <li>

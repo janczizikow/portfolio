@@ -42,15 +42,21 @@ layout: compress
       </section>
       <div class="controls">
         <div class="container">
-          <div class="post-nav">
-            {% if page.previous %}
-              <a class="prev" href="{{prev}}">&laquo; Previous project</a>
-            {% endif %}
-            <a href="/" class="home">Home</a>
-            {% if page.next %}
-              <a class="next" href="{{next}}">Next project &raquo;</a>
-            {% endif %}
-          </div>
+            <div class="control">
+              {% if page.previous %}
+                <a class="prev" href="{{prev}}">&laquo; Previous project</a>
+              {% endif %}
+            </div>
+
+            <div class="control">
+              <a href="/" class="home">Home</a>
+            </div>
+
+            <div class="control">
+              {% if page.next %}
+                <a class="next" href="{{next}}">Next project &raquo;</a>
+              {% endif %}
+            </div>
         </div>
       </div>
     </main>
