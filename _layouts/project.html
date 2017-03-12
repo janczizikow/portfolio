@@ -12,14 +12,6 @@ layout: compress
     <main>
       <section class="project">
         <div class="container">
-          <a class="return" href="/">
-            <svg class="arrow" version="1.1" id="arrow-back" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-               viewBox="0 0 50 50" style="enable-background:new 0 0 50 50;" xml:space="preserve">
-            <g>
-              <path class="st1" d="M31.7,37.4L18.3,24 M31.7,12.6L18.3,26"/>
-            </g>
-            </svg>
-          </a>
           <div class="center">
 
             <h2 class="title">{{ page.title }}</h2>
@@ -34,8 +26,15 @@ layout: compress
           <div class="center">
 
             {% for image in page.image %}
-              <img src="{{page.image[forloop.index0]}}">
-            {% endfor%}
+            <picture>
+              <source media="(min-width: 992px)" srcset="{{page.image[forloop.index0]}}_lg.jpg, {{page.image[forloop.index0]}}_lg@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="{{page.image[forloop.index0]}}_md.jpg, {{page.image[forloop.index0]}}_md@2x.jpg 2x">
+              <source media="(min-width: 576px)" srcset="{{page.image[forloop.index0]}}_sm.jpg, {{page.image[forloop.index0]}}_sm@2x.jpg 2x">
+              <source media="(min-width: 0)" srcset="{{page.image[forloop.index0]}}_xs.jpg, {{page.image[forloop.index0]}}_xs@2x.jpg 2x">
+              <img src="{{page.image[forloop.index0]}}_lg.jpg" alt="{{page.title}} project - Developed by Jan Czizikow" style="width:auto;">
+            </picture>
+            {% endfor %}
+
 
           </div>
         </div>
