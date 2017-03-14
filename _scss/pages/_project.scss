@@ -1,7 +1,3 @@
-#projects {
-  overflow-x: hidden;
-}
-
 .center {
   max-width: 720px;
   margin-right: auto;
@@ -14,19 +10,6 @@
 
 .showcase {
   background-color: #F6F6F6;
-}
-
-
-.projects-wrap {
-  width: 200%;
-  position: relative;
-  left: 0%;
-  transition: all 0.8s ease;
-}
-
-.thumb-wrap, .project-wrap {
-  width: 50%;
-  float: left;
 }
 
 .project-container {

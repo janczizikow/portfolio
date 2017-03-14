@@ -2,8 +2,8 @@
   position: fixed;
   display: block;
   text-align: center;
-  right: 1em;
-  bottom: -30px;
+  right: 1.8em;
+  bottom: -29px;
   cursor: pointer;
   height: 29px;
   width: 29px;
@@ -15,7 +15,7 @@
   &.show {
     opacity: 1;
     visibility: visible;
-    bottom: 1em;
+    bottom: 1.8em;
   }
   svg {
     position: absolute;
