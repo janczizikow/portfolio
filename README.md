@@ -14,3 +14,9 @@ To do list:
     * Add on form submit script
 * Navigation
     * <s>Fix padding on header</s>
+    * Investigate 700+ breakpoint issue
+    *
+* Path to PWA
+    * Even more images :P - add WebP format
+    * Web App Manifest
+    * Service Worker

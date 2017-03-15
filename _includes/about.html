@@ -6,7 +6,7 @@
         <source media="(min-width: 992px)" srcset="assets/img/profile_lg.jpg, assets/img/profile_lg@2x.jpg 2x">
         <source media="(min-width: 768px)" srcset="assets/img/profile_md.jpg, assets/img/profile_md@2x.jpg 2x">
         <source media="(min-width: 0)" srcset="assets/img/profile_sm.jpg, assets/img/profile_sm@2x.jpg 2x">
-        <img src="{{ site.baseurl }}assets/img/profile.jpg" alt="Jan Czizikow" style="width:auto;">
+        <img src="{{ site.baseurl }}assets/img/profile_xl.jpg" srcset="profile_xl.jpg, profile_xl@2x.jpg 2x" alt="Jan Czizikow" style="width:auto;">
       </picture>
       <h3>Personal details</h3>
       <ul>
@@ -63,7 +63,7 @@
         <li>
           <svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" width="4.6" height="5" viewBox="0 0 4.6 5"><path class="st0" d="M1.1.8c0 .1 0 .3-.2.4 0 .1-.2.1-.4.1s-.3 0-.4-.1C0 1.1 0 1 0 .8 0 .7 0 .5.2.4.3.3.4.3.6.3s.3 0 .4.1c.1.1.1.3.1.4zm-.1.9v3H0v-3h1zM4.6 3v1.7h-1V3.1c0-.2 0-.4-.1-.5-.1-.1-.2-.2-.4-.2-.1 0-.2 0-.3.1-.1.1-.1.2-.2.3v1.9h-1V2.8v-1h1v.4c0-.1.1-.2.1-.2l.2-.2s.1-.1.2-.1h.3c.3 0 .6.1.8.3.3.2.4.6.4 1z"/>
           </svg>
-          <a href="https://cn.linkedin.com/in/{{site.linkedin}}" target="_blank">
+          <a href="https://cn.linkedin.com/in/{{site.linkedin}}" target="_blank" rel="external noopener">
             linkedin
           </a>
         </li>
@@ -74,7 +74,7 @@
       <h1 class="title">About</h1>
       <p>{{ site.data.settings.about }}</p>
       <div class="btn-wrap">
-        <a class="btn" href="/assets/other/CV.pdf" target="_blank">Download CV</a>
+        <a class="btn" href="/assets/other/CV.pdf" target="_blank" rel="noopener">Download CV</a>
       </div>
     </div>
 

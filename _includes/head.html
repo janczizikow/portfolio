@@ -2,7 +2,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="theme-color" content="#277cea">
+	<meta name="theme-color" content="#313237">
 
 	<!-- Google Tag Manager -->
 	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -15,10 +15,21 @@
 	<!-- Plain Description -->
 	<title>{%if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
 	<meta name="description" content="{% if page.description %}{{page.description}}{% else %}{{site.description}}{% endif %}">
-	<link rel="image/x-icon" href="{{site.url}}assets/img/favicons/favicon.ico">
 	<meta rel="author" content="{{ site.data.settings.seo.rel-author }}">
 	<meta rel="publisher" href="{{ site.data.settings.seo.rel-publisher }}">
 
+	<!-- Web App Manifest -->
+	<link rel="mask-icon" sizes="any" href="/assets/img/icons/favicon.svg" color="#313237">
+	<meta name="apple-mobile-web-app-title" content="Jan Czizikow">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="mobile-web-app-capable" content="yes">
+	<!-- <link rel="apple-touch-startup-image" href="/launch.png"> -->
+	<meta name="apple-mobile-web-app-status-bar-style" content="white-transparent">
+	<link rel="apple-touch-icon" sizes="180x180" href="/assets/img/icons/apple-icon-180x180.png">
+	<link rel="manifest" href="/manifest.json">
+	<link rel="image/x-icon" href="/assets/img/icons/favicon.ico">
+	<meta name="msapplication-TileColor" content="#313237">
+	<meta name="msapplication-TileImage" content="/assets/img/icons/ms-icon-144x144.png">
 
 	<!-- Facebook -->
 	<meta property="og:type" content="website"/>
