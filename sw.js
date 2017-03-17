@@ -1,11 +1,9 @@
 // Set a name for the current cache
-var cacheName = 'v02';
+var cacheName = 'v03';
 
 // Default files to always cache
 var cacheFiles = [
 	'/',
-	'/projects/the-clinic',
-	'/projects/minimal-portfolio',
 	'/index.html',
   '/assets/js/jquery-3.1.1.min.js',
   '/assets/js/jquery.easing.1.3min.js',
