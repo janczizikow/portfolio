@@ -34,6 +34,10 @@ img::selection {
   cursor: not-allowed;
   background-color: transparent;
 }
+
+.hidden {
+  display: none;
+}
 .alert {
   position: fixed;
   bottom: 0;
