@@ -4,27 +4,49 @@
     padding: 0;
     margin: 0;
     list-style: none;
+    @include clearfix;
     li {
       margin-bottom: gutter();
       @include breakpoint($xs) {
         @include span(full);
       }
-      @include breakpoint($sm) {
-        @include gallery(6 of 12);
+      @include susy-breakpoint($md, 8) {
+        @include gallery(4);
       }
       @include breakpoint($lg) {
-        @include gallery(4 of 12);
+        @include gallery(3 of 12);
       }
       .post-outer {
-        border: 1px solid $outline;
+        min-height: 250px;
         border-radius: 4px;
+        overflow: hidden;
+        box-shadow: 0px 1px 3px rgba(0,0,0,.08)!important;
+        .category {
+          position: relative;
+          .post-tag {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            z-index: 3;
+            padding: 5px;
+            background-color: #41a674;
+            border-radius: 4px;
+            font-size: 10px;
+            line-height: 1.2;
+            font-weight: 400;
+            color: $bg-color;
+            text-transform: uppercase;
+          }
+        }
         .img-link {
           display: block;
           line-height: 0;
         }
+        .link-inner {
+          color: inherit;
+        }
         .post-inner {
           background-color: $bg-color;
-          border: none;
           .post-inner-contianer {
             padding: 30px 20px;
             .post-inner-header {
@@ -36,18 +58,13 @@
               font-size: 1.56em;
               font-weight: 400;
               color: $heading-color;
-              &:hover {
-                color: $primary;
-              }
             }
-          }
-          .meta {
-            font-size: 0.75em;
-            border-top: 1px solid $outline;
+            p, time {
+              color: $text-color;
+            }
           }
         }
       }
     }
   }
-
 }

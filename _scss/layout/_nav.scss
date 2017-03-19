@@ -5,9 +5,8 @@ header {
   width: 100%;
   z-index: 4;
   will-change: transform;
-  transition: transform .30s ease;
+  transition: transform .3s;
   transform: translateY(0%);
-  -webkit-transform: translateY(0%);
   @include clearfix;
   .bg-head {
     position: absolute;
@@ -112,8 +111,7 @@ header {
 // }
 
 .hide-nav {
-  transform: translateY(-100%!important);
-  -webkit-transform: translateY(-100%)!important;
+  transform: translateY(-100%)!important;
 }
 .bg-transparent {
   background-color: transparent;

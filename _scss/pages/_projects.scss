@@ -1,6 +1,7 @@
 #projects {
-  background-color: $light-bg-color;
-  overflow-x: hidden;
+  @include breakpoint($md) {
+    padding-bottom: 120px;
+  }
   figure {
     position: relative;
     margin: 0;
@@ -30,7 +31,8 @@
       right: 0;
       opacity: 0;
       background-color: rgba(33, 33, 33, 0.8);
-      padding: 70px 0;
+      padding: 25% 25%;
+      margin-bottom: 5px; // quick fix for caption going outside
       text-align: center;
       transition: all .3s ease-in-out;
       &:hover {

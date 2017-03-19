@@ -1,13 +1,14 @@
-$(document).ready(function() {
-    $('body').removeClass('no-js');
-    ShowHideNav();
-    scrollTop();
-    smoothScroll(750);
-    burger();
-    $('.effect').each(function() {
-      $(this).addClass('active');
-    })
-    $('.fade').addClass('active');
+jQuery(document).ready(function() {
+
+	$('body').removeClass('no-js');
+	ShowHideNav();
+	scrollTop();
+	smoothScroll(750);
+	burger();
+	$('.effect').each(function() {
+		$(this).addClass('active');
+	})
+	$('.fade').addClass('active');
 });
 
 //SCROLL TOP
@@ -98,7 +99,7 @@ function ShowHideNav() {
           hasScrolled();
           didScroll = false;
       }
-  }, 100);
+  }, 250);
 
   function hasScrolled() {
       var currentScroll = $(this).scrollTop();
@@ -131,40 +132,23 @@ function ShowHideNav() {
   }
 }
 
-// // AJAX Forms
-//
-// $.ajax({
-//   url: 'https://formspree.io/jan.czizikow@gmail.com',
-//   method: 'Post',
-//   data: $('#contactForm').serialize(),
-//   dataType: 'json',
-//   beforeSend: function() {
-//     console.log('loading');
-//   },
-//   sucess: function(data) {
-//     console.log(data);
-//   },
-//   error: function(err) {
-//     console.log('error');
-//   }
-// });
-//
-// ALERT
-$('#hero').append('<div class="alert">Thanks for stopping by! The website is still under development, click to dismiss warning.</div>');
-$('.alert').on('click', function(){
-  $(this).fadeOut(300);
+// AJAX Forms
+$('#contactForm').submit(function(e) {
+  e.preventDefault();
+  $.ajax({
+    url: 'https://formspree.io/jan.czizikow@gmail.com',
+    method: 'POST',
+    data: $(this).serialize(),
+    dataType: 'json',
+    beforeSend: function() {
+      console.log('Please wait form sending');
+    },
+    sucess: function(data) {
+      alert('Thank you for contacting me! Message was sent succesfully, will get back to you soon!');
+    },
+    error: function(err) {
+			alert('Ups, something went wrong, please try again. You can check console log for more information.');
+      console.log(err);
+    }
+  });
 });
-
-// if ('serviceWorker' in navigator) {
-//   window.addEventListener('load', function() {
-//     navigator.serviceWorker
-//     .register('/sw.js', {scope: './'})
-//     .then(function(registration) {
-//       // Registration was successful
-//       console.log('ServiceWorker registration successful with scope: ', registration.scope);
-//     }).catch(function(err) {
-//       // registration failed :(
-//       console.log('ServiceWorker registration failed: ', err);
-//     });
-//   });
-// }

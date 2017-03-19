@@ -26,7 +26,10 @@
           <textarea type="text" name="message" id="message" rows="5" required></textarea>
         </div>
 
-        <button type="submit" name="submit" value="Send">Send</button>
+        <input type="hidden" name="_subject" value="Website Form submission">
+        <input type="hidden" name="_format" value="plain" />
+        <input class="hidden" type="text" name="_gotcha">
+        <button id="contactBtn" type="submit" value="Send">Send</button>
       </form>
       </div>
     </div>

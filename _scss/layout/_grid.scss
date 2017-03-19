@@ -28,7 +28,7 @@ $susy: (
 }
 
 section {
-  padding: 120px 0 100px;
+  padding: 80px 0 60px;
 }
 
 #hero {
@@ -200,14 +200,13 @@ section {
   }
 }
 
-.post {
-  article {
-    @include breakpoint($xs) {
-      @include span(full);
-    }
-    @include breakpoint($lg) {
-      @include span(8 of 12);
-      margin-left: span(2 wide of 12);
-    }
+
+article, .controls-wrap{
+  @include breakpoint($xs) {
+    @include span(full);
+  }
+  @include breakpoint($lg) {
+    @include span(8 of 12);
+    margin-left: span(2 wide of 12);
   }
 }

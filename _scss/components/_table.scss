@@ -1,0 +1,19 @@
+table {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+  max-width: 100%;
+  margin-bottom: 1rem;
+  border-collapse: collapse;
+  border-spacing: 0;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  th, td {
+    padding: 6px 13px;
+    border: 1px solid #dfe2e5;
+  }
+  tr {
+    background-color: #fff;
+    border-top: 1px solid #c6cbd1;
+  }
+}

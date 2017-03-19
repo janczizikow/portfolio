@@ -7,6 +7,8 @@ image:
   - /assets/img/projects//minimal-portfolio/minimal-portfolio-1
   - /assets/img/projects//minimal-portfolio/minimal-portfolio-2
   - /assets/img/projects//minimal-portfolio/minimal-portfolio-3
+previous:
+  - {name: 'the clinic', link: '/the-clinic'}
 ---
 
 Web development of simple, responsive and minimalistic portfolio website, which could be used instead of ordinary pdf file. Developed using bootstrap framework components (grid, navigation).

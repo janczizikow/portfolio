@@ -6,26 +6,33 @@
       {% for post in site.posts %}
         <li>
           <div class="post-outer">
+            <span class="category">
+              <a href="" class="post-tag">{{ post.categories }}</a>
+            </span>
+            {% if page.featured-img %} <!-- To be fixed -->
             <a href="{{ post.url }}">
-              <span class="img-link">
-                <img src="http://themenectar.com/demo/salient-corporate/wp-content/uploads/2013/04/post-2-600x403.jpg" alt="">
-              </span>
-            </a>
-            <div class="post-inner">
-              <div class="post-inner-contianer">
-                <div class="post-inner-header">
-                  {{ post.date | date_to_string }}
-                  <a class="post-title" href="{{ post.url }}">{{ post.title }}</a>
+                <span class="img-link">
+                  <img src="{{featured-img}}" alt="">
+                </span>
+              </a>
+            {% endif %}
+            <a class="" href="{{ post.url }}">
+              <div class="post-inner">
+                <div class="post-inner-contianer">
+                  <div class="post-inner-header">
+                    <h3 class="post-title">{{ post.title }}</h3>
+                    <time>{{ post.date | date_to_string }}</time>
+                  </div>
+                  <p>{{ post.content | strip_html | truncatewords:40 }}</p>
                 </div>
-                {{ post.excerpt }}
               </div>
-              <div class="meta">
-                {{ site.data.settings.seo.rel-author }}
-              </div>
-            </div>
+            </a>
           </div>
         </li>
       {% endfor %}
     </ul>
+    <div class="btn-center">
+      <a href="#" class="btn">view more</a>
+    </div>
   </div>
 </section>

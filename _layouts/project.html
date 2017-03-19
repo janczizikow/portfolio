@@ -9,7 +9,8 @@ layout: compress
   <body>
 
     {% include header.html %}
-    <main>
+    <main role="main">
+      <div class="content-ajax">
       <section class="project">
         <div class="container">
           <div class="center">
@@ -41,20 +42,25 @@ layout: compress
       </section>
       <div class="controls">
         <div class="container">
-            <div class="control">
-              {% if page.previous %}
-                <a class="prev" href="{{prev}}">&laquo; Previous project</a>
-              {% endif %}
-            </div>
+          <div class="controls-wrap">
+              <div class="control">
+                {% for previous in page.previous %}
+                  <a class="prev" href="/projects{{ previous.link }}">&laquo; Previous project</a>
+                {% endfor %}
+              </div>
 
-            <div class="control">
-              <a href="/" class="home">Home</a>
-            </div>
+              <div class="control">
+                <a href="/" class="home"><svg height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4 8h4V4H4v4zm6 12h4v-4h-4v4zm-6 0h4v-4H4v4zm0-6h4v-4H4v4zm6 0h4v-4h-4v4zm6-10v4h4V4h-4zm-6 4h4V4h-4v4zm6 6h4v-4h-4v4zm0 6h4v-4h-4v4z"/>
+                    <path d="M0 0h24v24H0z" fill="none"/></svg>
+                </a>
+              </div>
 
-            <div class="control">
-              {% if page.next %}
-                <a class="next" href="{{next}}">Next project &raquo;</a>
-              {% endif %}
+              <div class="control">
+                {% for next in page.next %}
+                  <a class="next" href="/projects{{ next.link }}">Next project &raquo;</a>
+                {% endfor %}
+              </div>
             </div>
         </div>
       </div>

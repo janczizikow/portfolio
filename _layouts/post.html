@@ -10,10 +10,11 @@ comments: true
   <body>
 
     {% include header.html %}
-    <main>
+    <main role="main">
+      <div class="content-ajax">
       <section class="post">
         <div class="container">
-          <article>
+          <article itemscope itemtype="http://schema.org/BlogPosting">
           <h2>{{ page.title }}</h2>
           <p>
             {% assign words = content | number_of_words %}
@@ -23,7 +24,7 @@ comments: true
               {{ words | divided_by:180 }} mins
             {% endif %} read
           </p>
-          <p class="meta">{{ page.date | date_to_string }}</p>
+          <p class="meta" itemprop="datePublished"><time>{{ page.date | date_to_string }}</time></p>
           {{ content }}
 
           </article>
@@ -31,18 +32,23 @@ comments: true
       </section>
       <div class="controls">
         <div class="container">
-          <div class="control">
-            {% if page.previous.url %}
-              <a class="prev" href="{{page.previous.url}}">&laquo; {{page.previous.title}}</a>
-            {% endif %}
-          </div>
-          <div class="control">
-            <a href="/" class="home">Home</a>
-          </div>
-          <div class="control">
-            {% if page.next.url %}
-              <a class="next" href="{{page.next.url}}">{{page.next.title}} &raquo;</a>
-            {% endif %}
+          <div class="controls-wrap">
+            <div class="control">
+              {% if page.previous.url %}
+                <a class="prev" href="{{page.previous.url}}">&laquo; {{page.previous.title}}</a>
+              {% endif %}
+            </div>
+            <div class="control">
+              <a href="/" class="home"><svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M4 8h4V4H4v4zm6 12h4v-4h-4v4zm-6 0h4v-4H4v4zm0-6h4v-4H4v4zm6 0h4v-4h-4v4zm6-10v4h4V4h-4zm-6 4h4V4h-4v4zm6 6h4v-4h-4v4zm0 6h4v-4h-4v4z"/>
+                  <path d="M0 0h24v24H0z" fill="none"/></svg>
+              </a>
+            </div>
+            <div class="control">
+              {% if page.next.url %}
+                <a class="next" href="{{page.next.url}}">{{page.next.title}} &raquo;</a>
+              {% endif %}
+            </div>
           </div>
         </div>
       </div>
