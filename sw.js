@@ -19,7 +19,7 @@ self.addEventListener('install', function(event) {
 });
 
 self.addEventListener('active',function(event) {
-	var cacheWhitelist = ['/assets/fonts/brown/brown-regular-webfont.woff2, /assets/fonts/brown/brown-light-webfont.woff2'];
+	var cacheWhitelist = ['v0.2'];
 
 	event.waitUntil(
 		caches.keys().then(function(cacheNames) {
