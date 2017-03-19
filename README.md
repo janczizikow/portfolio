@@ -1,22 +1,22 @@
 # Jan Czizikow - Personal Portfolio
 To do list:
 * Button styles
-    * Define the styles of all buttons
-    * <s>Optimize how buttons render for mobile</s>
-    * Still need fix hero & sticky hover buttons
+    * Define the styles of all buttons?
+    - [x] Optimize how buttons render for mobile
 * PROJECTS
-    * Create all the images & copy
-    * Think of how to loop things better within project page
-    * Add next/previous project on the bottom
+    - [x] this is a complete item
+    - [x] Think of how to loop things better within project page
+    - [x] Add next/previous project on the bottom
+    - [ ] Fix next/prev controls
 * AJAX
     * <s>Add script to define if homepage or no (if homepage -> scroll, if no -> link)</s>
     * Fix the form styles + make them global
     * Add on form submit script
 * Navigation
-    * <s>Fix padding on header</s>
-    * Investigate 700+ breakpoint issue
-    *
+    - [x] Fix padding on header
+    - [ ] Investigate 700+ breakpoint issue
+    - [ ] Nav links as a block
 * Path to PWA
-    * Even more images :P - add WebP format
-    * Web App Manifest
+    - [ ] Images - add WebP format
+    - [x] Web App Manifest
     * Service Worker
