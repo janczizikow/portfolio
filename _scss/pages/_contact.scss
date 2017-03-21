@@ -28,7 +28,7 @@ label {
     left: 0;
     width: 0;
     height: 2px;
-    background: #ff561e;
+    background: #ff6161;
     z-index:4;
     transition: width .45s cubic-bezier(.694,.048,.335,1);
   }
@@ -37,6 +37,11 @@ label {
   }
   &:hover:before, :focus:before, :active:after {
     width: 100%;
+  }
+  &:nth-child(3n) {
+    &:before, &:after {
+      bottom: 6px;
+    }
   }
 }
 

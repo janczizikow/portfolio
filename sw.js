@@ -5,6 +5,7 @@ var urlsToCache = [
 	'/assets/js/jquery-3.1.1.min.js',
 	'/assets/js/plugins.js',
 	'/assets/js/scripts.js',
+	'manifest.json',
 	'/assets/fonts/brown/brown-light-webfont.woff2',
 	'/assets/fonts/brown/brown-regular-webfont.woff2'
 ];
