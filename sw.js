@@ -19,7 +19,7 @@ self.addEventListener('install', function(event) {
 	);
 });
 
-self.addEventListener('active',function(event) {
+self.addEventListener('activate',function(event) {
 	var cacheWhitelist = ['v02'];
 
 	event.waitUntil(
