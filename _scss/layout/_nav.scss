@@ -5,9 +5,25 @@ header {
   width: 100%;
   z-index: 4;
   will-change: transform;
-  transition: transform .3s;
+  transition: transform .3s, background-color 0.5s ease;
   transform: translateY(0%);
   @include clearfix;
+  &.hide-nav {
+    transform: translateY(-100%)!important;
+  }
+  &.top {
+    @include breakpoint($md) {
+      nav > .logo {
+        color: $bg-color;
+      }
+      nav > .menu-left a {
+        color: rgba(255, 255, 255, 0.75);
+        &:hover {
+          color: $bg-color;
+        }
+      }
+    }
+  }
   .bg-head {
     position: absolute;
     left: 0;
@@ -92,6 +108,10 @@ header {
   // -webkit-transform .5s cubic-bezier(.694,.048,.335,1);
 }
 
+.bg-transparent {
+  // background-color: transparent;
+}
+
 #expanded {
   display: none;
 }
@@ -109,13 +129,6 @@ header {
 //     width: 100%;
 //     height: 100%;
 // }
-
-.hide-nav {
-  transform: translateY(-100%)!important;
-}
-.bg-transparent {
-  background-color: transparent;
-}
 
 ul.menu-left {
   display: block;

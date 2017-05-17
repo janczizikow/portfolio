@@ -1,0 +1,27 @@
+---
+layout: compress
+permalink: /blog/:title/
+---
+<!DOCTYPE html>
+<html lang="en">
+  {% include head.html %}
+  <body>
+
+    {% include headrooted.html %}
+      <div class="hero-blog">
+
+      </div>
+      <main role="main" class="blog-layout">
+        <div class="content-ajax">
+          <section id="blog">
+            <div class="container">
+              {{ content }}
+            </div>
+          </section>
+        </div>
+      </main>
+
+      {% include footer.html %}
+
+  </body>
+</html>

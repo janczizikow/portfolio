@@ -1,3 +1,177 @@
+// Hero wrappers
+.post-intro {
+  position: absolute;
+  top: calc(50% );
+  width: 100%;
+  left: 0;
+  text-align: center;
+  transform: translate(0%, -50%);
+  will-change: transform;
+  // transition: transform 1.25s 0s cubic-bezier(0.3,0.58,0.42,0.9);
+  z-index: 3;
+
+  h1.title {
+    color: #fff;
+  }
+}
+
+article {
+  color: rgba(0,0,0,.8);
+  .post-hero {
+    position: relative;
+    height: 60vh;
+    overflow: hidden;
+    @include clearfix;
+    .post-bg-image {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      background-color: #27282a;
+      background-attachment: fixed;
+      &:after {
+        content:'';
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background-color: rgba(60, 61, 65, .4);
+        z-index: 1;
+      }
+    }
+    h1.title {
+      text-align: center;
+      font-size: 1.9rem;
+      margin: 0 0 55px 0;
+    }
+  }
+  h2, h3, h4, h5, h6 {
+    margin: 0 0 25px 0;
+  }
+  .post-meta {
+    text-align: center;
+    font-size: 14px;
+    color: rgba(255, 255, 255, .8);
+    span {
+      margin-right: 5px;
+      &:after {
+        content:  '\007C';
+      }
+      &:last-child:after {
+        content: '';
+      }
+    }
+  }
+  svg {
+    width: 15px;
+    height: auto;
+  }
+  img {
+    display: block;
+    margin: 0 auto 20px;
+  }
+  figure {
+    img {
+      margin: 0 auto;
+    }
+    figcaption {
+      margin: 10px 0 0 0;
+      text-align: center;
+      font-size: 14px;
+    }
+  }
+  .share > a {
+    border-radius: 100px;
+    line-height: 1;
+    text-align: center;
+    border: 2px solid;
+    padding: 9px 30px;
+    margin: 10px 13px 10px 0;
+    height: auto;
+    display: inline-block;
+    svg {
+      transition: all 0.3s ease;
+    }
+  }
+  .share {
+    .facebook {
+      border-color: #3b5998;
+      color: #3b5998;
+      transition: all 0.45s cubic-bezier(0.25, 1, 0.33, 1);
+      svg {
+        fill: #3b5998;
+      }
+      &:hover {
+        background-color: #3b5998;
+        color: $bg-color;
+      }
+    }
+    .twitter {
+      border-color: #55acee;
+      color: #55acee;
+      transition: all 0.2s ease;
+      svg {
+        fill: #55acee;
+      }
+      &:hover {
+        background-color: #55acee;
+        color: $bg-color;
+      }
+    }
+    .google-plus {
+      border-color: #dd4b39;
+      color: #dd4b39;
+      transition: all 0.2s ease;
+      svg {
+        fill: #dd4b39;
+      }
+      &:hover {
+        background-color: #dd4b39;
+        color: $bg-color;
+      }
+    }
+    .linkedin {
+      border-color: #007bb5;
+      color: #007bb5;
+      transition: all 0.2s ease;
+      svg {
+        fill: #007bb5;
+      }
+      &:hover {
+        background-color: #007bb5;
+        color: $bg-color;
+      }
+    }
+    .pinterest {
+      border-color: #cb2027;
+      color: #cb2027;
+      transition: all 0.2s ease;
+      svg {
+        fill: #cb2027;
+      }
+      &:hover {
+        background-color: #cb2027;
+        color: $bg-color;
+      }
+    }
+  }
+}
+.facebook:hover svg path,
+.facebook:hover, .twitter:hover svg path,
+.twitter:hover, .google-plus:hover svg path,
+.google-plus:hover, .linkedin:hover svg path,
+.linkedin:hover,.pinterest:hover svg path,
+.pinterest:hover{
+  fill:$bg-color;
+  color:$bg-color;
+}
+
 .controls {
   padding: 40px 0;
   background-color: #eee;
@@ -43,14 +217,4 @@
 .comments {
   padding: 50px 0px 50px;
   background-color: #fafafa;
-  .container {
-    max-width: 720px;
-    margin-right: auto;
-    margin-left: auto;
-    text-align: center;
-  }
-}
-
-article {
-  color: rgba(0,0,0,.8);
 }

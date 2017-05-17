@@ -29,6 +29,12 @@ $susy: (
 
 section {
   padding: 80px 0 60px;
+  &#skills {
+    padding: 100px 0 0;
+  }
+  &#contact {
+    padding: 100px 0;
+  }
 }
 
 #hero {
@@ -200,8 +206,23 @@ section {
   }
 }
 
+// ARTICLE
+.post {
+  padding: 58px 0 40px;
+  @include clearfix;
+}
+.post-content {
+  padding: 70px 0;
+  @include breakpoint($xs) {
+    @include span(full);
+  }
+  @include breakpoint($lg) {
+    @include span(8 of 12);
+    margin-left: span(2 wide of 12);
+  }
+}
 
-article, .controls-wrap{
+.controls-wrap, .comments-wrap{
   @include breakpoint($xs) {
     @include span(full);
   }

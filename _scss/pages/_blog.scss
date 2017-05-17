@@ -14,7 +14,7 @@
         @include gallery(4);
       }
       @include breakpoint($lg) {
-        @include gallery(3 of 12);
+        @include gallery(4 of 12);
       }
       .post-outer {
         min-height: 250px;
@@ -66,5 +66,29 @@
         }
       }
     }
+  }
+}
+
+.hero-blog {
+  position: relative;
+  width: 100%;
+  height: 59vh;
+  top: 0;
+  left: 0;
+  background-image: url('/assets/img/blog/jan-czizikow-blog.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-color: #27282a;
+  &:after {
+    content:'';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(60, 61, 65, .4);
+    z-index: 1;
   }
 }

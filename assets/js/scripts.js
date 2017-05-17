@@ -85,13 +85,14 @@ function ShowHideNav() {
   $(window).scroll(function(event){
       didScroll = true;
       // Removing transparency after scroll more then navHeight
-      if($(this).scrollTop() > navbarHeight) {
-        $('.bg-head').removeClass('bg-transparent');
-      }
-      // Making header transparent if on top
-      else {
-        $('.bg-head').addClass('bg-transparent');
-      }
+      // if($(this).scrollTop() > navbarHeight) {
+			// 	$('header').removeClass('top');
+      //   $('.bg-head').removeClass('bg-transparent');
+      // }
+      // // Making header transparent if on top
+      // else {
+			// 	$('header').addClass('top');
+      // }
   });
 
   setInterval(function() {
@@ -141,10 +142,16 @@ $('#contactForm').submit(function(e) {
     data: $(this).serialize(),
     dataType: 'json',
     beforeSend: function() {
-      console.log('Please wait form sending');
+			console.log('Sending...')
+			// $('#test').addClass('loading').html('<div class="spin"></div>');
     },
-    sucess: function(data) {
+		complete: function() {
+			console.log('Complete')
+			// $('#test').removeClass('loading').html('Send');
+		},
+    success: function(data) {
       alert('Thank you for contacting me! Message was sent succesfully, will get back to you soon!');
+			$('#test').remove('loading').html('√');
     },
     error: function(err) {
 			alert('Ups, something went wrong, please try again. You can check console log for more information.');
