@@ -1,208 +1,177 @@
 header {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 4;
+  height: auto;
+  z-index: 5;
   will-change: transform;
   transition: transform .3s, background-color 0.5s ease;
   transform: translateY(0%);
+  background-color: transparent;
   @include clearfix;
   &.hide-nav {
-    transform: translateY(-100%)!important;
+    transform: translateY(-120%)!important;
+    transition: transform .3s;
   }
-  &.top {
-    @include breakpoint($md) {
-      nav > .logo {
-        color: $bg-color;
-      }
-      nav > .menu-left a {
-        color: rgba(255, 255, 255, 0.75);
-        &:hover {
-          color: $bg-color;
-        }
-      }
-    }
-  }
-  .bg-head {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
+  &.fix-nav {
+    position: fixed;
+    background-color: rgba(255,255,255,.96);
+    transition: transform .3s, background-color 0.5s ease;
   }
   nav {
-    padding: 0.625rem 0;
     @include clearfix;
     .logo {
       float: left;
-      padding-top: .25rem;
-      padding-bottom: .25rem;
-      margin-right: 1rem;
+      padding: 19px 0px;
+      margin-right: 1.25rem;
+      line-height: 20px;
       font-size: 1.25rem;
-      line-height: inherit;
       font-weight: 500;
       color: $heading-color;
+      @include clearfix;
       &:hover:after, :active:after, :focus:after {
         display: none;
         width: 0%;
         transition: all .35s cubic-bezier(.694,.048,.335,1);
       }
-      &:after {
-        content: '';
-        display: table;
-        clear: both;
+    }
+    // Burger
+    .nav-toggle {
+      display: block;
+      border-radius: 5px;
+      background-color: transparent;
+      float: right;
+      height: 38px;
+      width: 38px;
+      cursor: pointer;
+      padding: 8px 8px;
+      margin: 10px -8px 10px 0px;
+      &.open span:first-child {
+        transform: rotate(45deg) translate(4.4px, 4.4px);
+      }
+      &.open span:nth-child(2) {
+        width: 0%;
+        opacity: 0;
+      }
+      &.open span:last-child {
+        transform: rotate(-45deg) translate(4.4px, -4.4px);
+      }
+      @include breakpoint($md) {
+        display: none;
+      }
+      span {
+        position: relative;
+        display: block;
+        height: 2px;
+        width: 100%;
+        margin-top: 4px;
+        border-radius: 5px;
+        background-color: $heading-color;
+        transition: all .3s cubic-bezier(1, 0.13, 0.35, 1.09);
       }
     }
-    ul {
-    list-style: none;
-    padding-left: 0;
-    margin: 0;
+    ul.menu-left {
+      display: block;
+      max-height: 0;
+      overflow: hidden;
+      transition: all 0.3s ease-out;
+      z-index: 5;
+      list-style: none;
+      padding-left: 0;
+      margin: 0;
+      clear: both;
+      @include clearfix;
+      @include breakpoint($md) {
+        clear: none;
+        float: right;
+        max-height: none;
+      }
+      &.collapse {
+        max-height: 20em!important;
+        li {
+          opacity: 1;
+          transform: translate3d(0, 0, 0);
+          &:nth-child(5) {
+            transition-delay: 0.07s;
+          }
+          &:nth-child(4) {
+            transition-delay: 0.14s;
+          }
+          &:nth-child(3) {
+            transition-delay: 0.21s;
+          }
+          &:nth-child(2) {
+            transition-delay: 0.28s;
+          }
+          &:nth-child(1) {
+            transition-delay: 0.35s;
+          }
+        }
+      }
       li {
         float: none;
         margin-left: 0;
         border-bottom: 1px solid rgba(214,214,214,0.5);
+        @include breakpoint(0px 767px) {
+          // EFFECTS
+          opacity: 0;
+          transform: translate3d(0, -25px, 0);
+          transition: 0.5s ease;
+          &:last-child {
+            border: 0;
+            padding-bottom: 0.938em;
+          }
+        }
         @include breakpoint($md) {
           float: left;
-          margin-left: 1rem;
-          border: 0;
-        }
-        &:last-child {
+          margin-left: 1.25rem;
           border: 0;
         }
         a {
           display: block;
-        @include breakpoint($sm) {
-          display: block;
-          padding: .425rem 0rem;
-        }
+          position: relative;
+          color: $text-color;
+          transition: all 0.1s ease-in-out;
+          line-height: 20px;
+          //EFFECT
+          padding: 0.938em 0 0.938em 0;
+          &:hover {
+            color: $heading-color;
+          }
+          @include breakpoint($md) {
+            display: block;
+            padding: 19px 0px;
+            &:after {
+              content: '';
+              display: block;
+              position: absolute;
+              left: 0;
+              bottom: 19px;
+              height: 2px;
+              width: 0;
+              transition: all 0.2s ease-in-out;
+            }
+            &:hover:after, :active:after, :focus:after {
+              transition: all .35s cubic-bezier(.694,.048,.335,1);
+              width: 100%;
+              background: $primary;
+              transition: width .35s ease;
+            }
+          }
         }
       }
     }
   }
 }
-@media(max-width: 768px) {
-  nav {
-    ul {
-      clear: both;
-      li {
-        padding: 0.938em 0 0.938em 0;
-        opacity: 0;
-        transform: translate3d(0, -25px, 0);
-        transition: 0.5s ease;
-      }
-    }
-  }
-  .scroll {
-    display: none;
-  }
-}
-.bg-head {
-  background-color: rgba(255,255,255,.96);
-  transition: background-color 0.5s ease;
-  // transition: background .3s,
-  // -webkit-transform .5s cubic-bezier(.694,.048,.335,1);
-  // transition: transform .5s cubic-bezier(.694,.048,.335,1),background .3s;
-  // transition: transform .5s cubic-bezier(.694,.048,.335,1),background .3s,
-  // -webkit-transform .5s cubic-bezier(.694,.048,.335,1);
-}
 
-.bg-transparent {
-  // background-color: transparent;
-}
-
+// Checbox hack
 #expanded {
   display: none;
-}
-
-#expanded:checked ~ #header .container .bg-head {
-  background-color: #fff;
-  transition: background-color 0.5s ease;
-  transition-property: background-color, backdrop-filter, -webkit-backdrop-filter;
-}
-// #expanded:checked ~ ul.menu-left {
-//     max-height: 15em !important;
-// }
-// #expanded:checked ~ div.overlay {
-//     opacity: 1;
-//     width: 100%;
-//     height: 100%;
-// }
-
-ul.menu-left {
-  display: block;
-  max-height: 0;
-  overflow: hidden;
-  transition: all 0.3s ease-out;
-  z-index: 10;
-  @include breakpoint($md) {
-    display: block!important;
-    float: right;
-    max-height: none;
-  }
-  &:before {
-    content: '';
-    display: table;
-    clear: both;
-  }
-  &.collapse {
-    max-height: 20em!important;
-    li {
-      opacity: 1;
-      transform: translate3d(0, 0, 0);
-      &:nth-child(5) {
-        transition-delay: 0.07s;
-      }
-      &:nth-child(4) {
-        transition-delay: 0.14s;
-      }
-      &:nth-child(3) {
-        transition-delay: 0.21s;
-      }
-      &:nth-child(2) {
-        transition-delay: 0.28s;
-      }
-      &:nth-child(1) {
-        transition-delay: 0.35s;
-      }
-    }
-  }
-}
-
-// Burger
-.nav-toggle {
-  display: block;
-  border-radius: 5px;
-  background-color: transparent;
-  float: right;
-  height: 38px;
-  width: 38px;
-  cursor: pointer;
-  padding: 8px 8px;
-  margin-right: -8px;
-  &.open span:first-child {
-    transform: rotate(45deg) translate(4.4px, 4.4px);
-  }
-  &.open span:nth-child(2) {
-    width: 0%;
-    opacity: 0;
-  }
-  &.open span:last-child {
-    transform: rotate(-45deg) translate(4.4px, -4.4px);
-  }
-  @include breakpoint($md) {
-    display: none;
-  }
-  span {
-    position: relative;
-    display: block;
-    height: 2px;
-    width: 100%;
-    margin-top: 4px;
-    border-radius: 5px;
-    background-color: $heading-color;
-    transition: all .3s cubic-bezier(1, 0.13, 0.35, 1.09);
+  &:checked ~ #header {
+    background-color: #fff;
+    transition: background-color 0.5s ease;
+    transition-property: background-color, backdrop-filter, -webkit-backdrop-filter;
   }
 }
 
@@ -210,7 +179,7 @@ ul.menu-left {
   position: fixed;
   left: 0;
   top: 0;
-  z-index:2;
+  z-index:3;
   height: 0;
   width: 0;
   background-color: rgba(0,0,0,0.75);
@@ -222,3 +191,20 @@ ul.menu-left {
     height: 100%;
   }
 }
+
+// To change the links color, the class .top could be added through JS
+// header {
+//   &.top {
+//     @include breakpoint($md) {
+//       nav > .logo {
+//         color: $bg-color;
+//       }
+//       nav > .menu-left a {
+//         color: rgba(255, 255, 255, 0.75);
+//         &:hover {
+//           color: $bg-color;
+//         }
+//       }
+//     }
+//   }
+// }

@@ -2,6 +2,8 @@ var gulp        = require('gulp');
 var browserSync = require('browser-sync');
 var sass        = require('gulp-sass');
 var prefix      = require('gulp-autoprefixer');
+var sourcemaps  = require('gulp-sourcemaps');
+var uglify      = require('gulp-uglify');
 var cp          = require('child_process');
 var deploy      = require('gulp-gh-pages');
 
@@ -53,15 +55,28 @@ gulp.task('browser-sync', ['sass', 'jekyll-build'], function() {
  */
 gulp.task('sass', function () {
     return gulp.src('_scss/main.scss')
+        .pipe(sourcemaps.init())
         .pipe(sass({
             outputStyle: 'compressed',
             includePaths: ['scss'],
             onError: browserSync.notify
         }))
         .pipe(prefix(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true }))
+        .pipe(sourcemaps.write('./maps'))
         .pipe(gulp.dest(dist.css))
         .pipe(browserSync.reload({stream:true}))
         .pipe(gulp.dest('assets/css'));
+});
+/**
+  * Uglify JS
+  */
+gulp.task('uglify', function() {
+  return gulp.src('assets/js/*.js')
+    .pipe(uglify())
+    .pipe(gulp.dest('./_site/assets/js'))
+    .on('error', function(err){
+      console.error('Error in uglify taks', err.toString());
+    });
 });
 
 /**

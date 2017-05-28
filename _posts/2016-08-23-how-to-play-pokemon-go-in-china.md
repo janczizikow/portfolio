@@ -59,7 +59,7 @@ In case you’ve been *soft banned* – you are not getting any items from PokeS
 Happy hunting!
 
 <div class="share">
-  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A//www.janczizikow.com/how-to-play-pokemon-go-in-china/" class="facebook">
+  <a target="_blank" rel="noopener external" href="https://www.facebook.com/sharer/sharer.php?u=https%3A//www.janczizikow.com/how-to-play-pokemon-go-in-china/" class="facebook" >
     <span>
       <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
          viewBox="0 0 20 20" style="enable-background:new 0 0 20 20;" xml:space="preserve">
@@ -71,13 +71,13 @@ Happy hunting!
     </span>
     Share
   </a>
-  <a href="https://twitter.com/home?status=All%20you%20need%20to%20know%20about%20WeChat%20Official%20Accounts%20%40jan_czizikow%20https%3A//www.janczizikow.com/wechat-official-accounts/" class="twitter">
+  <a target="_blank" rel="noopener external" href="https://twitter.com/home?status=All%20you%20need%20to%20know%20about%20WeChat%20Official%20Accounts%20%40jan_czizikow%20https%3A//www.janczizikow.com/wechat-official-accounts/" class="twitter">
     <span>
       <svg id="twitter" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 20" enable-background="new 0 0 26 20"><path fill-rule="evenodd" clip-rule="evenodd" d="M17.408.198c1.945-.034 2.979.665 3.967 1.554.84-.07 1.93-.533 2.572-.855l.625-.337c-.367.978-.865 1.744-1.629 2.326-.17.128-.338.304-.551.385v.013c1.09-.011 1.986-.496 2.84-.759v.012c-.447.703-1.055 1.417-1.701 1.929l-.783.614c.014 1.139-.018 2.226-.232 3.182-1.254 5.563-4.576 9.339-9.833 10.958-1.889.58-4.939.818-7.103.289-1.072-.264-2.042-.561-2.951-.953-.505-.217-.973-.453-1.42-.723l-.441-.266c.488.014 1.059.146 1.604.061.493-.078.978-.059 1.433-.156 1.135-.246 2.144-.572 3.012-1.074.422-.242 1.061-.527 1.359-.879-.563.01-1.075-.119-1.494-.266-1.623-.566-2.568-1.607-3.184-3.17.492.053 1.909.18 2.241-.096-.619-.033-1.215-.389-1.641-.65-1.307-.809-2.372-2.161-2.363-4.244l.514.241c.328.137.662.21 1.054.289.165.034.496.13.686.061h-.024c-.254-.292-.666-.485-.92-.797-.838-1.029-1.623-2.612-1.126-4.495.126-.479.325-.901.538-1.29l.025.012c.097.202.314.35.453.519.428.523.955.995 1.493 1.41 1.833 1.415 3.483 2.285 6.135 2.929.673.164 1.45.288 2.253.289-.225-.648-.152-1.698.025-2.326.445-1.578 1.416-2.717 2.84-3.326.34-.146.719-.252 1.115-.338l.612-.073z"/></svg>
       Share
     </span>
   </a>
-  <a href="https://plus.google.com/share?url=https%3A//www.janczizikow.com/how-to-play-pokemon-go-in-china/" class="google-plus">
+  <a target="_blank" rel="noopener external" href="https://plus.google.com/share?url=https%3A//www.janczizikow.com/how-to-play-pokemon-go-in-china/" class="google-plus">
     <span>
       <svg version="1.1" id="google-plus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 20" style="enable-background:new 0 0 26 20;" xml:space="preserve"><path d="M16,10.2c0,4.4-3,7.6-7.5,7.6c-4.3,0-7.8-3.5-7.8-7.8s3.5-7.8,7.8-7.8c2.1,0,3.9,0.8,5.2,2l-2.1,2c-0.6-0.6-1.6-1.2-3.1-1.2
         c-2.7,0-4.8,2.2-4.8,4.9s2.2,4.9,4.8,4.9c3.1,0,4.2-2.2,4.4-3.4H8.6V8.9h7.3C16,9.3,16,9.7,16,10.2L16,10.2z M25.2,8.9v2.2H23v2.2
@@ -86,13 +86,13 @@ Happy hunting!
       Share
     </span>
   </a>
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A//www.janczizikow.com/how-to-play-pokemon-go-in-china/&title=How%20to%20Play%20Pok%C3%A9mon%20Go%20in%20China&summary=Here%20you%20can%20find%20a%20solution%20how%20to%20play%20Pok%C3%A9mon%20Go%20in%20China%20from%20the%20comfort%20of%20your%20home%20using%20on-screen%20joystick%20to%20navigate%20in%20the%20virtual%20world.&source=https%3A//www.janczizikow.com/" class="linkedin">
+  <a target="_blank" rel="noopener external" href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A//www.janczizikow.com/how-to-play-pokemon-go-in-china/&title=How%20to%20Play%20Pok%C3%A9mon%20Go%20in%20China&summary=Here%20you%20can%20find%20a%20solution%20how%20to%20play%20Pok%C3%A9mon%20Go%20in%20China%20from%20the%20comfort%20of%20your%20home%20using%20on-screen%20joystick%20to%20navigate%20in%20the%20virtual%20world.&source=https%3A//www.janczizikow.com/" class="linkedin">
     <span>
       <svg id="linkedin" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" enable-background="new 0 0 16 16"><path d="M.818 5.542h3.08v9.778h-3.08v-9.778zm1.54-4.861c.984 0 1.784.79 1.784 1.763s-.8 1.762-1.784 1.762c-.987 0-1.786-.79-1.786-1.763s.798-1.762 1.786-1.762"/><path d="M5.829 5.542h2.952v1.336h.041c.41-.768 1.416-1.579 2.914-1.579 3.115 0 3.691 2.024 3.691 4.658v5.362h-3.077v-4.755c0-1.135-.02-2.593-1.6-2.593-1.602 0-1.846 1.235-1.846 2.512v4.836h-3.075v-9.777z"/></svg>
       Share
     </span>
   </a>
-  <a href="https://pinterest.com/pin/create/button/?url=https%3A//www.janczizikow.com/how-to-play-pokemon-go-in-china/&media=https%3A//www.janczizikow.com/assets/img/posts/how-to-play-pokemon-go-in-china/how-to-play-pokemon-go-in-china.jpg&description=Here%20you%20can%20find%20a%20solution%20how%20to%20play%20Pok%C3%A9mon%20Go%20in%20China%20from%20the%20comfort%20of%20your%20home%20using%20on-screen%20joystick%20to%20navigate%20in%20the%20virtual%20world." class="pinterest">
+  <a target="_blank" rel="noopener external" href="https://pinterest.com/pin/create/button/?url=https%3A//www.janczizikow.com/how-to-play-pokemon-go-in-china/&media=https%3A//www.janczizikow.com/assets/img/posts/how-to-play-pokemon-go-in-china/how-to-play-pokemon-go-in-china.jpg&description=Here%20you%20can%20find%20a%20solution%20how%20to%20play%20Pok%C3%A9mon%20Go%20in%20China%20from%20the%20comfort%20of%20your%20home%20using%20on-screen%20joystick%20to%20navigate%20in%20the%20virtual%20world." class="pinterest">
     <span>
       <svg version="1.1" id="pinterest" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" enable-background="new 0 0 16 16">
       <path d="M15.5,7.8c0,4.1-3.4,7.5-7.5,7.5c-0.7,0-1.4-0.1-2.1-0.3c0.3-0.5,0.6-1,0.8-1.6c0,0,0.1-0.3,0.5-2.1c0.3,0.5,1,0.9,1.8,0.9

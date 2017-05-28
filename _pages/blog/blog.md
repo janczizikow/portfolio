@@ -1,7 +1,7 @@
 ---
 layout: blog
 title: Jan Czizikow // Blog
-description: Jan Czizikow - a senior BBA student with passion for digital marketing based in Shanghai, China. Let's work together - email or view CV to get in touch.
+description: Discover all the latest about tech, marketing and life in China, from perspective of an UX strategist and web developer.
 permalink: "/blog/"
 sitemap:
   priority:  0.8

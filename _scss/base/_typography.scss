@@ -77,35 +77,6 @@ a.link {
     transition: all .35s cubic-bezier(.694,.048,.335,1);
   }
 }
-// menu links
-.menu-left a {
-  display: inline-block;
-  position: relative;
-  padding-bottom: 0px;
-  color: $text-color;
-  transition: all 0.1s ease-in-out;
-  &:hover {
-    color: $heading-color;
-  }
-  @include breakpoint($md) {
-    &:after {
-      content: '';
-      display: block;
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      height: 2px;
-      width: 0;
-      transition: all 0.2s ease-in-out;
-    }
-    &:hover:after, :active:after, :focus:after {
-      transition: all .35s cubic-bezier(.694,.048,.335,1);
-      width: 100%;
-      background: $primary;
-      transition: width .35s ease;
-    }
-  }
-}
 
 em {
   font-style: italic;

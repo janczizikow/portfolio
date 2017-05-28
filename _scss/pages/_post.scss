@@ -23,32 +23,42 @@ article {
     overflow: hidden;
     @include clearfix;
     .post-bg-image {
-      position: absolute;
       width: 100%;
       height: 100%;
+      max-width: 1600px;
+      margin: 0 auto;
       top: 0;
       left: 0;
       background-repeat: no-repeat;
-      background-position: center;
+      background-position: center center;
       background-size: cover;
       background-color: #27282a;
       background-attachment: fixed;
       &:after {
         content:'';
         display: block;
-        position: absolute;
         top: 0;
         left: 0;
         height: 100%;
         width: 100%;
-        background-color: rgba(60, 61, 65, .4);
+        max-width: 1680px;
+        margin: 0 auto;
+        background-color: #252b33;
+        opacity: .65;
         z-index: 1;
       }
     }
     h1.title {
       text-align: center;
-      font-size: 1.9rem;
-      margin: 0 0 55px 0;
+      font-size: 1.5rem;
+      margin: 0 25px 35px 25px;
+      @include breakpoint($md) {
+        font-size: 1.75rem;
+      }
+      @include breakpoint($lg) {
+        font-size: 1.9rem;
+        margin: 0 0px 35px 0px;
+      }
     }
   }
   h2, h3, h4, h5, h6 {
@@ -217,4 +227,8 @@ article {
 .comments {
   padding: 50px 0px 50px;
   background-color: #fafafa;
+}
+
+@include breakpoint($sm) {
+
 }
