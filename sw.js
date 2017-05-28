@@ -20,7 +20,7 @@ self.addEventListener('install', function(event) {
 });
 
 self.addEventListener('activate',function(event) {
-	var cacheWhitelist = ['v03'];
+	var cacheWhitelist = ['v04'];
 
 	event.waitUntil(
 		caches.keys().then(function(cacheNames) {

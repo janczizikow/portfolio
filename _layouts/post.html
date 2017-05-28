@@ -13,9 +13,8 @@ comments: true
     <main role="main">
       <div class="content-ajax">
       <section class="post">
-
         <article itemscope itemtype="http://schema.org/BlogPosting">
-        <meta itemscope itemprop="mainEntityOfPage"  itemType="https://schema.org/WebPage" itemid="https://{site.url}{page.url}"/>
+        <meta itemscope itemprop="mainEntityOfPage"  itemType="https://schema.org/WebPage" itemid="{{site.url}}/{page.url}"/>
          <meta itemprop="inLanguage" content="en-US"/>
           <div class="post-hero">
             <div class="post-intro">
@@ -42,7 +41,7 @@ comments: true
               </div>
             </div>
             <div itemprop="image" itemscope itemtype="https://schema.org/ImageObject" class="post-bg-image" {% if page.featured-img %} style="background-image: url('/assets/img/posts/{{page.featured-img}}/{{page.featured-img}}.jpg');" {% endif %}>
-              <meta itemprop="url" content="https://{site.url}/assets/img/posts/{{page.featured-img}}/{{page.featured-img}}.jpg"/>
+              <meta itemprop="url" content="{{site.url}}/assets/img/posts/{{page.featured-img}}/{{page.featured-img}}.jpg"/>
               <meta itemprop="width" content="1600"/>
               <meta itemprop="height" content="900"/>
             </div>
