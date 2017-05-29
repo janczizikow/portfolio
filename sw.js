@@ -1,4 +1,4 @@
-var CACHE_NAME = 'v04';
+var CACHE_NAME = 'v05';
 var urlsToCache = [
 	'/',
 	'/assets/css/main.css',
@@ -20,7 +20,7 @@ self.addEventListener('install', function(event) {
 });
 
 self.addEventListener('activate',function(event) {
-	var cacheWhitelist = ['v04'];
+	var cacheWhitelist = ['v05'];
 
 	event.waitUntil(
 		caches.keys().then(function(cacheNames) {
