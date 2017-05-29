@@ -4,7 +4,7 @@
     <ul class="image-container">
       {% for project in site.data.settings.projects %}
       <li data-folder="{{ project.folder }}">
-        <a class="project-item" href="{{ site.github.url }}/projects/{{ project.folder }}">
+        <a class="project-item" href="{{site.url}}/projects/{{ project.folder }}">
           <figure>
             <picture>
               <source media="(min-width: 1200px)" srcset="assets/img/projects/{{project.folder}}/{{project.folder}}-thumb_xl.jpg, assets/img/projects/{{project.folder}}/{{project.folder}}-thumb_xl@2x.jpg 2x">
