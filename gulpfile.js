@@ -6,6 +6,7 @@ var sourcemaps  = require('gulp-sourcemaps');
 var uglify      = require('gulp-uglify');
 var cp          = require('child_process');
 var deploy      = require('gulp-gh-pages');
+var webp        = require('gulp-webp');
 
 var jekyll   = process.platform === 'win32' ? 'jekyll.bat' : 'jekyll';
 var messages = {
@@ -79,6 +80,21 @@ gulp.task('uglify', function() {
     });
 });
 
+gulp.task('webp',function(){
+  gulp.src('assets/img/*.jpg')
+    .pipe(webp())
+    .pipe(gulp.dest('assets/img'))
+
+  //Projects
+  gulp.src('assets/img/projects/minimal-portfolio/*.jpg')
+    .pipe(webp())
+    .pipe(gulp.dest('assets/img/projects/minimal-portfolio'))
+  // The clinic
+  gulp.src('assets/img/projects/the-clinic/*.jpg')
+    .pipe(webp())
+    .pipe(gulp.dest('assets/img/projects/the-clinic')) 
+});
+
 /**
  * Watch scss files for changes & recompile
  * Watch html/md files, run jekyll & reload BrowserSync
@@ -94,4 +110,4 @@ gulp.task('watch', function () {
  * Default task, running just `gulp` will compile the sass,
  * compile the jekyll site, launch BrowserSync & watch files.
  */
-gulp.task('default', ['browser-sync', 'watch']);
+gulp.task('default', ['browser-sync', 'watch', 'webp']);
