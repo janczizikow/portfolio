@@ -5,14 +5,13 @@ permalink: /blog/:title/
 <!DOCTYPE html>
 <html lang="en">
   {% include head.html %}
-  <body>
+  <body class="post">
 
-    {% include headrooted.html %}
-      <div class="hero-blog">
-
-      </div>
+    {% include headerHero.html %}
       <main role="main" class="blog-layout">
         <div class="content-ajax">
+          <div class="hero-blog">
+          </div>
           <section id="blog">
             <div class="container">
               {{ content }}

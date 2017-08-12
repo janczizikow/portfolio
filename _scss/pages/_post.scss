@@ -1,7 +1,7 @@
-// Hero wrappers
+// Hero wrapper
 .post-intro {
   position: absolute;
-  top: calc(50% );
+  top: calc(50%);
   width: 100%;
   left: 0;
   text-align: center;
@@ -9,23 +9,94 @@
   will-change: transform;
   // transition: transform 1.25s 0s cubic-bezier(0.3,0.58,0.42,0.9);
   z-index: 3;
-
-  h1.title {
+  // RESET Parallax
+  @include breakpoint($xs $lg) {
+    opacity: 1!important;
+  }
+  h1 {
     color: #fff;
+    padding: 0.5em 0;
+    @include breakpoint($lg) {
+      font-size: 3.9rem;
+    }
+  }
+}
+//post test
+.post-test {
+  padding: 58px 0px 0px 0px;
+  @include breakpoint($lg) {
+    padding: 0;
+  }
+  article {
+    color: rgba(0,0,0,.8);
+    line-height: 1.9;
+    .post-hero-wrap {
+      position: relative;
+      height: $hero-height;
+      overflow: hidden;
+      @include breakpoint($md) {
+        height: 340px;
+      }
+      @include breakpoint($lg) {
+        height: 550px;
+      }
+    }
+    .post-bg-image {
+      position: relative;
+      width: 100%;
+      height: auto;
+      margin: 0 auto;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+      background-color: #27282a;
+      // RESET Parallax
+      @include breakpoint($xs $lg) {
+        transform: translate(0px)!important;
+        visibility: visible!important;
+        display: block!important;
+      }
+      @include breakpoint($lg) {
+      position: fixed;
+      }
+      &:after {
+        position: absolute;
+        display: block;
+        content:'';
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        margin: 0 auto;
+        background-color: #252b33;
+        opacity: .65;
+        z-index: 1;
+      }
+    }
+  }
+  .content {
+    position: relative;
+    background-color: $bg-color;
   }
 }
 
 article {
   color: rgba(0,0,0,.8);
+  line-height: 1.9;
   .post-hero {
     position: relative;
-    height: 60vh;
+    height: $hero-height;
     overflow: hidden;
+    @include breakpoint($md) {
+      height: 340px;
+    }
+    @include breakpoint($lg) {
+      height: 550px;
+    }
     @include clearfix;
     .post-bg-image {
       width: 100%;
       height: 100%;
-      max-width: 1600px;
       margin: 0 auto;
       top: 0;
       left: 0;
@@ -41,7 +112,6 @@ article {
         left: 0;
         height: 100%;
         width: 100%;
-        max-width: 1680px;
         margin: 0 auto;
         background-color: #252b33;
         opacity: .65;
@@ -60,9 +130,6 @@ article {
         margin: 0 0px 35px 0px;
       }
     }
-  }
-  h2, h3, h4, h5, h6 {
-    margin: 0 0 25px 0;
   }
   .post-meta {
     text-align: center;
@@ -227,8 +294,4 @@ article {
 .comments {
   padding: 50px 0px 50px;
   background-color: #fafafa;
-}
-
-@include breakpoint($sm) {
-
 }

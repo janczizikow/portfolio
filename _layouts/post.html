@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: compress
 comments: true
 ---
 <!DOCTYPE html>
@@ -7,43 +7,47 @@ comments: true
 
   {% include head.html %}
 
-  <body>
+  <body class="no-js post">
 
-    {% include headrooted.html %}
+    {% include headerHero.html %}
     <main role="main">
       <div class="content-ajax">
-      <section class="post">
+      <section class="post-test">
         <article itemscope itemtype="http://schema.org/BlogPosting">
         <meta itemscope itemprop="mainEntityOfPage"  itemType="https://schema.org/WebPage" itemid="{{site.url}}/{page.url}"/>
          <meta itemprop="inLanguage" content="en-US"/>
-          <div class="post-hero">
-            <div class="post-intro">
-              <h1 class="title" itemprop="headline">{{ page.title }}</h1>
-              <div class="post-meta">
-                <span class="meta" itemprop="datePublished">
-                  <time>{{ page.date | date_to_string }}</time>
-                  &nbsp;
-                </span>
-                <span>
-                  {% assign words = content | number_of_words %}
-                  {% if words < 360 %}
-                    1 min
-                  {% else %}
-                    {{ words | divided_by:180 }} mins
-                  {% endif %} read
-                	&nbsp;
-                </span>
-                <div style="display: inline-block" itemprop="author" itemscope itemtype="https://schema.org/Person">
-                  <span itemprop="name">
-                    {{ site.data.settings.seo.rel-author }}
-                  </span>
+           <div class="post-hero-wrap">
+             <div itemprop="image" itemscope itemtype="https://schema.org/ImageObject" class="post-bg-image">
+               <meta itemprop="url" content="{{site.url}}/assets/img/posts/{{page.featured-img}}/{{page.featured-img}}.jpg"/>
+               <meta itemprop="width" content="1600"/>
+               <meta itemprop="height" content="900"/>
+               <div class="container">
+                <div class="post-hero">
+                  <div class="post-intro">
+                    <h1 itemprop="headline">{{ page.title }}</h1>
+                    <div class="post-meta">
+                      <span class="meta" itemprop="datePublished">
+                        <time>{{ page.date | date_to_string }}</time>
+                        &nbsp;
+                      </span>
+                      <span>
+                        {% assign words = content | number_of_words %}
+                        {% if words < 360 %}
+                          1 min
+                        {% else %}
+                          {{ words | divided_by:180 }} mins
+                        {% endif %} read
+                      	&nbsp;
+                      </span>
+                      <div style="display: inline-block" itemprop="author" itemscope itemtype="https://schema.org/Person">
+                        <span itemprop="name">
+                          {{ site.data.settings.seo.rel-author }}
+                        </span>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div itemprop="image" itemscope itemtype="https://schema.org/ImageObject" class="post-bg-image" {% if page.featured-img %} style="background-image: url('/assets/img/posts/{{page.featured-img}}/{{page.featured-img}}.jpg');" {% endif %}>
-              <meta itemprop="url" content="{{site.url}}/assets/img/posts/{{page.featured-img}}/{{page.featured-img}}.jpg"/>
-              <meta itemprop="width" content="1600"/>
-              <meta itemprop="height" content="900"/>
             </div>
           </div>
           <div class="content">
@@ -66,9 +70,11 @@ comments: true
               {% endif %}
             </div>
             <div class="control">
-              <a href="/blog" class="home"><svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+              <a href="/blog" class="home">
+                <svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
                   <path d="M4 8h4V4H4v4zm6 12h4v-4h-4v4zm-6 0h4v-4H4v4zm0-6h4v-4H4v4zm6 0h4v-4h-4v4zm6-10v4h4V4h-4zm-6 4h4V4h-4v4zm6 6h4v-4h-4v4zm0 6h4v-4h-4v4z"/>
-                  <path d="M0 0h24v24H0z" fill="none"/></svg>
+                  <path d="M0 0h24v24H0z" fill="none"/>
+                </svg>
               </a>
             </div>
             <div class="control">

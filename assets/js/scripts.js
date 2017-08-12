@@ -8,6 +8,7 @@ jQuery(document).ready(function() {
 		$(this).addClass('active');
 	})
 	$('.fade').addClass('active');
+	ParallaxInit();
 });
 
 //SCROLL TOP
@@ -59,10 +60,14 @@ function burger() {
     $(this).toggleClass('open');
     $('.menu-left').toggleClass('collapse');
     $('.overlay').toggleClass('show');
+		$('body').toggleClass('lock');
+		$('html').toggleClass('lock');
   });
 
   // REMOVE X & COLLAPSE NAV ON CLICK
   $('.menu-left a').on('click', function() {
+		$('html').removeClass('lock');
+		$('body').removeClass('lock');
     $('.nav-toggle').removeClass('open');
     $('.menu-left').removeClass('collapse');
     $('.overlay').removeClass('show');
@@ -73,42 +78,48 @@ function burger() {
     $('.menu-left').removeClass('collapse');
     $('.overlay').removeClass('show');
     $('#expanded').prop('checked', false);
+		$('body').removeClass('lock');
+		$('html').removeClass('lock');
   });
 }
 
 // SHOW/HIDE NAV
-function ShowHideNav() {
+function ShowHideNav(e) {
   var previousScroll = 0,
 			$header = $('#header'),
 			navHeight = $('#header').outerHeight(),
 			detachPoint = 650,
 			hideShowOffset = 6;
 
-  $(window).scroll(function(){
-    if (!$header.hasClass('fixed')) {
-			var currentScroll = $(this).scrollTop(),
-					scrollDifference = Math.abs(currentScroll - previousScroll);
-			if (currentScroll > navHeight) {
-				if (currentScroll > detachPoint) {
-					if (!$header.hasClass('fix-nav'))
-						$header.addClass('fix-nav');
-				}
-				if (scrollDifference >= hideShowOffset) {
-					if (currentScroll > previousScroll) {
-						if (!$header.hasClass('hide-nav'))
-							$header.addClass('hide-nav');
-							$('.nav-toggle').removeClass('open');
-							$('.menu-left').removeClass('collapse');
-							$('.overlay').removeClass('show');
-							$('#expanded').prop('checked', false);
-					} else {
-						if ($header.hasClass('hide-nav'))
-							$('#header').removeClass('hide-nav');
+  $(window).scroll(function(e){
+		var wW = 1024;
+		if ($(window).width() >= wW) {
+	    if (!$header.hasClass('fixed')) {
+				var currentScroll = $(this).scrollTop(),
+						scrollDifference = Math.abs(currentScroll - previousScroll);
+				if (currentScroll > navHeight) {
+					if (currentScroll > detachPoint) {
+						if (!$header.hasClass('fix-nav'))
+							$header.addClass('fix-nav');
 					}
-				}
-			} else {
-				if (currentScroll <= 0) {
-						$header.removeClass();
+					if (scrollDifference >= hideShowOffset) {
+						if (currentScroll > previousScroll) {
+							if (!$header.hasClass('hide-nav'))
+								$header.addClass('hide-nav');
+						} else {
+							if ($header.hasClass('hide-nav'))
+								$('#header').removeClass('hide-nav');
+						}
+					}
+				} else {
+					if (currentScroll <= 0) {
+							$header.removeClass();
+							if($('body').hasClass('post') && $(window).width() >= 992 && navigator.userAgent.match(/iPad/i) == null) {
+								$header.addClass('top');
+							} else {
+								$header.removeClass();
+							}
+					}
 				}
 			}
 			if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
@@ -116,8 +127,12 @@ function ShowHideNav() {
 			}
 			previousScroll = currentScroll;
 		}
+		else {
+		 $header.addClass('fix-nav');
+	 }
   })
 }
+
 
 // AJAX Forms
 $('#contactForm').submit(function(e) {
@@ -145,3 +160,46 @@ $('#contactForm').submit(function(e) {
     }
   });
 });
+$(window).resize(function(){
+	$('body').removeClass('lock');
+	$('.nav-toggle').removeClass('open');
+	$('.menu-left').removeClass('collapse');
+	$('.overlay').removeClass('show');
+	$('#header').removeClass('hide-nav');
+});
+
+// Paralax
+function Parallax() {
+	var scrollTop = $(window).scrollTop(),
+			navHeight = $('#header').outerHeight(),
+		  heroHeight = $('.post-bg-image').height();
+
+	if ($('body').hasClass('post') && $(window).width() >= 992 && navigator.userAgent.match(/iPad/i) == null) {
+		if ($('.post-bg-image.out-of-sight').length == 0 ) {
+
+		$('.post-bg-image').css({ 'transform': 'translateY('+ scrollTop*-0.40 +'px)' });
+		$('.post-intro').css({'opacity': 1-(scrollTop/(heroHeight-58))});
+		}
+		if (scrollTop / (heroHeight + navHeight) > 1  ) {
+			$('.post-bg-image').css('visibility','hidden').hide().addClass('out-of-sight');
+		} else {
+			$('.post-bg-image').css('visibility','visible').show().removeClass('out-of-sight');
+		}
+		if ($('.post-bg-image').hasClass('out-of-sight')) {
+			// stop function?
+		}
+	}
+	return false;
+	//  else {
+	// 	console.log('Conditions for Parallax unmet');
+	// }
+	// if ($('#header').length > 0 && ) {
+	// 	 $('#header-outer.parallax-contained').css({ 'transform': 'translateY('+$scrollTop*-$parallaxHeaderHUN+'px)' });
+	// }
+}
+
+function ParallaxInit() {
+	$(window).scroll(function(){
+		Parallax();
+	});
+}

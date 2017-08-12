@@ -38,6 +38,16 @@ img::selection {
 .hidden {
   display: none;
 }
+
+.lock {
+  overflow: hidden;
+}
+
+.lock #header {
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
 .alert {
   position: fixed;
   bottom: 0;

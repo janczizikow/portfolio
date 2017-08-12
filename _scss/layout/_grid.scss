@@ -208,11 +208,10 @@ section {
 
 // ARTICLE
 .post {
-  padding: 58px 0 40px;
   @include clearfix;
 }
 .post-content {
-  padding: 70px 0;
+  padding: 52px 0;
   @include breakpoint($xs) {
     @include span(full);
   }
