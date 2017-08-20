@@ -209,7 +209,8 @@ $('#contactForm').submit(function(e) {
 			alert('Thanks for contacting me, ' + name + ' ! Will get back to you soon!');
     },
     error: function(err) {
-			alert('Ups, something went wrong, please try again. Error:' + '<br/>' + err);
+			alert('Ups, something went wrong, please try again. You can check console log for more information.');
+      console.log(err);
     }
   });
 });
