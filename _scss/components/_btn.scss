@@ -88,10 +88,12 @@
 .btn-center {
   text-align: center;
 }
-button {
-  &.loading {
-    position: relative;
-    background-color: $text-color;
-    transition: background-color .2s ease;
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: .65;
+  transition: background-color .2s ease;
+  &:hover, :focus {
+    background-color: $button-dark;
   }
 }

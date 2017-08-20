@@ -43,6 +43,14 @@ label {
       bottom: 6px;
     }
   }
+  &.error {
+    &:hover:after, :focus:after, :active:after {
+      width: 0%;
+    }
+    &:hover:before, :focus:before, :active:after {
+      width: 0%;
+    }
+  }
 }
 
 input {
@@ -75,6 +83,22 @@ textarea#message {
     transition: border-color .25s;
     border-color:$primary;
   }
+}
+
+.error {
+  input {
+    border-bottom-color: $error!important;
+  }
+  textarea {
+    border-bottom-color: $error!important;
+  }
+}
+.error-data {
+  color: $error;
+  font-size: 14px;
+  position: absolute;
+  left: 0;
+  bottom: -21px;
 }
 
 #contact {

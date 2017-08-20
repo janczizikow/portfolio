@@ -7,9 +7,8 @@
         to discuss your next project.</p>
     </div>
     <div class="contact-left">
-      <form id="contactForm" action="https://formspree.io/{{site.email}}" method="post">
+      <form id="contactForm" action="https://formspree.io/{{site.email}}" method="post" novalidate>
       <div class="inner-container">
-
 
         <div class="input half">
           <label for="name">Name</label>
@@ -30,12 +29,9 @@
         <input type="hidden" name="_format" value="plain" />
         <input class="hidden" type="text" name="_gotcha">
         <button id="contactBtn" type="submit" value="Send" onClick="dataLayer.push({event: 'pageview', pageview: '/virtual/form/submit'})">Send</button>
-        <!-- <button id="test"><span>TEST</span></button>
-        <div class="spin"></div> -->
       </form>
       </div>
     </div>
-
     <div class="contact-right">
       <div class="reference">
 

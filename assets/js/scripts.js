@@ -9,6 +9,7 @@ jQuery(document).ready(function() {
 	})
 	$('.fade').addClass('active');
 	ParallaxInit();
+	formCheck();
 });
 
 //SCROLL TOP
@@ -111,7 +112,8 @@ function ShowHideNav(e) {
 								$('#header').removeClass('hide-nav');
 						}
 					}
-				} else {
+				}
+				else {
 					if (currentScroll <= 0) {
 							$header.removeClass();
 							if($('body').hasClass('post') && $(window).width() >= 992 && navigator.userAgent.match(/iPad/i) == null) {
@@ -133,9 +135,60 @@ function ShowHideNav(e) {
   })
 }
 
+// Forms
+function formCheck() {
+  $('#contactBtn').click(function(e) {
+    e.preventDefault();
+    var inputs = $('.input input');
+		var textarea = $('.input textarea');
+    var isError = false;
+    $('.input').removeClass('error');
+    $('.error-data').remove();
+    for (var i = 0; i < inputs.length; i++) {
+      var input = inputs[i];
+      if ($(input).attr('required', true) && !validateRequired($(input).val())) {
+        addErrorData($(input), "This field is required");
+        isError = true;
+      }
+			if ($(input).attr('requred', true) && $(input).attr('type') ==="email" && !validateEmail($(input).val())) {
+				addErrorData($(input), "Email address is invalid");
+				isError = true;
+			}
+      if ($(textarea).attr('required', true) && !validateRequired($(textarea).val())) {
+				addErrorData($(textarea), "This field is required");
+				isError = true;
+			}
+    }
+    if (isError === false) {
+      $('#contactForm').submit();
+    }
+  });
+}
+
+function validateRequired(value) {
+  if (value == "") return false;
+  return true;
+}
+
+function validateEmail(value) {
+	if (value != "") {
+		return /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/i.test(value);
+	}
+	return true;
+}
+
+function addErrorData(element, error) {
+  element.parent().addClass("error");
+  element.after("<span class='error-data'>" + error + "</span>");
+}
 
 // AJAX Forms
 $('#contactForm').submit(function(e) {
+	var btn = $('#contactBtn'),
+			inputs = $('.input input'),
+			textarea = $('.input textarea');
+			name = $('input#name').val();
+
   e.preventDefault();
   $.ajax({
     url: 'https://formspree.io/jan.czizikow@gmail.com',
@@ -143,20 +196,20 @@ $('#contactForm').submit(function(e) {
     data: $(this).serialize(),
     dataType: 'json',
     beforeSend: function() {
-			console.log('Sending...')
-			// $('#test').addClass('loading').html('<div class="spin"></div>');
+			btn.prop('disabled', true);
+			btn.text('Sending...');
     },
 		complete: function() {
-			console.log('Complete')
-			// $('#test').removeClass('loading').html('Send');
+			btn.prop('disabled', false);
+			btn.text('Send');
 		},
     success: function(data) {
-      alert('Thank you for contacting me! Message was sent succesfully, will get back to you soon!');
-			// $('#test').remove('loading').html('√');
+			inputs.val('');
+			textarea.val('');
+			alert('Thanks for contacting me, ' + name + ' ! Will get back to you soon!');
     },
     error: function(err) {
-			alert('Ups, something went wrong, please try again. You can check console log for more information.');
-      console.log(err);
+			alert('Ups, something went wrong, please try again. Error:' + '<br/>' + err);
     }
   });
 });
