@@ -1,10 +1,9 @@
-var CACHE_NAME = 'v08';
+var CACHE_NAME = 'v09';
 var urlsToCache = [
 	'/',
 	'/assets/css/main.css',
-	'/assets/js/jquery-3.1.1.min.js',
-	'/assets/js/plugins.js',
-	'/assets/js/scripts.js',
+	'/assets/js/bundle.js',
+	'/assets/js/picturefill.min.js',
 	'manifest.json',
 	'/assets/fonts/brown/brown-light-webfont.woff2',
 	'/assets/fonts/brown/brown-regular-webfont.woff2'
@@ -20,7 +19,7 @@ self.addEventListener('install', function(event) {
 });
 
 self.addEventListener('activate',function(event) {
-	var cacheWhitelist = ['v08'];
+	var cacheWhitelist = ['v09'];
 
 	event.waitUntil(
 		caches.keys().then(function(cacheNames) {

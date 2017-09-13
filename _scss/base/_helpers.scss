@@ -40,7 +40,12 @@ img::selection {
 }
 
 .lock {
-  overflow: hidden;
+  height: 100%!important;
+}
+.no-scroll {
+  overflow-y: scroll!important;
+  overflow: hidden!important;
+  height: 100%!important;
 }
 
 .lock #header {

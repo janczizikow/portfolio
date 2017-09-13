@@ -5,16 +5,23 @@
   "main": "gulpfile.js",
   "dependencies": {
     "browser-sync": "^2.18.8",
+    "critical": "^0.9.1",
+    "font-face-observer": "^1.0.0",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.1",
     "gulp-sass": "^3.1.0",
-    "gulp-webp": "^2.3.0"
+    "gulp-webp": "^2.3.0",
+    "jquery": "^3.2.1",
+    "normalize.css": "^7.0.0"
   },
   "devDependencies": {
     "breakpoint-sass": "^2.7.1",
+    "browserify": "^14.4.0",
+    "gulp-concat": "^2.6.1",
     "gulp-gh-pages": "^0.5.4",
     "gulp-sourcemaps": "^2.6.0",
     "gulp-uglify": "^3.0.0",
+    "node-sass": "^4.5.3",
     "susy": "^2.2.12",
     "sw-precache": "^5.1.0"
   },

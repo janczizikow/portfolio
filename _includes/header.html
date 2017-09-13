@@ -12,11 +12,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <span></span>
         <span></span>
       </label>
-        <ul id='navLink' class="menu-left">
-          {% for item in site.data.settings.menu %}
-            <li><a href="{{ item.link }}">{{ item.name }}</a></li>
-          {% endfor %}
-        </ul>
+      <ul id='navLink' class="menu-left">
+        {% for item in site.data.settings.menu %}
+          <li><a href="{{ item.link }}">{{ item.name }}</a></li>
+        {% endfor %}
+      </ul>
     </nav>
   </div>
 </header>

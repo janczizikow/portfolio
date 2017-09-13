@@ -21,12 +21,21 @@ email: "jan.czizikow@gmail.com"
 #Others
 markdown: kramdown
 highlighter: rouge # or pygments or null
-exclude: [README.md, assets/css/pages, "node_modules", "bower_components", Gemfile, "package.json", "bower.json"]
+exclude: [README.md, assets/css/pages, "node_modules", "bower_components", Gemfile, "package.json", "bower.json", vendor]
 include: ['_pages']
 permalink: /:title/
 # Gems
 gems:
   - jekyll-paginate
+  - algoliasearch-jekyll
+
+algolia:
+  application_id: 'DK7WY1DV05'
+  index_name: 'test_article'
+  read_only_api_key: '2a1c4577ae9ca90f32d9a0f1c70b79c1'
+  excluded_files:
+    - 404.html
+    - index.html
 
 compress_html:
   clippings: all

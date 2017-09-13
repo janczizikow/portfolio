@@ -23,7 +23,7 @@
 jQuery(document).ready(function() {
 	$('body').removeClass('no-js');
 	ShowHideNav();
-	searchSlide();
+	// searchSlide();
 	scrollTop();
 	smoothScroll(750);
 	burger();
@@ -93,12 +93,12 @@ function burger() {
     $('.menu-left').toggleClass('collapse');
     $('.overlay').toggleClass('show');
 		$('body').toggleClass('lock');
-		$('html').toggleClass('lock');
+		$('html').toggleClass('no-scroll');
   });
 
   // REMOVE X & COLLAPSE NAV ON CLICK
   $('.menu-left a').on('click', function() {
-		$('html').removeClass('lock');
+		$('html').removeClass('no-scroll');
 		$('body').removeClass('lock');
     $('.nav-toggle').removeClass('open');
     $('.menu-left').removeClass('collapse');
@@ -111,7 +111,7 @@ function burger() {
     $('.overlay').removeClass('show');
     $('#expanded').prop('checked', false);
 		$('body').removeClass('lock');
-		$('html').removeClass('lock');
+		$('html').removeClass('no-scroll');
   });
 }
 
@@ -249,7 +249,7 @@ $(window).resize(function(){
 	$('.menu-left').removeClass('collapse');
 	$('.overlay').removeClass('show');
 	$('#header').removeClass('hide-nav');
-	$('html').removeClass('lock');
+	$('html').removeClass('no-scroll');
 	$('body').removeClass('lock');
 });
 

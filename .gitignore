@@ -61,3 +61,5 @@ build-iPhoneSimulator/
 #####################
 bower_components
 node_modules
+
+_algolia_api_key
