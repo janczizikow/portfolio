@@ -10,8 +10,10 @@ menu:
   - {name: 'Contact', link: '#contact'}
 
 projects:
+- {name: Blanccstate, cat: 'website', folder: 'blanccstate', file: 'projects/blanccstate.html'}
 - {name: the clinic, cat: 'email', folder: 'the-clinic', file: 'projects/the-clinic.html'}
 - {name: Minimal Portfolio, cat: 'website', folder: 'minimal-portfolio', file: 'projects/minimal-portfolio.html'}
+
 
 #-------------------------------
 # Hero Area Settings

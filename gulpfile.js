@@ -163,6 +163,10 @@ gulp.task('webp',function(){
   gulp.src('assets/img/projects/the-clinic/*.jpg')
     .pipe(webp())
     .pipe(gulp.dest('assets/img/projects/the-clinic'))
+  // Blanccstate
+  gulp.src('assets/img/projects/blanccstate/*.jpg')
+    .pipe(webp())
+    .pipe(gulp.dest('assets/img/projects/blanccstate'))
 });
 
 /**
