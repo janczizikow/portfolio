@@ -1,11 +1,12 @@
 @mixin clearfix {
-  &:before {
-    content: '';
+  &::before {
+    content: "";
     display: table;
     clear: both;
   }
-  &:after {
-    content: '';
+
+  &::after {
+    content: "";
     display: table;
     clear: both;
   }
@@ -14,6 +15,7 @@
 @mixin heading-font {
   font-weight: 400;
 }
+
 @mixin text-font {
   font-weight: 300;
  }
