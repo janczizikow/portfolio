@@ -26,17 +26,17 @@ exclude: [README.md, assets/css/pages, "node_modules", "bower_components", Gemfi
 include: ['_pages']
 permalink: /:title/
 # Gems
-gems:
+plugins:
   - jekyll-paginate
-  - algoliasearch-jekyll
+  # - algoliasearch-jekyll
 
-algolia:
-  application_id: 'DK7WY1DV05'
-  index_name: 'test_article'
-  read_only_api_key: '2a1c4577ae9ca90f32d9a0f1c70b79c1'
-  excluded_files:
-    - 404.html
-    - index.html
+# algolia:
+#   application_id: 'DK7WY1DV05'
+#   index_name: 'test_article'
+#   read_only_api_key: '2a1c4577ae9ca90f32d9a0f1c70b79c1'
+#   excluded_files:
+#     - 404.html
+#     - index.html
 
 compress_html:
   clippings: all
