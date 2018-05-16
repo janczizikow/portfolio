@@ -4,7 +4,7 @@ seo:
 
 menu:
   - {name: 'About', link: '#about'}
-  - {name: 'Skills', link: '#skills'}
+  # - {name: 'Skills', link: '#skills'}
   - {name: 'Projects', link: '#projects'}
   - {name: 'Blog', link: '#blog'}
   - {name: 'Contact', link: '#contact'}
@@ -19,19 +19,15 @@ projects:
 # Hero Area Settings
 
 tagline: >
-  I build websites and do digital marketing magic.
+  Just a simple dude who wants to build cool web experiences.
 
 cta: >
-  Got an idea? Start here
 
 #-------------------------------
 # About Site Settings
 
 about: >
-  Currently a senior undergraduate business student in Donghua University,
-  living in China since 2012. Passionate about marketing, PR, branding and
-  serious about future career in related business field. Highly motivated,
-  proactive and adaptable fast-learner, eager to further develop his skills
-  through a challenging experience. Believing that education is based on
-  two pillars: theory and practice, I engaged in a couple of part-time positions
-  throughout studies.
+  Previously UX Project manger at Motion Global - an e-commerce retailer of eyewear and contact lenses.
+  Now, a self-starting developer seeking to launch a career building
+  web applications and services. Familiar with development and
+  deployment processes for many web-based technologies.

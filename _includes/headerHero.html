@@ -13,11 +13,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <span></span>
       </label>
         <ul id='navLink' class="menu-left">
-            <li><a href="{{site.url}}/#about">About</a></li>
-            <li><a href="{{site.url}}/#skills">Skills</a></li>
-            <li><a href="{{site.url}}/#projects">Projects</a></li>
-            <li><a href="{{site.url}}/blog">Blog</a></li>
-            <li><a href="{{site.url}}/#contact">Contact</a></li>
+          {% for item in site.data.settings.menu %}
+            <li><a href="{{site.url}}{{ item.link }}">{{ item.name }}</a></li>
+          {% endfor %}
         </ul>
     </nav>
   </div>
