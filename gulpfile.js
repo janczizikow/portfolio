@@ -167,6 +167,10 @@ gulp.task('webp',function(){
   gulp.src('assets/img/projects/blanccstate/*.jpg')
     .pipe(webp())
     .pipe(gulp.dest('assets/img/projects/blanccstate'))
+  // Jekyll-sleek
+  gulp.src('assets/img/projects/jekyll-sleek/*.jpg')
+    .pipe(webp())
+    .pipe(gulp.dest('assets/img/projects/jekyll-sleek'))
 });
 
 /**
