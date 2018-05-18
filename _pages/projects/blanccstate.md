@@ -16,5 +16,5 @@ next:
 Web design and development of a landing page for an artist. The EP wasn't released yet, but the website is up and running. Thanks to modern tech (GatsbyJS & React) the browsing experience is lightning fast! Check it out:
 
 <div class="btn-center">
-  <a class="btn" target="_blank" href="https://janczizikow.github.io/sleek/" rel="external">View Demo Site</a>
+  <a class="btn" target="_blank" href="https://www.blanccstate.com/" rel="external">View Site</a>
 </div>
