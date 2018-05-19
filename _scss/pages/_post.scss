@@ -252,36 +252,19 @@ article {
 .controls {
   padding: 40px 0;
   background-color: #eee;
-  .control {
-    @include gallery(4);
-    &:nth-child(2n) {
-      text-align: center;
-    }
-    &:nth-child(3n) {
-      text-align: right;
-      @include last;
-    }
-    a {
-      color: #6D6D6D;
-      &:hover {
-        color: #222325;
-      }
+  .control a {
+    color: #6D6D6D;
+    &:hover {
+      color: #222325;
     }
   }
 }
+
 .home {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  display: block;
-  width: 30px;
-  height: 30px;
+  width: 32px;
+  height: 32px;
   svg {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 30px;
+    width: 32px;
     height: auto;
     fill:#6D6D6D;
   }
@@ -291,6 +274,7 @@ article {
     }
   }
 }
+
 .comments {
   padding: 50px 0px 50px;
   background-color: #fafafa;

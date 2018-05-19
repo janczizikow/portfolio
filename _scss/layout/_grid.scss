@@ -220,12 +220,24 @@ section {
     margin-left: span(2 wide of 12);
   }
 }
+.comments-wrap {
+  @include breakpoint($xs) {
+    @include span(full)
+  }
+  @include breakpoint($lg) {
+    @include span(8 of 12);
+    margin-left: span(2 wide of 12);
+  }
+}
 
-.controls-wrap, .comments-wrap{
+.controls-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   @include breakpoint($xs) {
     @include span(full);
   }
-  @include breakpoint($lg) {
+  @include breakpoint($sm) {
     @include span(8 of 12);
     margin-left: span(2 wide of 12);
   }
