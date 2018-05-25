@@ -252,10 +252,18 @@ article {
 .controls {
   padding: 40px 0;
   background-color: #eee;
-  .control a {
-    color: #6D6D6D;
-    &:hover {
-      color: #222325;
+  .control {
+    width: 33.3333%;
+
+    &:nth-child(2n) {
+      text-align: center;
+    }
+
+    a {
+      color: #6D6D6D;
+      &:hover {
+        color: #222325;
+      }
     }
   }
 }
