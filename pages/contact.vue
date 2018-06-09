@@ -1,8 +1,7 @@
 <template>
   <main>
     <div class="container">
-      <h1>Home</h1>
-      <div style="height: calc(100vh - 60px)"></div>
+      <h1>Contact</h1>
     </div>
   </main>
 </template>

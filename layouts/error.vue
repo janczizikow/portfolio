@@ -5,7 +5,9 @@
   </div>
 </template>
 
-<style>
+<style lang="scss">
+// FIXME: Those styles will overwritte other ones if not scoped! If scoped, they break
+// Since cannot scope *, html and body
 * {
   line-height: 1.2;
   margin: 0;

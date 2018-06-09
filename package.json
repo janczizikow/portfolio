@@ -3,6 +3,8 @@
   "version": "1.0.0",
   "description": "Jan Czizikow - Personal Website",
   "dependencies": {
+    "breakpoint-sass": "^2.7.1",
+    "normalize.css": "^8.0.0",
     "nuxt": "^1.4.1"
   },
   "devDependencies": {
@@ -12,7 +14,8 @@
     "eslint-loader": "^2.0.0",
     "eslint-plugin-vue": "^4.5.0",
     "node-sass": "^4.9.0",
-    "sass-loader": "^7.0.3"
+    "sass-loader": "^7.0.3",
+    "svg-inline-loader": "^0.8.0"
   },
   "scripts": {
     "dev": "nuxt",

@@ -16,7 +16,7 @@ module.exports = {
   /*
   ** Customize the progress bar color
   */
-  loading: { color: '#3B8070' },
+  loading: { color: '#277cea' },
   /*
   ** Build configuration
   */
@@ -33,6 +33,17 @@ module.exports = {
           exclude: /(node_modules)/
         })
       }
+      /*
+      ** SVG inline loader
+      */
+      const urlLoader = config.module.rules.find((rule) => rule.loader === 'url-loader')
+      urlLoader.test = /\.(png|jpe?g|gif)$/
+
+      config.module.rules.push({
+        test: /\.svg$/,
+        loader: 'svg-inline-loader',
+        exclude: /node_modules/
+      })
     }
   }
 }

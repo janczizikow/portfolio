@@ -1,19 +1,19 @@
 export const state = () => ({
-  counter: 0
+  isMobileMenuOpen: false,
 });
 
 export const getters = {
-  counter: state => state.counter
+  isMobileMenuOpen: state => state.isMobileMenuOpen,
 };
 
 export const mutations = {
-  increment(state) {
-    state.counter++
+  toggleMobileMenu(state) {
+    state.isMobileMenuOpen = !state.isMobileMenuOpen;
   }
 };
 
 export const actions = {
-  increment(context) {
-    context.commit('increment');
+  toggleMobileMenu(context) {
+    context.commit('toggleMobileMenu');
   }
 };
