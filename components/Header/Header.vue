@@ -1,17 +1,12 @@
 <template>
   <header class="header" itemscope itemtype="http://schema.org/SiteNavigationElement" aria-label="Main navigation">
-    <div class="header__container">
+    <container fluid>
       <div class="header__inner">
         <nuxt-link to="/" class="header__logo">
-          <!-- SVG issue: https://github.com/nuxt/nuxt.js/issues/3423 -->
-          <svg class="header__icon">
-            <use href="/logo.svg#logo"></use>
-          </svg>
+          <app-logo class="header__icon"/>
         </nuxt-link>
         <button @click="toggleMobileMenu" class="header__toggle">
-          <svg class="header__toggle-icon">
-            <use href="/burger.svg#burger"></use>
-          </svg>
+          <app-burger class="header__toggle-icon"/>
         </button>
         <nav class="header__links">
           <nuxt-link
@@ -25,12 +20,16 @@
           </nuxt-link>
         </nav>
       </div>
-    </div>
+    </container>
   </header>
 </template>
 
 <script>
 import { mapActions } from 'vuex';
+
+import { Container } from '~/components/Layout';
+import appLogo from '~/assets/images/icons/logo.svg';
+import appBurger from '~/assets/images/icons/burger.svg';
 
 export default {
   data() {
@@ -44,24 +43,29 @@ export default {
   },
   methods: mapActions([
     'toggleMobileMenu'
-  ])
+  ]),
+  components: {
+    Container,
+    appLogo,
+    appBurger
+  }
 }
 </script>
 
 
 <style lang="scss" scoped>
-@import "breakpoint-sass";
 @import "~/assets/_vars.scss";
+
 .header {
   position: fixed;
   width: 100%;
   top: 0;
   left: 0;
-  background-color: $white;
-  border-bottom: 0.125rem solid $light_grey;
+  background-color: rgba(255,255,255,0.96);
+  // border-bottom: 1px solid $light_grey;
+  // box-shadow:  0 0 3px 0 rgba(0,0,0,0.22);
+  // box-shadow: 0 1px 4px 0 rgba(0,0,0,.08);
   z-index: 3;
-
-  &__container { @include container(1200px) }
 
   &__inner {
     display: flex;
@@ -85,20 +89,15 @@ export default {
   }
 
   &__toggle {
-    padding: 0;
+    @extend %btn-reset;
     height: 100%;
-    background-color: transparent;
-    border: 0;
-    outline: 0;
-    cursor: pointer;
 
-    @include breakpoint($md) {
+    @include breakpoint($lg) {
       display: none;
     }
   }
 
   &__toggle-icon {
-    // color: $dark;
     fill: currentColor;
     width: 1.5rem;
     height: 0.875rem;
@@ -107,7 +106,7 @@ export default {
   &__links {
     display: none;
 
-    @include breakpoint($md) {
+    @include breakpoint($lg) {
       display: flex;
       align-items: center;
       height: 100%;
@@ -119,6 +118,7 @@ export default {
     align-items: center;
     padding: 0 0.9375rem;
     height: 100%;
+    color: $light_dark;
     transition: color .2s linear;
 
     &:last-child {
@@ -130,6 +130,8 @@ export default {
 
       // Breaks the BEM convetion, but rules are meant to be broken, right?
       .header__link-item::before {
+        left: 0;
+        right: auto;
         width: 100%;
       }
     }
@@ -139,6 +141,8 @@ export default {
 
       // as the above, sorry BEM
       .header__link-item::before {
+        left: 0;
+        right: auto;
         width: 100%;
       }
     }
@@ -151,12 +155,12 @@ export default {
       content: "";
       display: block;
       position: absolute;
-      left: 0;
+      right: 0;
       bottom: 0;
-      height: .125rem;
       width: 0;
+      height: .125rem;
       background-color: $primary;
-      transition: width .35s ease;
+      transition: width .24s ease-in-out;
     }
   }
 }

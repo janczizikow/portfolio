@@ -1,36 +1,38 @@
 <template>
   <div class="menu">
-    <div class="container">
+    <container fluid>
         <div class="menu__top">
             <nuxt-link @click.native="toggleMobileMenu" to="/" class="menu__logo">
             <!-- SVG issue: https://github.com/nuxt/nuxt.js/issues/3423 -->
-            <svg class="menu__logo-icon">
-              <use href="/logo.svg#logo"></use>
-            </svg>
+            <app-logo class="menu__logo-icon"/>
           </nuxt-link>
           <button @click="toggleMobileMenu" class="menu__toggle">
-            <svg class="menu__toggle-icon">
-              <use href="/cross.svg#cross"></use>
-            </svg>
+            <app-menu-toggle class="menu__toggle-icon"/>
           </button>
         </div>
         <div class="menu__links-wrapper">
-          <nav class="menu__links">
+          <transition-group name="fade-in" tag="nav" appear class="menu__links">
             <nuxt-link
               v-for="(link, i) in links"
               :key="i"
               :to="link.to"
+              :style="{'transition-delay': (.05 + 0.07 * (i + 1) ) + 's'}"
               class="menu__link"
               exact-active-class="menu__link--active"
               @click.native="toggleMobileMenu">{{ link.title }}</nuxt-link>
-          </nav>
+          </transition-group>
         </div>
-    </div>
+    </container>
   </div>
 </template>
 
 <script>
 import { mapActions } from 'vuex';
+
+import { Container } from '~/components/Layout';
+import appLogo from '~/assets/images/icons/logo.svg';
+import appMenuToggle from '~/assets/images/icons/cross.svg';
+
 export default {
   data() {
     return {
@@ -48,10 +50,15 @@ export default {
     ]),
     getWindowWidth(e) {
       this.windowWidth = window.innerWidth;
-      if ( this.windowWidth > 768 ) {
+      if ( this.windowWidth > 992 ) {
         this.$store.dispatch('toggleMobileMenu');
       }
     }
+  },
+  components: {
+    Container,
+    appLogo,
+    appMenuToggle
   },
   mounted() {
     window.addEventListener('resize', this.getWindowWidth);
@@ -65,6 +72,7 @@ export default {
 
 <style lang="scss" scoped>
 @import "~/assets/_vars.scss";
+
 .menu {
   position: fixed;
   top: 0;
@@ -98,6 +106,7 @@ export default {
 
   &__toggle {
     @extend %btn-reset;
+    height: 100%;
   }
 
   &__toggle-icon {
@@ -105,6 +114,7 @@ export default {
     width: 1.125rem;
     height: 1.125rem;
   }
+
   &__links-wrapper {
     display: flex;
     align-items: center;
@@ -124,6 +134,7 @@ export default {
     font-weight: 600;
     text-align: center;
     text-transform: uppercase;
+    letter-spacing: 1.5px;
     color: $white;
     opacity: 0.6;
 
@@ -136,4 +147,14 @@ export default {
     opacity: 1;
   }
 }
+
+.fade-in-enter {
+  opacity: 0;
+  transform: translateY(-24px);
+}
+
+.fade-in-enter-active {
+  transition: opacity .5s ease, transform 0.5s ease;
+}
+
 </style>

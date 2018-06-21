@@ -3,11 +3,11 @@ module.exports = {
   ** Headers of the page
   */
   head: {
-    title: 'jan-czizikow-portfolio',
+    title: 'Jan Czizikow // Web Developer',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'Nuxt.js project' }
+      { hid: 'description', name: 'description', content: 'This is the site of Jan Czizikow, a Web Developer. The site is just a list of things he\'s been up to including blog and projects.' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
@@ -16,7 +16,8 @@ module.exports = {
   /*
   ** Customize the progress bar color
   */
-  loading: { color: '#277cea' },
+  // loading: { color: '#277cea' },
+  loading: false,
   /*
   ** Build configuration
   */
@@ -34,16 +35,19 @@ module.exports = {
         })
       }
       /*
-      ** SVG inline loader
+      ** Vue SVG Loader
       */
       const urlLoader = config.module.rules.find((rule) => rule.loader === 'url-loader')
       urlLoader.test = /\.(png|jpe?g|gif)$/
 
       config.module.rules.push({
         test: /\.svg$/,
-        loader: 'svg-inline-loader',
+        loader: 'vue-svg-loader',
         exclude: /node_modules/
       })
-    }
-  }
+    },
+
+    vendor: ['axios', 'vuelidate', 'breakpoint-sass']
+  },
+  plugins: ['~/plugins/vuelidate']
 }
