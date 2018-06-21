@@ -1,7 +1,14 @@
 <template>
-  <nuxt-link class="card" :to="'/projects/' + projectURL">
+  <nuxt-link
+    class="card"
+    :to="'/projects/' + projectURL">
     <figure class="card__thumb">
-      <img class="card__img" :src="'/images/' + projectURL + '.jpg'" :alt="title">
+      <img
+        class="card__img"
+        :src="'/images/' + projectURL + '.jpg'"
+        src-placeholder="https://cdn-images-1.medium.com/max/30/1*xjGrvQSXvj72W4zD6IWzfg.jpeg"
+        :alt="title"/>
+      <!-- <img class="card__img" :src="'/images/' + projectURL + '.jpg'" :alt="title"> -->
       <figcaption class="card__inner">
         <p>{{ date }}</p>
         <h3 class="card__title">{{ title }}</h3>
@@ -11,6 +18,8 @@
 </template>
 
 <script>
+import ProgressiveImage from '~/components/ProgressiveImage.vue';
+
 export default {
   props: {
     title: {
@@ -30,6 +39,9 @@ export default {
       return this.title.toLowerCase().replace(/\W+/, '-');
     }
   },
+  components: {
+    ProgressiveImage,
+  }
 }
 </script>
 

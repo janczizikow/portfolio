@@ -46,8 +46,15 @@ module.exports = {
         exclude: /node_modules/
       })
     },
-
-    vendor: ['axios', 'vuelidate', 'breakpoint-sass']
+    vendor: ['axios', 'vuelidate',
+    // 'v-lazy-image',
+    'breakpoint-sass']
   },
-  plugins: ['~/plugins/vuelidate']
+  plugins: [
+    '~/plugins/vuelidate',
+    // '~/plugins/v-lazy-image'
+  ],
+  generate: {
+    fallback: true // custom 404.html pages
+  }
 }

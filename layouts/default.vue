@@ -1,6 +1,5 @@
 <template>
   <div class="site">
-    <app-transition/>
     <app-header/>
 
     <transition name="fade" appear>
@@ -20,9 +19,6 @@ import appHeader from '~/components/Header/Header.vue';
 import appMobileMenu from '~/components/Header/MobileMenu.vue';
 import appFooter from '~/components/Footer.vue';
 
-
-import appTransition from '~/components/Transition.vue';
-
 export default {
   computed: mapGetters([
     'isMobileMenuOpen'
@@ -31,7 +27,6 @@ export default {
     appHeader,
     appFooter,
     appMobileMenu,
-    appTransition
   }
 }
 </script>
