@@ -1,10 +1,14 @@
 <template>
   <div class="site">
+    <app-transition/>
     <app-header/>
+
     <transition name="fade" appear>
       <app-mobile-menu v-if="isMobileMenuOpen"/>
     </transition>
+
     <nuxt class="site__content"/>
+
     <app-footer/>
   </div>
 </template>
@@ -16,6 +20,9 @@ import appHeader from '~/components/Header/Header.vue';
 import appMobileMenu from '~/components/Header/MobileMenu.vue';
 import appFooter from '~/components/Footer.vue';
 
+
+import appTransition from '~/components/Transition.vue';
+
 export default {
   computed: mapGetters([
     'isMobileMenuOpen'
@@ -24,6 +31,7 @@ export default {
     appHeader,
     appFooter,
     appMobileMenu,
+    appTransition
   }
 }
 </script>
@@ -56,11 +64,17 @@ h4,
 h5,
 h6 {
   color: $dark;
+  font-weight: 500;
 }
 
 a {
-  color: inherit;
+  color: $primary;
   text-decoration: none;
+  transition: color .2s linear;
+
+  &:hover {
+    color: $primary_light;
+  }
 }
 
 // responsive images
@@ -73,6 +87,10 @@ img {
 
 img::selection {
   background: transparent;
+}
+
+figure {
+  margin: 0;
 }
 
 ::selection {
@@ -91,7 +109,21 @@ img::selection {
   flex: 1;
 }
 
-.container { @include container(1200px) }
+.icon {
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  fill:currentColor;
+  transition: all .5s ease;
+}
+
+.page-enter-active, .page-leave-active {
+  transition: opacity .5s;
+}
+
+.page-enter, .page-leave-to {
+  opacity: 0;
+}
 
 .fade-enter,
 .fade-leave-active {

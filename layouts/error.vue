@@ -1,53 +1,46 @@
 <template>
-  <div>
-    <h1>Page Not Found</h1>
-    <p>Sorry, but the page you were trying to view does not exist.</p>
+  <div class="error">
+    <div class="container">
+      <div class="error__illustration">
+        <app-error-illustration/>
+      </div>
+      <h1 class="error__title">Page Not Found</h1>
+      <p class="error__text">The page you are looking for doesn’t seem to exist…</p>
+      <app-button to="/">Go Home</app-button>
+    </div>
   </div>
 </template>
 
+
+<script>
+import appButton from '~/components/Button.vue';
+import appErrorIllustration from '~/assets/images/illustrations/404.svg';
+export default {
+  components: {
+    appButton,
+    appErrorIllustration
+  }
+}
+</script>
+
 <style lang="scss">
-// FIXME: Those styles will overwritte other ones if not scoped! If scoped, they break
-// Since cannot scope *, html and body
-* {
-  line-height: 1.2;
-  margin: 0;
-}
-
-html {
-  color: #888;
-  display: table;
-  font-family: sans-serif;
-  height: 100%;
+.error {
+  padding: 3rem 0;
   text-align: center;
-  width: 100%;
-}
+  background-color: #F4F6FB;
 
-body {
-  display: table-cell;
-  vertical-align: middle;
-  margin: 2em auto;
-}
-
-h1 {
-  color: #555;
-  font-size: 2em;
-  font-weight: 400;
-}
-
-p {
-  margin: 0 auto;
-  width: 280px;
-}
-
-@media only screen and (max-width: 280px) {
-
-  body, p {
-    width: 95%;
+  &__illustration {
+    margin-left: 30px;
   }
 
-  h1 {
-    font-size: 1.5em;
-    margin: 0 0 0.3em;
+  &__title {
+    margin-top: -64px;
+    font-size: 2rem;
+  }
+
+  &__text {
+    margin: 1rem auto;
+    width: 280px;
   }
 }
 </style>

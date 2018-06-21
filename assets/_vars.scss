@@ -1,5 +1,7 @@
+@import "breakpoint-sass";
 // colors
 $primary: #277cea;
+$primary_light: #68a4f1;
 $success: #8fd896;
 $error: #ff6161;
 $dark: #2a2a30;
@@ -21,17 +23,15 @@ $xl:1200px;
 // partials
 %btn-reset {
   padding: 0;
-  height: 100%;
+  margin: 0;
   background-color: transparent;
   border: 0;
+  overflow: hidden;
   outline: 0;
-  cursor: pointer;
 }
 
-
-// mixins
-@mixin container($max-width) {
-  padding: 0 1.25rem;
-  margin: 0 auto;
-  max-width: $max-width;
+%list-reset {
+  padding: 0;
+  margin: 0;
+  list-style: none;
 }
