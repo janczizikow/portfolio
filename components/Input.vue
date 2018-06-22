@@ -69,7 +69,6 @@ export default {
   // Need to research if this is needed
   watch: {
     value(newVal) {
-      console.log('value changed to: ' + newVal);
       this.value = newVal;
       this.$refs.input = newVal;
     }

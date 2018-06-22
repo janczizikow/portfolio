@@ -13,7 +13,7 @@
         </row><!-- ./contact__row -->
 
         <row class="contact__form">
-          <app-form :action="contact.email" :method="'POST'" :novalidate="true"/>
+          <app-form :action="'/'" :method="'POST'" :novalidate="true"/>
           <column :lg="5">
             <template v-for="(value, key, i) in contact">
               <h4 class="contact__info-heading" :key="i + key">{{ key }}</h4>

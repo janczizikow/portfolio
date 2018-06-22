@@ -2,8 +2,10 @@
     <column
       tag="form"
       class="form"
+      name="contact"
+      data-netlify="true"
       @submit.native.prevent="formSubmit"
-      :action="formAction"
+      :action="action"
       :method="method"
       :novalidate="novalidate"
       :lg="7">
@@ -86,9 +88,6 @@ export default {
         return 'Email address is invalid'
       }
     },
-    formAction() {
-      return `https://formspree.io/${this.action}`;
-    },
   },
   validations: {
     name: {
@@ -113,11 +112,16 @@ export default {
       this.$v.$reset(); // reset vuelidate
       e.target.reset(); // reset the form
     },
+    encode(data) {
+      return Object.keys(data)
+        .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+        .join('&');
+    },
     formSubmit(e) {
-      const data = JSON.stringify(this.$data);
-      axios.post(this.formAction, data, {
+      const data = this.encode({ "form-name": "contact", ...this.$data });
+      axios.post('/', data, {
         headers: {
-          'Content-Type': 'application/json'
+          'Content-Type': 'application/x-www-form-urlencoded'
         },
       })
       .then(response => {

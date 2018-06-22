@@ -57,7 +57,7 @@ export default {
   width: 100%;
   height: 100%;
   overflow-y: auto;
-  z-index: 1050;
+  z-index: 10000;
   transition: all .3s ease;
 
   &__inner {
@@ -78,7 +78,7 @@ export default {
     background-color: $white;
     border-radius: 4px;
     transition: all .3s ease;
-    z-index: 1050;
+    z-index: 10000;
   }
 
   &__close {
