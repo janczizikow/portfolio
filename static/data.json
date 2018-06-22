@@ -1,0 +1,96 @@
+{
+  "projects": [
+    {
+      "id": 0,
+      "title": "Jekyll Sleek",
+      "date": "18 Feb 2018",
+      "description": "Design and development of a gem-based jekyll theme focused on speed performance and minimalistic style. Heavily inspired by… well, my own website.",
+      "category": "Website",
+      "introLinks": [
+        { "text": "View on Github", "link": "https://github.com/janczizikow/sleek"},
+        { "text": "View Demo Site", "link": "https://janczizikow.github.io/sleek/"}
+      ],
+      "images": [
+        "/images/projects/jekyll-sleek/jekyll-sleek-1_lg.jpg",
+        "/images/projects/jekyll-sleek/jekyll-sleek-2_lg.jpg"
+      ],
+      "thumb": "",
+      "prev": {
+        "text": "Minimal Portfolio",
+        "link": "/projects/minimal-portfolio"
+      },
+      "next": {
+        "text": "Blanccstate",
+        "link": "/projects/blanccstate"
+      }
+    }, {
+      "id": 1,
+      "title": "Blanccstate",
+      "date": "18 Feb 2018",
+      "description": "Web design and development of a landing page for an artist. The EP wasn’t released yet, but the website is up and running. Thanks to modern tech (GatsbyJS & React) the browsing experience is lightning fast! Check it out:",
+      "category": "Website",
+      "introLinks": [
+        { "text": "View Site", "link": "https://www.blanccstate.com/?ref=www.janczizikow.com" }
+      ],
+      "images": [
+        "/images/projects/blanccstate/blanccstate-1_lg@2x.jpg",
+        "/images/projects/blanccstate/blanccstate-2_lg@2x.jpg",
+        "/images/projects/blanccstate/blanccstate-3_lg@2x.jpg",
+        "/images/projects/blanccstate/blanccstate-4_lg@2x.jpg"
+      ],
+      "thumb": "",
+      "prev": {
+        "text": "Jekyll Sleek",
+        "link": "/projects/jekyll-sleek"
+      },
+      "next": {
+        "text": "the clinic",
+        "link": "/projects/the-clinic"
+      }
+    }, {
+      "id": 2,
+      "title": "the clinic",
+      "date": "18 Feb 2018",
+      "description": "The clinic is a premier high-end physical therapy, sports medicine, and wellness center, based in Shanghai. The objective of the project was to design and develop a responsive newsletter template, that would match the high-end standards of the clinic and remain coherent with its visual identity, while being entirely editable in Mailchimp interface.",
+      "category": "email",
+      "introLinks": "",
+      "images": [
+        "/images/projects/the-clinic/the-clinic-1_lg@2x.jpg",
+        "/images/projects/the-clinic/the-clinic-2_lg@2x.jpg",
+        "/images/projects/the-clinic/the-clinic-3_lg@2x.jpg"
+      ],
+      "thumb": "",
+      "prev": {
+        "text": "Blanccstate",
+        "link": "/projects/blanccstate"
+      },
+      "next": {
+        "text": "Minimal Portfolio",
+        "link": "/projects/minimal-portfolio"
+      }
+    }, {
+      "id": 3,
+      "title": "Minimal Portfolio",
+      "date": "18 Feb 2018",
+      "description": "Web development of simple, responsive and minimalistic portfolio website, which could be used instead of ordinary pdf file. Developed using bootstrap framework components (grid, navigation).",
+      "category": "Website",
+      "introLinks": [
+        { "text": "View Site", "link": "http://www.marinesanzvico.com/?ref=www.janczizikow.com" }
+      ],
+      "images": [
+        "/images/projects/minimal-portfolio/minimal-portfolio-1_lg@2x.jpg",
+        "/images/projects/minimal-portfolio/minimal-portfolio-2_lg@2x.jpg",
+        "/images/projects/minimal-portfolio/minimal-portfolio-3_lg@2x.jpg"
+      ],
+      "thumb": "",
+      "prev": {
+        "text": "the clinic",
+        "link": "/projects/the-clinic"
+      },
+      "next": {
+        "text": "Jekyll Sleek",
+        "link": "/projects/jekyll-sleek"
+      }
+    }
+  ]
+}

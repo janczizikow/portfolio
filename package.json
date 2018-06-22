@@ -2,44 +2,39 @@
   "name": "janczizikow.github.io",
   "version": "1.0.0",
   "description": "Jan Czizikow - Personal Website",
-  "main": "gulpfile.js",
   "dependencies": {
-    "browser-sync": "^2.24.4",
-    "critical": "^1.3.0",
-    "font-face-observer": "^1.0.0",
-    "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^3.1.1",
-    "gulp-sass": "^3.1.0",
-    "gulp-webp": "^2.3.0",
-    "jquery": "^3.2.1",
-    "normalize.css": "^7.0.0"
+    "@nuxtjs/google-tag-manager": "^2.0.0",
+    "axios": "^0.18.0",
+    "breakpoint-sass": "^2.7.1",
+    "normalize.css": "^8.0.0",
+    "nuxt": "^1.4.1",
+    "vue-headroom": "^0.8.1",
+    "vuelidate": "^0.7.4"
   },
   "devDependencies": {
-    "breakpoint-sass": "^2.7.1",
-    "browserify": "^14.4.0",
-    "gulp-concat": "^2.6.1",
-    "gulp-gh-pages": "^0.5.4",
-    "gulp-sourcemaps": "^2.6.0",
-    "gulp-uglify": "^3.0.0",
-    "node-sass": "^4.5.3",
-    "susy": "^2.2.12",
-    "sw-precache": "^5.1.0"
+    "babel-eslint": "^8.2.3",
+    "eslint": "^4.19.1",
+    "eslint-friendly-formatter": "^4.0.1",
+    "eslint-loader": "^2.0.0",
+    "eslint-plugin-vue": "^4.5.0",
+    "node-sass": "^4.9.0",
+    "nuxt-sass-resources-loader": "^2.0.2",
+    "sass-loader": "^7.0.3",
+    "vue-svg-loader": "^0.5.0"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
+    "precommit": "npm run lint"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/janczizikow/janczizikow.github.io.git"
   },
-  "keywords": [
-    "jekyll",
-    "gulp",
-    "sass",
-    "browsersync",
-    "autoprefixer"
-  ],
-  "author": "Jan Czizikow",
+  "author": "Jan Czizikow <jan.czizikow@gmail.com>",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/janczizikow/janczizikow.github.io/issues"
