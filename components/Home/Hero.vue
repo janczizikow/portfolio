@@ -65,7 +65,7 @@ export default {
     display: none;
     visibility: hidden;
 
-    @include breakpoint($md) {
+    @include breakpoint($lg) {
       display: block;
       visibility: visible;
       position: absolute;

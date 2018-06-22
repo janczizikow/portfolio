@@ -4,7 +4,7 @@
       <section class="about">
         <row middle>
           <column :lgOrder="2" :lg="6">
-            <img src="https://images.unsplash.com/photo-1529349910542-f85dcb84309e?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=9ea07694667114afb2b158c5f418fb3b&auto=format&fit=crop&w=2550&q=80"/>
+            <img src="~/assets/images/thai_wake_park.jpg"/>
           </column>
           <column :lg="6">
             <h1>Hey, nice to meet you! 👋</h1>
@@ -35,7 +35,7 @@ export default {
 @import "~/assets/_vars.scss";
 
 .about {
-  padding: 4rem 0;
+  padding: 3rem 0;
 }
 
 </style>

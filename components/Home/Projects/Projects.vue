@@ -23,9 +23,9 @@ export default {
     return {
       projects: [
         { id: 0, date: '18 Feb 2018', name: 'Jekyll Sleek', category: 'Website' },
-        { id: 1, date: '18 Feb 2018', name: 'Blanccstate', category: 'Website' },
-        { id: 2, date: '18 Feb 2018', name: 'the clinic', category: 'Website' },
-        { id: 3, date: '18 Feb 2018', name: 'Minimal Portfolio', category: 'Website' },
+        { id: 1, date: '14 Jan 2018', name: 'Blanccstate', category: 'Website' },
+        { id: 2, date: '21 Nov 2016', name: 'the clinic', category: 'Website' },
+        { id: 3, date: '26 Oct 2016', name: 'Minimal Portfolio', category: 'Website' },
       ]
     };
   },

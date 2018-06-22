@@ -1,31 +1,34 @@
 <template>
-  <header class="header" itemscope itemtype="http://schema.org/SiteNavigationElement" aria-label="Main navigation">
-    <container fluid>
-      <div class="header__inner">
-        <nuxt-link to="/" class="header__logo">
-          <app-logo class="header__icon"/>
-        </nuxt-link>
-        <button @click="toggleMobileMenu" class="header__toggle">
-          <app-burger class="header__toggle-icon"/>
-        </button>
-        <nav class="header__links">
-          <nuxt-link
-            v-for="(link, i) in links"
-            :key="i"
-            :to="link.to"
-            exact-active-class="header__link--active"
-            class="header__link"
-            itemprop="url">
-            <span class="header__link-item" itemprop="name">{{ link.title }}</span>
+  <headroom :speed="300" :easing="'ease'" :offset="500" :disabled="!isHeadroomActive">
+    <header class="header" itemscope itemtype="http://schema.org/SiteNavigationElement" aria-label="Main navigation">
+      <container fluid>
+        <div class="header__inner">
+          <nuxt-link to="/" class="header__logo">
+            <app-logo class="header__icon"/>
           </nuxt-link>
-        </nav>
-      </div>
-    </container>
-  </header>
+          <button @click="toggleMobileMenu" class="header__toggle">
+            <app-burger class="header__toggle-icon"/>
+          </button>
+          <nav class="header__links">
+            <nuxt-link
+              v-for="(link, i) in links"
+              :key="i"
+              :to="link.to"
+              exact-active-class="header__link--active"
+              class="header__link"
+              itemprop="url">
+              <span class="header__link-item" itemprop="name">{{ link.title }}</span>
+            </nuxt-link>
+          </nav>
+        </div>
+      </container>
+    </header>
+  </headroom>
 </template>
 
 <script>
 import { mapActions } from 'vuex';
+import { headroom } from 'vue-headroom';
 
 import { Container } from '~/components/Layout';
 import appLogo from '~/assets/images/icons/logo.svg';
@@ -34,20 +37,40 @@ import appBurger from '~/assets/images/icons/burger.svg';
 export default {
   data() {
     return {
+      windowWidth: 0,
+      isHeadroomActive: true,
       links: [
         { to: '/', title: 'Projects' },
         { to: '/about', title: 'About' },
         { to: '/contact', title: 'Contact' },
-      ]
+      ],
     };
   },
-  methods: mapActions([
-    'toggleMobileMenu'
-  ]),
+  methods: {
+    ...mapActions([
+      'toggleMobileMenu'
+    ]),
+    getWindowWidth(e) {
+      this.windowWidth = window.innerWidth;
+      if ( this.windowWidth < 992 ) {
+        this.isHeadroomActive = false;
+      } else {
+        this.isHeadroomActive = true;
+      }
+    }
+  },
   components: {
+    headroom,
     Container,
     appLogo,
     appBurger
+  },
+  mounted() {
+    this.getWindowWidth();
+    window.addEventListener('resize', this.getWindowWidth);
+  },
+  beforeDestroy() {
+    window.removeEventListener('resize', this.getWindowWidth);
   }
 }
 </script>
@@ -56,16 +79,26 @@ export default {
 <style lang="scss" scoped>
 @import "~/assets/_vars.scss";
 
+.headroom--top {
+  box-shadow: none!important;
+}
+
+.headroom--not-top {
+  box-shadow:  0 0 3px 0 rgba(0,0,0,0.22);
+  box-shadow: 0 1px 4px 0 rgba(0,0,0,.08);
+}
+
+@include breakpoint($lg) {
+  .header {
+    box-shadow: none!important;
+  }
+}
 .header {
-  position: fixed;
+  box-shadow:  0 0 3px 0 rgba(0,0,0,0.22);
+  box-shadow: 0 1px 4px 0 rgba(0,0,0,.08);
   width: 100%;
-  top: 0;
-  left: 0;
   background-color: rgba(255,255,255,0.96);
-  // border-bottom: 1px solid $light_grey;
-  // box-shadow:  0 0 3px 0 rgba(0,0,0,0.22);
-  // box-shadow: 0 1px 4px 0 rgba(0,0,0,.08);
-  z-index: 3;
+
 
   &__inner {
     display: flex;

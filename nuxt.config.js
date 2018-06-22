@@ -10,7 +10,8 @@ module.exports = {
       { hid: 'description', name: 'description', content: 'This is the site of Jan Czizikow, a Web Developer. The site is just a list of things he\'s been up to including blog and projects.' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'mask-icon', sizes: 'any', href: '/favicon.svg', color: "#313237"},
+      // { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
     ]
   },
   /*
@@ -46,14 +47,9 @@ module.exports = {
         exclude: /node_modules/
       })
     },
-    vendor: ['axios', 'vuelidate',
-    // 'v-lazy-image',
-    'breakpoint-sass']
+    vendor: ['axios', 'vuelidate', 'vue-headroom', 'breakpoint-sass']
   },
-  plugins: [
-    '~/plugins/vuelidate',
-    // '~/plugins/v-lazy-image'
-  ],
+  plugins: [ '~/plugins/vuelidate'],
   generate: {
     fallback: true // custom 404.html pages
   }

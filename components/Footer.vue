@@ -22,6 +22,28 @@
   </footer>
 </template>
 
+<script>
+import appGithubIcon from '~/assets/images/icons/github.svg';
+import appCodepenIcon from '~/assets/images/icons/codepen.svg';
+import appLinkedinIcon from '~/assets/images/icons/linkedin.svg';
+export default {
+  data() {
+    return {
+      socialLinks: [
+        { to: 'https://github.com/janczizikow/', component: 'app-github-icon'},
+        { to: 'https://codepen.io/hollow3d/', component: 'app-codepen-icon'},
+        { to: 'https://www.linkedin.com/in/janczizikow', component: 'app-linkedin-icon'},
+      ]
+    };
+  },
+  components: {
+    appGithubIcon,
+    appCodepenIcon,
+    appLinkedinIcon
+  }
+}
+</script>
+
 <style lang="scss" scoped>
 @import "~/assets/_vars.scss";
 .footer {
@@ -59,25 +81,3 @@
   }
 }
 </style>
-
-<script>
-import appGithubIcon from '~/assets/images/icons/github.svg';
-import appCodepenIcon from '~/assets/images/icons/codepen.svg';
-import appLinkedinIcon from '~/assets/images/icons/linkedin.svg';
-export default {
-  data() {
-    return {
-      socialLinks: [
-        { to: 'https://github.com/janczizikow/', component: 'app-github-icon'},
-        { to: 'https://codepen.io/hollow3d/', component: 'app-codepen-icon'},
-        { to: 'https://www.linkedin.com/in/janczizikow', component: 'app-linkedin-icon'},
-      ]
-    };
-  },
-  components: {
-    appGithubIcon,
-    appCodepenIcon,
-    appLinkedinIcon
-  }
-}
-</script>

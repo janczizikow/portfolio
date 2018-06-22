@@ -81,7 +81,7 @@ export default {
   height: 100%;
   overflow-y: auto;
   background: $dark;
-  z-index: 4;
+  z-index: 19999;
 
   &__logo {
     display: flex;

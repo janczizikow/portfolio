@@ -7,7 +7,9 @@
     :type="type"
     :target="href ? '_blank' : null"
     :rel="href ? 'noopener' : null"
-    :class="['btn', `btn--${color}`, {'btn--block': block}, {'btn--loading': loading}]" >
+    :class="['btn', `btn--${color}`, {'btn--block': block}, {'btn--loading': loading}]"
+    v-bind="$attrs"
+    v-on="$listeners">
     <slot></slot>
   </component>
 </template>
