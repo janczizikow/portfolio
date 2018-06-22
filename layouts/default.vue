@@ -27,6 +27,14 @@ export default {
     appHeader,
     appFooter,
     appMobileMenu,
+  },
+  mounted() {
+    navigator.serviceWorker.getRegistrations()
+      .then(function(registrations) {
+        for (let registration of registrations) {
+          registration.unregister()
+        }
+      })
   }
 }
 </script>
