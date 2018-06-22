@@ -7,7 +7,6 @@
         class="card__img"
         :src="'/images/' + projectURL + '.jpg'"
         :alt="title"/>
-      <!-- <img class="card__img" :src="'/images/' + projectURL + '.jpg'" :alt="title"> -->
       <figcaption class="card__inner">
         <p>{{ date }}</p>
         <h3 class="card__title">{{ title }}</h3>
@@ -21,17 +20,9 @@
 
 export default {
   props: {
-    title: {
-      type: String,
-      required: true,
-    },
-    date: {
-      type: [String, Object]
-    },
-    category: {
-      type: String,
-      // required: true,
-    }
+    title: { type: String, required: true },
+    date: [String, Object],
+    category: String
   },
   computed: {
     projectURL() {

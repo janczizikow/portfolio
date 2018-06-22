@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Jan Czizikow - Personal Website",
   "dependencies": {
+    "@nuxtjs/google-tag-manager": "^2.0.0",
     "axios": "^0.18.0",
     "breakpoint-sass": "^2.7.1",
     "normalize.css": "^8.0.0",
@@ -17,6 +18,7 @@
     "eslint-loader": "^2.0.0",
     "eslint-plugin-vue": "^4.5.0",
     "node-sass": "^4.9.0",
+    "nuxt-sass-resources-loader": "^2.0.2",
     "sass-loader": "^7.0.3",
     "vue-svg-loader": "^0.5.0"
   },

@@ -52,5 +52,16 @@ module.exports = {
   plugins: [ '~/plugins/vuelidate'],
   generate: {
     fallback: true // custom 404.html pages
-  }
+  },
+  modules: [
+    ['@nuxtjs/google-tag-manager', {
+      id: 'GTM-NBBVPGQ',
+      pageTracking: true,
+     }
+    ],
+  //   'nuxt-sass-resources-loader'
+  ],
+  // sassResources: [
+  //   '@/assets/_vars.scss'
+  // ]
 }

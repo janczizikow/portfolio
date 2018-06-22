@@ -90,6 +90,7 @@ select:-webkit-autofill:hover,
 textarea:-webkit-autofill,
 textarea:-webkit-autofill:focus,
 textarea:-webkit-autofill:hover {
+  // scss-lint:disable all
   border: 0;
   border-bottom: 2px solid $grey;
   -webkit-text-fill-color: $dark;
