@@ -59,6 +59,7 @@ module.exports = {
       pageTracking: true,
      }
     ],
+    '@nuxtjs/sitemap',
   //   'nuxt-sass-resources-loader'
   ],
   // sassResources: [
