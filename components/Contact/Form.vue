@@ -2,8 +2,6 @@
     <column
       tag="form"
       class="form"
-      name="contact"
-      data-netlify="true"
       @submit.native.prevent="formSubmit"
       :action="action"
       :method="method"
@@ -50,14 +48,12 @@
 </template>
 
 <script>
-import axios from 'axios';
+// import axios from 'axios';
 import { mapActions } from 'vuex';
 import { required, email } from 'vuelidate/lib/validators';
-
 import { Contianer, Row, Column } from '~/components/Layout';
 import appInput from '~/components/Input.vue';
 import appButton from '~/components/Button.vue';
-
 export default {
   props: {
     action: {
@@ -118,22 +114,46 @@ export default {
         .join('&');
     },
     formSubmit(e) {
-      const data = this.encode({ "form-name": "contact", ...this.$data });
-      axios.post('/', data, {
+
+      const self = this; // making sure it's the right this
+
+      fetch(self.action, {
+        method: self.method,
+        body: self.encode({ "form-name": "contact", ...self.$data }),
         headers: {
           'Content-Type': 'application/x-www-form-urlencoded'
-        },
-      })
-      .then(response => {
-        if (response.status === 200) {
-          this.$store.commit('toggleModal');
-          this.resetForm(e);
         }
       })
-      .catch(error => {
-        alert('Snap! Something went wrong. Please try again or email me from your email service provider.');
-        console.log(error);
-      });
+        .then(response => {
+          if (response.status === 200) {
+            this.$store.commit('toggleModal');
+            this.resetForm(e);
+          }
+        })
+        .catch(error => {
+          alert('Snap! Something went wrong. Please try again or email me from your email service provider.');
+          console.log(error);
+        })
+
+      // AXIOS issue: https://github.com/axios/axios/issues/362
+      // axios('/', data, {
+      //   method: "POST",
+      //   body: self.encode({ "form-name": "contact", ...self.$data }),
+      //   headers: {
+      //     'Content-Type': 'application/x-www-form-urlencoded'
+      //   },
+      // })
+      // .then(response => {
+      //   if (response.status === 200) {
+      //     console.log(response);
+      //     this.$store.commit('toggleModal');
+      //     this.resetForm(e);
+      //   }
+      // })
+      // .catch(error => {
+      //   alert('Snap! Something went wrong. Please try again or email me from your email service provider.');
+      //   console.log(error);
+      // });
     },
   },
   components: {
