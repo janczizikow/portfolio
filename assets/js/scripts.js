@@ -1,25 +1,3 @@
-// var client = algoliasearch("DK7WY1DV05", "2a1c4577ae9ca90f32d9a0f1c70b79c1");
-// var index = client.initIndex('test_article');
-// //initialize autocomplete on search input (ID selector must match)
-// $('#aa-search-input').autocomplete(
-//   {hint: false}, [
-//   {
-//     source: $.fn.autocomplete.sources.hits(index, { hitsPerPage: 2 }),
-//     //value to be displayed in input control after user's suggestion selection
-//     displayKey: 'name',
-//     //hash of templates used when rendering dataset
-//     templates: {
-//       //'suggestion' templating function used to render a single suggestion
-//       suggestion: function(suggestion) {
-//         return '<span>' +
-//           suggestion._highlightResult.title.value + '</span><div>' +
-//           suggestion._highlightResult.description.value + '</div>';
-//       }
-//     }
-//   }
-// ]).on('autocomplete:selected', function(event, suggestion, dataset) {
-//     location.href = suggestion.url;
-// });
 jQuery(document).ready(function() {
 	$('body').removeClass('no-js');
 	ShowHideNav();
@@ -288,13 +266,3 @@ function ParallaxInit() {
 		Parallax();
 	});
 }
-
-//
-// function searchSlide() {
-// 	$('.search-tggle').click(function(){
-// 		$('.aa-input-search').animate(
-// 			{'width': '200px'}, 300
-// 		);
-// 		$('.aa-input-search').focus();
-// 	});
-// }
