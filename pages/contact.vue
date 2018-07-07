@@ -13,7 +13,7 @@
         </row><!-- ./contact__row -->
 
         <row class="contact__form">
-          <app-form :action="'/'" :method="'POST'" :novalidate="true"/>
+          <app-form :action="contact.email" :method="'POST'" :novalidate="true"/>
           <column :lg="5">
             <template v-for="(value, key, i) in contact">
               <h4 class="contact__info-heading" :key="i + key">{{ key }}</h4>
@@ -43,8 +43,8 @@ export default {
     return {
       contact: {
         email: 'jan.czizikow@gmail.com',
-        phone: '+48 791 039 924',
-        location: 'Warsaw, Poland'
+        phone: '+49 151 726 97241',
+        location: 'Berlin, Germany'
       }
     }
   },
