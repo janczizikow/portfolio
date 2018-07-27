@@ -51,9 +51,14 @@ export default {
   &__inner {
 
     @include breakpoint($md) {
-      display: grid;
-      grid-template: repeat(2, 1fr) / repeat(4, 1fr);
-      grid-gap: 20px;
+      @supports (display: grid) {
+        display: grid;
+        grid-template: repeat(2, 1fr) / repeat(4, 1fr);
+        grid-template-areas:
+          'one one two two'
+          'one one three four';
+        grid-gap: 20px;
+      }
     }
   }
 
@@ -64,31 +69,19 @@ export default {
     cursor: pointer;
 
     &:first-child {
-      grid-column-start: 1;
-      grid-column-end: 3;
-      grid-row-start: 1;
-      grid-row-end: 3;
+      grid-area: one;
     }
 
     &:nth-child(2n) {
-      grid-column-start: 3;
-      grid-column-end: 5;
-      grid-row-start: 1;
-      grid-row-end: 1;
+      grid-area: two;
     }
 
     &:nth-child(3n) {
-      grid-column-start: 3;
-      grid-column-end: 4;
-      grid-row-start: 2;
-      grid-row-end: 3;
+      grid-area: three;
     }
 
     &:nth-child(4n) {
-      grid-column-start: 4;
-      grid-column-end: 5;
-      grid-row-start: 2;
-      grid-row-end: 3;
+      grid-area: four;
     }
 
     @include breakpoint($md) {
