@@ -6,6 +6,7 @@
     "@nuxtjs/google-tag-manager": "^2.0.0",
     "axios": "^0.18.0",
     "breakpoint-sass": "^2.7.1",
+    "lazysizes": "^4.0.4",
     "normalize.css": "^8.0.0",
     "nuxt": "^1.4.1",
     "vue-headroom": "^0.8.1",
