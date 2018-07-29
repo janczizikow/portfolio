@@ -4,7 +4,7 @@
       <section class="about">
         <row middle>
           <column :lgOrder="2" :lg="6">
-            <img src="~/assets/images/thai_wake_park.jpg"/>
+          <app-progresive-img :placholder="true" src="/images/thai_wake_park.jpg" alt="Jan Czizikow"/>
           </column>
           <column :lg="6">
             <h1>Hey, nice to meet you! 👋</h1>
@@ -18,8 +18,9 @@
 </template>
 
 <script>
-import { Container, Row, Column } from '~/components/Layout'
-import appButton from '~/components/Button.vue'
+import { Container, Row, Column } from '~/components/Layout';
+import appButton from '~/components/Button.vue';
+import appProgresiveImg from '~/components/ProgressiveImg.vue';
 
 export default {
   components: {
@@ -27,6 +28,7 @@ export default {
     Row,
     Column,
     appButton,
+    appProgresiveImg
   }
 }
 </script>
@@ -37,5 +39,4 @@ export default {
 .about {
   padding: 3rem 0;
 }
-
 </style>

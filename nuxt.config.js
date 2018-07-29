@@ -47,7 +47,13 @@ module.exports = {
         exclude: /node_modules/
       })
     },
-    vendor: ['axios', 'vuelidate', 'vue-headroom', 'breakpoint-sass']
+    vendor: [
+      // 'axios',
+      'vuelidate',
+      'vue-headroom',
+      'lazysizes',
+      'breakpoint-sass'
+    ]
   },
   plugins: [ '~/plugins/vuelidate'],
   generate: {
