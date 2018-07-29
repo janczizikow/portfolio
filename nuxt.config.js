@@ -10,8 +10,11 @@ module.exports = {
       { hid: 'description', name: 'description', content: 'This is the site of Jan Czizikow, a Web Developer. The site is just a list of things he\'s been up to including blog and projects.' }
     ],
     link: [
-      { rel: 'mask-icon', sizes: 'any', href: '/favicon.svg', color: "#313237"},
-      // { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-icon-180x180.png' },
+      { rel: 'mask-icon', sizes: 'any', href: '/favicon.svg', color: "#313237" },
+      { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/favicon-32x32.png' },
+      { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/favicon-16x16.png' },
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
     ]
   },
   /*
