@@ -43,7 +43,7 @@ export default {
     return {
       contact: {
         email: 'jan.czizikow@gmail.com',
-        phone: '+49 151 726 97241',
+        // phone: '+49 151 726 97241',
         location: 'Berlin, Germany'
       }
     }
