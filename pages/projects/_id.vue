@@ -46,6 +46,7 @@
 
 
 <script>
+// FIXME: Mixins issue
 import projectsData from '~/static/data.json';
 
 import { Container, Row } from '~/components/Layout';
@@ -72,9 +73,8 @@ export default {
   },
   validate ({ params }) {
     //FIXME: This should be dynamic
-    const URLS = ['Jekyll Sleek', 'Blanccstate', 'the clinic', 'Minimal Portfolio'];
-    const arr = URLS.map(el => el.toLowerCase().replace(/\W+/, '-'));
-    return arr.some(el => el === params.id);
+    const URLS = projectsData.projects.map(project => project.title.toLowerCase().replace(/\W+/g, '-'));
+    return URLS.some(el => el === params.id);
   },
   components: {
     Container,
@@ -131,10 +131,12 @@ export default {
 
   &__showcase {
     padding: 4rem 0;
+    background-color: $light_grey;
   }
 
   &__img {
     margin-bottom: 3rem;
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, .08);
   }
 }
 </style>

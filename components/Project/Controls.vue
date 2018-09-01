@@ -48,7 +48,6 @@ export default {
 
 .controls {
   padding: 1.375rem 0 1.25rem;
-  border-top: 1px solid $grey;
 
   &__item {
     display: flex;
