@@ -19,7 +19,7 @@
     "eslint-friendly-formatter": "^4.0.1",
     "eslint-loader": "^2.0.0",
     "eslint-plugin-vue": "^4.5.0",
-    "node-sass": "^4.9.0",
+    "node-sass": "^4.9.3",
     "nuxt-sass-resources-loader": "^2.0.2",
     "sass-loader": "^7.0.3",
     "vue-svg-loader": "^0.5.0"

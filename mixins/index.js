@@ -14,10 +14,10 @@ export const parametize = {
   methods: {
     parametize(str) {
       if (typeof str === 'string') {
-        return str.toLowerCase().replace(/\W+/, '-');
+        return str.toLowerCase().replace(/\W+/g, '-');
       }
       console.warn('Function parametize expects String as a parameter!!');
       return null;
     }
   }
-}
+};

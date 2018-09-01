@@ -1,5 +1,10 @@
 <template>
-  <headroom :speed="300" :easing="'ease'" :offset="500" :disabled="!isHeadroomActive">
+  <headroom
+    :speed="300"
+    :easing="'ease'"
+    :offset="500"
+    :style="stylesOverride"
+    :disabled="!isHeadroomActive">
     <header class="header" itemscope itemtype="http://schema.org/SiteNavigationElement" aria-label="Main navigation">
       <container fluid>
         <div class="header__inner">
@@ -39,6 +44,7 @@ export default {
     return {
       windowWidth: 0,
       isHeadroomActive: true,
+      stylesOverride: null,
       links: [
         { to: '/', title: 'Projects' },
         { to: '/about', title: 'About' },
@@ -54,8 +60,10 @@ export default {
       this.windowWidth = window.innerWidth;
       if ( this.windowWidth < 992 ) {
         this.isHeadroomActive = false;
+        this.stylesOverride = 'transform: translate3d(0, 0, 0)';
       } else {
         this.isHeadroomActive = true;
+        this.stylesOverride = null;
       }
     }
   },

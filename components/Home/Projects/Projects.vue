@@ -22,10 +22,11 @@ export default {
   data() {
     return {
       projects: [
-        { id: 0, date: '18 Feb 2018', name: 'Jekyll Sleek', category: 'Website' },
-        { id: 1, date: '14 Jan 2018', name: 'Blanccstate', category: 'Website' },
-        { id: 2, date: '21 Nov 2016', name: 'the clinic', category: 'Website' },
-        { id: 3, date: '26 Oct 2016', name: 'Minimal Portfolio', category: 'Website' },
+        { id: 0, date: '31 Aug 2018', name: 'Skatespots', category: 'Website' },
+        { id: 1, date: '18 Feb 2018', name: 'Jekyll Sleek', category: 'Website' },
+        { id: 2, date: '14 Jan 2018', name: 'Blanccstate', category: 'Website' },
+        { id: 3, date: '21 Nov 2016', name: 'the clinic', category: 'Email' },
+        { id: 4, date: '26 Oct 2016', name: 'Minimal Portfolio', category: 'Website' },
       ]
     };
   },
@@ -53,10 +54,22 @@ export default {
     @include breakpoint($md) {
       @supports (display: grid) {
         display: grid;
-        grid-template: repeat(2, 1fr) / repeat(4, 1fr);
+        grid-template: repeat(3, 1fr) / repeat(4, 1fr);
         grid-template-areas:
           'one one two two'
-          'one one three four';
+          'three three four four'
+          'five five six six';
+        grid-gap: 20px;
+      }
+    }
+
+    @include breakpoint($lg) {
+      @supports (display: grid) {
+        display: grid;
+        grid-template: repeat(2, 1fr) / repeat(4, 1fr);
+        grid-template-areas:
+          'one one two three'
+          'one one four five';
         grid-gap: 20px;
       }
     }
@@ -72,16 +85,20 @@ export default {
       grid-area: one;
     }
 
-    &:nth-child(2n) {
+    &:nth-child(2) {
       grid-area: two;
     }
 
-    &:nth-child(3n) {
+    &:nth-child(3) {
       grid-area: three;
     }
 
-    &:nth-child(4n) {
+    &:nth-child(4) {
       grid-area: four;
+    }
+
+    &:nth-child(5) {
+      grid-area: five;
     }
 
     @include breakpoint($md) {
