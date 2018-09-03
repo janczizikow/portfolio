@@ -74,14 +74,31 @@ export default {
     transition: all .2s cubic-bezier(.02,.01,.47,1);
   }
 
+  &::after {
+    content: "";
+    position: absolute;
+    display: none;
+    top: 50%;
+    left: 50%;
+    width: 1.25rem;
+    height: 1.25rem;
+    border-radius: 50%;
+    border-top: 2px solid rgba($white, 0.2);
+    border-right: 2px solid rgba($white, 0.2);
+    border-bottom: 2px solid rgba($white, 0.2);
+    border-left: 2px solid $white;
+    transform: translate(-50%, -50%) rotate(0deg);
+    animation: loader 1.1s infinite linear;
+  }
+
   &:not(:disabled) {
     cursor: pointer;
 
     @include breakpoint($md) {
       &:hover {
-      transition: all .3s cubic-bezier(.02,.01,.47,1);
-      transform: scale(1.1);
-      box-shadow: 0 1px 8px rgba(58,51,53,.4);
+        transition: all .3s cubic-bezier(.02,.01,.47,1);
+        transform: scale(1.1);
+        box-shadow: 0 1px 8px rgba(58,51,53,.4);
 
         &::before {
           opacity: .15;
@@ -113,6 +130,26 @@ export default {
 
   &--error {
     background-color: $error;
+  }
+
+  &--loading {
+    color: transparent;
+    opacity: 0.75;
+    cursor: default;
+
+    &::after {
+      display: block;
+    }
+  }
+}
+
+@keyframes loader {
+  0% {
+    transform: translate(-50%, -50%) rotatate(0deg);
+  }
+
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
   }
 }
 </style>

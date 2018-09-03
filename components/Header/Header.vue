@@ -16,7 +16,7 @@
           </button>
           <nav class="header__links">
             <nuxt-link
-              v-for="(link, i) in links"
+              v-for="(link, i) in afterAuthLinks"
               :key="i"
               :to="link.to"
               exact-active-class="header__link--active"
@@ -64,6 +64,15 @@ export default {
       } else {
         this.isHeadroomActive = true;
         this.stylesOverride = null;
+      }
+    }
+  },
+  computed: {
+    afterAuthLinks() {
+      if (this.$store.getters.isAuth) {
+        return this.links.concat({ to: '/dashboard', title: 'Dashboard' });
+      } else {
+        return this.links;
       }
     }
   },

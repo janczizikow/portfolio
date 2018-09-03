@@ -1,59 +1,54 @@
 <template>
-    <column
-      tag="form"
-      class="form"
-      @submit.native.prevent="formSubmit"
-      :action="action"
-      :method="method"
-      :novalidate="novalidate"
-      :lg="7">
-      <row>
-
-        <column :md="6">
-          <div class="form__form-group">
-            <app-input
-              @blur="$v.name.$touch()"
-              :error="$v.name.$error"
-              :errorMsg="$v.name.$error ? 'This field is required' : null"
-              v-model="name">Name</app-input>
-          </div>
-        </column>
-
-        <column :md="6">
-          <div class="form__form-group">
-            <app-input
-              type="email"
-              @blur="$v.email.$touch()"
-              :error="$v.email.$error"
-              :errorMsg="emailErrorMsg"
-              v-model="email">Email</app-input>
-          </div>
-        </column>
-
-      </row><!-- /row -->
-
-      <row>
-
-        <column>
+  <column
+    tag="form"
+    class="form"
+    @submit.native.prevent="formSubmit"
+    :action="action"
+    :method="method"
+    :novalidate="novalidate"
+    :lg="7">
+    <row>
+      <column :md="6">
+        <div class="form__form-group">
           <app-input
-            @blur="$v.message.$touch()"
-            :error="$v.message.$error"
-            :errorMsg="$v.message.$error ? 'This field is required' : null"
-            v-model="message" type="textarea">Message</app-input>
-          <app-button type="submit" :disabled="$v.$invalid">Send</app-button>
-        </column>
-
-      </row><!-- /row -->
-    </column><!-- ./col-7 -->
+            @blur="$v.name.$touch()"
+            :error="$v.name.$error"
+            :errorMsg="$v.name.$error ? 'This field is required' : null"
+            v-model="name">Name</app-input>
+        </div>
+      </column>
+      <column :md="6">
+        <div class="form__form-group">
+          <app-input
+            type="email"
+            @blur="$v.email.$touch()"
+            :error="$v.email.$error"
+            :errorMsg="emailErrorMsg"
+            v-model="email">Email</app-input>
+        </div>
+      </column>
+    </row><!-- /row -->
+    <row>
+      <column>
+        <app-input
+          @blur="$v.message.$touch()"
+          :error="$v.message.$error"
+          :errorMsg="$v.message.$error ? 'This field is required' : null"
+          v-model="message" type="textarea">Message</app-input>
+        <app-button type="submit" :disabled="$v.$invalid">Send</app-button>
+      </column>
+    </row><!-- /row -->
+  </column><!-- ./col-7 -->
 </template>
 
 <script>
-// import axios from 'axios';
 import { mapActions } from 'vuex';
 import { required, email } from 'vuelidate/lib/validators';
+import api from '~/plugins/axios';
 import { Contianer, Row, Column } from '~/components/Layout';
 import appInput from '~/components/Input.vue';
 import appButton from '~/components/Button.vue';
+
 export default {
   props: {
     action: {
@@ -108,52 +103,25 @@ export default {
       this.$v.$reset(); // reset vuelidate
       e.target.reset(); // reset the form
     },
-    encode(data) {
-      return Object.keys(data)
-        .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
-        .join('&');
-    },
     formSubmit(e) {
-
-      const self = this; // making sure it's the right this
-
-      fetch(self.action, {
-        method: self.method,
-        body: self.encode({ "form-name": "contact", ...self.$data }),
-        headers: {
-          'Content-Type': 'application/x-www-form-urlencoded'
+      const data = {
+        name: this.name,
+        email: this.email,
+        message: this.message
+      };
+      api.post('/submissions', {
+        submission: {...data}
+      })
+      .then(response => {
+        if (response.status === 200) {
+          this.$store.commit('toggleModal');
+          this.resetForm(e);
         }
       })
-        .then(response => {
-          if (response.status === 200) {
-            this.$store.commit('toggleModal');
-            this.resetForm(e);
-          }
-        })
-        .catch(error => {
-          alert('Snap! Something went wrong. Please try again or email me from your email service provider.');
-          console.log(error);
-        })
-
-      // AXIOS issue: https://github.com/axios/axios/issues/362
-      // axios('/', data, {
-      //   method: "POST",
-      //   body: self.encode({ "form-name": "contact", ...self.$data }),
-      //   headers: {
-      //     'Content-Type': 'application/x-www-form-urlencoded'
-      //   },
-      // })
-      // .then(response => {
-      //   if (response.status === 200) {
-      //     console.log(response);
-      //     this.$store.commit('toggleModal');
-      //     this.resetForm(e);
-      //   }
-      // })
-      // .catch(error => {
-      //   alert('Snap! Something went wrong. Please try again or email me from your email service provider.');
-      //   console.log(error);
-      // });
+      .catch(error => {
+        alert('Snap! Something went wrong. Please try again or email me from your email service provider.');
+        console.log(error);
+      });
     },
   },
   components: {

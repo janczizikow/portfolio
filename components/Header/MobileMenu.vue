@@ -13,7 +13,7 @@
         <div class="menu__links-wrapper">
           <transition-group name="fade-in" tag="nav" appear class="menu__links">
             <nuxt-link
-              v-for="(link, i) in links"
+              v-for="(link, i) in afterAuthLinks"
               :key="i"
               :to="link.to"
               :style="{'transition-delay': (.05 + 0.07 * (i + 1) ) + 's'}"
@@ -52,6 +52,15 @@ export default {
       this.windowWidth = window.innerWidth;
       if ( this.windowWidth > 992 ) {
         this.$store.dispatch('toggleMobileMenu');
+      }
+    }
+  },
+  computed: {
+    afterAuthLinks() {
+      if (this.$store.getters.isAuth) {
+        return this.links.concat({ to: '/dashboard', title: 'Dashboard' });
+      } else {
+        return this.links;
       }
     }
   },

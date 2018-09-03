@@ -51,8 +51,8 @@ export default {
 
   &__inner {
 
-    @include breakpoint($md) {
-      @supports (display: grid) {
+    @supports (display: grid) {
+      @include breakpoint($md) {
         display: grid;
         grid-template: repeat(3, 1fr) / repeat(4, 1fr);
         grid-template-areas:
@@ -61,10 +61,8 @@ export default {
           'five five six six';
         grid-gap: 20px;
       }
-    }
 
-    @include breakpoint($lg) {
-      @supports (display: grid) {
+      @include breakpoint($lg) {
         display: grid;
         grid-template: repeat(2, 1fr) / repeat(4, 1fr);
         grid-template-areas:
