@@ -3,6 +3,14 @@
     <container>
       <h1>Welcome back.</h1>
       <app-button @click="logOut">Log Out</app-button>
+      <div>
+        <h2>Recent submissions</h2>
+        <ul>
+          <li v-for="submission in submissions" :key="submission.id">
+            <nuxt-link :to="`/dashboard/submission/${submission.id}`">{{submission.name}}</nuxt-link>
+          </li>
+        </ul>
+      </div>
       <nuxt-link to="/">Back home</nuxt-link>
     </container>
   </section>
@@ -16,16 +24,20 @@ import appButton from '~/components/Button';
 
 export default {
   middleware: 'authenticated',
-  fetch({ store }) {
-    return store.dispatch('loadSubmissions')
-      // .then((res => ({ submissions: res })));
+  async asyncData(context) {
+    try {
+      const data = await context.store.dispatch('auth/loadSubmissions');
+      return { submissions: data.data }
+    } catch(error) {
+      console.log(error);
+    }
   },
   methods: {
     ...mapActions([
-      'logOut'
+      'auth/logOut'
     ]),
     logOut() {
-      this.$store.dispatch('logOut').then(() => {
+      this.$store.dispatch('auth/logOut').then(() => {
         this.$router.push('/login');
       });
     }

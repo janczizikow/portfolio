@@ -52,21 +52,23 @@ export default {
   methods: {
     ...mapActions([
       'toggleModal',
-      'setAuth',
-      'logIn',
+      'auth/setAuth',
+      'auth/logIn',
     ]),
     async formSubmit(e) {
       this.loading = true;
       try {
-        await this.$store.dispatch('logIn', {
-          email: this.email,
-          password: this.password,
+        await this.$store.dispatch('auth/logIn', {
+          user: {
+            email: this.email,
+            password: this.password,
+          }
         });
         this.error = null;
       } catch (error) {
         this.loading = false;
         if (error.response) {
-          this.error = error.response.data.errors.join(', ');
+          this.error = error.response.data.error
         } else {
           this.error = error.message;
         }

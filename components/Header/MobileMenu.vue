@@ -57,7 +57,7 @@ export default {
   },
   computed: {
     afterAuthLinks() {
-      if (this.$store.getters.isAuth) {
+      if (this.$store.getters['auth/isAuth']) {
         return this.links.concat({ to: '/dashboard', title: 'Dashboard' });
       } else {
         return this.links;

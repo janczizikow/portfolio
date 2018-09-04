@@ -104,16 +104,16 @@ export default {
       e.target.reset(); // reset the form
     },
     formSubmit(e) {
-      const data = {
+      const submission = {
         name: this.name,
         email: this.email,
         message: this.message
       };
       api.post('/submissions', {
-        submission: {...data}
+        submission
       })
       .then(response => {
-        if (response.status === 200) {
+        if (response.status === 200 || response.status ===  201) {
           this.$store.commit('toggleModal');
           this.resetForm(e);
         }
