@@ -95,6 +95,7 @@ textarea:-webkit-autofill:hover {
   -webkit-text-fill-color: $dark;
   -webkit-box-shadow: 0 0 0 1000px #fff inset;
   transition: background-color 5000s ease-in-out 0s;
+  // scss-lint:enable all
 }
 
 .form-group {
