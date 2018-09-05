@@ -12,7 +12,7 @@
         </column>
 
         <column :lg="6" class="hero__hidden-md">
-          <img src="~/assets/images/illustrations/hero__img.svg" alt="Illustration">
+          <img style="height: 450px;" src="~/assets/images/illustrations/hero__img.svg" alt="Illustration">
         </column>
 
       </row>
