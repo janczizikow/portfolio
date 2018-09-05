@@ -34,8 +34,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "~/assets/_vars.scss";
-
 .about {
   padding: 3rem 0;
 }

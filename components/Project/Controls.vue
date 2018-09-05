@@ -44,8 +44,6 @@ export default {
 
 
 <style lang="scss" scoped>
-@import "~/assets/_vars.scss";
-
 .controls {
   padding: 1.375rem 0 1.25rem;
 

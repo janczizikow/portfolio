@@ -55,7 +55,6 @@ module.exports = {
       'vuelidate',
       'vue-headroom',
       'lazysizes',
-      'breakpoint-sass'
     ]
   },
   plugins: [ '~/plugins/vuelidate'],
@@ -69,9 +68,14 @@ module.exports = {
      }
     ],
     '@nuxtjs/sitemap',
-  //   'nuxt-sass-resources-loader'
+    ['nuxt-sass-resources-loader', '@@/assets/shared.scss']
   ],
-  // sassResources: [
-  //   '@/assets/_vars.scss'
-  // ]
+  sitemap: {
+    hostname: 'https://www.janczizikow.com',
+    generate: true,
+    exclude: [
+      '/login',
+      '/dashboard/**',
+    ]
+  }
 }

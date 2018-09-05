@@ -20,8 +20,6 @@ export default {
 
 
 <style lang="scss" scoped>
-@import "breakpoint-sass";
-@import "~/assets/_vars.scss";
 .cta {
   padding: 3rem 1rem;
   background-color: $primary;

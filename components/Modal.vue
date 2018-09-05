@@ -48,7 +48,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "~/assets/_vars.scss";
 .modal {
   position: fixed;
   display: block;

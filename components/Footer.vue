@@ -45,7 +45,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "~/assets/_vars.scss";
 .footer {
   padding: 3.625rem 0;
   background-color: $dark;

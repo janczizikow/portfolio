@@ -5,7 +5,6 @@
   "dependencies": {
     "@nuxtjs/google-tag-manager": "^2.0.0",
     "axios": "^0.18.0",
-    "breakpoint-sass": "^2.7.1",
     "cookieparser": "^0.1.0",
     "js-cookie": "^2.2.0",
     "lazysizes": "^4.0.4",

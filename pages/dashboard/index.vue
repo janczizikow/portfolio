@@ -52,8 +52,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "~/assets/_vars.scss";
-
 .dashboard {
   background-color: $light_grey
 }

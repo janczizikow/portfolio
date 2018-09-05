@@ -77,8 +77,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "~/assets/_vars.scss";
-
 // Reset Chrome autofill styles
 input:-webkit-autofill,
 input:-webkit-autofill:focus,

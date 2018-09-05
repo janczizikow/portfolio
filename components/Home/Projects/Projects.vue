@@ -39,8 +39,6 @@ export default {
 
 
 <style lang="scss" scoped>
-@import "~/assets/_vars.scss";
-
 .projects {
   padding: 3rem 0;
   background-color: $light_grey;
