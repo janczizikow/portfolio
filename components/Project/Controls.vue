@@ -26,8 +26,8 @@
 
 <script>
 import { Row } from '~/components/Layout';
-import appArrowLeft from '~/assets/images/icons/arrow-left.svg';
-import appArrowRight from '~/assets/images/icons/arrow-right.svg';
+import appArrowLeft from '~/assets/images/icons/arrow-left.svg?inline';
+import appArrowRight from '~/assets/images/icons/arrow-right.svg?inline';
 
 export default {
   props: {

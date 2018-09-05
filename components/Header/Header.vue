@@ -36,8 +36,8 @@ import { mapActions } from 'vuex';
 import { headroom } from 'vue-headroom';
 
 import { Container } from '~/components/Layout';
-import appLogo from '~/assets/images/icons/logo.svg';
-import appBurger from '~/assets/images/icons/burger.svg';
+import appLogo from '~/assets/images/icons/logo.svg?inline';
+import appBurger from '~/assets/images/icons/burger.svg?inline';
 
 export default {
   data() {
@@ -94,6 +94,10 @@ export default {
 
 
 <style lang="scss" scoped>
+.headroom {
+  position: fixed!important;
+}
+
 .headroom--top {
   box-shadow: none!important;
 }

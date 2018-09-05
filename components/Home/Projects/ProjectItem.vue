@@ -2,21 +2,22 @@
   <nuxt-link
     class="card"
     :to="'/projects/' + projectURL">
-    <figure class="card__thumb">
-      <img
-        class="card__img"
-        :src="'/images/' + projectURL + '.jpg'"
-        :alt="title"/>
+    <app-progresive-img
+      :placeholder="true"
+      class="card__thumb"
+      imgClass="card__img"
+      :src="'/images/' + projectURL + '.jpg'"
+      :alt="title">
       <figcaption class="card__inner">
         <p>{{ date }}</p>
         <h3 class="card__title">{{ title }}</h3>
       </figcaption>
-    </figure>
+    </app-progresive-img>
   </nuxt-link>
 </template>
 
 <script>
-
+import appProgresiveImg from '~/components/ProgressiveImg.vue';
 
 export default {
   props: {
@@ -29,10 +30,13 @@ export default {
       return this.title.toLowerCase().replace(/\W+/, '-');
     }
   },
+  components: {
+    appProgresiveImg
+  }
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .card {
   position: relative;
   overflow: hidden;
@@ -51,6 +55,25 @@ export default {
 
   &__thumb {
     position: relative;
+    overflow: hidden;
+
+    &::after {
+      content: "";
+      display: block;
+      height: 0;
+      width: 100%;
+      padding-bottom: 100%;
+    }
+
+    .card__img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: block;
+      transition: transform .62s cubic-bezier(.05, .2, .1, 1);
+    }
   }
 
   &__inner {
@@ -67,11 +90,6 @@ export default {
   &__title {
     color: $white;
   }
-
-  &__img {
-    transition: transform .62s cubic-bezier(.05, .2, .1, 1);
-  }
-
 
   @include breakpoint($lg) {
 
