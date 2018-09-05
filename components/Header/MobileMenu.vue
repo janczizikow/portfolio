@@ -80,8 +80,6 @@ export default {
 
 
 <style lang="scss" scoped>
-@import "~/assets/_vars.scss";
-
 .menu {
   position: fixed;
   top: 0;

@@ -43,8 +43,6 @@ export default {
 
 
 <style lang="scss" scoped>
-@import "~/assets/_vars.scss";
-
 .btn {
   position: relative;
   display: inline-block;

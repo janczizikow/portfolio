@@ -42,7 +42,6 @@ export default {
 
 <style lang="scss">
 @import "normalize.css";
-@import "~/assets/_vars.scss";
 
 *::before,
 *::after,

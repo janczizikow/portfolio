@@ -55,7 +55,6 @@ module.exports = {
       'vuelidate',
       'vue-headroom',
       'lazysizes',
-      'breakpoint-sass'
     ]
   },
   plugins: [ '~/plugins/vuelidate'],
@@ -63,15 +62,38 @@ module.exports = {
     fallback: true // custom 404.html pages
   },
   modules: [
+    ['nuxt-sass-resources-loader', '@@/assets/shared.scss'],
     ['@nuxtjs/google-tag-manager', {
       id: 'GTM-NBBVPGQ',
       pageTracking: true,
      }
     ],
+    ['nuxt-social-meta', {
+      url: 'https://www.janczizikow.com',
+      title: 'Jan Czizikow // Web Developer',
+      description: 'This is the site of Jan Czizikow, a Web Developer. The site is just a list of things he\'s been up to including blog and projects.',
+      img: 'https://www.janczizikow.com/images/open_graph.jpg',
+      locale: 'en_US',
+      twitter: '@jan_czizikow',
+      themeColor: '#277cea'
+    }],
     '@nuxtjs/sitemap',
-  //   'nuxt-sass-resources-loader'
   ],
-  // sassResources: [
-  //   '@/assets/_vars.scss'
-  // ]
+  sitemap: {
+    hostname: 'https://www.janczizikow.com',
+    generate: true,
+    exclude: [
+      '/login',
+      '/dashboard/**',
+    ],
+    // FIXME: Make this dynamic
+    // https://www.npmjs.com/package/@nuxtjs/sitemap
+    routes:[
+      '/projects/skatespots',
+      '/projects/jekyll-sleek',
+      '/projects/blanccstate',
+      '/projects/the-clinic',
+      '/projects/minimal-portfolio',
+    ]
+  }
 }

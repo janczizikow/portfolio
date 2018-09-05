@@ -94,8 +94,6 @@ export default {
 
 
 <style lang="scss" scoped>
-@import "~/assets/_vars.scss";
-
 .headroom--top {
   box-shadow: none!important;
 }

@@ -39,9 +39,6 @@ export default {
 
 
 <style lang="scss" scoped>
-@import "breakpoint-sass";
-@import "~/assets/_vars.scss";
-
 .hero {
   padding: 2.375rem 0;
   width: 100%;
