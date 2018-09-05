@@ -10,6 +10,7 @@
     "lazysizes": "^4.0.4",
     "normalize.css": "^8.0.0",
     "nuxt": "^1.4.1",
+    "nuxt-social-meta": "0.0.1",
     "vue-headroom": "^0.8.1",
     "vuelidate": "^0.7.4"
   },
