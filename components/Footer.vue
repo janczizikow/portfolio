@@ -23,9 +23,10 @@
 </template>
 
 <script>
-import appGithubIcon from '~/assets/images/icons/github.svg';
-import appCodepenIcon from '~/assets/images/icons/codepen.svg';
-import appLinkedinIcon from '~/assets/images/icons/linkedin.svg';
+import appGithubIcon from '~/assets/images/icons/github.svg?inline';
+import appCodepenIcon from '~/assets/images/icons/codepen.svg?inline';
+import appLinkedinIcon from '~/assets/images/icons/linkedin.svg?inline';
+
 export default {
   data() {
     return {

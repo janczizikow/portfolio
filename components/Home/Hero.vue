@@ -7,12 +7,12 @@
           <slot name="header"></slot>
           <slot name="lead"></slot>
           <div class="hero__scroll">
-            <arrow-down style=""/>
+            <arrow-down />
           </div>
         </column>
 
         <column :lg="6" class="hero__hidden-md">
-          <app-hero-illustration style="width: 100%; height: 100%;"></app-hero-illustration>
+          <img src="~/assets/images/illustrations/hero__img.svg" alt="Illustration">
         </column>
 
       </row>
@@ -22,21 +22,17 @@
 
 <script>
 import { Container, Row, Column } from '~/components/Layout';
-
-import appHeroIllustration from '~/assets/images/illustrations/hero__img.svg';
-import arrowDown from '~/assets/images/icons/arrow-down.svg';
+import arrowDown from '~/assets/images/icons/arrow-down.svg?inline';
 
 export default {
   components: {
     Container,
     Row,
     Column,
-    appHeroIllustration,
     arrowDown
   }
 }
 </script>
-
 
 <style lang="scss" scoped>
 .hero {

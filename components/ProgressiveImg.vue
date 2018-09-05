@@ -1,14 +1,15 @@
 <template>
-  <figure class="progressive-img">
+  <figure :class="'progressive-img'">
     <img
-      :img-class="imgClass"
-      :alt="alt"
-      :src="placeholder ? placeholderImg : false"
       data-sizes="auto"
-      :class="[ 'lazyload', { 'blur-up': blur } ]"
-      :data-srcset="responsive ? retina : src"/>
+      :src="placeholder ? placeholderImg : false"
+      :data-srcset="responsive ? retina : src"
+      :class="[ 'lazyload', { 'blur-up': blur }, imgClass ]"
+      :alt="alt"
+    />
       <!-- https://github.com/nuxt/nuxt.js/issues/2582 -->
       <noscript inline-template><img :src="src" :alt="alt"/></noscript>
+      <slot></slot>
   </figure>
 </template>
 
@@ -35,7 +36,7 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .progressive-img {
   background:#e7e7e7;
   position: relative;
@@ -52,20 +53,22 @@ export default {
     padding-bottom: 100%;
   }
 
-  & > * {
+  img {
     position: absolute;
+    display: block;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    display: block;
+    background-size: cover;
+    font-family: "blur-up: always", "object-fit: cover";
     object-fit: cover;
   }
 }
 
 .blur-up {
-  filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feGaussianBlur stdDeviation="10" /></filter></svg>#filter');
-  filter: blur(10px);
+  filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feGaussianBlur stdDeviation="12" /></filter></svg>#filter');
+  filter: blur(12px);
   transition: filter .1s;
 }
 

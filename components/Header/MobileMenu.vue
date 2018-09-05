@@ -30,8 +30,8 @@
 import { mapActions } from 'vuex';
 
 import { Container } from '~/components/Layout';
-import appLogo from '~/assets/images/icons/logo.svg';
-import appMenuToggle from '~/assets/images/icons/cross.svg';
+import appLogo from '~/assets/images/icons/logo.svg?inline';
+import appMenuToggle from '~/assets/images/icons/cross.svg?inline';
 
 export default {
   data() {

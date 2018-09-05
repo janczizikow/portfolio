@@ -1,5 +1,5 @@
 import api from '~/plugins/axios';
-const Cookie = process.browser ? require('js-cookie') : undefined;
+// const Cookie = process.browser ? require('js-cookie') : undefined;
 
 export const state = () => ({
   token: null,
@@ -21,7 +21,7 @@ export const actions = {
       .then(res => {
         const token = res.headers.authorization;
         context.commit('setAuth', token);
-        Cookie.set('token', token, { expires: 1 });
+        // Cookie.set('token', token, { expires: 1 });
       });
   },
   logOut(context) {
@@ -32,7 +32,7 @@ export const actions = {
       })
       .then(() => {
         context.commit('setAuth', null)
-        Cookie.remove('token');
+        // Cookie.remove('token');
       });
   },
   loadSubmissions(context) {

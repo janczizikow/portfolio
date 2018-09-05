@@ -14,7 +14,8 @@
 
 <script>
 import appButton from '~/components/Button.vue';
-import appErrorIllustration from '~/assets/images/illustrations/404.svg';
+import appErrorIllustration from '~/assets/images/illustrations/404.svg?inline';
+
 export default {
   components: {
     appButton,

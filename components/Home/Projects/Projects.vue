@@ -18,6 +18,7 @@
 <script>
 import { Container } from '~/components/Layout';
 import appProjectItem from './ProjectItem.vue';
+
 export default {
   data() {
     return {
@@ -72,7 +73,7 @@ export default {
   }
 
   &__item {
-    display: flex;
+    display: block;
     width: 100%;
     margin-bottom: 5%;
     cursor: pointer;

@@ -4,7 +4,7 @@
       <section class="about">
         <row middle>
           <column :lgOrder="2" :lg="6">
-          <app-progresive-img :placholder="true" src="/images/thai_wake_park.jpg" alt="Jan Czizikow"/>
+          <app-progresive-img :placholder="true" src="/images/thai_wake_park.jpg" alt="Jan Czizikow" />
           </column>
           <column :lg="6">
             <h1>Hey, nice to meet you! 👋</h1>

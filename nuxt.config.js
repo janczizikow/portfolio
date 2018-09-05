@@ -38,23 +38,37 @@ module.exports = {
           exclude: /(node_modules)/
         })
       }
+      // const vueLoader = config.module.rules.find((rule) => rule.loader === 'vue-loader')
+      // vueLoader.options.transformToRequire['img'] = ['src', 'data-lowsrc']
       /*
       ** Vue SVG Loader
       */
-      const urlLoader = config.module.rules.find((rule) => rule.loader === 'url-loader')
-      urlLoader.test = /\.(png|jpe?g|gif)$/
+      const svgRule = config.module.rules.find(rule => rule.loader === 'url-loader')
+      svgRule.test = /\.(png|jpe?g|gif)$/;
 
       config.module.rules.push({
         test: /\.svg$/,
-        loader: 'vue-svg-loader',
-        exclude: /node_modules/
-      })
+        oneOf: [
+          {
+            resourceQuery: /inline/,
+            loader: 'vue-svg-loader',
+          },
+          {
+            loader: 'file-loader',
+            query: {
+              name: 'assets/[name].[hash:8].[ext]',
+            },
+          },
+        ],
+      });
     },
     vendor: [
-      // 'axios',
       'vuelidate',
-      'vue-headroom',
       'lazysizes',
+      'lazysizes/plugins/parent-fit/ls.parent-fit',
+      'lazysizes/plugins/object-fit/ls.object-fit',
+      // 'lazysizes/plugins/blur-up/ls.blur-up',
+      // 'lazysizes/plugins/attrchange/ls.attrchange'
     ]
   },
   plugins: [ '~/plugins/vuelidate'],
@@ -63,11 +77,13 @@ module.exports = {
   },
   modules: [
     ['nuxt-sass-resources-loader', '@@/assets/shared.scss'],
+    '@nuxtjs/webpackmonitor',
     ['@nuxtjs/google-tag-manager', {
       id: 'GTM-NBBVPGQ',
       pageTracking: true,
      }
     ],
+    '@nuxtjs/sitemap',
     ['nuxt-social-meta', {
       url: 'https://www.janczizikow.com',
       title: 'Jan Czizikow // Web Developer',
@@ -77,7 +93,6 @@ module.exports = {
       twitter: '@jan_czizikow',
       themeColor: '#277cea'
     }],
-    '@nuxtjs/sitemap',
   ],
   sitemap: {
     hostname: 'https://www.janczizikow.com',
