@@ -1,1 +1,0 @@
-# Jan Czizikow - Personal Portfolio
