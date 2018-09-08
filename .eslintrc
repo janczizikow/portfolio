@@ -1,0 +1,31 @@
+{
+  "parser": "babel-eslint",
+  "env": {
+    "browser": true,
+    "jest": true,
+    "es6": true,
+    "node": true
+  },
+  "extends": [
+    "airbnb",
+    "prettier"
+  ],
+  "plugins": [
+    "prettier"
+  ],
+  "globals": {
+    "graphql": true
+  },
+  "rules": {
+    "react/jsx-filename-extension": 0,
+    "react/require-default-props": 0,
+    "react/jsx-one-expression-per-line": 0,
+    "arrow-body-style": 0,
+    "import/no-unresolved": 0,
+    "prettier/prettier": ["error", {
+      "semi": true,
+      "singleQuote": true,
+      "trailingComma": "es5"
+    }]
+  }
+}

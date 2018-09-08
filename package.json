@@ -1,0 +1,109 @@
+{
+  "name": "gatsby-sleek",
+  "version": "1.0.0",
+  "repository": "git@github.com:janczizikow/gatsby-sleek.git",
+  "author": "Jan Czizikow <jan.czizikow@gmail.com>",
+  "license": "MIT",
+  "private": false,
+  "lint-staged": {
+    "src/**/*.{js,jsx,json}": [
+      "eslint --fix",
+      "prettier --config .prettierrc --write",
+      "git add"
+    ],
+    "src/**/*.{scss,css}": [
+      "stylelint --config=.stylelintrc --fix",
+      "prettier --config .prettierrc --write",
+      "git add"
+    ]
+  },
+  "scripts": {
+    "precommit": "lint-staged",
+    "dev": "gatsby develop",
+    "build": "gatsby build",
+    "format": "prettier --write 'src/**/*.{js,jsx,css,scss}'",
+    "lint:css": "stylelint --config=.stylelintrc --fix 'src/**/*.{css, scss}'; exit 0",
+    "lint:js": "eslint --config=.eslintrc --fix 'src/**/*.{js,jsx}'; exit 0",
+    "lint": "yarn lint:css && yarn lint:js",
+    "test": "jest",
+    "test:watch": "jest --watch"
+  },
+  "dependencies": {
+    "dotenv": "^6.0.0",
+    "gatsby": "^2.0.0-rc.13",
+    "gatsby-image": "^2.0.0-rc.1",
+    "gatsby-plugin-favicon": "^3.1.4",
+    "gatsby-plugin-google-tagmanager": "^2.0.0-rc.1",
+    "gatsby-plugin-manifest": "^2.0.2-rc.1",
+    "gatsby-plugin-netlify": "^2.0.0-rc.2",
+    "gatsby-plugin-netlify-cache": "^0.1.0",
+    "gatsby-plugin-nprogress": "^2.0.0-rc.1",
+    "gatsby-plugin-offline": "^2.0.0-rc.4",
+    "gatsby-plugin-polyfill-io": "^1.0.5",
+    "gatsby-plugin-react-helmet": "^3.0.0-rc.1",
+    "gatsby-plugin-react-svg": "^2.0.0-beta1",
+    "gatsby-plugin-resolve-src": "^2.0.0-beta.1",
+    "gatsby-plugin-sharp": "^2.0.0-rc.3",
+    "gatsby-plugin-sitemap": "^2.0.0-rc.1",
+    "gatsby-source-filesystem": "^2.0.1-rc.2",
+    "gatsby-transformer-sharp": "^2.1.1-rc.3",
+    "husky": "^0.14.3",
+    "lint-staged": "^7.2.2",
+    "prop-types": "^15.6.2",
+    "react": "^16.5.0",
+    "react-dom": "^16.5.0",
+    "react-helmet": "^5.2.0",
+    "react-redux": "^5.0.7",
+    "redux": "^4.0.0",
+    "redux-thunk": "^2.3.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.0.0",
+    "@babel/plugin-proposal-class-properties": "^7.0.0",
+    "@babel/plugin-proposal-optional-chaining": "^7.0.0",
+    "@babel/preset-env": "^7.0.0",
+    "@babel/preset-react": "^7.0.0",
+    "babel-core": "^7.0.0-0",
+    "babel-eslint": "^9.0.0",
+    "babel-jest": "^23.4.2",
+    "enzyme": "^3.6.0",
+    "enzyme-adapter-react-16": "^1.5.0",
+    "enzyme-to-json": "^3.3.4",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-config-prettier": "^3.0.1",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.1",
+    "eslint-plugin-prettier": "^2.6.2",
+    "eslint-plugin-react": "^7.11.1",
+    "gatsby-plugin-eslint": "^2.0.1",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^23.5.0",
+    "prettier": "^1.14.2",
+    "stylelint": "^9.5.0",
+    "stylelint-config-prettier": "^4.0.0",
+    "stylelint-config-recommended": "^2.1.0"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.jsx?$": "<rootDir>/jest-preprocess.js"
+    },
+    "testRegex": "/.*(__tests__\\/.*)|(.*(test|spec))\\.jsx?$",
+    "moduleNameMapper": {
+      ".+\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js"
+    },
+    "testPathIgnorePatterns": [
+      "node_modules",
+      ".cache"
+    ],
+    "transformIgnorePatterns": [
+      "node_modules/(?!(gatsby)/)"
+    ],
+    "globals": {
+      "__PATH_PREFIX__": ""
+    },
+    "testURL": "http://localhost",
+    "setupFiles": [
+      "<rootDir>/loadershim.js"
+    ]
+  }
+}
