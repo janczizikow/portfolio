@@ -9,14 +9,21 @@ module.exports = {
   },
   plugins: [
     'gatsby-plugin-react-helmet',
+    'gatsby-plugin-flow',
     'gatsby-plugin-eslint',
     'gatsby-plugin-resolve-src',
-    'gatsby-plugin-polyfill-io',
+    'gatsby-plugin-emotion',
+    {
+      resolve: 'gatsby-plugin-typography',
+      options: {
+        pathToConfigModule: 'src/utils/typography.js',
+      },
+    },
     {
       resolve: 'gatsby-plugin-nprogress',
       options: {
         // Setting a color is optional.
-        color: '#663399',
+        color: '#277cea',
         // Disable the loading spinner.
         showSpinner: false,
       },
@@ -33,32 +40,33 @@ module.exports = {
         icon: 'src/assets/images/gatsby-icon.png', // This path is relative to the root of the site.
       },
     },
-    {
-      resolve: 'gatsby-plugin-favicon',
-      options: {
-        logo: 'src/assets/images/gatsby-icon.png',
-        injectHTML: true,
-        icons: {
-          android: true,
-          appleIcon: true,
-          appleStartup: true,
-          coast: false,
-          favicons: true,
-          firefox: true,
-          twitter: false,
-          yandex: false,
-          windows: false,
-        },
-      },
-    },
+    // {
+    //   resolve: 'gatsby-plugin-favicon',
+    //   options: {
+    //     logo: 'src/assets/images/gatsby-icon.png',
+    //     injectHTML: true,
+    //     icons: {
+    //       android: true,
+    //       appleIcon: true,
+    //       appleStartup: true,
+    //       coast: false,
+    //       favicons: true,
+    //       firefox: true,
+    //       twitter: false,
+    //       yandex: false,
+    //       windows: false,
+    //     },
+    //   },
+    // },
     {
       resolve: 'gatsby-plugin-react-svg',
       options: {
         rule: {
-          include: /assets/,
+          include: /(assets\/images\/.*\.svg)/,
         },
       },
     },
+    'gatsby-transformer-json',
     {
       resolve: 'gatsby-source-filesystem',
       options: {

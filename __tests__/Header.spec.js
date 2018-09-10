@@ -9,5 +9,5 @@ describe('<Header />', () => {
 
   it('renders without crashing', () => {
     expect(wrapper).toHaveLength(1);
-  })
+  });
 });

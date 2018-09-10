@@ -1,22 +1,22 @@
+// @flow
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
 import * as actionCreators from 'store/actions';
 
-const propTypes = {
-  ctr: PropTypes.number,
-  onIncrementCounter: PropTypes.func,
-  onDecrementCounter: PropTypes.func,
-  onAddCounter: PropTypes.func,
-  onSubstractCounter: PropTypes.func,
-  storedResults: PropTypes.instanceOf(Array),
-  onStoreResult: PropTypes.func,
-  onRemoveResult: PropTypes.func,
+type Props = {
+  ctr: number,
+  onIncrementCounter: Function,
+  onDecrementCounter: Function,
+  onAddCounter: Function,
+  onSubstractCounter: Function,
+  storedResults: Array,
+  onStoreResult: Function,
+  onRemoveResult: Function,
 };
 
 /* eslint-disable react/prefer-stateless-function */
-class Counter extends Component {
+class Counter extends Component<Props> {
   render() {
     const {
       ctr,
@@ -63,7 +63,7 @@ class Counter extends Component {
   }
 }
 
-Counter.propTypes = propTypes;
+// Counter.propTypes = propTypes;
 
 const mapStateToProps = state => {
   return {

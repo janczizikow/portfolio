@@ -1,16 +1,38 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+// @flow
+import * as React from 'react';
 import Helmet from 'react-helmet';
 import { StaticQuery, graphql } from 'gatsby';
+import { injectGlobal } from 'emotion';
+import { css } from 'react-emotion';
+import { ThemeProvider } from 'emotion-theming';
+import { Box, Flex } from '@rebass/grid/emotion';
 
-import Header from 'components/Header';
-import './layout.css';
+import Header from 'components/Header/index';
+import Footer from 'components/Footer/index';
+import theme from 'utils/theme';
 
-const propTypes = {
-  children: PropTypes.node.isRequired,
-};
+injectGlobal(`
+  *::before,
+  *::after,
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    padding: 0;
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+  }
+`);
 
-const Layout = ({ children }) => (
+const siteStyles = css`
+  min-height: 100vh;
+`;
+
+// const siteContentStyles = css`
+//   margin-top: 3.625rem;
+// `;
+
+const Layout = ({ children }: { children: React.Node }) => (
   <StaticQuery
     query={graphql`
       query SiteTitleQuery {
@@ -32,22 +54,18 @@ const Layout = ({ children }) => (
         >
           <html lang="en" />
         </Helmet>
-        <Header siteTitle={data.site.siteMetadata.title} />
-        <div
-          style={{
-            margin: '0 auto',
-            maxWidth: 960,
-            padding: '0px 1.0875rem 1.45rem',
-            paddingTop: 0,
-          }}
-        >
-          {children}
-        </div>
+        <ThemeProvider theme={theme}>
+          <Flex flexDirection="column" className={siteStyles}>
+            <Header siteTitle={data.site.siteMetadata.title} />
+            <Box tag="main" flex={1}>
+              {children}
+            </Box>
+            <Footer />
+          </Flex>
+        </ThemeProvider>
       </>
     )}
   />
 );
-
-Layout.propTypes = propTypes;
 
 export default Layout;
