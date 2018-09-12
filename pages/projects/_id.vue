@@ -18,15 +18,15 @@
     <section class="project__showcase">
       <container fluid>
         <div class="project__center">
-          <picture v-for="(image, i) in images" :key="image">
-            <source media="(min-width: 992px)" :srcset="'/images/projects/' + $route.params.id + '/' + $route.params.id + '-' + (i + 1) + '_lg.jpg' + ', ' + '/images/projects/' + $route.params.id + '/' + $route.params.id + '-' + (i + 1) + '_lg@2x.jpg 2x'">
-            <source media="(min-width: 768px)" :srcset="'/images/projects/' + $route.params.id + '/' + $route.params.id + '-' + (i + 1) + '_md.jpg' + ', ' + '/images/projects/' + $route.params.id + '/' + $route.params.id + '-' + (i + 1) + '_md@2x.jpg 2x'">
-            <source media="(min-width: 576px)" :srcset="'/images/projects/' + $route.params.id + '/' + $route.params.id + '-' + (i + 1) + '_sm.jpg' + ', ' + '/images/projects/' + $route.params.id + '/' + $route.params.id + '-' + (i + 1) + '_sm@2x.jpg 2x'">
-            <source media="(min-width: 0)" :srcset="'/images/projects/' + $route.params.id + '/' + $route.params.id + '-' + (i + 1) + '_xs.jpg' + ', ' + '/images/projects/' + $route.params.id + '/' + $route.params.id + '-' + (i + 1) + '_xs@2x.jpg 2x'">
+          <picture v-for="(photo, i) in photos" :key="photo.id">
+            <source media="(min-width: 992px)" :srcset="`${photo.photo.large.url}, ${photo.photo.large_retina.url} 2x`">
+            <source media="(min-width: 768px)" :srcset="`${photo.photo.medium.url}, ${photo.photo.medium_retina.url} 2x`">
+            <source media="(min-width: 576px)" :srcset="`${photo.photo.small.url}, ${photo.photo.small_retina.url} 2x`">
+            <source media="(min-width: 0)" :srcset="`${photo.photo.extra_small.url}, ${photo.photo.extra_small_retina.url} 2x`">
             <img
               class="project__img"
-              :key="image"
-              :src="image"
+              :key="photo.id"
+              :src="photo.photo.large_retina.url"
               :alt="name + '-' + i"/>
           </picture>
         </div>
@@ -55,10 +55,13 @@ export default {
   async asyncData({ params, error }) {
     try {
       const res = await axios.get(`http://localhost:3001/api/v1/projects/${params.id}`);
-      console.log(res.data);
       return res.data;
     } catch (e) {
-      return error({ statusCode: e.request.res.statusCode, message: e.request.res.statusMessage});
+      if (e.request.res) {
+        return error({ statusCode: e.request.res.statusCode, message: e.request.res.statusMessage});
+      } else {
+        return error({ statusCode: e.statusCode, message: e.message});
+      }
     }
   },
   components: {
