@@ -88,7 +88,7 @@ module.exports = {
       url: 'https://www.janczizikow.com',
       title: 'Jan Czizikow // Web Developer',
       description: 'This is the site of Jan Czizikow, a Web Developer. The site is just a list of things he\'s been up to including blog and projects.',
-      img: 'https://www.janczizikow.com/images/open_graph.jpg',
+      img: 'https://www.janczizikow.com/open_graph.jpg',
       locale: 'en_US',
       twitter: '@jan_czizikow',
       themeColor: '#277cea'
