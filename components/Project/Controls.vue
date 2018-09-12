@@ -2,23 +2,27 @@
   <row middle between :gutters="false" class="controls">
 
     <div class="controls__item controls__item--prev">
-      <span class="controls__meta">Previous</span>
-      <nuxt-link :to="prev.link" class="controls__link">
-        <span>
-          <app-arrow-left class="controls__icon"/>
-        </span>
-        {{ prev.text }}
-      </nuxt-link>
+      <template v-if="prev">
+        <span class="controls__meta">Previous</span>
+        <nuxt-link :to="`/projects/${prev.slug}`" class="controls__link">
+          <span>
+            <app-arrow-left class="controls__icon"/>
+          </span>
+          {{ prev.name }}
+        </nuxt-link>
+      </template>
     </div>
 
     <div class="controls__item controls__item--next">
-      <span class="controls__meta">Next</span>
-      <nuxt-link :to="next.link" class="controls__link">
-        {{ next.text }}
-        <span>
-          <app-arrow-right class="controls__icon"/>
-        </span>
-      </nuxt-link>
+      <template v-if="next">
+        <span class="controls__meta">Next</span>
+        <nuxt-link :to="`/projects/${next.slug}`" class="controls__link">
+          {{ next.name }}
+          <span>
+            <app-arrow-right class="controls__icon"/>
+          </span>
+        </nuxt-link>
+      </template>
     </div>
 
   </row>

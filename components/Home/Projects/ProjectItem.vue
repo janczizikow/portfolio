@@ -1,16 +1,16 @@
 <template>
   <nuxt-link
     class="card"
-    :to="'/projects/' + projectURL">
+    :to="`/projects/${slug}`">
     <app-progresive-img
       :placeholder="true"
       class="card__thumb"
       imgClass="card__img"
-      :src="'/images/' + projectURL + '.jpg'"
-      :alt="title">
+      :src="`/images/${slug}.jpg`"
+      :alt="name">
       <figcaption class="card__inner">
         <p>{{ date }}</p>
-        <h3 class="card__title">{{ title }}</h3>
+        <h3 class="card__title">{{ name }}</h3>
       </figcaption>
     </app-progresive-img>
   </nuxt-link>
@@ -21,14 +21,10 @@ import appProgresiveImg from '~/components/ProgressiveImg.vue';
 
 export default {
   props: {
-    title: { type: String, required: true },
+    name: { type: String, required: true },
+    slug: { type: String, required: true },
     date: [String, Object],
     category: String
-  },
-  computed: {
-    projectURL() {
-      return this.title.toLowerCase().replace(/\W+/, '-');
-    }
   },
   components: {
     appProgresiveImg

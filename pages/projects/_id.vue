@@ -2,15 +2,15 @@
   <main class="project">
       <container fluid>
         <div class="project__center project__intro">
-          <h2 class="project__title">{{ title }}</h2>
+          <h2 class="project__title">{{ name }}</h2>
           <p>{{ description }}</p>
-          <template v-if="introLinks">
+          <template v-if="links">
             <row center middle :gutters="false">
               <app-button
-                v-for="(link, i) in introLinks"
+                v-for="(link, i) in links"
                 :key="i"
                 :class="{'project__btn--second': (i >= 1) }"
-                :href="link.link">{{ link.text }}</app-button>
+                :href="link.url">{{ link.text }}</app-button>
             </row>
           </template>
         </div>
@@ -27,7 +27,7 @@
               class="project__img"
               :key="image"
               :src="image"
-              :alt="title + '-' + i"/>
+              :alt="name + '-' + i"/>
           </picture>
         </div>
       </container>
@@ -46,35 +46,20 @@
 
 
 <script>
-// FIXME: Mixins issue
-import projectsData from '~/static/data.json';
-
+import axios from 'axios';
 import { Container, Row } from '~/components/Layout';
 import appButton from '~/components/Button.vue';
 import appControls from '~/components/Project/Controls.vue';
 
 export default {
-  asyncData({ params }) {
-    const data = projectsData;
-
-    function getCurProjectData(str) {
-      return str.toLowerCase().replace(/\W+/, '-');
+  async asyncData({ params, error }) {
+    try {
+      const res = await axios.get(`http://localhost:3001/api/v1/projects/${params.id}`);
+      console.log(res.data);
+      return res.data;
+    } catch (e) {
+      return error({ statusCode: e.request.res.statusCode, message: e.request.res.statusMessage});
     }
-
-    const index = data.projects.findIndex(el => {
-      if ( getCurProjectData(el.title) === params.id ) {
-        return el;
-      }
-    });
-
-    if (index !== -1) {
-      return data.projects[index];
-    }
-  },
-  validate ({ params }) {
-    //FIXME: This should be dynamic
-    const URLS = projectsData.projects.map(project => project.title.toLowerCase().replace(/\W+/g, '-'));
-    return URLS.some(el => el === params.id);
   },
   components: {
     Container,
