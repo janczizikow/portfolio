@@ -10,15 +10,15 @@
 </template>
 
 <script>
-import axios from 'axios';
+import api from '~/plugins/axios';
 import appHero from '~/components/Home/Hero.vue';
 import appProjects from '~/components/Home/Projects/Projects.vue';
 import appCta from '~/components/Home/Cta.vue';
 
 export default {
-  async asyncData({ error }) {
+  async asyncData({ isDev, error }) {
     try {
-      const res = await axios.get('http://localhost:3001/api/v1/projects/');
+      const res = await api.get('/projects');
       return { projects: res.data }
     } catch (e) {
       if (e.request.res) {

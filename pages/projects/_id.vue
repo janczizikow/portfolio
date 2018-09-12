@@ -46,7 +46,7 @@
 
 
 <script>
-import axios from 'axios';
+import api from '~/plugins/axios';
 import { Container, Row } from '~/components/Layout';
 import appButton from '~/components/Button.vue';
 import appControls from '~/components/Project/Controls.vue';
@@ -54,7 +54,7 @@ import appControls from '~/components/Project/Controls.vue';
 export default {
   async asyncData({ params, error }) {
     try {
-      const res = await axios.get(`http://localhost:3001/api/v1/projects/${params.id}`);
+      const res = await api.get(`/projects/${params.id}`);
       return res.data;
     } catch (e) {
       if (e.request.res) {
