@@ -7,8 +7,10 @@
           v-for="project in projects"
           :key="project.id"
           :name="project.name"
-          :date="project.date"
           :slug="project.slug"
+          :date="project.date"
+          :thumbnail="project.thumbnail"
+          :category="project.category"
           class="projects__item"
           />
       </div>
