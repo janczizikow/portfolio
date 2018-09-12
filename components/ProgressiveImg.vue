@@ -9,7 +9,9 @@
       :alt="alt"
     />
       <!-- https://github.com/nuxt/nuxt.js/issues/2582 -->
-      <noscript inline-template><img :src="src" :alt="alt"/></noscript>
+      <noscript inline-template>
+        <img :srcset="responsive ? srcset : null" :src="!responsive ? src : null" :alt="alt"/>
+      </noscript>
       <slot></slot>
   </figure>
 </template>
@@ -24,16 +26,6 @@ export default {
     srcset: { type: String },
     placeholder: { type: [String, Boolean], default: null },
     imgClass: { type: String }
-  },
-  computed: {
-    retina() {
-      const index = this.src.lastIndexOf('.');
-      return `${this.src}, ${this.src.substr(0, index)}@2x${this.src.substr(index, this.src.length)} 2x`;
-    },
-    placeholderImg() {
-      const index = this.src.lastIndexOf('.');
-      return `${this.src.substr(0, index)}_placeholder${this.src.substr(index, this.src.length)}`;
-    }
   }
 }
 </script>
