@@ -2,8 +2,9 @@
   <figure :class="'progressive-img'">
     <img
       data-sizes="auto"
-      :src="placeholder ? placeholderImg : false"
-      :data-srcset="responsive ? retina : src"
+      :src="placeholder"
+      :data-srcset="responsive ? srcset : null"
+      :data-src="!responsive ? src : null"
       :class="[ 'lazyload', { 'blur-up': blur }, imgClass ]"
       :alt="alt"
     />
@@ -19,8 +20,9 @@ export default {
     responsive: { type: Boolean, default: true },
     blur: { type: Boolean, default: true },
     alt: { type: String, required: true },
-    src: { type: String, required: true },
-    placeholder: { type: [Boolean, String], default: false },
+    src: { type: String },
+    srcset: { type: String },
+    placeholder: { type: [String, Boolean], default: null },
     imgClass: { type: String }
   },
   computed: {

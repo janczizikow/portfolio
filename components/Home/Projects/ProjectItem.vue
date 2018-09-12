@@ -3,10 +3,10 @@
     class="card"
     :to="`/projects/${slug}`">
     <app-progresive-img
-      :placeholder="true"
       class="card__thumb"
       imgClass="card__img"
-      :src="`/images/${slug}.jpg`"
+      :placeholder="placeholder"
+      :srcset="srcset"
       :alt="name">
       <figcaption class="card__inner">
         <p>{{ date }}</p>
@@ -24,7 +24,21 @@ export default {
     name: { type: String, required: true },
     slug: { type: String, required: true },
     date: [String, Object],
-    category: String
+    category: String,
+    thumbnail: { type: Object, required: true },
+    big: { type: Boolean,required: true }
+  },
+  computed: {
+    placeholder() {
+      return this.big ? this.thumbnail.big_placeholder.url : this.thumbnail.small_placeholder.url
+    },
+    srcset() {
+      if (this.big) {
+        return `${this.thumbnail.big.url}, ${this.thumbnail.big_retina.url} 2x`;
+      } else {
+        return `${this.thumbnail.small.url}, ${this.thumbnail.small_retina.url} 2x`;
+      }
+    }
   },
   components: {
     appProgresiveImg

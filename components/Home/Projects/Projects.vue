@@ -4,13 +4,14 @@
       <h1 class="projects__header">Projects</h1>
       <div class="projects__inner">
         <app-project-item
-          v-for="project in projects"
+          v-for="(project, i) in projects"
           :key="project.id"
           :name="project.name"
           :slug="project.slug"
           :date="project.date"
-          :thumbnail="project.thumbnail"
           :category="project.category"
+          :thumbnail="project.thumbnail"
+          :big="i === 0"
           class="projects__item"
           />
       </div>
