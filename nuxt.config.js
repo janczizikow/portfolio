@@ -7,7 +7,8 @@ module.exports = {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'This is the site of Jan Czizikow, a Web Developer. The site is just a list of things he\'s been up to including blog and projects.' }
+      { hid: 'description', name: 'description', content: 'This is the site of Jan Czizikow, a Web Developer. The site is just a list of things he\'s been up to including blog and projects.' },
+      { name: 'google-site-verification', content: 'wCwp1rTFhCFbcDnt5mwGCaof3tp3kJUcs6lQgnFYJZc' }
     ],
     link: [
       { rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-icon-180x180.png' },
