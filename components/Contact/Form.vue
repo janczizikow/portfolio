@@ -35,7 +35,7 @@
           :error="$v.message.$error"
           :errorMsg="$v.message.$error ? 'This field is required' : null"
           v-model="message" type="textarea">Message</app-input>
-        <app-button type="submit" :disabled="$v.$invalid">Send</app-button>
+        <app-button type="submit" :loading="loading" :disabled="$v.$invalid || loading">Send</app-button>
       </column>
     </row><!-- /row -->
   </column><!-- ./col-7 -->
@@ -68,7 +68,9 @@ export default {
     return {
       name: '',
       email: '',
-      message: ''
+      message: '',
+      loading: false,
+      error: null,
     };
   },
   computed: {
@@ -104,6 +106,7 @@ export default {
       e.target.reset(); // reset the form
     },
     formSubmit(e) {
+      this.loading = true;
       const submission = {
         name: this.name,
         email: this.email,
@@ -114,12 +117,20 @@ export default {
       })
       .then(response => {
         if (response.status === 200 || response.status ===  201) {
+          this.loading = false;
+          this.error = null;
           this.$store.commit('toggleModal');
           this.resetForm(e);
         }
       })
       .catch(error => {
-        alert('Snap! Something went wrong. Please try again or email me from your email service provider.');
+        this.loading = false;
+        if (error.response) {
+          this.error = error.response.data.error;
+        } else {
+          this.error = error.message;
+        }
+        alert(this.error);
         console.log(error);
       });
     },
