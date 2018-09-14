@@ -2,15 +2,15 @@
   <main class="project">
       <container fluid>
         <div class="project__center project__intro">
-          <h2 class="project__title">{{ title }}</h2>
+          <h2 class="project__title">{{ name }}</h2>
           <p>{{ description }}</p>
-          <template v-if="introLinks">
+          <template v-if="links">
             <row center middle :gutters="false">
               <app-button
-                v-for="(link, i) in introLinks"
+                v-for="(link, i) in links"
                 :key="i"
                 :class="{'project__btn--second': (i >= 1) }"
-                :href="link.link">{{ link.text }}</app-button>
+                :href="link.url">{{ link.text }}</app-button>
             </row>
           </template>
         </div>
@@ -18,16 +18,16 @@
     <section class="project__showcase">
       <container fluid>
         <div class="project__center">
-          <picture v-for="(image, i) in images" :key="image">
-            <source media="(min-width: 992px)" :srcset="'/images/projects/' + $route.params.id + '/' + $route.params.id + '-' + (i + 1) + '_lg.jpg' + ', ' + '/images/projects/' + $route.params.id + '/' + $route.params.id + '-' + (i + 1) + '_lg@2x.jpg 2x'">
-            <source media="(min-width: 768px)" :srcset="'/images/projects/' + $route.params.id + '/' + $route.params.id + '-' + (i + 1) + '_md.jpg' + ', ' + '/images/projects/' + $route.params.id + '/' + $route.params.id + '-' + (i + 1) + '_md@2x.jpg 2x'">
-            <source media="(min-width: 576px)" :srcset="'/images/projects/' + $route.params.id + '/' + $route.params.id + '-' + (i + 1) + '_sm.jpg' + ', ' + '/images/projects/' + $route.params.id + '/' + $route.params.id + '-' + (i + 1) + '_sm@2x.jpg 2x'">
-            <source media="(min-width: 0)" :srcset="'/images/projects/' + $route.params.id + '/' + $route.params.id + '-' + (i + 1) + '_xs.jpg' + ', ' + '/images/projects/' + $route.params.id + '/' + $route.params.id + '-' + (i + 1) + '_xs@2x.jpg 2x'">
+          <picture v-for="(photo, i) in photos" :key="photo.id">
+            <source media="(min-width: 992px)" :srcset="`${photo.photo.large.url}, ${photo.photo.large_retina.url} 2x`">
+            <source media="(min-width: 768px)" :srcset="`${photo.photo.medium.url}, ${photo.photo.medium_retina.url} 2x`">
+            <source media="(min-width: 576px)" :srcset="`${photo.photo.small.url}, ${photo.photo.small_retina.url} 2x`">
+            <source media="(min-width: 0)" :srcset="`${photo.photo.extra_small.url}, ${photo.photo.extra_small_retina.url} 2x`">
             <img
               class="project__img"
-              :key="image"
-              :src="image"
-              :alt="title + '-' + i"/>
+              :key="photo.id"
+              :src="photo.photo.large_retina.url"
+              :alt="name + '-' + i"/>
           </picture>
         </div>
       </container>
@@ -46,35 +46,23 @@
 
 
 <script>
-// FIXME: Mixins issue
-import projectsData from '~/static/data.json';
-
+import api from '~/plugins/axios';
 import { Container, Row } from '~/components/Layout';
 import appButton from '~/components/Button.vue';
 import appControls from '~/components/Project/Controls.vue';
 
 export default {
-  asyncData({ params }) {
-    const data = projectsData;
-
-    function getCurProjectData(str) {
-      return str.toLowerCase().replace(/\W+/, '-');
-    }
-
-    const index = data.projects.findIndex(el => {
-      if ( getCurProjectData(el.title) === params.id ) {
-        return el;
+  async asyncData({ params, error }) {
+    try {
+      const res = await api.get(`/projects/${params.id}`);
+      return res.data;
+    } catch (e) {
+      if (e.request.res) {
+        return error({ statusCode: e.request.res.statusCode, message: e.request.res.statusMessage});
+      } else {
+        return error({ statusCode: e.statusCode, message: e.message});
       }
-    });
-
-    if (index !== -1) {
-      return data.projects[index];
     }
-  },
-  validate ({ params }) {
-    //FIXME: This should be dynamic
-    const URLS = projectsData.projects.map(project => project.title.toLowerCase().replace(/\W+/g, '-'));
-    return URLS.some(el => el === params.id);
   },
   components: {
     Container,

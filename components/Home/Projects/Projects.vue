@@ -4,10 +4,14 @@
       <h1 class="projects__header">Projects</h1>
       <div class="projects__inner">
         <app-project-item
-          v-for="project in projects"
+          v-for="(project, i) in projects"
           :key="project.id"
-          :title="project.name"
+          :name="project.name"
+          :slug="project.slug"
           :date="project.date"
+          :category="project.category"
+          :thumbnail="project.thumbnail"
+          :big="i === 0"
           class="projects__item"
           />
       </div>
@@ -20,16 +24,8 @@ import { Container } from '~/components/Layout';
 import appProjectItem from './ProjectItem.vue';
 
 export default {
-  data() {
-    return {
-      projects: [
-        { id: 0, date: '31 Aug 2018', name: 'Skatespots', category: 'Website' },
-        { id: 1, date: '18 Feb 2018', name: 'Jekyll Sleek', category: 'Website' },
-        { id: 2, date: '14 Jan 2018', name: 'Blanccstate', category: 'Website' },
-        { id: 3, date: '21 Nov 2016', name: 'the clinic', category: 'Email' },
-        { id: 4, date: '26 Oct 2016', name: 'Minimal Portfolio', category: 'Website' },
-      ]
-    };
+  props: {
+    projects: { type: Array, required: true }
   },
   components: {
     Container,

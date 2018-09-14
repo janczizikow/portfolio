@@ -29394,5 +29394,2686 @@
         "modules": []
       }
     ]
+  },
+  {
+    "timeStamp": 1536775728502,
+    "time": 16683,
+    "hash": "16a8b96697ac080dd5ac",
+    "errors": [],
+    "size": 669164,
+    "assets": [
+      {
+        "name": "pages/dashboard/index.6d64f356817167e71563.js",
+        "chunks": [
+          7
+        ],
+        "size": 18776,
+        "minified": true
+      },
+      {
+        "name": "assets/hero__img.5cf98857.svg",
+        "chunks": [],
+        "size": 190303
+      },
+      {
+        "name": "pages/login.8f50af584a262bbe7149.js",
+        "chunks": [
+          1
+        ],
+        "size": 34210,
+        "minified": true
+      },
+      {
+        "name": "pages/index.589eb0f8cef8966cb90e.js",
+        "chunks": [
+          2
+        ],
+        "size": 29248,
+        "minified": true
+      },
+      {
+        "name": "layouts/default.c7f04aad7966723cf2b8.js",
+        "chunks": [
+          3
+        ],
+        "size": 48320,
+        "minified": true
+      },
+      {
+        "name": "pages/projects/_id.95d1d65e22718676a70b.js",
+        "chunks": [
+          4
+        ],
+        "size": 23957,
+        "minified": true
+      },
+      {
+        "name": "pages/about.940ebb30dd1c4bde680b.js",
+        "chunks": [
+          5
+        ],
+        "size": 21164,
+        "minified": true
+      },
+      {
+        "name": "pages/dashboard/submission/_id.c8219cc7a34cf740437b.js",
+        "chunks": [
+          6
+        ],
+        "size": 18868,
+        "minified": true
+      },
+      {
+        "name": "pages/contact.43298972230f569ae963.js",
+        "chunks": [
+          0
+        ],
+        "size": 39784,
+        "minified": true
+      },
+      {
+        "name": "vendor.db093308277085a02054.js",
+        "chunks": [
+          8
+        ],
+        "size": 190982,
+        "minified": true
+      },
+      {
+        "name": "app.bdcddd62f69f79427e5f.js",
+        "chunks": [
+          9
+        ],
+        "size": 39219,
+        "minified": true
+      },
+      {
+        "name": "manifest.16a8b96697ac080dd5ac.js",
+        "chunks": [
+          10
+        ],
+        "size": 1752,
+        "minified": true
+      },
+      {
+        "name": "LICENSES",
+        "chunks": [],
+        "size": 1112
+      },
+      {
+        "name": "index.spa.html",
+        "chunks": [],
+        "size": 383
+      },
+      {
+        "name": "index.ssr.html",
+        "chunks": [],
+        "size": 132
+      },
+      {
+        "name": "vue-ssr-client-manifest.json",
+        "chunks": [],
+        "size": 10954
+      }
+    ],
+    "chunks": [
+      {
+        "size": 72585,
+        "files": [
+          "pages/contact.43298972230f569ae963.js"
+        ],
+        "modules": [
+          {
+            "name": "./node_modules/vue-loader/lib/template-compiler?{\"id\":\"data-v-93b58568\",\"hasScoped\":true,\"transformToRequire\":{\"video\":\"src\",\"source\":\"src\",\"object\":\"src\",\"embed\":\"src\"},\"preserveWhitespace\":false,\"buble\":{\"transforms\":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./components/Contact/Form.vue",
+            "size": 1557,
+            "id": "+PDS"
+          },
+          {
+            "name": "./node_modules/vuelidate/lib/validators/index.js",
+            "size": 4696,
+            "id": "+cKO"
+          },
+          {
+            "name": "./node_modules/css-loader?{\"sourceMap\":false,\"minimize\":true,\"importLoaders\":1,\"alias\":{\"/assets\":\"/Users/johnny/Sites/janczizikow-portfolio/assets\",\"/static\":\"/Users/johnny/Sites/janczizikow-portfolio/static\"}}!./node_modules/vue-loader/lib/style-compiler?{\"vue\":true,\"id\":\"data-v-6656c67e\",\"scoped\":true,\"hasInlineConfig\":true}!./node_modules/sass-loader/lib/loader.js?{\"sourceMap\":false}!./node_modules/sass-resources-loader/lib/loader.js?{\"resources\":[\"/Users/johnny/Sites/janczizikow-portfolio/assets/shared.scss\"]}!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./components/Input.vue",
+            "size": 2545,
+            "id": "/pif"
+          },
+          {
+            "name": "./components/Input.vue",
+            "size": 2207,
+            "id": "2Kyz"
+          },
+          {
+            "name": "./node_modules/babel-loader/lib?{\"babelrc\":false,\"cacheDirectory\":false,\"presets\":[[\"/Users/johnny/Sites/janczizikow-portfolio/node_modules/babel-preset-vue-app/dist/index.common.js\",{\"targets\":{\"ie\":9,\"uglify\":true}}]]}!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./components/Layout/components/Col.vue",
+            "size": 929,
+            "id": "2VL1"
+          },
+          {
+            "name": "./node_modules/vue-style-loader?{\"sourceMap\":false}!./node_modules/css-loader?{\"sourceMap\":false,\"minimize\":true,\"importLoaders\":1,\"alias\":{\"/assets\":\"/Users/johnny/Sites/janczizikow-portfolio/assets\",\"/static\":\"/Users/johnny/Sites/janczizikow-portfolio/static\"}}!./node_modules/vue-loader/lib/style-compiler?{\"vue\":true,\"id\":\"data-v-93b58568\",\"scoped\":true,\"hasInlineConfig\":true}!./node_modules/sass-loader/lib/loader.js?{\"sourceMap\":false}!./node_modules/sass-resources-loader/lib/loader.js?{\"resources\":[\"/Users/johnny/Sites/janczizikow-portfolio/assets/shared.scss\"]}!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./components/Contact/Form.vue",
+            "size": 1061,
+            "id": "2WOS"
+          },
+          {
+            "name": "./node_modules/vuelidate/lib/validators/between.js",
+            "size": 453,
+            "id": "3Ro/"
+          },
+          {
+            "name": "./node_modules/vuelidate/lib/validators/required.js",
+            "size": 248,
+            "id": "4oDf"
+          },
+          {
+            "name": "./node_modules/vuelidate/lib/validators/minLength.js",
+            "size": 395,
+            "id": "4ypF"
+          },
+          {
+            "name": "./node_modules/css-loader?{\"sourceMap\":false,\"minimize\":true,\"importLoaders\":1,\"alias\":{\"/assets\":\"/Users/johnny/Sites/janczizikow-portfolio/assets\",\"/static\":\"/Users/johnny/Sites/janczizikow-portfolio/static\"}}!./node_modules/vue-loader/lib/style-compiler?{\"vue\":true,\"id\":\"data-v-089c8207\",\"scoped\":true,\"hasInlineConfig\":true}!./node_modules/sass-loader/lib/loader.js?{\"sourceMap\":false}!./node_modules/sass-resources-loader/lib/loader.js?{\"resources\":[\"/Users/johnny/Sites/janczizikow-portfolio/assets/shared.scss\"]}!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./components/Layout/components/Row.vue",
+            "size": 1302,
+            "id": "5+h7"
+          },
+          {
+            "name": "./node_modules/vuelidate/lib/validators/requiredUnless.js",
+            "size": 418,
+            "id": "6+Xr"
+          },
+          {
+            "name": "./node_modules/vuelidate/lib/validators/email.js",
+            "size": 402,
+            "id": "6rz0"
+          },
+          {
+            "name": "./node_modules/vuelidate/lib/validators/url.js",
+            "size": 692,
+            "id": "7J6f"
+          },
+          {
+            "name": "./node_modules/vue-loader/lib/template-compiler?{\"id\":\"data-v-13ad627c\",\"hasScoped\":true,\"transformToRequire\":{\"video\":\"src\",\"source\":\"src\",\"object\":\"src\",\"embed\":\"src\"},\"preserveWhitespace\":false,\"buble\":{\"transforms\":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./components/Layout/components/Container.vue",
+            "size": 286,
+            "id": "BSAC"
+          },
+          {
+            "name": "./node_modules/vue-style-loader?{\"sourceMap\":false}!./node_modules/css-loader?{\"sourceMap\":false,\"minimize\":true,\"importLoaders\":1,\"alias\":{\"/assets\":\"/Users/johnny/Sites/janczizikow-portfolio/assets\",\"/static\":\"/Users/johnny/Sites/janczizikow-portfolio/static\"}}!./node_modules/vue-loader/lib/style-compiler?{\"vue\":true,\"id\":\"data-v-6656c67e\",\"scoped\":true,\"hasInlineConfig\":true}!./node_modules/sass-loader/lib/loader.js?{\"sourceMap\":false}!./node_modules/sass-resources-loader/lib/loader.js?{\"resources\":[\"/Users/johnny/Sites/janczizikow-portfolio/assets/shared.scss\"]}!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./components/Input.vue",
+            "size": 1044,
+            "id": "BU9E"
+          },
+          {
+            "name": "./node_modules/vue-loader/lib/template-compiler?{\"id\":\"data-v-2837d6e6\",\"hasScoped\":false,\"transformToRequire\":{\"video\":\"src\",\"source\":\"src\",\"object\":\"src\",\"embed\":\"src\"},\"preserveWhitespace\":false,\"buble\":{\"transforms\":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./components/Layout/components/Col.vue",
+            "size": 288,
+            "id": "DKC3"
+          },
+          {
+            "name": "./node_modules/css-loader?{\"sourceMap\":false,\"minimize\":true,\"importLoaders\":1,\"alias\":{\"/assets\":\"/Users/johnny/Sites/janczizikow-portfolio/assets\",\"/static\":\"/Users/johnny/Sites/janczizikow-portfolio/static\"}}!./node_modules/vue-loader/lib/style-compiler?{\"vue\":true,\"id\":\"data-v-2837d6e6\",\"scoped\":false,\"hasInlineConfig\":true}!./node_modules/sass-loader/lib/loader.js?{\"sourceMap\":false}!./node_modules/sass-resources-loader/lib/loader.js?{\"resources\":[\"/Users/johnny/Sites/janczizikow-portfolio/assets/shared.scss\"]}!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./components/Layout/components/Col.vue",
+            "size": 11987,
+            "id": "DVaP"
+          },
+          {
+            "name": "./node_modules/vuelidate/lib/validators/not.js",
+            "size": 378,
+            "id": "FP1U"
+          },
+          {
+            "name": "./node_modules/vue-loader/lib/template-compiler?{\"id\":\"data-v-6656c67e\",\"hasScoped\":true,\"transformToRequire\":{\"video\":\"src\",\"source\":\"src\",\"object\":\"src\",\"embed\":\"src\"},\"preserveWhitespace\":false,\"buble\":{\"transforms\":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./components/Input.vue",
+            "size": 794,
+            "id": "FQRf"
+          },
+          {
+            "name": "./node_modules/vuelidate/lib/validators/alpha.js",
+            "size": 230,
+            "id": "FWhV"
+          },
+          {
+            "name": "./node_modules/css-loader?{\"sourceMap\":false,\"minimize\":true,\"importLoaders\":1,\"alias\":{\"/assets\":\"/Users/johnny/Sites/janczizikow-portfolio/assets\",\"/static\":\"/Users/johnny/Sites/janczizikow-portfolio/static\"}}!./node_modules/vue-loader/lib/style-compiler?{\"vue\":true,\"id\":\"data-v-13ad627c\",\"scoped\":true,\"hasInlineConfig\":true}!./node_modules/sass-loader/lib/loader.js?{\"sourceMap\":false}!./node_modules/sass-resources-loader/lib/loader.js?{\"resources\":[\"/Users/johnny/Sites/janczizikow-portfolio/assets/shared.scss\"]}!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./components/Layout/components/Container.vue",
+            "size": 632,
+            "id": "FyiN"
+          },
+          {
+            "name": "./node_modules/vue-style-loader?{\"sourceMap\":false}!./node_modules/css-loader?{\"sourceMap\":false,\"minimize\":true,\"importLoaders\":1,\"alias\":{\"/assets\":\"/Users/johnny/Sites/janczizikow-portfolio/assets\",\"/static\":\"/Users/johnny/Sites/janczizikow-portfolio/static\"}}!./node_modules/vue-loader/lib/style-compiler?{\"vue\":true,\"id\":\"data-v-6ec1b68a\",\"scoped\":true,\"hasInlineConfig\":true}!./node_modules/sass-loader/lib/loader.js?{\"sourceMap\":false}!./node_modules/sass-resources-loader/lib/loader.js?{\"resources\":[\"/Users/johnny/Sites/janczizikow-portfolio/assets/shared.scss\"]}!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./pages/contact.vue",
+            "size": 1046,
+            "id": "H4av"
+          },
+          {
+            "name": "./node_modules/vuelidate/lib/validators/macAddress.js",
+            "size": 876,
+            "id": "HM/u"
+          },
+          {
+            "name": "./node_modules/vuelidate/lib/validators/ipAddress.js",
+            "size": 786,
+            "id": "HSVw"
+          },
+          {
+            "name": "./node_modules/babel-loader/lib?{\"babelrc\":false,\"cacheDirectory\":false,\"presets\":[[\"/Users/johnny/Sites/janczizikow-portfolio/node_modules/babel-preset-vue-app/dist/index.common.js\",{\"targets\":{\"ie\":9,\"uglify\":true}}]]}!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./components/Layout/components/Row.vue",
+            "size": 790,
+            "id": "K82H"
+          },
+          {
+            "name": "./node_modules/vuelidate/lib/validators/sameAs.js",
+            "size": 393,
+            "id": "L6Jx"
+          },
+          {
+            "name": "./mixins/index.js",
+            "size": 582,
+            "id": "M2pF"
+          },
+          {
+            "name": "./node_modules/vue-style-loader?{\"sourceMap\":false}!./node_modules/css-loader?{\"sourceMap\":false,\"minimize\":true,\"importLoaders\":1,\"alias\":{\"/assets\":\"/Users/johnny/Sites/janczizikow-portfolio/assets\",\"/static\":\"/Users/johnny/Sites/janczizikow-portfolio/static\"}}!./node_modules/vue-loader/lib/style-compiler?{\"vue\":true,\"id\":\"data-v-2837d6e6\",\"scoped\":false,\"hasInlineConfig\":true}!./node_modules/sass-loader/lib/loader.js?{\"sourceMap\":false}!./node_modules/sass-resources-loader/lib/loader.js?{\"resources\":[\"/Users/johnny/Sites/janczizikow-portfolio/assets/shared.scss\"]}!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./components/Layout/components/Col.vue",
+            "size": 1079,
+            "id": "M3JZ"
+          },
+          {
+            "name": "./node_modules/vuelidate/lib/validators/alphaNum.js",
+            "size": 236,
+            "id": "PKmV"
+          },
+          {
+            "name": "./node_modules/babel-loader/lib?{\"babelrc\":false,\"cacheDirectory\":false,\"presets\":[[\"/Users/johnny/Sites/janczizikow-portfolio/node_modules/babel-preset-vue-app/dist/index.common.js\",{\"targets\":{\"ie\":9,\"uglify\":true}}]]}!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./components/Input.vue",
+            "size": 1126,
+            "id": "POlE"
+          },
+          {
+            "name": "./components/Layout/components/Col.vue",
+            "size": 2230,
+            "id": "Tf12"
+          },
+          {
+            "name": "./node_modules/vuelidate/lib/validators/common.js",
+            "size": 1818,
+            "id": "URu4"
+          },
+          {
+            "name": "./node_modules/vue-style-loader?{\"sourceMap\":false}!./node_modules/css-loader?{\"sourceMap\":false,\"minimize\":true,\"importLoaders\":1,\"alias\":{\"/assets\":\"/Users/johnny/Sites/janczizikow-portfolio/assets\",\"/static\":\"/Users/johnny/Sites/janczizikow-portfolio/static\"}}!./node_modules/vue-loader/lib/style-compiler?{\"vue\":true,\"id\":\"data-v-13ad627c\",\"scoped\":true,\"hasInlineConfig\":true}!./node_modules/sass-loader/lib/loader.js?{\"sourceMap\":false}!./node_modules/sass-resources-loader/lib/loader.js?{\"resources\":[\"/Users/johnny/Sites/janczizikow-portfolio/assets/shared.scss\"]}!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./components/Layout/components/Container.vue",
+            "size": 1084,
+            "id": "V4Q8"
+          },
+          {
+            "name": "./components/Modal.vue",
+            "size": 2207,
+            "id": "WWcs"
+          },
+          {
+            "name": "./node_modules/css-loader?{\"sourceMap\":false,\"minimize\":true,\"importLoaders\":1,\"alias\":{\"/assets\":\"/Users/johnny/Sites/janczizikow-portfolio/assets\",\"/static\":\"/Users/johnny/Sites/janczizikow-portfolio/static\"}}!./node_modules/vue-loader/lib/style-compiler?{\"vue\":true,\"id\":\"data-v-6ec1b68a\",\"scoped\":true,\"hasInlineConfig\":true}!./node_modules/sass-loader/lib/loader.js?{\"sourceMap\":false}!./node_modules/sass-resources-loader/lib/loader.js?{\"resources\":[\"/Users/johnny/Sites/janczizikow-portfolio/assets/shared.scss\"]}!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./pages/contact.vue",
+            "size": 409,
+            "id": "Xv4p"
+          },
+          {
+            "name": "./node_modules/vuelidate/lib/validators/or.js",
+            "size": 736,
+            "id": "Y18q"
+          },
+          {
+            "name": "./node_modules/babel-loader/lib?{\"babelrc\":false,\"cacheDirectory\":false,\"presets\":[[\"/Users/johnny/Sites/janczizikow-portfolio/node_modules/babel-preset-vue-app/dist/index.common.js\",{\"targets\":{\"ie\":9,\"uglify\":true}}]]}!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./components/Layout/components/Container.vue",
+            "size": 262,
+            "id": "aCNx"
+          },
+          {
+            "name": "./node_modules/vuelidate/lib/validators/minValue.js",
+            "size": 417,
+            "id": "aYrh"
+          },
+          {
+            "name": "./node_modules/vuelidate/lib/validators/and.js",
+            "size": 736,
+            "id": "bXE/"
+          },
+          {
+            "name": "./node_modules/babel-loader/lib?{\"babelrc\":false,\"cacheDirectory\":false,\"presets\":[[\"/Users/johnny/Sites/janczizikow-portfolio/node_modules/babel-preset-vue-app/dist/index.common.js\",{\"targets\":{\"ie\":9,\"uglify\":true}}]]}!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./components/Contact/Form.vue",
+            "size": 2260,
+            "id": "cJgu"
+          },
+          {
+            "name": "./node_modules/vue-loader/lib/template-compiler?{\"id\":\"data-v-7ac1451b\",\"hasScoped\":true,\"transformToRequire\":{\"video\":\"src\",\"source\":\"src\",\"object\":\"src\",\"embed\":\"src\"},\"preserveWhitespace\":false,\"buble\":{\"transforms\":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./components/Modal.vue",
+            "size": 1146,
+            "id": "dS4U"
+          },
+          {
+            "name": "./components/Layout/index.js",
+            "size": 402,
+            "id": "eXTn"
+          },
+          {
+            "name": "./node_modules/vuelidate/lib/validators/integer.js",
+            "size": 231,
+            "id": "eqrJ"
+          },
+          {
+            "name": "./pages/contact.vue",
+            "size": 2215,
+            "id": "fBFx"
+          },
+          {
+            "name": "./node_modules/babel-loader/lib?{\"babelrc\":false,\"cacheDirectory\":false,\"presets\":[[\"/Users/johnny/Sites/janczizikow-portfolio/node_modules/babel-preset-vue-app/dist/index.common.js\",{\"targets\":{\"ie\":9,\"uglify\":true}}]]}!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./pages/contact.vue",
+            "size": 800,
+            "id": "hX42"
+          },
+          {
+            "name": "./node_modules/vuelidate/lib/validators/numeric.js",
+            "size": 229,
+            "id": "hbkP"
+          },
+          {
+            "name": "./node_modules/vue-style-loader?{\"sourceMap\":false}!./node_modules/css-loader?{\"sourceMap\":false,\"minimize\":true,\"importLoaders\":1,\"alias\":{\"/assets\":\"/Users/johnny/Sites/janczizikow-portfolio/assets\",\"/static\":\"/Users/johnny/Sites/janczizikow-portfolio/static\"}}!./node_modules/vue-loader/lib/style-compiler?{\"vue\":true,\"id\":\"data-v-089c8207\",\"scoped\":true,\"hasInlineConfig\":true}!./node_modules/sass-loader/lib/loader.js?{\"sourceMap\":false}!./node_modules/sass-resources-loader/lib/loader.js?{\"resources\":[\"/Users/johnny/Sites/janczizikow-portfolio/assets/shared.scss\"]}!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./components/Layout/components/Row.vue",
+            "size": 1078,
+            "id": "i/HF"
+          },
+          {
+            "name": "./components/Layout/components/Container.vue",
+            "size": 2265,
+            "id": "iN1F"
+          },
+          {
+            "name": "./node_modules/vuelidate/lib/validators/requiredIf.js",
+            "size": 413,
+            "id": "lEk1"
+          },
+          {
+            "name": "./components/Contact/Form.vue",
+            "size": 2224,
+            "id": "m1yc"
+          },
+          {
+            "name": "./node_modules/vuelidate/lib/withParams.js",
+            "size": 283,
+            "id": "mpcv"
+          },
+          {
+            "name": "./node_modules/css-loader?{\"sourceMap\":false,\"minimize\":true,\"importLoaders\":1,\"alias\":{\"/assets\":\"/Users/johnny/Sites/janczizikow-portfolio/assets\",\"/static\":\"/Users/johnny/Sites/janczizikow-portfolio/static\"}}!./node_modules/vue-loader/lib/style-compiler?{\"vue\":true,\"id\":\"data-v-93b58568\",\"scoped\":true,\"hasInlineConfig\":true}!./node_modules/sass-loader/lib/loader.js?{\"sourceMap\":false}!./node_modules/sass-resources-loader/lib/loader.js?{\"resources\":[\"/Users/johnny/Sites/janczizikow-portfolio/assets/shared.scss\"]}!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./components/Contact/Form.vue",
+            "size": 223,
+            "id": "nIx8"
+          },
+          {
+            "name": "./node_modules/vuelidate/lib/validators/decimal.js",
+            "size": 238,
+            "id": "pO+f"
+          },
+          {
+            "name": "./node_modules/vuelidate/lib/validators/maxLength.js",
+            "size": 395,
+            "id": "qHXR"
+          },
+          {
+            "name": "./node_modules/css-loader?{\"sourceMap\":false,\"minimize\":true,\"importLoaders\":1,\"alias\":{\"/assets\":\"/Users/johnny/Sites/janczizikow-portfolio/assets\",\"/static\":\"/Users/johnny/Sites/janczizikow-portfolio/static\"}}!./node_modules/vue-loader/lib/style-compiler?{\"vue\":true,\"id\":\"data-v-7ac1451b\",\"scoped\":true,\"hasInlineConfig\":true}!./node_modules/sass-loader/lib/loader.js?{\"sourceMap\":false}!./node_modules/sass-resources-loader/lib/loader.js?{\"resources\":[\"/Users/johnny/Sites/janczizikow-portfolio/assets/shared.scss\"]}!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./components/Modal.vue",
+            "size": 1827,
+            "id": "snkF"
+          },
+          {
+            "name": "./node_modules/vuelidate/lib/withParamsBrowser.js",
+            "size": 908,
+            "id": "tL8V"
+          },
+          {
+            "name": "./components/Layout/components/Row.vue",
+            "size": 2241,
+            "id": "tkXM"
+          },
+          {
+            "name": "./node_modules/babel-loader/lib?{\"babelrc\":false,\"cacheDirectory\":false,\"presets\":[[\"/Users/johnny/Sites/janczizikow-portfolio/node_modules/babel-preset-vue-app/dist/index.common.js\",{\"targets\":{\"ie\":9,\"uglify\":true}}]]}!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./components/Modal.vue",
+            "size": 684,
+            "id": "vRST"
+          },
+          {
+            "name": "./node_modules/vue-loader/lib/template-compiler?{\"id\":\"data-v-089c8207\",\"hasScoped\":true,\"transformToRequire\":{\"video\":\"src\",\"source\":\"src\",\"object\":\"src\",\"embed\":\"src\"},\"preserveWhitespace\":false,\"buble\":{\"transforms\":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./components/Layout/components/Row.vue",
+            "size": 288,
+            "id": "wHzc"
+          },
+          {
+            "name": "./node_modules/vue-style-loader?{\"sourceMap\":false}!./node_modules/css-loader?{\"sourceMap\":false,\"minimize\":true,\"importLoaders\":1,\"alias\":{\"/assets\":\"/Users/johnny/Sites/janczizikow-portfolio/assets\",\"/static\":\"/Users/johnny/Sites/janczizikow-portfolio/static\"}}!./node_modules/vue-loader/lib/style-compiler?{\"vue\":true,\"id\":\"data-v-7ac1451b\",\"scoped\":true,\"hasInlineConfig\":true}!./node_modules/sass-loader/lib/loader.js?{\"sourceMap\":false}!./node_modules/sass-resources-loader/lib/loader.js?{\"resources\":[\"/Users/johnny/Sites/janczizikow-portfolio/assets/shared.scss\"]}!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./components/Modal.vue",
+            "size": 1044,
+            "id": "wTof"
+          },
+          {
+            "name": "./node_modules/vuelidate/lib/validators/maxValue.js",
+            "size": 417,
+            "id": "xJ3U"
+          },
+          {
+            "name": "./node_modules/vue-loader/lib/template-compiler?{\"id\":\"data-v-6ec1b68a\",\"hasScoped\":true,\"transformToRequire\":{\"video\":\"src\",\"source\":\"src\",\"object\":\"src\",\"embed\":\"src\"},\"preserveWhitespace\":false,\"buble\":{\"transforms\":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./pages/contact.vue",
+            "size": 1417,
+            "id": "ypaL"
+          }
+        ]
+      },
+      {
+        "size": 60439,
+        "files": [
+          "pages/login.8f50af584a262bbe7149.js"
+        ],
+        "modules": [
+          {
+            "name": "./node_modules/vuelidate/lib/validators/index.js",
+            "size": 4696,
+            "id": "+cKO"
+          },
+          {
+            "name": "./node_modules/css-loader?{\"sourceMap\":false,\"minimize\":true,\"importLoaders\":1,\"alias\":{\"/assets\":\"/Users/johnny/Sites/janczizikow-portfolio/assets\",\"/static\":\"/Users/johnny/Sites/janczizikow-portfolio/static\"}}!./node_modules/vue-loader/lib/style-compiler?{\"vue\":true,\"id\":\"data-v-6656c67e\",\"scoped\":true,\"hasInlineConfig\":true}!./node_modules/sass-loader/lib/loader.js?{\"sourceMap\":false}!./node_modules/sass-resources-loader/lib/loader.js?{\"resources\":[\"/Users/johnny/Sites/janczizikow-portfolio/assets/shared.scss\"]}!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./components/Input.vue",
+            "size": 2545,
+            "id": "/pif"
+          },
+          {
+            "name": "./components/Input.vue",
+            "size": 2207,
+            "id": "2Kyz"
+          },
+          {
+            "name": "./node_modules/babel-loader/lib?{\"babelrc\":false,\"cacheDirectory\":false,\"presets\":[[\"/Users/johnny/Sites/janczizikow-portfolio/node_modules/babel-preset-vue-app/dist/index.common.js\",{\"targets\":{\"ie\":9,\"uglify\":true}}]]}!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./components/Layout/components/Col.vue",
+            "size": 929,
+            "id": "2VL1"
+          },
+          {
+            "name": "./node_modules/vuelidate/lib/validators/between.js",
+            "size": 453,
+            "id": "3Ro/"
+          },
+          {
+            "name": "./node_modules/vuelidate/lib/validators/required.js",
+            "size": 248,
+            "id": "4oDf"
+          },
+          {
+            "name": "./node_modules/vuelidate/lib/validators/minLength.js",
+            "size": 395,
+            "id": "4ypF"
+          },
+          {
+            "name": "./node_modules/css-loader?{\"sourceMap\":false,\"minimize\":true,\"importLoaders\":1,\"alias\":{\"/assets\":\"/Users/johnny/Sites/janczizikow-portfolio/assets\",\"/static\":\"/Users/johnny/Sites/janczizikow-portfolio/static\"}}!./node_modules/vue-loader/lib/style-compiler?{\"vue\":true,\"id\":\"data-v-089c8207\",\"scoped\":true,\"hasInlineConfig\":true}!./node_modules/sass-loader/lib/loader.js?{\"sourceMap\":false}!./node_modules/sass-resources-loader/lib/loader.js?{\"resources\":[\"/Users/johnny/Sites/janczizikow-portfolio/assets/shared.scss\"]}!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./components/Layout/components/Row.vue",
+            "size": 1302,
+            "id": "5+h7"
+          },
+          {
+            "name": "./node_modules/vuelidate/lib/validators/requiredUnless.js",
+            "size": 418,
+            "id": "6+Xr"
+          },
+          {
+            "name": "./node_modules/vuelidate/lib/validators/email.js",
+            "size": 402,
+            "id": "6rz0"
+          },
+          {
+            "name": "./node_modules/vuelidate/lib/validators/url.js",
+            "size": 692,
+            "id": "7J6f"
+          },
+          {
+            "name": "./node_modules/vue-loader/lib/template-compiler?{\"id\":\"data-v-13ad627c\",\"hasScoped\":true,\"transformToRequire\":{\"video\":\"src\",\"source\":\"src\",\"object\":\"src\",\"embed\":\"src\"},\"preserveWhitespace\":false,\"buble\":{\"transforms\":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./components/Layout/components/Container.vue",
+            "size": 286,
+            "id": "BSAC"
+          },
+          {
+            "name": "./node_modules/vue-style-loader?{\"sourceMap\":false}!./node_modules/css-loader?{\"sourceMap\":false,\"minimize\":true,\"importLoaders\":1,\"alias\":{\"/assets\":\"/Users/johnny/Sites/janczizikow-portfolio/assets\",\"/static\":\"/Users/johnny/Sites/janczizikow-portfolio/static\"}}!./node_modules/vue-loader/lib/style-compiler?{\"vue\":true,\"id\":\"data-v-6656c67e\",\"scoped\":true,\"hasInlineConfig\":true}!./node_modules/sass-loader/lib/loader.js?{\"sourceMap\":false}!./node_modules/sass-resources-loader/lib/loader.js?{\"resources\":[\"/Users/johnny/Sites/janczizikow-portfolio/assets/shared.scss\"]}!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./components/Input.vue",
+            "size": 1044,
+            "id": "BU9E"
+          },
+          {
+            "name": "./node_modules/vue-loader/lib/template-compiler?{\"id\":\"data-v-2837d6e6\",\"hasScoped\":false,\"transformToRequire\":{\"video\":\"src\",\"source\":\"src\",\"object\":\"src\",\"embed\":\"src\"},\"preserveWhitespace\":false,\"buble\":{\"transforms\":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./components/Layout/components/Col.vue",
+            "size": 288,
+            "id": "DKC3"
+          },
+          {
+            "name": "./node_modules/css-loader?{\"sourceMap\":false,\"minimize\":true,\"importLoaders\":1,\"alias\":{\"/assets\":\"/Users/johnny/Sites/janczizikow-portfolio/assets\",\"/static\":\"/Users/johnny/Sites/janczizikow-portfolio/static\"}}!./node_modules/vue-loader/lib/style-compiler?{\"vue\":true,\"id\":\"data-v-2837d6e6\",\"scoped\":false,\"hasInlineConfig\":true}!./node_modules/sass-loader/lib/loader.js?{\"sourceMap\":false}!./node_modules/sass-resources-loader/lib/loader.js?{\"resources\":[\"/Users/johnny/Sites/janczizikow-portfolio/assets/shared.scss\"]}!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./components/Layout/components/Col.vue",
+            "size": 11987,
+            "id": "DVaP"
+          },
+          {
+            "name": "./node_modules/vuelidate/lib/validators/not.js",
+            "size": 378,
+            "id": "FP1U"
+          },
+          {
+            "name": "./node_modules/vue-loader/lib/template-compiler?{\"id\":\"data-v-6656c67e\",\"hasScoped\":true,\"transformToRequire\":{\"video\":\"src\",\"source\":\"src\",\"object\":\"src\",\"embed\":\"src\"},\"preserveWhitespace\":false,\"buble\":{\"transforms\":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./components/Input.vue",
+            "size": 794,
+            "id": "FQRf"
+          },
+          {
+            "name": "./node_modules/vuelidate/lib/validators/alpha.js",
+            "size": 230,
+            "id": "FWhV"
+          },
+          {
+            "name": "./node_modules/css-loader?{\"sourceMap\":false,\"minimize\":true,\"importLoaders\":1,\"alias\":{\"/assets\":\"/Users/johnny/Sites/janczizikow-portfolio/assets\",\"/static\":\"/Users/johnny/Sites/janczizikow-portfolio/static\"}}!./node_modules/vue-loader/lib/style-compiler?{\"vue\":true,\"id\":\"data-v-13ad627c\",\"scoped\":true,\"hasInlineConfig\":true}!./node_modules/sass-loader/lib/loader.js?{\"sourceMap\":false}!./node_modules/sass-resources-loader/lib/loader.js?{\"resources\":[\"/Users/johnny/Sites/janczizikow-portfolio/assets/shared.scss\"]}!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./components/Layout/components/Container.vue",
+            "size": 632,
+            "id": "FyiN"
+          },
+          {
+            "name": "./node_modules/vuelidate/lib/validators/macAddress.js",
+            "size": 876,
+            "id": "HM/u"
+          },
+          {
+            "name": "./node_modules/vue-style-loader?{\"sourceMap\":false}!./node_modules/css-loader?{\"sourceMap\":false,\"minimize\":true,\"importLoaders\":1,\"alias\":{\"/assets\":\"/Users/johnny/Sites/janczizikow-portfolio/assets\",\"/static\":\"/Users/johnny/Sites/janczizikow-portfolio/static\"}}!./node_modules/vue-loader/lib/style-compiler?{\"vue\":true,\"id\":\"data-v-02252568\",\"scoped\":true,\"hasInlineConfig\":true}!./node_modules/sass-loader/lib/loader.js?{\"sourceMap\":false}!./node_modules/sass-resources-loader/lib/loader.js?{\"resources\":[\"/Users/johnny/Sites/janczizikow-portfolio/assets/shared.scss\"]}!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./pages/login.vue",
+            "size": 1044,
+            "id": "HQH8"
+          },
+          {
+            "name": "./node_modules/vuelidate/lib/validators/ipAddress.js",
+            "size": 786,
+            "id": "HSVw"
+          },
+          {
+            "name": "./node_modules/babel-loader/lib?{\"babelrc\":false,\"cacheDirectory\":false,\"presets\":[[\"/Users/johnny/Sites/janczizikow-portfolio/node_modules/babel-preset-vue-app/dist/index.common.js\",{\"targets\":{\"ie\":9,\"uglify\":true}}]]}!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./components/Layout/components/Row.vue",
+            "size": 790,
+            "id": "K82H"
+          },
+          {
+            "name": "./node_modules/vuelidate/lib/validators/sameAs.js",
+            "size": 393,
+            "id": "L6Jx"
+          },
+          {
+            "name": "./mixins/index.js",
+            "size": 582,
+            "id": "M2pF"
+          },
+          {
+            "name": "./node_modules/vue-style-loader?{\"sourceMap\":false}!./node_modules/css-loader?{\"sourceMap\":false,\"minimize\":true,\"importLoaders\":1,\"alias\":{\"/assets\":\"/Users/johnny/Sites/janczizikow-portfolio/assets\",\"/static\":\"/Users/johnny/Sites/janczizikow-portfolio/static\"}}!./node_modules/vue-loader/lib/style-compiler?{\"vue\":true,\"id\":\"data-v-2837d6e6\",\"scoped\":false,\"hasInlineConfig\":true}!./node_modules/sass-loader/lib/loader.js?{\"sourceMap\":false}!./node_modules/sass-resources-loader/lib/loader.js?{\"resources\":[\"/Users/johnny/Sites/janczizikow-portfolio/assets/shared.scss\"]}!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./components/Layout/components/Col.vue",
+            "size": 1079,
+            "id": "M3JZ"
+          },
+          {
+            "name": "./node_modules/css-loader?{\"sourceMap\":false,\"minimize\":true,\"importLoaders\":1,\"alias\":{\"/assets\":\"/Users/johnny/Sites/janczizikow-portfolio/assets\",\"/static\":\"/Users/johnny/Sites/janczizikow-portfolio/static\"}}!./node_modules/vue-loader/lib/style-compiler?{\"vue\":true,\"id\":\"data-v-02252568\",\"scoped\":true,\"hasInlineConfig\":true}!./node_modules/sass-loader/lib/loader.js?{\"sourceMap\":false}!./node_modules/sass-resources-loader/lib/loader.js?{\"resources\":[\"/Users/johnny/Sites/janczizikow-portfolio/assets/shared.scss\"]}!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./pages/login.vue",
+            "size": 287,
+            "id": "Mh7X"
+          },
+          {
+            "name": "./node_modules/vuelidate/lib/validators/alphaNum.js",
+            "size": 236,
+            "id": "PKmV"
+          },
+          {
+            "name": "./node_modules/babel-loader/lib?{\"babelrc\":false,\"cacheDirectory\":false,\"presets\":[[\"/Users/johnny/Sites/janczizikow-portfolio/node_modules/babel-preset-vue-app/dist/index.common.js\",{\"targets\":{\"ie\":9,\"uglify\":true}}]]}!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./components/Input.vue",
+            "size": 1126,
+            "id": "POlE"
+          },
+          {
+            "name": "./components/Layout/components/Col.vue",
+            "size": 2230,
+            "id": "Tf12"
+          },
+          {
+            "name": "./node_modules/vuelidate/lib/validators/common.js",
+            "size": 1818,
+            "id": "URu4"
+          },
+          {
+            "name": "./node_modules/vue-style-loader?{\"sourceMap\":false}!./node_modules/css-loader?{\"sourceMap\":false,\"minimize\":true,\"importLoaders\":1,\"alias\":{\"/assets\":\"/Users/johnny/Sites/janczizikow-portfolio/assets\",\"/static\":\"/Users/johnny/Sites/janczizikow-portfolio/static\"}}!./node_modules/vue-loader/lib/style-compiler?{\"vue\":true,\"id\":\"data-v-13ad627c\",\"scoped\":true,\"hasInlineConfig\":true}!./node_modules/sass-loader/lib/loader.js?{\"sourceMap\":false}!./node_modules/sass-resources-loader/lib/loader.js?{\"resources\":[\"/Users/johnny/Sites/janczizikow-portfolio/assets/shared.scss\"]}!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./components/Layout/components/Container.vue",
+            "size": 1084,
+            "id": "V4Q8"
+          },
+          {
+            "name": "./node_modules/vuelidate/lib/validators/or.js",
+            "size": 736,
+            "id": "Y18q"
+          },
+          {
+            "name": "./node_modules/babel-loader/lib?{\"babelrc\":false,\"cacheDirectory\":false,\"presets\":[[\"/Users/johnny/Sites/janczizikow-portfolio/node_modules/babel-preset-vue-app/dist/index.common.js\",{\"targets\":{\"ie\":9,\"uglify\":true}}]]}!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./components/Layout/components/Container.vue",
+            "size": 262,
+            "id": "aCNx"
+          },
+          {
+            "name": "./node_modules/vuelidate/lib/validators/minValue.js",
+            "size": 417,
+            "id": "aYrh"
+          },
+          {
+            "name": "./pages/login.vue",
+            "size": 2207,
+            "id": "bIR0"
+          },
+          {
+            "name": "./node_modules/vuelidate/lib/validators/and.js",
+            "size": 736,
+            "id": "bXE/"
+          },
+          {
+            "name": "./components/Layout/index.js",
+            "size": 402,
+            "id": "eXTn"
+          },
+          {
+            "name": "./node_modules/vuelidate/lib/validators/integer.js",
+            "size": 231,
+            "id": "eqrJ"
+          },
+          {
+            "name": "./node_modules/vuelidate/lib/validators/numeric.js",
+            "size": 229,
+            "id": "hbkP"
+          },
+          {
+            "name": "./node_modules/vue-style-loader?{\"sourceMap\":false}!./node_modules/css-loader?{\"sourceMap\":false,\"minimize\":true,\"importLoaders\":1,\"alias\":{\"/assets\":\"/Users/johnny/Sites/janczizikow-portfolio/assets\",\"/static\":\"/Users/johnny/Sites/janczizikow-portfolio/static\"}}!./node_modules/vue-loader/lib/style-compiler?{\"vue\":true,\"id\":\"data-v-089c8207\",\"scoped\":true,\"hasInlineConfig\":true}!./node_modules/sass-loader/lib/loader.js?{\"sourceMap\":false}!./node_modules/sass-resources-loader/lib/loader.js?{\"resources\":[\"/Users/johnny/Sites/janczizikow-portfolio/assets/shared.scss\"]}!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./components/Layout/components/Row.vue",
+            "size": 1078,
+            "id": "i/HF"
+          },
+          {
+            "name": "./components/Layout/components/Container.vue",
+            "size": 2265,
+            "id": "iN1F"
+          },
+          {
+            "name": "./node_modules/babel-loader/lib?{\"babelrc\":false,\"cacheDirectory\":false,\"presets\":[[\"/Users/johnny/Sites/janczizikow-portfolio/node_modules/babel-preset-vue-app/dist/index.common.js\",{\"targets\":{\"ie\":9,\"uglify\":true}}]]}!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./pages/login.vue",
+            "size": 3041,
+            "id": "j33o"
+          },
+          {
+            "name": "./node_modules/vuelidate/lib/validators/requiredIf.js",
+            "size": 413,
+            "id": "lEk1"
+          },
+          {
+            "name": "./node_modules/vue-loader/lib/template-compiler?{\"id\":\"data-v-02252568\",\"hasScoped\":true,\"transformToRequire\":{\"video\":\"src\",\"source\":\"src\",\"object\":\"src\",\"embed\":\"src\"},\"preserveWhitespace\":false,\"buble\":{\"transforms\":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./pages/login.vue",
+            "size": 1395,
+            "id": "mhmy"
+          },
+          {
+            "name": "./node_modules/vuelidate/lib/withParams.js",
+            "size": 283,
+            "id": "mpcv"
+          },
+          {
+            "name": "./node_modules/vuelidate/lib/validators/decimal.js",
+            "size": 238,
+            "id": "pO+f"
+          },
+          {
+            "name": "./node_modules/vuelidate/lib/validators/maxLength.js",
+            "size": 395,
+            "id": "qHXR"
+          },
+          {
+            "name": "./node_modules/vuelidate/lib/withParamsBrowser.js",
+            "size": 908,
+            "id": "tL8V"
+          },
+          {
+            "name": "./components/Layout/components/Row.vue",
+            "size": 2241,
+            "id": "tkXM"
+          },
+          {
+            "name": "./node_modules/vue-loader/lib/template-compiler?{\"id\":\"data-v-089c8207\",\"hasScoped\":true,\"transformToRequire\":{\"video\":\"src\",\"source\":\"src\",\"object\":\"src\",\"embed\":\"src\"},\"preserveWhitespace\":false,\"buble\":{\"transforms\":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./components/Layout/components/Row.vue",
+            "size": 288,
+            "id": "wHzc"
+          },
+          {
+            "name": "./node_modules/vuelidate/lib/validators/maxValue.js",
+            "size": 417,
+            "id": "xJ3U"
+          }
+        ]
+      },
+      {
+        "size": 59772,
+        "files": [
+          "pages/index.589eb0f8cef8966cb90e.js"
+        ],
+        "modules": [
+          {
+            "name": "./node_modules/vue-loader/lib/template-compiler?{\"id\":\"data-v-1d1cbc3e\",\"hasScoped\":true,\"transformToRequire\":{\"video\":\"src\",\"source\":\"src\",\"object\":\"src\",\"embed\":\"src\"},\"preserveWhitespace\":false,\"buble\":{\"transforms\":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./components/Home/Projects/Projects.vue",
+            "size": 641,
+            "id": "+BQb"
+          },
+          {
+            "name": "./components/Home/Cta.vue",
+            "size": 2220,
+            "id": "/1rE"
+          },
+          {
+            "name": "./components/Home/Projects/ProjectItem.vue",
+            "size": 2262,
+            "id": "/4aM"
+          },
+          {
+            "name": "./components/Home/Hero.vue",
+            "size": 2224,
+            "id": "/I9r"
+          },
+          {
+            "name": "./node_modules/vue-style-loader?{\"sourceMap\":false}!./node_modules/css-loader?{\"sourceMap\":false,\"minimize\":true,\"importLoaders\":1,\"alias\":{\"/assets\":\"/Users/johnny/Sites/janczizikow-portfolio/assets\",\"/static\":\"/Users/johnny/Sites/janczizikow-portfolio/static\"}}!./node_modules/vue-loader/lib/style-compiler?{\"vue\":true,\"id\":\"data-v-239f1e20\",\"scoped\":false,\"hasInlineConfig\":true}!./node_modules/sass-loader/lib/loader.js?{\"sourceMap\":false}!./node_modules/sass-resources-loader/lib/loader.js?{\"resources\":[\"/Users/johnny/Sites/janczizikow-portfolio/assets/shared.scss\"]}!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./components/Home/Projects/ProjectItem.vue",
+            "size": 1087,
+            "id": "/SbI"
+          },
+          {
+            "name": "./pages/index.vue",
+            "size": 1537,
+            "id": "/TYz"
+          },
+          {
+            "name": "./node_modules/babel-loader/lib?{\"babelrc\":false,\"cacheDirectory\":false,\"presets\":[[\"/Users/johnny/Sites/janczizikow-portfolio/node_modules/babel-preset-vue-app/dist/index.common.js\",{\"targets\":{\"ie\":9,\"uglify\":true}}]]}!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./components/Layout/components/Col.vue",
+            "size": 929,
+            "id": "2VL1"
+          },
+          {
+            "name": "./node_modules/css-loader?{\"sourceMap\":false,\"minimize\":true,\"importLoaders\":1,\"alias\":{\"/assets\":\"/Users/johnny/Sites/janczizikow-portfolio/assets\",\"/static\":\"/Users/johnny/Sites/janczizikow-portfolio/static\"}}!./node_modules/vue-loader/lib/style-compiler?{\"vue\":true,\"id\":\"data-v-089c8207\",\"scoped\":true,\"hasInlineConfig\":true}!./node_modules/sass-loader/lib/loader.js?{\"sourceMap\":false}!./node_modules/sass-resources-loader/lib/loader.js?{\"resources\":[\"/Users/johnny/Sites/janczizikow-portfolio/assets/shared.scss\"]}!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./components/Layout/components/Row.vue",
+            "size": 1302,
+            "id": "5+h7"
+          },
+          {
+            "name": "./components/ProgressiveImg.vue",
+            "size": 2232,
+            "id": "5D5x"
+          },
+          {
+            "name": "./node_modules/vue-loader/lib/template-compiler?{\"id\":\"data-v-713a12a2\",\"hasScoped\":true,\"transformToRequire\":{\"video\":\"src\",\"source\":\"src\",\"object\":\"src\",\"embed\":\"src\"},\"preserveWhitespace\":false,\"buble\":{\"transforms\":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./components/Home/Hero.vue",
+            "size": 670,
+            "id": "5Mxy"
+          },
+          {
+            "name": "./node_modules/vue-loader/lib/template-compiler?{\"id\":\"data-v-239f1e20\",\"hasScoped\":false,\"transformToRequire\":{\"video\":\"src\",\"source\":\"src\",\"object\":\"src\",\"embed\":\"src\"},\"preserveWhitespace\":false,\"buble\":{\"transforms\":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./components/Home/Projects/ProjectItem.vue",
+            "size": 592,
+            "id": "7bZp"
+          },
+          {
+            "name": "./node_modules/css-loader?{\"sourceMap\":false,\"minimize\":true,\"importLoaders\":1,\"alias\":{\"/assets\":\"/Users/johnny/Sites/janczizikow-portfolio/assets\",\"/static\":\"/Users/johnny/Sites/janczizikow-portfolio/static\"}}!./node_modules/vue-loader/lib/style-compiler?{\"vue\":true,\"id\":\"data-v-713a12a2\",\"scoped\":true,\"hasInlineConfig\":true}!./node_modules/sass-loader/lib/loader.js?{\"sourceMap\":false}!./node_modules/sass-resources-loader/lib/loader.js?{\"resources\":[\"/Users/johnny/Sites/janczizikow-portfolio/assets/shared.scss\"]}!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./components/Home/Hero.vue",
+            "size": 1299,
+            "id": "9F2m"
+          },
+          {
+            "name": "./node_modules/vue-loader/lib/template-compiler?{\"id\":\"data-v-13ad627c\",\"hasScoped\":true,\"transformToRequire\":{\"video\":\"src\",\"source\":\"src\",\"object\":\"src\",\"embed\":\"src\"},\"preserveWhitespace\":false,\"buble\":{\"transforms\":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./components/Layout/components/Container.vue",
+            "size": 286,
+            "id": "BSAC"
+          },
+          {
+            "name": "./node_modules/vue-loader/lib/template-compiler?{\"id\":\"data-v-2837d6e6\",\"hasScoped\":false,\"transformToRequire\":{\"video\":\"src\",\"source\":\"src\",\"object\":\"src\",\"embed\":\"src\"},\"preserveWhitespace\":false,\"buble\":{\"transforms\":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./components/Layout/components/Col.vue",
+            "size": 288,
+            "id": "DKC3"
+          },
+          {
+            "name": "./node_modules/css-loader?{\"sourceMap\":false,\"minimize\":true,\"importLoaders\":1,\"alias\":{\"/assets\":\"/Users/johnny/Sites/janczizikow-portfolio/assets\",\"/static\":\"/Users/johnny/Sites/janczizikow-portfolio/static\"}}!./node_modules/vue-loader/lib/style-compiler?{\"vue\":true,\"id\":\"data-v-2837d6e6\",\"scoped\":false,\"hasInlineConfig\":true}!./node_modules/sass-loader/lib/loader.js?{\"sourceMap\":false}!./node_modules/sass-resources-loader/lib/loader.js?{\"resources\":[\"/Users/johnny/Sites/janczizikow-portfolio/assets/shared.scss\"]}!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./components/Layout/components/Col.vue",
+            "size": 11987,
+            "id": "DVaP"
+          },
+          {
+            "name": "./node_modules/css-loader?{\"sourceMap\":false,\"minimize\":true,\"importLoaders\":1,\"alias\":{\"/assets\":\"/Users/johnny/Sites/janczizikow-portfolio/assets\",\"/static\":\"/Users/johnny/Sites/janczizikow-portfolio/static\"}}!./node_modules/vue-loader/lib/style-compiler?{\"vue\":true,\"id\":\"data-v-13ad627c\",\"scoped\":true,\"hasInlineConfig\":true}!./node_modules/sass-loader/lib/loader.js?{\"sourceMap\":false}!./node_modules/sass-resources-loader/lib/loader.js?{\"resources\":[\"/Users/johnny/Sites/janczizikow-portfolio/assets/shared.scss\"]}!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./components/Layout/components/Container.vue",
+            "size": 632,
+            "id": "FyiN"
+          },
+          {
+            "name": "./node_modules/css-loader?{\"sourceMap\":false,\"minimize\":true,\"importLoaders\":1,\"alias\":{\"/assets\":\"/Users/johnny/Sites/janczizikow-portfolio/assets\",\"/static\":\"/Users/johnny/Sites/janczizikow-portfolio/static\"}}!./node_modules/vue-loader/lib/style-compiler?{\"vue\":true,\"id\":\"data-v-1d1cbc3e\",\"scoped\":true,\"hasInlineConfig\":true}!./node_modules/sass-loader/lib/loader.js?{\"sourceMap\":false}!./node_modules/sass-resources-loader/lib/loader.js?{\"resources\":[\"/Users/johnny/Sites/janczizikow-portfolio/assets/shared.scss\"]}!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./components/Home/Projects/Projects.vue",
+            "size": 1252,
+            "id": "GcjE"
+          },
+          {
+            "name": "./node_modules/babel-loader/lib?{\"babelrc\":false,\"cacheDirectory\":false,\"presets\":[[\"/Users/johnny/Sites/janczizikow-portfolio/node_modules/babel-preset-vue-app/dist/index.common.js\",{\"targets\":{\"ie\":9,\"uglify\":true}}]]}!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./components/Layout/components/Row.vue",
+            "size": 790,
+            "id": "K82H"
+          },
+          {
+            "name": "./node_modules/vue-style-loader?{\"sourceMap\":false}!./node_modules/css-loader?{\"sourceMap\":false,\"minimize\":true,\"importLoaders\":1,\"alias\":{\"/assets\":\"/Users/johnny/Sites/janczizikow-portfolio/assets\",\"/static\":\"/Users/johnny/Sites/janczizikow-portfolio/static\"}}!./node_modules/vue-loader/lib/style-compiler?{\"vue\":true,\"id\":\"data-v-6e31687c\",\"scoped\":false,\"hasInlineConfig\":true}!./node_modules/sass-loader/lib/loader.js?{\"sourceMap\":false}!./node_modules/sass-resources-loader/lib/loader.js?{\"resources\":[\"/Users/johnny/Sites/janczizikow-portfolio/assets/shared.scss\"]}!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./components/ProgressiveImg.vue",
+            "size": 1054,
+            "id": "LMmt"
+          },
+          {
+            "name": "./mixins/index.js",
+            "size": 582,
+            "id": "M2pF"
+          },
+          {
+            "name": "./node_modules/vue-style-loader?{\"sourceMap\":false}!./node_modules/css-loader?{\"sourceMap\":false,\"minimize\":true,\"importLoaders\":1,\"alias\":{\"/assets\":\"/Users/johnny/Sites/janczizikow-portfolio/assets\",\"/static\":\"/Users/johnny/Sites/janczizikow-portfolio/static\"}}!./node_modules/vue-loader/lib/style-compiler?{\"vue\":true,\"id\":\"data-v-2837d6e6\",\"scoped\":false,\"hasInlineConfig\":true}!./node_modules/sass-loader/lib/loader.js?{\"sourceMap\":false}!./node_modules/sass-resources-loader/lib/loader.js?{\"resources\":[\"/Users/johnny/Sites/janczizikow-portfolio/assets/shared.scss\"]}!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./components/Layout/components/Col.vue",
+            "size": 1079,
+            "id": "M3JZ"
+          },
+          {
+            "name": "./node_modules/babel-loader/lib?{\"babelrc\":false,\"cacheDirectory\":false,\"presets\":[[\"/Users/johnny/Sites/janczizikow-portfolio/node_modules/babel-preset-vue-app/dist/index.common.js\",{\"targets\":{\"ie\":9,\"uglify\":true}}]]}!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./components/Home/Hero.vue",
+            "size": 323,
+            "id": "S7z7"
+          },
+          {
+            "name": "./components/Layout/components/Col.vue",
+            "size": 2230,
+            "id": "Tf12"
+          },
+          {
+            "name": "./node_modules/vue-style-loader?{\"sourceMap\":false}!./node_modules/css-loader?{\"sourceMap\":false,\"minimize\":true,\"importLoaders\":1,\"alias\":{\"/assets\":\"/Users/johnny/Sites/janczizikow-portfolio/assets\",\"/static\":\"/Users/johnny/Sites/janczizikow-portfolio/static\"}}!./node_modules/vue-loader/lib/style-compiler?{\"vue\":true,\"id\":\"data-v-1d1cbc3e\",\"scoped\":true,\"hasInlineConfig\":true}!./node_modules/sass-loader/lib/loader.js?{\"sourceMap\":false}!./node_modules/sass-resources-loader/lib/loader.js?{\"resources\":[\"/Users/johnny/Sites/janczizikow-portfolio/assets/shared.scss\"]}!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./components/Home/Projects/Projects.vue",
+            "size": 1083,
+            "id": "TiXh"
+          },
+          {
+            "name": "./node_modules/vue-style-loader?{\"sourceMap\":false}!./node_modules/css-loader?{\"sourceMap\":false,\"minimize\":true,\"importLoaders\":1,\"alias\":{\"/assets\":\"/Users/johnny/Sites/janczizikow-portfolio/assets\",\"/static\":\"/Users/johnny/Sites/janczizikow-portfolio/static\"}}!./node_modules/vue-loader/lib/style-compiler?{\"vue\":true,\"id\":\"data-v-13ad627c\",\"scoped\":true,\"hasInlineConfig\":true}!./node_modules/sass-loader/lib/loader.js?{\"sourceMap\":false}!./node_modules/sass-resources-loader/lib/loader.js?{\"resources\":[\"/Users/johnny/Sites/janczizikow-portfolio/assets/shared.scss\"]}!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./components/Layout/components/Container.vue",
+            "size": 1084,
+            "id": "V4Q8"
+          },
+          {
+            "name": "./node_modules/babel-loader/lib?{\"babelrc\":false,\"cacheDirectory\":false,\"presets\":[[\"/Users/johnny/Sites/janczizikow-portfolio/node_modules/babel-preset-vue-app/dist/index.common.js\",{\"targets\":{\"ie\":9,\"uglify\":true}}]]}!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./components/Home/Cta.vue",
+            "size": 147,
+            "id": "Y0Ay"
+          },
+          {
+            "name": "./node_modules/css-loader?{\"sourceMap\":false,\"minimize\":true,\"importLoaders\":1,\"alias\":{\"/assets\":\"/Users/johnny/Sites/janczizikow-portfolio/assets\",\"/static\":\"/Users/johnny/Sites/janczizikow-portfolio/static\"}}!./node_modules/vue-loader/lib/style-compiler?{\"vue\":true,\"id\":\"data-v-a40c5e1c\",\"scoped\":true,\"hasInlineConfig\":true}!./node_modules/sass-loader/lib/loader.js?{\"sourceMap\":false}!./node_modules/sass-resources-loader/lib/loader.js?{\"resources\":[\"/Users/johnny/Sites/janczizikow-portfolio/assets/shared.scss\"]}!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./components/Home/Cta.vue",
+            "size": 344,
+            "id": "Zxo9"
+          },
+          {
+            "name": "./node_modules/babel-loader/lib?{\"babelrc\":false,\"cacheDirectory\":false,\"presets\":[[\"/Users/johnny/Sites/janczizikow-portfolio/node_modules/babel-preset-vue-app/dist/index.common.js\",{\"targets\":{\"ie\":9,\"uglify\":true}}]]}!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./components/Layout/components/Container.vue",
+            "size": 262,
+            "id": "aCNx"
+          },
+          {
+            "name": "./node_modules/vue-loader/lib/template-compiler?{\"id\":\"data-v-a40c5e1c\",\"hasScoped\":true,\"transformToRequire\":{\"video\":\"src\",\"source\":\"src\",\"object\":\"src\",\"embed\":\"src\"},\"preserveWhitespace\":false,\"buble\":{\"transforms\":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./components/Home/Cta.vue",
+            "size": 485,
+            "id": "c0e5"
+          },
+          {
+            "name": "./assets/images/icons/arrow-down.svg?inline",
+            "size": 592,
+            "id": "cW+9"
+          },
+          {
+            "name": "./node_modules/babel-loader/lib?{\"babelrc\":false,\"cacheDirectory\":false,\"presets\":[[\"/Users/johnny/Sites/janczizikow-portfolio/node_modules/babel-preset-vue-app/dist/index.common.js\",{\"targets\":{\"ie\":9,\"uglify\":true}}]]}!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./pages/index.vue",
+            "size": 2393,
+            "id": "eXH0"
+          },
+          {
+            "name": "./components/Layout/index.js",
+            "size": 402,
+            "id": "eXTn"
+          },
+          {
+            "name": "./node_modules/babel-loader/lib?{\"babelrc\":false,\"cacheDirectory\":false,\"presets\":[[\"/Users/johnny/Sites/janczizikow-portfolio/node_modules/babel-preset-vue-app/dist/index.common.js\",{\"targets\":{\"ie\":9,\"uglify\":true}}]]}!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./components/ProgressiveImg.vue",
+            "size": 375,
+            "id": "eays"
+          },
+          {
+            "name": "./node_modules/vue-style-loader?{\"sourceMap\":false}!./node_modules/css-loader?{\"sourceMap\":false,\"minimize\":true,\"importLoaders\":1,\"alias\":{\"/assets\":\"/Users/johnny/Sites/janczizikow-portfolio/assets\",\"/static\":\"/Users/johnny/Sites/janczizikow-portfolio/static\"}}!./node_modules/vue-loader/lib/style-compiler?{\"vue\":true,\"id\":\"data-v-089c8207\",\"scoped\":true,\"hasInlineConfig\":true}!./node_modules/sass-loader/lib/loader.js?{\"sourceMap\":false}!./node_modules/sass-resources-loader/lib/loader.js?{\"resources\":[\"/Users/johnny/Sites/janczizikow-portfolio/assets/shared.scss\"]}!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./components/Layout/components/Row.vue",
+            "size": 1078,
+            "id": "i/HF"
+          },
+          {
+            "name": "./components/Layout/components/Container.vue",
+            "size": 2265,
+            "id": "iN1F"
+          },
+          {
+            "name": "./node_modules/css-loader?{\"sourceMap\":false,\"minimize\":true,\"importLoaders\":1,\"alias\":{\"/assets\":\"/Users/johnny/Sites/janczizikow-portfolio/assets\",\"/static\":\"/Users/johnny/Sites/janczizikow-portfolio/static\"}}!./node_modules/vue-loader/lib/style-compiler?{\"vue\":true,\"id\":\"data-v-6e31687c\",\"scoped\":false,\"hasInlineConfig\":true}!./node_modules/sass-loader/lib/loader.js?{\"sourceMap\":false}!./node_modules/sass-resources-loader/lib/loader.js?{\"resources\":[\"/Users/johnny/Sites/janczizikow-portfolio/assets/shared.scss\"]}!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./components/ProgressiveImg.vue",
+            "size": 1131,
+            "id": "kjY+"
+          },
+          {
+            "name": "./node_modules/css-loader?{\"sourceMap\":false,\"minimize\":true,\"importLoaders\":1,\"alias\":{\"/assets\":\"/Users/johnny/Sites/janczizikow-portfolio/assets\",\"/static\":\"/Users/johnny/Sites/janczizikow-portfolio/static\"}}!./node_modules/vue-loader/lib/style-compiler?{\"vue\":true,\"id\":\"data-v-239f1e20\",\"scoped\":false,\"hasInlineConfig\":true}!./node_modules/sass-loader/lib/loader.js?{\"sourceMap\":false}!./node_modules/sass-resources-loader/lib/loader.js?{\"resources\":[\"/Users/johnny/Sites/janczizikow-portfolio/assets/shared.scss\"]}!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./components/Home/Projects/ProjectItem.vue",
+            "size": 1226,
+            "id": "lUvj"
+          },
+          {
+            "name": "./node_modules/babel-loader/lib?{\"babelrc\":false,\"cacheDirectory\":false,\"presets\":[[\"/Users/johnny/Sites/janczizikow-portfolio/node_modules/babel-preset-vue-app/dist/index.common.js\",{\"targets\":{\"ie\":9,\"uglify\":true}}]]}!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./components/Home/Projects/ProjectItem.vue",
+            "size": 870,
+            "id": "lmex"
+          },
+          {
+            "name": "./assets/images/illustrations/hero__img.svg",
+            "size": 75,
+            "id": "nCoX"
+          },
+          {
+            "name": "./node_modules/vue-style-loader?{\"sourceMap\":false}!./node_modules/css-loader?{\"sourceMap\":false,\"minimize\":true,\"importLoaders\":1,\"alias\":{\"/assets\":\"/Users/johnny/Sites/janczizikow-portfolio/assets\",\"/static\":\"/Users/johnny/Sites/janczizikow-portfolio/static\"}}!./node_modules/vue-loader/lib/style-compiler?{\"vue\":true,\"id\":\"data-v-a40c5e1c\",\"scoped\":true,\"hasInlineConfig\":true}!./node_modules/sass-loader/lib/loader.js?{\"sourceMap\":false}!./node_modules/sass-resources-loader/lib/loader.js?{\"resources\":[\"/Users/johnny/Sites/janczizikow-portfolio/assets/shared.scss\"]}!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./components/Home/Cta.vue",
+            "size": 1060,
+            "id": "pEU/"
+          },
+          {
+            "name": "./node_modules/vue-loader/lib/template-compiler?{\"id\":\"data-v-4658b79e\",\"hasScoped\":false,\"transformToRequire\":{\"video\":\"src\",\"source\":\"src\",\"object\":\"src\",\"embed\":\"src\"},\"preserveWhitespace\":false,\"buble\":{\"transforms\":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./pages/index.vue",
+            "size": 463,
+            "id": "r3oj"
+          },
+          {
+            "name": "./node_modules/vue-loader/lib/template-compiler?{\"id\":\"data-v-6e31687c\",\"hasScoped\":false,\"transformToRequire\":{\"video\":\"src\",\"source\":\"src\",\"object\":\"src\",\"embed\":\"src\"},\"preserveWhitespace\":false,\"buble\":{\"transforms\":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./components/ProgressiveImg.vue",
+            "size": 764,
+            "id": "smoE"
+          },
+          {
+            "name": "./components/Layout/components/Row.vue",
+            "size": 2241,
+            "id": "tkXM"
+          },
+          {
+            "name": "./node_modules/vue-style-loader?{\"sourceMap\":false}!./node_modules/css-loader?{\"sourceMap\":false,\"minimize\":true,\"importLoaders\":1,\"alias\":{\"/assets\":\"/Users/johnny/Sites/janczizikow-portfolio/assets\",\"/static\":\"/Users/johnny/Sites/janczizikow-portfolio/static\"}}!./node_modules/vue-loader/lib/style-compiler?{\"vue\":true,\"id\":\"data-v-713a12a2\",\"scoped\":true,\"hasInlineConfig\":true}!./node_modules/sass-loader/lib/loader.js?{\"sourceMap\":false}!./node_modules/sass-resources-loader/lib/loader.js?{\"resources\":[\"/Users/johnny/Sites/janczizikow-portfolio/assets/shared.scss\"]}!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./components/Home/Hero.vue",
+            "size": 1061,
+            "id": "uYIJ"
+          },
+          {
+            "name": "./node_modules/vue-loader/lib/template-compiler?{\"id\":\"data-v-089c8207\",\"hasScoped\":true,\"transformToRequire\":{\"video\":\"src\",\"source\":\"src\",\"object\":\"src\",\"embed\":\"src\"},\"preserveWhitespace\":false,\"buble\":{\"transforms\":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./components/Layout/components/Row.vue",
+            "size": 288,
+            "id": "wHzc"
+          },
+          {
+            "name": "./node_modules/babel-loader/lib?{\"babelrc\":false,\"cacheDirectory\":false,\"presets\":[[\"/Users/johnny/Sites/janczizikow-portfolio/node_modules/babel-preset-vue-app/dist/index.common.js\",{\"targets\":{\"ie\":9,\"uglify\":true}}]]}!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./components/Home/Projects/Projects.vue",
+            "size": 324,
+            "id": "xDcp"
+          },
+          {
+            "name": "./components/Home/Projects/Projects.vue",
+            "size": 2261,
+            "id": "ySJQ"
+          }
+        ]
+      },
+      {
+        "size": 81367,
+        "files": [
+          "layouts/default.c7f04aad7966723cf2b8.js"
+        ],
+        "modules": [
+          {
+            "name": "./node_modules/babel-loader/lib?{\"babelrc\":false,\"cacheDirectory\":false,\"presets\":[[\"/Users/johnny/Sites/janczizikow-portfolio/node_modules/babel-preset-vue-app/dist/index.common.js\",{\"targets\":{\"ie\":9,\"uglify\":true}}]]}!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./components/Layout/components/Col.vue",
+            "size": 929,
+            "id": "2VL1"
+          },
+          {
+            "name": "./node_modules/vue-loader/lib/template-compiler?{\"id\":\"data-v-75b5f038\",\"hasScoped\":true,\"transformToRequire\":{\"video\":\"src\",\"source\":\"src\",\"object\":\"src\",\"embed\":\"src\"},\"preserveWhitespace\":false,\"buble\":{\"transforms\":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./components/Header/Header.vue",
+            "size": 1147,
+            "id": "3Iar"
+          },
+          {
+            "name": "./node_modules/css-loader?{\"sourceMap\":false,\"minimize\":true,\"importLoaders\":1,\"alias\":{\"/assets\":\"/Users/johnny/Sites/janczizikow-portfolio/assets\",\"/static\":\"/Users/johnny/Sites/janczizikow-portfolio/static\"}}!./node_modules/vue-loader/lib/style-compiler?{\"vue\":true,\"id\":\"data-v-089c8207\",\"scoped\":true,\"hasInlineConfig\":true}!./node_modules/sass-loader/lib/loader.js?{\"sourceMap\":false}!./node_modules/sass-resources-loader/lib/loader.js?{\"resources\":[\"/Users/johnny/Sites/janczizikow-portfolio/assets/shared.scss\"]}!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./components/Layout/components/Row.vue",
+            "size": 1302,
+            "id": "5+h7"
+          },
+          {
+            "name": "./assets/images/icons/logo.svg?inline",
+            "size": 3818,
+            "id": "5lal"
+          },
+          {
+            "name": "./assets/images/icons/github.svg?inline",
+            "size": 1874,
+            "id": "6k4F"
+          },
+          {
+            "name": "./node_modules/vue-loader/lib/template-compiler?{\"id\":\"data-v-1ee5da8c\",\"hasScoped\":false,\"transformToRequire\":{\"video\":\"src\",\"source\":\"src\",\"object\":\"src\",\"embed\":\"src\"},\"preserveWhitespace\":false,\"buble\":{\"transforms\":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./layouts/default.vue",
+            "size": 436,
+            "id": "8iQ4"
+          },
+          {
+            "name": "./node_modules/vue-style-loader?{\"sourceMap\":false}!./node_modules/css-loader?{\"sourceMap\":false,\"minimize\":true,\"importLoaders\":1,\"alias\":{\"/assets\":\"/Users/johnny/Sites/janczizikow-portfolio/assets\",\"/static\":\"/Users/johnny/Sites/janczizikow-portfolio/static\"}}!./node_modules/vue-loader/lib/style-compiler?{\"vue\":true,\"id\":\"data-v-1ee5da8c\",\"scoped\":false,\"hasInlineConfig\":true}!./node_modules/sass-loader/lib/loader.js?{\"sourceMap\":false}!./node_modules/sass-resources-loader/lib/loader.js?{\"resources\":[\"/Users/johnny/Sites/janczizikow-portfolio/assets/shared.scss\"]}!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./layouts/default.vue",
+            "size": 1047,
+            "id": "8qVp"
+          },
+          {
+            "name": "./node_modules/vue-loader/lib/template-compiler?{\"id\":\"data-v-13ad627c\",\"hasScoped\":true,\"transformToRequire\":{\"video\":\"src\",\"source\":\"src\",\"object\":\"src\",\"embed\":\"src\"},\"preserveWhitespace\":false,\"buble\":{\"transforms\":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./components/Layout/components/Container.vue",
+            "size": 286,
+            "id": "BSAC"
+          },
+          {
+            "name": "./node_modules/vue-loader/lib/template-compiler?{\"id\":\"data-v-2837d6e6\",\"hasScoped\":false,\"transformToRequire\":{\"video\":\"src\",\"source\":\"src\",\"object\":\"src\",\"embed\":\"src\"},\"preserveWhitespace\":false,\"buble\":{\"transforms\":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./components/Layout/components/Col.vue",
+            "size": 288,
+            "id": "DKC3"
+          },
+          {
+            "name": "./node_modules/css-loader?{\"sourceMap\":false,\"minimize\":true,\"importLoaders\":1,\"alias\":{\"/assets\":\"/Users/johnny/Sites/janczizikow-portfolio/assets\",\"/static\":\"/Users/johnny/Sites/janczizikow-portfolio/static\"}}!./node_modules/vue-loader/lib/style-compiler?{\"vue\":true,\"id\":\"data-v-2837d6e6\",\"scoped\":false,\"hasInlineConfig\":true}!./node_modules/sass-loader/lib/loader.js?{\"sourceMap\":false}!./node_modules/sass-resources-loader/lib/loader.js?{\"resources\":[\"/Users/johnny/Sites/janczizikow-portfolio/assets/shared.scss\"]}!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./components/Layout/components/Col.vue",
+            "size": 11987,
+            "id": "DVaP"
+          },
+          {
+            "name": "./node_modules/babel-loader/lib?{\"babelrc\":false,\"cacheDirectory\":false,\"presets\":[[\"/Users/johnny/Sites/janczizikow-portfolio/node_modules/babel-preset-vue-app/dist/index.common.js\",{\"targets\":{\"ie\":9,\"uglify\":true}}]]}!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./layouts/default.vue",
+            "size": 1393,
+            "id": "DZKp"
+          },
+          {
+            "name": "./assets/images/icons/cross.svg?inline",
+            "size": 579,
+            "id": "Ftb1"
+          },
+          {
+            "name": "./node_modules/css-loader?{\"sourceMap\":false,\"minimize\":true,\"importLoaders\":1,\"alias\":{\"/assets\":\"/Users/johnny/Sites/janczizikow-portfolio/assets\",\"/static\":\"/Users/johnny/Sites/janczizikow-portfolio/static\"}}!./node_modules/vue-loader/lib/style-compiler?{\"vue\":true,\"id\":\"data-v-13ad627c\",\"scoped\":true,\"hasInlineConfig\":true}!./node_modules/sass-loader/lib/loader.js?{\"sourceMap\":false}!./node_modules/sass-resources-loader/lib/loader.js?{\"resources\":[\"/Users/johnny/Sites/janczizikow-portfolio/assets/shared.scss\"]}!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./components/Layout/components/Container.vue",
+            "size": 632,
+            "id": "FyiN"
+          },
+          {
+            "name": "./node_modules/css-loader?{\"sourceMap\":false,\"minimize\":true,\"importLoaders\":1,\"alias\":{\"/assets\":\"/Users/johnny/Sites/janczizikow-portfolio/assets\",\"/static\":\"/Users/johnny/Sites/janczizikow-portfolio/static\"}}!./node_modules/vue-loader/lib/style-compiler?{\"vue\":true,\"id\":\"data-v-1ee5da8c\",\"scoped\":false,\"hasInlineConfig\":true}!./node_modules/sass-loader/lib/loader.js?{\"sourceMap\":false}!./node_modules/sass-resources-loader/lib/loader.js?{\"resources\":[\"/Users/johnny/Sites/janczizikow-portfolio/assets/shared.scss\"]}!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./layouts/default.vue",
+            "size": 3799,
+            "id": "HysW"
+          },
+          {
+            "name": "./node_modules/babel-loader/lib?{\"babelrc\":false,\"cacheDirectory\":false,\"presets\":[[\"/Users/johnny/Sites/janczizikow-portfolio/node_modules/babel-preset-vue-app/dist/index.common.js\",{\"targets\":{\"ie\":9,\"uglify\":true}}]]}!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./components/Layout/components/Row.vue",
+            "size": 790,
+            "id": "K82H"
+          },
+          {
+            "name": "./node_modules/vue-loader/lib/template-compiler?{\"id\":\"data-v-04b19313\",\"hasScoped\":true,\"transformToRequire\":{\"video\":\"src\",\"source\":\"src\",\"object\":\"src\",\"embed\":\"src\"},\"preserveWhitespace\":false,\"buble\":{\"transforms\":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./components/Header/MobileMenu.vue",
+            "size": 1127,
+            "id": "M+Df"
+          },
+          {
+            "name": "./mixins/index.js",
+            "size": 582,
+            "id": "M2pF"
+          },
+          {
+            "name": "./node_modules/vue-style-loader?{\"sourceMap\":false}!./node_modules/css-loader?{\"sourceMap\":false,\"minimize\":true,\"importLoaders\":1,\"alias\":{\"/assets\":\"/Users/johnny/Sites/janczizikow-portfolio/assets\",\"/static\":\"/Users/johnny/Sites/janczizikow-portfolio/static\"}}!./node_modules/vue-loader/lib/style-compiler?{\"vue\":true,\"id\":\"data-v-2837d6e6\",\"scoped\":false,\"hasInlineConfig\":true}!./node_modules/sass-loader/lib/loader.js?{\"sourceMap\":false}!./node_modules/sass-resources-loader/lib/loader.js?{\"resources\":[\"/Users/johnny/Sites/janczizikow-portfolio/assets/shared.scss\"]}!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./components/Layout/components/Col.vue",
+            "size": 1079,
+            "id": "M3JZ"
+          },
+          {
+            "name": "./layouts/default.vue",
+            "size": 2204,
+            "id": "Ma2J"
+          },
+          {
+            "name": "./assets/images/icons/linkedin.svg?inline",
+            "size": 797,
+            "id": "NijJ"
+          },
+          {
+            "name": "./components/Layout/components/Col.vue",
+            "size": 2230,
+            "id": "Tf12"
+          },
+          {
+            "name": "./node_modules/vue-style-loader?{\"sourceMap\":false}!./node_modules/css-loader?{\"sourceMap\":false,\"minimize\":true,\"importLoaders\":1,\"alias\":{\"/assets\":\"/Users/johnny/Sites/janczizikow-portfolio/assets\",\"/static\":\"/Users/johnny/Sites/janczizikow-portfolio/static\"}}!./node_modules/vue-loader/lib/style-compiler?{\"vue\":true,\"id\":\"data-v-13ad627c\",\"scoped\":true,\"hasInlineConfig\":true}!./node_modules/sass-loader/lib/loader.js?{\"sourceMap\":false}!./node_modules/sass-resources-loader/lib/loader.js?{\"resources\":[\"/Users/johnny/Sites/janczizikow-portfolio/assets/shared.scss\"]}!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./components/Layout/components/Container.vue",
+            "size": 1084,
+            "id": "V4Q8"
+          },
+          {
+            "name": "./node_modules/babel-loader/lib?{\"babelrc\":false,\"cacheDirectory\":false,\"presets\":[[\"/Users/johnny/Sites/janczizikow-portfolio/node_modules/babel-preset-vue-app/dist/index.common.js\",{\"targets\":{\"ie\":9,\"uglify\":true}}]]}!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./components/Header/MobileMenu.vue",
+            "size": 1436,
+            "id": "XIAL"
+          },
+          {
+            "name": "./node_modules/vue-headroom/dist/vue-headroom.js",
+            "size": 13846,
+            "id": "YFiv"
+          },
+          {
+            "name": "./node_modules/babel-loader/lib?{\"babelrc\":false,\"cacheDirectory\":false,\"presets\":[[\"/Users/johnny/Sites/janczizikow-portfolio/node_modules/babel-preset-vue-app/dist/index.common.js\",{\"targets\":{\"ie\":9,\"uglify\":true}}]]}!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./components/Layout/components/Container.vue",
+            "size": 262,
+            "id": "aCNx"
+          },
+          {
+            "name": "./components/Header/Header.vue",
+            "size": 2232,
+            "id": "cU7t"
+          },
+          {
+            "name": "./node_modules/css-loader?{\"sourceMap\":false,\"minimize\":true,\"importLoaders\":1,\"alias\":{\"/assets\":\"/Users/johnny/Sites/janczizikow-portfolio/assets\",\"/static\":\"/Users/johnny/Sites/janczizikow-portfolio/static\"}}!./node_modules/vue-loader/lib/style-compiler?{\"vue\":true,\"id\":\"data-v-04b19313\",\"scoped\":true,\"hasInlineConfig\":true}!./node_modules/sass-loader/lib/loader.js?{\"sourceMap\":false}!./node_modules/sass-resources-loader/lib/loader.js?{\"resources\":[\"/Users/johnny/Sites/janczizikow-portfolio/assets/shared.scss\"]}!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./components/Header/MobileMenu.vue",
+            "size": 2007,
+            "id": "d3DZ"
+          },
+          {
+            "name": "./node_modules/css-loader?{\"sourceMap\":false,\"minimize\":true,\"importLoaders\":1,\"alias\":{\"/assets\":\"/Users/johnny/Sites/janczizikow-portfolio/assets\",\"/static\":\"/Users/johnny/Sites/janczizikow-portfolio/static\"}}!./node_modules/vue-loader/lib/style-compiler?{\"vue\":true,\"id\":\"data-v-d902e8d0\",\"scoped\":true,\"hasInlineConfig\":true}!./node_modules/sass-loader/lib/loader.js?{\"sourceMap\":false}!./node_modules/sass-resources-loader/lib/loader.js?{\"resources\":[\"/Users/johnny/Sites/janczizikow-portfolio/assets/shared.scss\"]}!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./components/Footer.vue",
+            "size": 898,
+            "id": "dhUa"
+          },
+          {
+            "name": "./components/Layout/index.js",
+            "size": 402,
+            "id": "eXTn"
+          },
+          {
+            "name": "./assets/images/icons/burger.svg?inline",
+            "size": 492,
+            "id": "fwxI"
+          },
+          {
+            "name": "./node_modules/vue-style-loader?{\"sourceMap\":false}!./node_modules/css-loader?{\"sourceMap\":false,\"minimize\":true,\"importLoaders\":1,\"alias\":{\"/assets\":\"/Users/johnny/Sites/janczizikow-portfolio/assets\",\"/static\":\"/Users/johnny/Sites/janczizikow-portfolio/static\"}}!./node_modules/vue-loader/lib/style-compiler?{\"vue\":true,\"id\":\"data-v-089c8207\",\"scoped\":true,\"hasInlineConfig\":true}!./node_modules/sass-loader/lib/loader.js?{\"sourceMap\":false}!./node_modules/sass-resources-loader/lib/loader.js?{\"resources\":[\"/Users/johnny/Sites/janczizikow-portfolio/assets/shared.scss\"]}!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./components/Layout/components/Row.vue",
+            "size": 1078,
+            "id": "i/HF"
+          },
+          {
+            "name": "./node_modules/vue-style-loader?{\"sourceMap\":false}!./node_modules/css-loader?{\"sourceMap\":false,\"minimize\":true,\"importLoaders\":1,\"alias\":{\"/assets\":\"/Users/johnny/Sites/janczizikow-portfolio/assets\",\"/static\":\"/Users/johnny/Sites/janczizikow-portfolio/static\"}}!./node_modules/vue-loader/lib/style-compiler?{\"vue\":true,\"id\":\"data-v-d902e8d0\",\"scoped\":true,\"hasInlineConfig\":true}!./node_modules/sass-loader/lib/loader.js?{\"sourceMap\":false}!./node_modules/sass-resources-loader/lib/loader.js?{\"resources\":[\"/Users/johnny/Sites/janczizikow-portfolio/assets/shared.scss\"]}!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./components/Footer.vue",
+            "size": 1045,
+            "id": "i2EQ"
+          },
+          {
+            "name": "./components/Layout/components/Container.vue",
+            "size": 2265,
+            "id": "iN1F"
+          },
+          {
+            "name": "./node_modules/vue-style-loader?{\"sourceMap\":false}!./node_modules/css-loader?{\"sourceMap\":false,\"minimize\":true,\"importLoaders\":1,\"alias\":{\"/assets\":\"/Users/johnny/Sites/janczizikow-portfolio/assets\",\"/static\":\"/Users/johnny/Sites/janczizikow-portfolio/static\"}}!./node_modules/vue-loader/lib/style-compiler?{\"vue\":true,\"id\":\"data-v-75b5f038\",\"scoped\":true,\"hasInlineConfig\":true}!./node_modules/sass-loader/lib/loader.js?{\"sourceMap\":false}!./node_modules/sass-resources-loader/lib/loader.js?{\"resources\":[\"/Users/johnny/Sites/janczizikow-portfolio/assets/shared.scss\"]}!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./components/Header/Header.vue",
+            "size": 1063,
+            "id": "jxRs"
+          },
+          {
+            "name": "./node_modules/css-loader?{\"sourceMap\":false,\"minimize\":true,\"importLoaders\":1,\"alias\":{\"/assets\":\"/Users/johnny/Sites/janczizikow-portfolio/assets\",\"/static\":\"/Users/johnny/Sites/janczizikow-portfolio/static\"}}!./node_modules/vue-loader/lib/style-compiler?{\"vue\":true,\"id\":\"data-v-75b5f038\",\"scoped\":true,\"hasInlineConfig\":true}!./node_modules/sass-loader/lib/loader.js?{\"sourceMap\":false}!./node_modules/sass-resources-loader/lib/loader.js?{\"resources\":[\"/Users/johnny/Sites/janczizikow-portfolio/assets/shared.scss\"]}!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./components/Header/Header.vue",
+            "size": 2851,
+            "id": "kdu9"
+          },
+          {
+            "name": "./node_modules/vue-loader/lib/template-compiler?{\"id\":\"data-v-d902e8d0\",\"hasScoped\":true,\"transformToRequire\":{\"video\":\"src\",\"source\":\"src\",\"object\":\"src\",\"embed\":\"src\"},\"preserveWhitespace\":false,\"buble\":{\"transforms\":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./components/Footer.vue",
+            "size": 633,
+            "id": "lpA+"
+          },
+          {
+            "name": "./node_modules/vue-style-loader?{\"sourceMap\":false}!./node_modules/css-loader?{\"sourceMap\":false,\"minimize\":true,\"importLoaders\":1,\"alias\":{\"/assets\":\"/Users/johnny/Sites/janczizikow-portfolio/assets\",\"/static\":\"/Users/johnny/Sites/janczizikow-portfolio/static\"}}!./node_modules/vue-loader/lib/style-compiler?{\"vue\":true,\"id\":\"data-v-04b19313\",\"scoped\":true,\"hasInlineConfig\":true}!./node_modules/sass-loader/lib/loader.js?{\"sourceMap\":false}!./node_modules/sass-resources-loader/lib/loader.js?{\"resources\":[\"/Users/johnny/Sites/janczizikow-portfolio/assets/shared.scss\"]}!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./components/Header/MobileMenu.vue",
+            "size": 1067,
+            "id": "mZ6r"
+          },
+          {
+            "name": "./node_modules/babel-loader/lib?{\"babelrc\":false,\"cacheDirectory\":false,\"presets\":[[\"/Users/johnny/Sites/janczizikow-portfolio/node_modules/babel-preset-vue-app/dist/index.common.js\",{\"targets\":{\"ie\":9,\"uglify\":true}}]]}!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./components/Footer.vue",
+            "size": 732,
+            "id": "oYOk"
+          },
+          {
+            "name": "./node_modules/babel-loader/lib?{\"babelrc\":false,\"cacheDirectory\":false,\"presets\":[[\"/Users/johnny/Sites/janczizikow-portfolio/node_modules/babel-preset-vue-app/dist/index.common.js\",{\"targets\":{\"ie\":9,\"uglify\":true}}]]}!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./components/Header/Header.vue",
+            "size": 1733,
+            "id": "rwJ8"
+          },
+          {
+            "name": "./components/Header/MobileMenu.vue",
+            "size": 2248,
+            "id": "t+b2"
+          },
+          {
+            "name": "./assets/images/icons/codepen.svg?inline",
+            "size": 927,
+            "id": "teAC"
+          },
+          {
+            "name": "./components/Layout/components/Row.vue",
+            "size": 2241,
+            "id": "tkXM"
+          },
+          {
+            "name": "./node_modules/vue-loader/lib/template-compiler?{\"id\":\"data-v-089c8207\",\"hasScoped\":true,\"transformToRequire\":{\"video\":\"src\",\"source\":\"src\",\"object\":\"src\",\"embed\":\"src\"},\"preserveWhitespace\":false,\"buble\":{\"transforms\":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./components/Layout/components/Row.vue",
+            "size": 288,
+            "id": "wHzc"
+          },
+          {
+            "name": "./components/Footer.vue",
+            "size": 2211,
+            "id": "yqLL"
+          }
+        ]
+      },
+      {
+        "size": 42990,
+        "files": [
+          "pages/projects/_id.95d1d65e22718676a70b.js"
+        ],
+        "modules": [
+          {
+            "name": "./assets/images/icons/arrow-right.svg?inline",
+            "size": 593,
+            "id": "+VTC"
+          },
+          {
+            "name": "./node_modules/babel-loader/lib?{\"babelrc\":false,\"cacheDirectory\":false,\"presets\":[[\"/Users/johnny/Sites/janczizikow-portfolio/node_modules/babel-preset-vue-app/dist/index.common.js\",{\"targets\":{\"ie\":9,\"uglify\":true}}]]}!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./components/Layout/components/Col.vue",
+            "size": 929,
+            "id": "2VL1"
+          },
+          {
+            "name": "./assets/images/icons/arrow-left.svg?inline",
+            "size": 593,
+            "id": "3sF5"
+          },
+          {
+            "name": "./node_modules/css-loader?{\"sourceMap\":false,\"minimize\":true,\"importLoaders\":1,\"alias\":{\"/assets\":\"/Users/johnny/Sites/janczizikow-portfolio/assets\",\"/static\":\"/Users/johnny/Sites/janczizikow-portfolio/static\"}}!./node_modules/vue-loader/lib/style-compiler?{\"vue\":true,\"id\":\"data-v-089c8207\",\"scoped\":true,\"hasInlineConfig\":true}!./node_modules/sass-loader/lib/loader.js?{\"sourceMap\":false}!./node_modules/sass-resources-loader/lib/loader.js?{\"resources\":[\"/Users/johnny/Sites/janczizikow-portfolio/assets/shared.scss\"]}!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./components/Layout/components/Row.vue",
+            "size": 1302,
+            "id": "5+h7"
+          },
+          {
+            "name": "./node_modules/vue-loader/lib/template-compiler?{\"id\":\"data-v-54b2acf6\",\"hasScoped\":true,\"transformToRequire\":{\"video\":\"src\",\"source\":\"src\",\"object\":\"src\",\"embed\":\"src\"},\"preserveWhitespace\":false,\"buble\":{\"transforms\":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./pages/projects/_id.vue",
+            "size": 1789,
+            "id": "680p"
+          },
+          {
+            "name": "./node_modules/vue-loader/lib/template-compiler?{\"id\":\"data-v-13ad627c\",\"hasScoped\":true,\"transformToRequire\":{\"video\":\"src\",\"source\":\"src\",\"object\":\"src\",\"embed\":\"src\"},\"preserveWhitespace\":false,\"buble\":{\"transforms\":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./components/Layout/components/Container.vue",
+            "size": 286,
+            "id": "BSAC"
+          },
+          {
+            "name": "./node_modules/vue-loader/lib/template-compiler?{\"id\":\"data-v-2837d6e6\",\"hasScoped\":false,\"transformToRequire\":{\"video\":\"src\",\"source\":\"src\",\"object\":\"src\",\"embed\":\"src\"},\"preserveWhitespace\":false,\"buble\":{\"transforms\":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./components/Layout/components/Col.vue",
+            "size": 288,
+            "id": "DKC3"
+          },
+          {
+            "name": "./node_modules/css-loader?{\"sourceMap\":false,\"minimize\":true,\"importLoaders\":1,\"alias\":{\"/assets\":\"/Users/johnny/Sites/janczizikow-portfolio/assets\",\"/static\":\"/Users/johnny/Sites/janczizikow-portfolio/static\"}}!./node_modules/vue-loader/lib/style-compiler?{\"vue\":true,\"id\":\"data-v-2837d6e6\",\"scoped\":false,\"hasInlineConfig\":true}!./node_modules/sass-loader/lib/loader.js?{\"sourceMap\":false}!./node_modules/sass-resources-loader/lib/loader.js?{\"resources\":[\"/Users/johnny/Sites/janczizikow-portfolio/assets/shared.scss\"]}!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./components/Layout/components/Col.vue",
+            "size": 11987,
+            "id": "DVaP"
+          },
+          {
+            "name": "./node_modules/css-loader?{\"sourceMap\":false,\"minimize\":true,\"importLoaders\":1,\"alias\":{\"/assets\":\"/Users/johnny/Sites/janczizikow-portfolio/assets\",\"/static\":\"/Users/johnny/Sites/janczizikow-portfolio/static\"}}!./node_modules/vue-loader/lib/style-compiler?{\"vue\":true,\"id\":\"data-v-13ad627c\",\"scoped\":true,\"hasInlineConfig\":true}!./node_modules/sass-loader/lib/loader.js?{\"sourceMap\":false}!./node_modules/sass-resources-loader/lib/loader.js?{\"resources\":[\"/Users/johnny/Sites/janczizikow-portfolio/assets/shared.scss\"]}!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./components/Layout/components/Container.vue",
+            "size": 632,
+            "id": "FyiN"
+          },
+          {
+            "name": "./pages/projects/_id.vue",
+            "size": 2220,
+            "id": "Hx7V"
+          },
+          {
+            "name": "./node_modules/babel-loader/lib?{\"babelrc\":false,\"cacheDirectory\":false,\"presets\":[[\"/Users/johnny/Sites/janczizikow-portfolio/node_modules/babel-preset-vue-app/dist/index.common.js\",{\"targets\":{\"ie\":9,\"uglify\":true}}]]}!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./components/Project/Controls.vue",
+            "size": 470,
+            "id": "JSIO"
+          },
+          {
+            "name": "./node_modules/css-loader?{\"sourceMap\":false,\"minimize\":true,\"importLoaders\":1,\"alias\":{\"/assets\":\"/Users/johnny/Sites/janczizikow-portfolio/assets\",\"/static\":\"/Users/johnny/Sites/janczizikow-portfolio/static\"}}!./node_modules/vue-loader/lib/style-compiler?{\"vue\":true,\"id\":\"data-v-ada78dec\",\"scoped\":true,\"hasInlineConfig\":true}!./node_modules/sass-loader/lib/loader.js?{\"sourceMap\":false}!./node_modules/sass-resources-loader/lib/loader.js?{\"resources\":[\"/Users/johnny/Sites/janczizikow-portfolio/assets/shared.scss\"]}!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./components/Project/Controls.vue",
+            "size": 1027,
+            "id": "JcWO"
+          },
+          {
+            "name": "./node_modules/babel-loader/lib?{\"babelrc\":false,\"cacheDirectory\":false,\"presets\":[[\"/Users/johnny/Sites/janczizikow-portfolio/node_modules/babel-preset-vue-app/dist/index.common.js\",{\"targets\":{\"ie\":9,\"uglify\":true}}]]}!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./components/Layout/components/Row.vue",
+            "size": 790,
+            "id": "K82H"
+          },
+          {
+            "name": "./mixins/index.js",
+            "size": 582,
+            "id": "M2pF"
+          },
+          {
+            "name": "./node_modules/vue-style-loader?{\"sourceMap\":false}!./node_modules/css-loader?{\"sourceMap\":false,\"minimize\":true,\"importLoaders\":1,\"alias\":{\"/assets\":\"/Users/johnny/Sites/janczizikow-portfolio/assets\",\"/static\":\"/Users/johnny/Sites/janczizikow-portfolio/static\"}}!./node_modules/vue-loader/lib/style-compiler?{\"vue\":true,\"id\":\"data-v-2837d6e6\",\"scoped\":false,\"hasInlineConfig\":true}!./node_modules/sass-loader/lib/loader.js?{\"sourceMap\":false}!./node_modules/sass-resources-loader/lib/loader.js?{\"resources\":[\"/Users/johnny/Sites/janczizikow-portfolio/assets/shared.scss\"]}!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./components/Layout/components/Col.vue",
+            "size": 1079,
+            "id": "M3JZ"
+          },
+          {
+            "name": "./node_modules/babel-loader/lib?{\"babelrc\":false,\"cacheDirectory\":false,\"presets\":[[\"/Users/johnny/Sites/janczizikow-portfolio/node_modules/babel-preset-vue-app/dist/index.common.js\",{\"targets\":{\"ie\":9,\"uglify\":true}}]]}!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./pages/projects/_id.vue",
+            "size": 2105,
+            "id": "RW5m"
+          },
+          {
+            "name": "./components/Layout/components/Col.vue",
+            "size": 2230,
+            "id": "Tf12"
+          },
+          {
+            "name": "./node_modules/vue-style-loader?{\"sourceMap\":false}!./node_modules/css-loader?{\"sourceMap\":false,\"minimize\":true,\"importLoaders\":1,\"alias\":{\"/assets\":\"/Users/johnny/Sites/janczizikow-portfolio/assets\",\"/static\":\"/Users/johnny/Sites/janczizikow-portfolio/static\"}}!./node_modules/vue-loader/lib/style-compiler?{\"vue\":true,\"id\":\"data-v-13ad627c\",\"scoped\":true,\"hasInlineConfig\":true}!./node_modules/sass-loader/lib/loader.js?{\"sourceMap\":false}!./node_modules/sass-resources-loader/lib/loader.js?{\"resources\":[\"/Users/johnny/Sites/janczizikow-portfolio/assets/shared.scss\"]}!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./components/Layout/components/Container.vue",
+            "size": 1084,
+            "id": "V4Q8"
+          },
+          {
+            "name": "./node_modules/vue-loader/lib/template-compiler?{\"id\":\"data-v-ada78dec\",\"hasScoped\":true,\"transformToRequire\":{\"video\":\"src\",\"source\":\"src\",\"object\":\"src\",\"embed\":\"src\"},\"preserveWhitespace\":false,\"buble\":{\"transforms\":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./components/Project/Controls.vue",
+            "size": 1034,
+            "id": "VmTM"
+          },
+          {
+            "name": "./components/Project/Controls.vue",
+            "size": 2240,
+            "id": "Wczv"
+          },
+          {
+            "name": "./node_modules/babel-loader/lib?{\"babelrc\":false,\"cacheDirectory\":false,\"presets\":[[\"/Users/johnny/Sites/janczizikow-portfolio/node_modules/babel-preset-vue-app/dist/index.common.js\",{\"targets\":{\"ie\":9,\"uglify\":true}}]]}!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./components/Layout/components/Container.vue",
+            "size": 262,
+            "id": "aCNx"
+          },
+          {
+            "name": "./node_modules/css-loader?{\"sourceMap\":false,\"minimize\":true,\"importLoaders\":1,\"alias\":{\"/assets\":\"/Users/johnny/Sites/janczizikow-portfolio/assets\",\"/static\":\"/Users/johnny/Sites/janczizikow-portfolio/static\"}}!./node_modules/vue-loader/lib/style-compiler?{\"vue\":true,\"id\":\"data-v-54b2acf6\",\"scoped\":true,\"hasInlineConfig\":true}!./node_modules/sass-loader/lib/loader.js?{\"sourceMap\":false}!./node_modules/sass-resources-loader/lib/loader.js?{\"resources\":[\"/Users/johnny/Sites/janczizikow-portfolio/assets/shared.scss\"]}!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./pages/projects/_id.vue",
+            "size": 1069,
+            "id": "c0cW"
+          },
+          {
+            "name": "./components/Layout/index.js",
+            "size": 402,
+            "id": "eXTn"
+          },
+          {
+            "name": "./node_modules/vue-style-loader?{\"sourceMap\":false}!./node_modules/css-loader?{\"sourceMap\":false,\"minimize\":true,\"importLoaders\":1,\"alias\":{\"/assets\":\"/Users/johnny/Sites/janczizikow-portfolio/assets\",\"/static\":\"/Users/johnny/Sites/janczizikow-portfolio/static\"}}!./node_modules/vue-loader/lib/style-compiler?{\"vue\":true,\"id\":\"data-v-089c8207\",\"scoped\":true,\"hasInlineConfig\":true}!./node_modules/sass-loader/lib/loader.js?{\"sourceMap\":false}!./node_modules/sass-resources-loader/lib/loader.js?{\"resources\":[\"/Users/johnny/Sites/janczizikow-portfolio/assets/shared.scss\"]}!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./components/Layout/components/Row.vue",
+            "size": 1078,
+            "id": "i/HF"
+          },
+          {
+            "name": "./components/Layout/components/Container.vue",
+            "size": 2265,
+            "id": "iN1F"
+          },
+          {
+            "name": "./node_modules/vue-style-loader?{\"sourceMap\":false}!./node_modules/css-loader?{\"sourceMap\":false,\"minimize\":true,\"importLoaders\":1,\"alias\":{\"/assets\":\"/Users/johnny/Sites/janczizikow-portfolio/assets\",\"/static\":\"/Users/johnny/Sites/janczizikow-portfolio/static\"}}!./node_modules/vue-loader/lib/style-compiler?{\"vue\":true,\"id\":\"data-v-54b2acf6\",\"scoped\":true,\"hasInlineConfig\":true}!./node_modules/sass-loader/lib/loader.js?{\"sourceMap\":false}!./node_modules/sass-resources-loader/lib/loader.js?{\"resources\":[\"/Users/johnny/Sites/janczizikow-portfolio/assets/shared.scss\"]}!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./pages/projects/_id.vue",
+            "size": 1060,
+            "id": "mCK4"
+          },
+          {
+            "name": "./node_modules/vue-style-loader?{\"sourceMap\":false}!./node_modules/css-loader?{\"sourceMap\":false,\"minimize\":true,\"importLoaders\":1,\"alias\":{\"/assets\":\"/Users/johnny/Sites/janczizikow-portfolio/assets\",\"/static\":\"/Users/johnny/Sites/janczizikow-portfolio/static\"}}!./node_modules/vue-loader/lib/style-compiler?{\"vue\":true,\"id\":\"data-v-ada78dec\",\"scoped\":true,\"hasInlineConfig\":true}!./node_modules/sass-loader/lib/loader.js?{\"sourceMap\":false}!./node_modules/sass-resources-loader/lib/loader.js?{\"resources\":[\"/Users/johnny/Sites/janczizikow-portfolio/assets/shared.scss\"]}!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./components/Project/Controls.vue",
+            "size": 1065,
+            "id": "pCC7"
+          },
+          {
+            "name": "./components/Layout/components/Row.vue",
+            "size": 2241,
+            "id": "tkXM"
+          },
+          {
+            "name": "./node_modules/vue-loader/lib/template-compiler?{\"id\":\"data-v-089c8207\",\"hasScoped\":true,\"transformToRequire\":{\"video\":\"src\",\"source\":\"src\",\"object\":\"src\",\"embed\":\"src\"},\"preserveWhitespace\":false,\"buble\":{\"transforms\":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./components/Layout/components/Row.vue",
+            "size": 288,
+            "id": "wHzc"
+          }
+        ]
+      },
+      {
+        "size": 38649,
+        "files": [
+          "pages/about.940ebb30dd1c4bde680b.js"
+        ],
+        "modules": [
+          {
+            "name": "./node_modules/babel-loader/lib?{\"babelrc\":false,\"cacheDirectory\":false,\"presets\":[[\"/Users/johnny/Sites/janczizikow-portfolio/node_modules/babel-preset-vue-app/dist/index.common.js\",{\"targets\":{\"ie\":9,\"uglify\":true}}]]}!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./components/Layout/components/Col.vue",
+            "size": 929,
+            "id": "2VL1"
+          },
+          {
+            "name": "./node_modules/css-loader?{\"sourceMap\":false,\"minimize\":true,\"importLoaders\":1,\"alias\":{\"/assets\":\"/Users/johnny/Sites/janczizikow-portfolio/assets\",\"/static\":\"/Users/johnny/Sites/janczizikow-portfolio/static\"}}!./node_modules/vue-loader/lib/style-compiler?{\"vue\":true,\"id\":\"data-v-089c8207\",\"scoped\":true,\"hasInlineConfig\":true}!./node_modules/sass-loader/lib/loader.js?{\"sourceMap\":false}!./node_modules/sass-resources-loader/lib/loader.js?{\"resources\":[\"/Users/johnny/Sites/janczizikow-portfolio/assets/shared.scss\"]}!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./components/Layout/components/Row.vue",
+            "size": 1302,
+            "id": "5+h7"
+          },
+          {
+            "name": "./components/ProgressiveImg.vue",
+            "size": 2232,
+            "id": "5D5x"
+          },
+          {
+            "name": "./node_modules/vue-loader/lib/template-compiler?{\"id\":\"data-v-13ad627c\",\"hasScoped\":true,\"transformToRequire\":{\"video\":\"src\",\"source\":\"src\",\"object\":\"src\",\"embed\":\"src\"},\"preserveWhitespace\":false,\"buble\":{\"transforms\":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./components/Layout/components/Container.vue",
+            "size": 286,
+            "id": "BSAC"
+          },
+          {
+            "name": "./node_modules/vue-loader/lib/template-compiler?{\"id\":\"data-v-2837d6e6\",\"hasScoped\":false,\"transformToRequire\":{\"video\":\"src\",\"source\":\"src\",\"object\":\"src\",\"embed\":\"src\"},\"preserveWhitespace\":false,\"buble\":{\"transforms\":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./components/Layout/components/Col.vue",
+            "size": 288,
+            "id": "DKC3"
+          },
+          {
+            "name": "./node_modules/css-loader?{\"sourceMap\":false,\"minimize\":true,\"importLoaders\":1,\"alias\":{\"/assets\":\"/Users/johnny/Sites/janczizikow-portfolio/assets\",\"/static\":\"/Users/johnny/Sites/janczizikow-portfolio/static\"}}!./node_modules/vue-loader/lib/style-compiler?{\"vue\":true,\"id\":\"data-v-2837d6e6\",\"scoped\":false,\"hasInlineConfig\":true}!./node_modules/sass-loader/lib/loader.js?{\"sourceMap\":false}!./node_modules/sass-resources-loader/lib/loader.js?{\"resources\":[\"/Users/johnny/Sites/janczizikow-portfolio/assets/shared.scss\"]}!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./components/Layout/components/Col.vue",
+            "size": 11987,
+            "id": "DVaP"
+          },
+          {
+            "name": "./node_modules/css-loader?{\"sourceMap\":false,\"minimize\":true,\"importLoaders\":1,\"alias\":{\"/assets\":\"/Users/johnny/Sites/janczizikow-portfolio/assets\",\"/static\":\"/Users/johnny/Sites/janczizikow-portfolio/static\"}}!./node_modules/vue-loader/lib/style-compiler?{\"vue\":true,\"id\":\"data-v-13ad627c\",\"scoped\":true,\"hasInlineConfig\":true}!./node_modules/sass-loader/lib/loader.js?{\"sourceMap\":false}!./node_modules/sass-resources-loader/lib/loader.js?{\"resources\":[\"/Users/johnny/Sites/janczizikow-portfolio/assets/shared.scss\"]}!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./components/Layout/components/Container.vue",
+            "size": 632,
+            "id": "FyiN"
+          },
+          {
+            "name": "./node_modules/babel-loader/lib?{\"babelrc\":false,\"cacheDirectory\":false,\"presets\":[[\"/Users/johnny/Sites/janczizikow-portfolio/node_modules/babel-preset-vue-app/dist/index.common.js\",{\"targets\":{\"ie\":9,\"uglify\":true}}]]}!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./components/Layout/components/Row.vue",
+            "size": 790,
+            "id": "K82H"
+          },
+          {
+            "name": "./node_modules/vue-style-loader?{\"sourceMap\":false}!./node_modules/css-loader?{\"sourceMap\":false,\"minimize\":true,\"importLoaders\":1,\"alias\":{\"/assets\":\"/Users/johnny/Sites/janczizikow-portfolio/assets\",\"/static\":\"/Users/johnny/Sites/janczizikow-portfolio/static\"}}!./node_modules/vue-loader/lib/style-compiler?{\"vue\":true,\"id\":\"data-v-6e31687c\",\"scoped\":false,\"hasInlineConfig\":true}!./node_modules/sass-loader/lib/loader.js?{\"sourceMap\":false}!./node_modules/sass-resources-loader/lib/loader.js?{\"resources\":[\"/Users/johnny/Sites/janczizikow-portfolio/assets/shared.scss\"]}!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./components/ProgressiveImg.vue",
+            "size": 1054,
+            "id": "LMmt"
+          },
+          {
+            "name": "./node_modules/vue-loader/lib/template-compiler?{\"id\":\"data-v-2b40475e\",\"hasScoped\":true,\"transformToRequire\":{\"video\":\"src\",\"source\":\"src\",\"object\":\"src\",\"embed\":\"src\"},\"preserveWhitespace\":false,\"buble\":{\"transforms\":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./pages/about.vue",
+            "size": 1494,
+            "id": "LbxU"
+          },
+          {
+            "name": "./mixins/index.js",
+            "size": 582,
+            "id": "M2pF"
+          },
+          {
+            "name": "./node_modules/vue-style-loader?{\"sourceMap\":false}!./node_modules/css-loader?{\"sourceMap\":false,\"minimize\":true,\"importLoaders\":1,\"alias\":{\"/assets\":\"/Users/johnny/Sites/janczizikow-portfolio/assets\",\"/static\":\"/Users/johnny/Sites/janczizikow-portfolio/static\"}}!./node_modules/vue-loader/lib/style-compiler?{\"vue\":true,\"id\":\"data-v-2837d6e6\",\"scoped\":false,\"hasInlineConfig\":true}!./node_modules/sass-loader/lib/loader.js?{\"sourceMap\":false}!./node_modules/sass-resources-loader/lib/loader.js?{\"resources\":[\"/Users/johnny/Sites/janczizikow-portfolio/assets/shared.scss\"]}!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./components/Layout/components/Col.vue",
+            "size": 1079,
+            "id": "M3JZ"
+          },
+          {
+            "name": "./components/Layout/components/Col.vue",
+            "size": 2230,
+            "id": "Tf12"
+          },
+          {
+            "name": "./node_modules/vue-style-loader?{\"sourceMap\":false}!./node_modules/css-loader?{\"sourceMap\":false,\"minimize\":true,\"importLoaders\":1,\"alias\":{\"/assets\":\"/Users/johnny/Sites/janczizikow-portfolio/assets\",\"/static\":\"/Users/johnny/Sites/janczizikow-portfolio/static\"}}!./node_modules/vue-loader/lib/style-compiler?{\"vue\":true,\"id\":\"data-v-13ad627c\",\"scoped\":true,\"hasInlineConfig\":true}!./node_modules/sass-loader/lib/loader.js?{\"sourceMap\":false}!./node_modules/sass-resources-loader/lib/loader.js?{\"resources\":[\"/Users/johnny/Sites/janczizikow-portfolio/assets/shared.scss\"]}!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./components/Layout/components/Container.vue",
+            "size": 1084,
+            "id": "V4Q8"
+          },
+          {
+            "name": "./node_modules/babel-loader/lib?{\"babelrc\":false,\"cacheDirectory\":false,\"presets\":[[\"/Users/johnny/Sites/janczizikow-portfolio/node_modules/babel-preset-vue-app/dist/index.common.js\",{\"targets\":{\"ie\":9,\"uglify\":true}}]]}!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./components/Layout/components/Container.vue",
+            "size": 262,
+            "id": "aCNx"
+          },
+          {
+            "name": "./components/Layout/index.js",
+            "size": 402,
+            "id": "eXTn"
+          },
+          {
+            "name": "./node_modules/babel-loader/lib?{\"babelrc\":false,\"cacheDirectory\":false,\"presets\":[[\"/Users/johnny/Sites/janczizikow-portfolio/node_modules/babel-preset-vue-app/dist/index.common.js\",{\"targets\":{\"ie\":9,\"uglify\":true}}]]}!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./components/ProgressiveImg.vue",
+            "size": 375,
+            "id": "eays"
+          },
+          {
+            "name": "./pages/about.vue",
+            "size": 2207,
+            "id": "hSk2"
+          },
+          {
+            "name": "./node_modules/vue-style-loader?{\"sourceMap\":false}!./node_modules/css-loader?{\"sourceMap\":false,\"minimize\":true,\"importLoaders\":1,\"alias\":{\"/assets\":\"/Users/johnny/Sites/janczizikow-portfolio/assets\",\"/static\":\"/Users/johnny/Sites/janczizikow-portfolio/static\"}}!./node_modules/vue-loader/lib/style-compiler?{\"vue\":true,\"id\":\"data-v-089c8207\",\"scoped\":true,\"hasInlineConfig\":true}!./node_modules/sass-loader/lib/loader.js?{\"sourceMap\":false}!./node_modules/sass-resources-loader/lib/loader.js?{\"resources\":[\"/Users/johnny/Sites/janczizikow-portfolio/assets/shared.scss\"]}!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./components/Layout/components/Row.vue",
+            "size": 1078,
+            "id": "i/HF"
+          },
+          {
+            "name": "./components/Layout/components/Container.vue",
+            "size": 2265,
+            "id": "iN1F"
+          },
+          {
+            "name": "./node_modules/css-loader?{\"sourceMap\":false,\"minimize\":true,\"importLoaders\":1,\"alias\":{\"/assets\":\"/Users/johnny/Sites/janczizikow-portfolio/assets\",\"/static\":\"/Users/johnny/Sites/janczizikow-portfolio/static\"}}!./node_modules/vue-loader/lib/style-compiler?{\"vue\":true,\"id\":\"data-v-2b40475e\",\"scoped\":true,\"hasInlineConfig\":true}!./node_modules/sass-loader/lib/loader.js?{\"sourceMap\":false}!./node_modules/sass-resources-loader/lib/loader.js?{\"resources\":[\"/Users/johnny/Sites/janczizikow-portfolio/assets/shared.scss\"]}!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./pages/about.vue",
+            "size": 213,
+            "id": "jmRU"
+          },
+          {
+            "name": "./node_modules/css-loader?{\"sourceMap\":false,\"minimize\":true,\"importLoaders\":1,\"alias\":{\"/assets\":\"/Users/johnny/Sites/janczizikow-portfolio/assets\",\"/static\":\"/Users/johnny/Sites/janczizikow-portfolio/static\"}}!./node_modules/vue-loader/lib/style-compiler?{\"vue\":true,\"id\":\"data-v-6e31687c\",\"scoped\":false,\"hasInlineConfig\":true}!./node_modules/sass-loader/lib/loader.js?{\"sourceMap\":false}!./node_modules/sass-resources-loader/lib/loader.js?{\"resources\":[\"/Users/johnny/Sites/janczizikow-portfolio/assets/shared.scss\"]}!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./components/ProgressiveImg.vue",
+            "size": 1131,
+            "id": "kjY+"
+          },
+          {
+            "name": "./node_modules/babel-loader/lib?{\"babelrc\":false,\"cacheDirectory\":false,\"presets\":[[\"/Users/johnny/Sites/janczizikow-portfolio/node_modules/babel-preset-vue-app/dist/index.common.js\",{\"targets\":{\"ie\":9,\"uglify\":true}}]]}!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./pages/about.vue",
+            "size": 410,
+            "id": "lMpm"
+          },
+          {
+            "name": "./node_modules/vue-style-loader?{\"sourceMap\":false}!./node_modules/css-loader?{\"sourceMap\":false,\"minimize\":true,\"importLoaders\":1,\"alias\":{\"/assets\":\"/Users/johnny/Sites/janczizikow-portfolio/assets\",\"/static\":\"/Users/johnny/Sites/janczizikow-portfolio/static\"}}!./node_modules/vue-loader/lib/style-compiler?{\"vue\":true,\"id\":\"data-v-2b40475e\",\"scoped\":true,\"hasInlineConfig\":true}!./node_modules/sass-loader/lib/loader.js?{\"sourceMap\":false}!./node_modules/sass-resources-loader/lib/loader.js?{\"resources\":[\"/Users/johnny/Sites/janczizikow-portfolio/assets/shared.scss\"]}!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./pages/about.vue",
+            "size": 1044,
+            "id": "pORn"
+          },
+          {
+            "name": "./node_modules/vue-loader/lib/template-compiler?{\"id\":\"data-v-6e31687c\",\"hasScoped\":false,\"transformToRequire\":{\"video\":\"src\",\"source\":\"src\",\"object\":\"src\",\"embed\":\"src\"},\"preserveWhitespace\":false,\"buble\":{\"transforms\":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./components/ProgressiveImg.vue",
+            "size": 764,
+            "id": "smoE"
+          },
+          {
+            "name": "./components/Layout/components/Row.vue",
+            "size": 2241,
+            "id": "tkXM"
+          },
+          {
+            "name": "./node_modules/vue-loader/lib/template-compiler?{\"id\":\"data-v-089c8207\",\"hasScoped\":true,\"transformToRequire\":{\"video\":\"src\",\"source\":\"src\",\"object\":\"src\",\"embed\":\"src\"},\"preserveWhitespace\":false,\"buble\":{\"transforms\":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./components/Layout/components/Row.vue",
+            "size": 288,
+            "id": "wHzc"
+          }
+        ]
+      },
+      {
+        "size": 34106,
+        "files": [
+          "pages/dashboard/submission/_id.c8219cc7a34cf740437b.js"
+        ],
+        "modules": [
+          {
+            "name": "./node_modules/babel-loader/lib?{\"babelrc\":false,\"cacheDirectory\":false,\"presets\":[[\"/Users/johnny/Sites/janczizikow-portfolio/node_modules/babel-preset-vue-app/dist/index.common.js\",{\"targets\":{\"ie\":9,\"uglify\":true}}]]}!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./components/Layout/components/Col.vue",
+            "size": 929,
+            "id": "2VL1"
+          },
+          {
+            "name": "./node_modules/css-loader?{\"sourceMap\":false,\"minimize\":true,\"importLoaders\":1,\"alias\":{\"/assets\":\"/Users/johnny/Sites/janczizikow-portfolio/assets\",\"/static\":\"/Users/johnny/Sites/janczizikow-portfolio/static\"}}!./node_modules/vue-loader/lib/style-compiler?{\"vue\":true,\"id\":\"data-v-089c8207\",\"scoped\":true,\"hasInlineConfig\":true}!./node_modules/sass-loader/lib/loader.js?{\"sourceMap\":false}!./node_modules/sass-resources-loader/lib/loader.js?{\"resources\":[\"/Users/johnny/Sites/janczizikow-portfolio/assets/shared.scss\"]}!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./components/Layout/components/Row.vue",
+            "size": 1302,
+            "id": "5+h7"
+          },
+          {
+            "name": "./node_modules/vue-loader/lib/template-compiler?{\"id\":\"data-v-13ad627c\",\"hasScoped\":true,\"transformToRequire\":{\"video\":\"src\",\"source\":\"src\",\"object\":\"src\",\"embed\":\"src\"},\"preserveWhitespace\":false,\"buble\":{\"transforms\":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./components/Layout/components/Container.vue",
+            "size": 286,
+            "id": "BSAC"
+          },
+          {
+            "name": "./node_modules/css-loader?{\"sourceMap\":false,\"minimize\":true,\"importLoaders\":1,\"alias\":{\"/assets\":\"/Users/johnny/Sites/janczizikow-portfolio/assets\",\"/static\":\"/Users/johnny/Sites/janczizikow-portfolio/static\"}}!./node_modules/vue-loader/lib/style-compiler?{\"vue\":true,\"id\":\"data-v-6449a7b5\",\"scoped\":true,\"hasInlineConfig\":true}!./node_modules/sass-loader/lib/loader.js?{\"sourceMap\":false}!./node_modules/sass-resources-loader/lib/loader.js?{\"resources\":[\"/Users/johnny/Sites/janczizikow-portfolio/assets/shared.scss\"]}!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./pages/dashboard/submission/_id.vue",
+            "size": 165,
+            "id": "CiKE"
+          },
+          {
+            "name": "./node_modules/vue-loader/lib/template-compiler?{\"id\":\"data-v-2837d6e6\",\"hasScoped\":false,\"transformToRequire\":{\"video\":\"src\",\"source\":\"src\",\"object\":\"src\",\"embed\":\"src\"},\"preserveWhitespace\":false,\"buble\":{\"transforms\":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./components/Layout/components/Col.vue",
+            "size": 288,
+            "id": "DKC3"
+          },
+          {
+            "name": "./node_modules/css-loader?{\"sourceMap\":false,\"minimize\":true,\"importLoaders\":1,\"alias\":{\"/assets\":\"/Users/johnny/Sites/janczizikow-portfolio/assets\",\"/static\":\"/Users/johnny/Sites/janczizikow-portfolio/static\"}}!./node_modules/vue-loader/lib/style-compiler?{\"vue\":true,\"id\":\"data-v-2837d6e6\",\"scoped\":false,\"hasInlineConfig\":true}!./node_modules/sass-loader/lib/loader.js?{\"sourceMap\":false}!./node_modules/sass-resources-loader/lib/loader.js?{\"resources\":[\"/Users/johnny/Sites/janczizikow-portfolio/assets/shared.scss\"]}!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./components/Layout/components/Col.vue",
+            "size": 11987,
+            "id": "DVaP"
+          },
+          {
+            "name": "./node_modules/css-loader?{\"sourceMap\":false,\"minimize\":true,\"importLoaders\":1,\"alias\":{\"/assets\":\"/Users/johnny/Sites/janczizikow-portfolio/assets\",\"/static\":\"/Users/johnny/Sites/janczizikow-portfolio/static\"}}!./node_modules/vue-loader/lib/style-compiler?{\"vue\":true,\"id\":\"data-v-13ad627c\",\"scoped\":true,\"hasInlineConfig\":true}!./node_modules/sass-loader/lib/loader.js?{\"sourceMap\":false}!./node_modules/sass-resources-loader/lib/loader.js?{\"resources\":[\"/Users/johnny/Sites/janczizikow-portfolio/assets/shared.scss\"]}!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./components/Layout/components/Container.vue",
+            "size": 632,
+            "id": "FyiN"
+          },
+          {
+            "name": "./node_modules/babel-loader/lib?{\"babelrc\":false,\"cacheDirectory\":false,\"presets\":[[\"/Users/johnny/Sites/janczizikow-portfolio/node_modules/babel-preset-vue-app/dist/index.common.js\",{\"targets\":{\"ie\":9,\"uglify\":true}}]]}!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./components/Layout/components/Row.vue",
+            "size": 790,
+            "id": "K82H"
+          },
+          {
+            "name": "./node_modules/vue-loader/lib/template-compiler?{\"id\":\"data-v-6449a7b5\",\"hasScoped\":true,\"transformToRequire\":{\"video\":\"src\",\"source\":\"src\",\"object\":\"src\",\"embed\":\"src\"},\"preserveWhitespace\":false,\"buble\":{\"transforms\":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./pages/dashboard/submission/_id.vue",
+            "size": 645,
+            "id": "KA/A"
+          },
+          {
+            "name": "./mixins/index.js",
+            "size": 582,
+            "id": "M2pF"
+          },
+          {
+            "name": "./node_modules/vue-style-loader?{\"sourceMap\":false}!./node_modules/css-loader?{\"sourceMap\":false,\"minimize\":true,\"importLoaders\":1,\"alias\":{\"/assets\":\"/Users/johnny/Sites/janczizikow-portfolio/assets\",\"/static\":\"/Users/johnny/Sites/janczizikow-portfolio/static\"}}!./node_modules/vue-loader/lib/style-compiler?{\"vue\":true,\"id\":\"data-v-2837d6e6\",\"scoped\":false,\"hasInlineConfig\":true}!./node_modules/sass-loader/lib/loader.js?{\"sourceMap\":false}!./node_modules/sass-resources-loader/lib/loader.js?{\"resources\":[\"/Users/johnny/Sites/janczizikow-portfolio/assets/shared.scss\"]}!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./components/Layout/components/Col.vue",
+            "size": 1079,
+            "id": "M3JZ"
+          },
+          {
+            "name": "./components/Layout/components/Col.vue",
+            "size": 2230,
+            "id": "Tf12"
+          },
+          {
+            "name": "./node_modules/vue-style-loader?{\"sourceMap\":false}!./node_modules/css-loader?{\"sourceMap\":false,\"minimize\":true,\"importLoaders\":1,\"alias\":{\"/assets\":\"/Users/johnny/Sites/janczizikow-portfolio/assets\",\"/static\":\"/Users/johnny/Sites/janczizikow-portfolio/static\"}}!./node_modules/vue-loader/lib/style-compiler?{\"vue\":true,\"id\":\"data-v-13ad627c\",\"scoped\":true,\"hasInlineConfig\":true}!./node_modules/sass-loader/lib/loader.js?{\"sourceMap\":false}!./node_modules/sass-resources-loader/lib/loader.js?{\"resources\":[\"/Users/johnny/Sites/janczizikow-portfolio/assets/shared.scss\"]}!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./components/Layout/components/Container.vue",
+            "size": 1084,
+            "id": "V4Q8"
+          },
+          {
+            "name": "./pages/dashboard/submission/_id.vue",
+            "size": 2241,
+            "id": "XWkq"
+          },
+          {
+            "name": "./node_modules/babel-loader/lib?{\"babelrc\":false,\"cacheDirectory\":false,\"presets\":[[\"/Users/johnny/Sites/janczizikow-portfolio/node_modules/babel-preset-vue-app/dist/index.common.js\",{\"targets\":{\"ie\":9,\"uglify\":true}}]]}!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./components/Layout/components/Container.vue",
+            "size": 262,
+            "id": "aCNx"
+          },
+          {
+            "name": "./node_modules/vue-style-loader?{\"sourceMap\":false}!./node_modules/css-loader?{\"sourceMap\":false,\"minimize\":true,\"importLoaders\":1,\"alias\":{\"/assets\":\"/Users/johnny/Sites/janczizikow-portfolio/assets\",\"/static\":\"/Users/johnny/Sites/janczizikow-portfolio/static\"}}!./node_modules/vue-loader/lib/style-compiler?{\"vue\":true,\"id\":\"data-v-6449a7b5\",\"scoped\":true,\"hasInlineConfig\":true}!./node_modules/sass-loader/lib/loader.js?{\"sourceMap\":false}!./node_modules/sass-resources-loader/lib/loader.js?{\"resources\":[\"/Users/johnny/Sites/janczizikow-portfolio/assets/shared.scss\"]}!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./pages/dashboard/submission/_id.vue",
+            "size": 1078,
+            "id": "duGz"
+          },
+          {
+            "name": "./components/Layout/index.js",
+            "size": 402,
+            "id": "eXTn"
+          },
+          {
+            "name": "./node_modules/vue-style-loader?{\"sourceMap\":false}!./node_modules/css-loader?{\"sourceMap\":false,\"minimize\":true,\"importLoaders\":1,\"alias\":{\"/assets\":\"/Users/johnny/Sites/janczizikow-portfolio/assets\",\"/static\":\"/Users/johnny/Sites/janczizikow-portfolio/static\"}}!./node_modules/vue-loader/lib/style-compiler?{\"vue\":true,\"id\":\"data-v-089c8207\",\"scoped\":true,\"hasInlineConfig\":true}!./node_modules/sass-loader/lib/loader.js?{\"sourceMap\":false}!./node_modules/sass-resources-loader/lib/loader.js?{\"resources\":[\"/Users/johnny/Sites/janczizikow-portfolio/assets/shared.scss\"]}!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./components/Layout/components/Row.vue",
+            "size": 1078,
+            "id": "i/HF"
+          },
+          {
+            "name": "./components/Layout/components/Container.vue",
+            "size": 2265,
+            "id": "iN1F"
+          },
+          {
+            "name": "./node_modules/babel-loader/lib?{\"babelrc\":false,\"cacheDirectory\":false,\"presets\":[[\"/Users/johnny/Sites/janczizikow-portfolio/node_modules/babel-preset-vue-app/dist/index.common.js\",{\"targets\":{\"ie\":9,\"uglify\":true}}]]}!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./pages/dashboard/submission/_id.vue",
+            "size": 2252,
+            "id": "p/KN"
+          },
+          {
+            "name": "./components/Layout/components/Row.vue",
+            "size": 2241,
+            "id": "tkXM"
+          },
+          {
+            "name": "./node_modules/vue-loader/lib/template-compiler?{\"id\":\"data-v-089c8207\",\"hasScoped\":true,\"transformToRequire\":{\"video\":\"src\",\"source\":\"src\",\"object\":\"src\",\"embed\":\"src\"},\"preserveWhitespace\":false,\"buble\":{\"transforms\":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./components/Layout/components/Row.vue",
+            "size": 288,
+            "id": "wHzc"
+          }
+        ]
+      },
+      {
+        "size": 33870,
+        "files": [
+          "pages/dashboard/index.6d64f356817167e71563.js"
+        ],
+        "modules": [
+          {
+            "name": "./node_modules/vue-loader/lib/template-compiler?{\"id\":\"data-v-cd65e270\",\"hasScoped\":true,\"transformToRequire\":{\"video\":\"src\",\"source\":\"src\",\"object\":\"src\",\"embed\":\"src\"},\"preserveWhitespace\":false,\"buble\":{\"transforms\":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./pages/dashboard/index.vue",
+            "size": 693,
+            "id": "+5zt"
+          },
+          {
+            "name": "./node_modules/babel-loader/lib?{\"babelrc\":false,\"cacheDirectory\":false,\"presets\":[[\"/Users/johnny/Sites/janczizikow-portfolio/node_modules/babel-preset-vue-app/dist/index.common.js\",{\"targets\":{\"ie\":9,\"uglify\":true}}]]}!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./components/Layout/components/Col.vue",
+            "size": 929,
+            "id": "2VL1"
+          },
+          {
+            "name": "./node_modules/css-loader?{\"sourceMap\":false,\"minimize\":true,\"importLoaders\":1,\"alias\":{\"/assets\":\"/Users/johnny/Sites/janczizikow-portfolio/assets\",\"/static\":\"/Users/johnny/Sites/janczizikow-portfolio/static\"}}!./node_modules/vue-loader/lib/style-compiler?{\"vue\":true,\"id\":\"data-v-089c8207\",\"scoped\":true,\"hasInlineConfig\":true}!./node_modules/sass-loader/lib/loader.js?{\"sourceMap\":false}!./node_modules/sass-resources-loader/lib/loader.js?{\"resources\":[\"/Users/johnny/Sites/janczizikow-portfolio/assets/shared.scss\"]}!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./components/Layout/components/Row.vue",
+            "size": 1302,
+            "id": "5+h7"
+          },
+          {
+            "name": "./node_modules/vue-style-loader?{\"sourceMap\":false}!./node_modules/css-loader?{\"sourceMap\":false,\"minimize\":true,\"importLoaders\":1,\"alias\":{\"/assets\":\"/Users/johnny/Sites/janczizikow-portfolio/assets\",\"/static\":\"/Users/johnny/Sites/janczizikow-portfolio/static\"}}!./node_modules/vue-loader/lib/style-compiler?{\"vue\":true,\"id\":\"data-v-cd65e270\",\"scoped\":true,\"hasInlineConfig\":true}!./node_modules/sass-loader/lib/loader.js?{\"sourceMap\":false}!./node_modules/sass-resources-loader/lib/loader.js?{\"resources\":[\"/Users/johnny/Sites/janczizikow-portfolio/assets/shared.scss\"]}!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./pages/dashboard/index.vue",
+            "size": 1062,
+            "id": "7kd4"
+          },
+          {
+            "name": "./node_modules/css-loader?{\"sourceMap\":false,\"minimize\":true,\"importLoaders\":1,\"alias\":{\"/assets\":\"/Users/johnny/Sites/janczizikow-portfolio/assets\",\"/static\":\"/Users/johnny/Sites/janczizikow-portfolio/static\"}}!./node_modules/vue-loader/lib/style-compiler?{\"vue\":true,\"id\":\"data-v-cd65e270\",\"scoped\":true,\"hasInlineConfig\":true}!./node_modules/sass-loader/lib/loader.js?{\"sourceMap\":false}!./node_modules/sass-resources-loader/lib/loader.js?{\"resources\":[\"/Users/johnny/Sites/janczizikow-portfolio/assets/shared.scss\"]}!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./pages/dashboard/index.vue",
+            "size": 215,
+            "id": "951z"
+          },
+          {
+            "name": "./node_modules/vue-loader/lib/template-compiler?{\"id\":\"data-v-13ad627c\",\"hasScoped\":true,\"transformToRequire\":{\"video\":\"src\",\"source\":\"src\",\"object\":\"src\",\"embed\":\"src\"},\"preserveWhitespace\":false,\"buble\":{\"transforms\":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./components/Layout/components/Container.vue",
+            "size": 286,
+            "id": "BSAC"
+          },
+          {
+            "name": "./node_modules/vue-loader/lib/template-compiler?{\"id\":\"data-v-2837d6e6\",\"hasScoped\":false,\"transformToRequire\":{\"video\":\"src\",\"source\":\"src\",\"object\":\"src\",\"embed\":\"src\"},\"preserveWhitespace\":false,\"buble\":{\"transforms\":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./components/Layout/components/Col.vue",
+            "size": 288,
+            "id": "DKC3"
+          },
+          {
+            "name": "./node_modules/css-loader?{\"sourceMap\":false,\"minimize\":true,\"importLoaders\":1,\"alias\":{\"/assets\":\"/Users/johnny/Sites/janczizikow-portfolio/assets\",\"/static\":\"/Users/johnny/Sites/janczizikow-portfolio/static\"}}!./node_modules/vue-loader/lib/style-compiler?{\"vue\":true,\"id\":\"data-v-2837d6e6\",\"scoped\":false,\"hasInlineConfig\":true}!./node_modules/sass-loader/lib/loader.js?{\"sourceMap\":false}!./node_modules/sass-resources-loader/lib/loader.js?{\"resources\":[\"/Users/johnny/Sites/janczizikow-portfolio/assets/shared.scss\"]}!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./components/Layout/components/Col.vue",
+            "size": 11987,
+            "id": "DVaP"
+          },
+          {
+            "name": "./node_modules/css-loader?{\"sourceMap\":false,\"minimize\":true,\"importLoaders\":1,\"alias\":{\"/assets\":\"/Users/johnny/Sites/janczizikow-portfolio/assets\",\"/static\":\"/Users/johnny/Sites/janczizikow-portfolio/static\"}}!./node_modules/vue-loader/lib/style-compiler?{\"vue\":true,\"id\":\"data-v-13ad627c\",\"scoped\":true,\"hasInlineConfig\":true}!./node_modules/sass-loader/lib/loader.js?{\"sourceMap\":false}!./node_modules/sass-resources-loader/lib/loader.js?{\"resources\":[\"/Users/johnny/Sites/janczizikow-portfolio/assets/shared.scss\"]}!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./components/Layout/components/Container.vue",
+            "size": 632,
+            "id": "FyiN"
+          },
+          {
+            "name": "./node_modules/babel-loader/lib?{\"babelrc\":false,\"cacheDirectory\":false,\"presets\":[[\"/Users/johnny/Sites/janczizikow-portfolio/node_modules/babel-preset-vue-app/dist/index.common.js\",{\"targets\":{\"ie\":9,\"uglify\":true}}]]}!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./components/Layout/components/Row.vue",
+            "size": 790,
+            "id": "K82H"
+          },
+          {
+            "name": "./mixins/index.js",
+            "size": 582,
+            "id": "M2pF"
+          },
+          {
+            "name": "./node_modules/vue-style-loader?{\"sourceMap\":false}!./node_modules/css-loader?{\"sourceMap\":false,\"minimize\":true,\"importLoaders\":1,\"alias\":{\"/assets\":\"/Users/johnny/Sites/janczizikow-portfolio/assets\",\"/static\":\"/Users/johnny/Sites/janczizikow-portfolio/static\"}}!./node_modules/vue-loader/lib/style-compiler?{\"vue\":true,\"id\":\"data-v-2837d6e6\",\"scoped\":false,\"hasInlineConfig\":true}!./node_modules/sass-loader/lib/loader.js?{\"sourceMap\":false}!./node_modules/sass-resources-loader/lib/loader.js?{\"resources\":[\"/Users/johnny/Sites/janczizikow-portfolio/assets/shared.scss\"]}!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./components/Layout/components/Col.vue",
+            "size": 1079,
+            "id": "M3JZ"
+          },
+          {
+            "name": "./pages/dashboard/index.vue",
+            "size": 2228,
+            "id": "NfHa"
+          },
+          {
+            "name": "./components/Layout/components/Col.vue",
+            "size": 2230,
+            "id": "Tf12"
+          },
+          {
+            "name": "./node_modules/vue-style-loader?{\"sourceMap\":false}!./node_modules/css-loader?{\"sourceMap\":false,\"minimize\":true,\"importLoaders\":1,\"alias\":{\"/assets\":\"/Users/johnny/Sites/janczizikow-portfolio/assets\",\"/static\":\"/Users/johnny/Sites/janczizikow-portfolio/static\"}}!./node_modules/vue-loader/lib/style-compiler?{\"vue\":true,\"id\":\"data-v-13ad627c\",\"scoped\":true,\"hasInlineConfig\":true}!./node_modules/sass-loader/lib/loader.js?{\"sourceMap\":false}!./node_modules/sass-resources-loader/lib/loader.js?{\"resources\":[\"/Users/johnny/Sites/janczizikow-portfolio/assets/shared.scss\"]}!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./components/Layout/components/Container.vue",
+            "size": 1084,
+            "id": "V4Q8"
+          },
+          {
+            "name": "./node_modules/babel-loader/lib?{\"babelrc\":false,\"cacheDirectory\":false,\"presets\":[[\"/Users/johnny/Sites/janczizikow-portfolio/node_modules/babel-preset-vue-app/dist/index.common.js\",{\"targets\":{\"ie\":9,\"uglify\":true}}]]}!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./components/Layout/components/Container.vue",
+            "size": 262,
+            "id": "aCNx"
+          },
+          {
+            "name": "./components/Layout/index.js",
+            "size": 402,
+            "id": "eXTn"
+          },
+          {
+            "name": "./node_modules/vue-style-loader?{\"sourceMap\":false}!./node_modules/css-loader?{\"sourceMap\":false,\"minimize\":true,\"importLoaders\":1,\"alias\":{\"/assets\":\"/Users/johnny/Sites/janczizikow-portfolio/assets\",\"/static\":\"/Users/johnny/Sites/janczizikow-portfolio/static\"}}!./node_modules/vue-loader/lib/style-compiler?{\"vue\":true,\"id\":\"data-v-089c8207\",\"scoped\":true,\"hasInlineConfig\":true}!./node_modules/sass-loader/lib/loader.js?{\"sourceMap\":false}!./node_modules/sass-resources-loader/lib/loader.js?{\"resources\":[\"/Users/johnny/Sites/janczizikow-portfolio/assets/shared.scss\"]}!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./components/Layout/components/Row.vue",
+            "size": 1078,
+            "id": "i/HF"
+          },
+          {
+            "name": "./components/Layout/components/Container.vue",
+            "size": 2265,
+            "id": "iN1F"
+          },
+          {
+            "name": "./node_modules/babel-loader/lib?{\"babelrc\":false,\"cacheDirectory\":false,\"presets\":[[\"/Users/johnny/Sites/janczizikow-portfolio/node_modules/babel-preset-vue-app/dist/index.common.js\",{\"targets\":{\"ie\":9,\"uglify\":true}}]]}!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./pages/dashboard/index.vue",
+            "size": 1947,
+            "id": "lQBM"
+          },
+          {
+            "name": "./components/Layout/components/Row.vue",
+            "size": 2241,
+            "id": "tkXM"
+          },
+          {
+            "name": "./node_modules/vue-loader/lib/template-compiler?{\"id\":\"data-v-089c8207\",\"hasScoped\":true,\"transformToRequire\":{\"video\":\"src\",\"source\":\"src\",\"object\":\"src\",\"embed\":\"src\"},\"preserveWhitespace\":false,\"buble\":{\"transforms\":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./components/Layout/components/Row.vue",
+            "size": 288,
+            "id": "wHzc"
+          }
+        ]
+      },
+      {
+        "size": 574992,
+        "files": [
+          "vendor.db093308277085a02054.js"
+        ],
+        "modules": [
+          {
+            "name": "./node_modules/core-js/library/modules/_descriptors.js",
+            "size": 184,
+            "id": "+E39"
+          },
+          {
+            "name": "./node_modules/core-js/library/modules/_ctx.js",
+            "size": 520,
+            "id": "+ZMJ"
+          },
+          {
+            "name": "./node_modules/core-js/library/modules/web.dom.iterable.js",
+            "size": 969,
+            "id": "+tPU"
+          },
+          {
+            "name": "./node_modules/babel-runtime/core-js/promise.js",
+            "size": 88,
+            "id": "//Fk"
+          },
+          {
+            "name": "./node_modules/vue/dist/vue.runtime.esm.js",
+            "size": 211990,
+            "id": "/5sW"
+          },
+          {
+            "name": "./node_modules/core-js/library/modules/_iterators.js",
+            "size": 21,
+            "id": "/bQp"
+          },
+          {
+            "name": "./node_modules/core-js/library/fn/symbol/iterator.js",
+            "size": 155,
+            "id": "/n6Q"
+          },
+          {
+            "name": "./node_modules/vue-router/dist/vue-router.esm.js",
+            "size": 65626,
+            "id": "/ocq"
+          },
+          {
+            "name": "./node_modules/core-js/library/modules/_meta.js",
+            "size": 1558,
+            "id": "06OY"
+          },
+          {
+            "name": "./node_modules/timers-browserify/main.js",
+            "size": 2022,
+            "id": "162o"
+          },
+          {
+            "name": "./node_modules/core-js/library/modules/_object-gops.js",
+            "size": 42,
+            "id": "1kS7"
+          },
+          {
+            "name": "./node_modules/axios/lib/core/settle.js",
+            "size": 757,
+            "id": "21It"
+          },
+          {
+            "name": "./node_modules/core-js/library/modules/_an-instance.js",
+            "size": 237,
+            "id": "2KxR"
+          },
+          {
+            "name": "./node_modules/lazysizes/plugins/object-fit/ls.object-fit.js",
+            "size": 4302,
+            "id": "2h3p"
+          },
+          {
+            "name": "./node_modules/core-js/library/modules/_uid.js",
+            "size": 162,
+            "id": "3Eo+"
+          },
+          {
+            "name": "./node_modules/core-js/library/modules/core.get-iterator-method.js",
+            "size": 297,
+            "id": "3fs2"
+          },
+          {
+            "name": "./node_modules/core-js/library/modules/_add-to-unscopables.js",
+            "size": 46,
+            "id": "4mcu"
+          },
+          {
+            "name": "./node_modules/core-js/library/modules/_defined.js",
+            "size": 162,
+            "id": "52gC"
+          },
+          {
+            "name": "./node_modules/babel-runtime/core-js/symbol.js",
+            "size": 87,
+            "id": "5QVw"
+          },
+          {
+            "name": "./node_modules/axios/lib/helpers/normalizeHeaderName.js",
+            "size": 357,
+            "id": "5VQ+"
+          },
+          {
+            "name": "./node_modules/core-js/library/modules/_an-object.js",
+            "size": 154,
+            "id": "77Pl"
+          },
+          {
+            "name": "./node_modules/axios/lib/adapters/xhr.js",
+            "size": 6170,
+            "id": "7GwW"
+          },
+          {
+            "name": "./node_modules/core-js/library/modules/_global.js",
+            "size": 369,
+            "id": "7KvD"
+          },
+          {
+            "name": "./node_modules/core-js/library/modules/_is-array.js",
+            "size": 147,
+            "id": "7UMu"
+          },
+          {
+            "name": "./node_modules/core-js/library/modules/_microtask.js",
+            "size": 1982,
+            "id": "82Mu"
+          },
+          {
+            "name": "./node_modules/core-js/library/modules/_redefine.js",
+            "size": 37,
+            "id": "880/"
+          },
+          {
+            "name": "./node_modules/core-js/library/modules/_iter-create.js",
+            "size": 526,
+            "id": "94VQ"
+          },
+          {
+            "name": "./node_modules/core-js/library/fn/object/define-property.js",
+            "size": 215,
+            "id": "9bBU"
+          },
+          {
+            "name": "./node_modules/lazysizes/lazysizes.js",
+            "size": 17343,
+            "id": "B2fU"
+          },
+          {
+            "name": "./node_modules/babel-runtime/core-js/get-iterator.js",
+            "size": 93,
+            "id": "BO1k"
+          },
+          {
+            "name": "./node_modules/vuelidate/lib/vval.js",
+            "size": 3763,
+            "id": "Bsco"
+          },
+          {
+            "name": "./node_modules/core-js/library/fn/symbol/index.js",
+            "size": 240,
+            "id": "BwfY"
+          },
+          {
+            "name": "./node_modules/babel-runtime/core-js/object/define-property.js",
+            "size": 103,
+            "id": "C4MV"
+          },
+          {
+            "name": "./node_modules/core-js/library/modules/es6.promise.js",
+            "size": 9812,
+            "id": "CXw9"
+          },
+          {
+            "name": "./node_modules/core-js/library/modules/es6.object.keys.js",
+            "size": 225,
+            "id": "Cdx3"
+          },
+          {
+            "name": "./node_modules/core-js/library/modules/_has.js",
+            "size": 120,
+            "id": "D2L2"
+          },
+          {
+            "name": "./node_modules/axios/lib/helpers/buildURL.js",
+            "size": 1549,
+            "id": "DQCr"
+          },
+          {
+            "name": "./node_modules/babel-runtime/helpers/extends.js",
+            "size": 544,
+            "id": "Dd8w"
+          },
+          {
+            "name": "(webpack)/buildin/global.js",
+            "size": 509,
+            "id": "DuR2"
+          },
+          {
+            "name": "./node_modules/core-js/library/modules/_iter-step.js",
+            "size": 86,
+            "id": "EGZi"
+          },
+          {
+            "name": "./node_modules/vuelidate/lib/index.js",
+            "size": 17960,
+            "id": "ESwS"
+          },
+          {
+            "name": "./node_modules/core-js/library/modules/es7.promise.finally.js",
+            "size": 763,
+            "id": "EqBC"
+          },
+          {
+            "name": "./node_modules/core-js/library/modules/_is-object.js",
+            "size": 110,
+            "id": "EqjI"
+          },
+          {
+            "name": "./node_modules/css-loader/lib/css-base.js",
+            "size": 2260,
+            "id": "FZ+f"
+          },
+          {
+            "name": "./node_modules/core-js/library/modules/_core.js",
+            "size": 122,
+            "id": "FeBl"
+          },
+          {
+            "name": "./node_modules/axios/lib/core/createError.js",
+            "size": 625,
+            "id": "FtD3"
+          },
+          {
+            "name": "./node_modules/axios/lib/helpers/isURLSameOrigin.js",
+            "size": 2245,
+            "id": "GHBc"
+          },
+          {
+            "name": "./node_modules/core-js/library/modules/_object-keys-internal.js",
+            "size": 537,
+            "id": "Ibhu"
+          },
+          {
+            "name": "./node_modules/axios/lib/helpers/bind.js",
+            "size": 256,
+            "id": "JP+z"
+          },
+          {
+            "name": "./node_modules/vuelidate/lib/params.js",
+            "size": 3014,
+            "id": "JVqD"
+          },
+          {
+            "name": "./node_modules/axios/lib/defaults.js",
+            "size": 2432,
+            "id": "KCLY"
+          },
+          {
+            "name": "./node_modules/core-js/library/modules/_wks-ext.js",
+            "size": 31,
+            "id": "Kh4W"
+          },
+          {
+            "name": "./node_modules/core-js/library/modules/_task.js",
+            "size": 2484,
+            "id": "L42u"
+          },
+          {
+            "name": "./node_modules/core-js/library/modules/_object-gopd.js",
+            "size": 577,
+            "id": "LKZe"
+          },
+          {
+            "name": "./node_modules/core-js/library/modules/es6.object.to-string.js",
+            "size": 0,
+            "id": "M6a0"
+          },
+          {
+            "name": "./node_modules/core-js/library/modules/_iobject.js",
+            "size": 289,
+            "id": "MU5D"
+          },
+          {
+            "name": "./node_modules/es6-promise/auto.js",
+            "size": 179,
+            "id": "MU8w"
+          },
+          {
+            "name": "./node_modules/core-js/library/modules/_is-array-iter.js",
+            "size": 279,
+            "id": "Mhyx"
+          },
+          {
+            "name": "./node_modules/core-js/library/modules/_to-primitive.js",
+            "size": 655,
+            "id": "MmMw"
+          },
+          {
+            "name": "./node_modules/core-js/library/modules/_for-of.js",
+            "size": 1176,
+            "id": "NWt+"
+          },
+          {
+            "name": "./node_modules/vuex/dist/vuex.esm.js",
+            "size": 26121,
+            "id": "NYxO"
+          },
+          {
+            "name": "./node_modules/core-js/library/modules/_object-pie.js",
+            "size": 37,
+            "id": "NpIQ"
+          },
+          {
+            "name": "./node_modules/core-js/library/modules/_library.js",
+            "size": 23,
+            "id": "O4g8"
+          },
+          {
+            "name": "./node_modules/core-js/library/modules/_dom-create.js",
+            "size": 289,
+            "id": "ON07"
+          },
+          {
+            "name": "./node_modules/core-js/library/modules/es7.symbol.async-iterator.js",
+            "size": 43,
+            "id": "OYls"
+          },
+          {
+            "name": "./node_modules/core-js/library/modules/_object-gpo.js",
+            "size": 493,
+            "id": "PzxK"
+          },
+          {
+            "name": "./node_modules/core-js/library/modules/_to-length.js",
+            "size": 215,
+            "id": "QRG4"
+          },
+          {
+            "name": "./node_modules/core-js/library/modules/es7.symbol.observable.js",
+            "size": 40,
+            "id": "QWe/"
+          },
+          {
+            "name": "./node_modules/core-js/library/modules/es6.object.assign.js",
+            "size": 162,
+            "id": "R4wc"
+          },
+          {
+            "name": "./node_modules/core-js/library/modules/_cof.js",
+            "size": 106,
+            "id": "R9M2"
+          },
+          {
+            "name": "./node_modules/core-js/library/modules/_html.js",
+            "size": 101,
+            "id": "RPLV"
+          },
+          {
+            "name": "./node_modules/core-js/library/modules/_classof.js",
+            "size": 718,
+            "id": "RY/4"
+          },
+          {
+            "name": "./node_modules/is-buffer/index.js",
+            "size": 698,
+            "id": "Re3r"
+          },
+          {
+            "name": "./node_modules/core-js/library/modules/_object-gopn-ext.js",
+            "size": 604,
+            "id": "Rrel"
+          },
+          {
+            "name": "./node_modules/core-js/library/modules/_fails.js",
+            "size": 104,
+            "id": "S82l"
+          },
+          {
+            "name": "./node_modules/core-js/library/modules/_ie8-dom-define.js",
+            "size": 199,
+            "id": "SfB7"
+          },
+          {
+            "name": "./node_modules/regenerator-runtime/runtime.js",
+            "size": 24124,
+            "id": "SldL"
+          },
+          {
+            "name": "./node_modules/axios/lib/core/transformData.js",
+            "size": 550,
+            "id": "TNV1"
+          },
+          {
+            "name": "./node_modules/core-js/library/modules/_to-iobject.js",
+            "size": 217,
+            "id": "TcQ7"
+          },
+          {
+            "name": "./node_modules/core-js/library/modules/_object-assign.js",
+            "size": 1195,
+            "id": "To3L"
+          },
+          {
+            "name": "./node_modules/core-js/library/fn/promise.js",
+            "size": 298,
+            "id": "U5ju"
+          },
+          {
+            "name": "./node_modules/core-js/library/modules/_to-integer.js",
+            "size": 161,
+            "id": "UuGF"
+          },
+          {
+            "name": "./node_modules/core-js/library/fn/object/assign.js",
+            "size": 107,
+            "id": "V3tA"
+          },
+          {
+            "name": "./node_modules/vue-loader/lib/component-normalizer.js",
+            "size": 2896,
+            "id": "VU/8"
+          },
+          {
+            "name": "./node_modules/process/browser.js",
+            "size": 5418,
+            "id": "W2nU"
+          },
+          {
+            "name": "./node_modules/core-js/library/modules/_property-desc.js",
+            "size": 173,
+            "id": "X8DO"
+          },
+          {
+            "name": "./node_modules/core-js/library/modules/_enum-keys.js",
+            "size": 469,
+            "id": "Xc4G"
+          },
+          {
+            "name": "./node_modules/axios/lib/core/Axios.js",
+            "size": 2187,
+            "id": "XmWM"
+          },
+          {
+            "name": "./node_modules/babel-runtime/regenerator/index.js",
+            "size": 49,
+            "id": "Xxa5"
+          },
+          {
+            "name": "./node_modules/core-js/library/modules/_object-create.js",
+            "size": 1505,
+            "id": "Yobk"
+          },
+          {
+            "name": "./node_modules/babel-runtime/core-js/symbol/iterator.js",
+            "size": 96,
+            "id": "Zzip"
+          },
+          {
+            "name": "./node_modules/core-js/library/modules/_shared-key.js",
+            "size": 159,
+            "id": "ax3d"
+          },
+          {
+            "name": "./node_modules/core-js/library/modules/_set-species.js",
+            "size": 435,
+            "id": "bRrM"
+          },
+          {
+            "name": "./node_modules/axios/lib/utils.js",
+            "size": 7541,
+            "id": "cGG2"
+          },
+          {
+            "name": "./node_modules/axios/lib/cancel/CancelToken.js",
+            "size": 1240,
+            "id": "cWxy"
+          },
+          {
+            "name": "./node_modules/core-js/library/modules/_wks-define.js",
+            "size": 417,
+            "id": "crlp"
+          },
+          {
+            "name": "./node_modules/axios/lib/helpers/isAbsoluteURL.js",
+            "size": 563,
+            "id": "dIwP"
+          },
+          {
+            "name": "./node_modules/core-js/library/modules/_perform.js",
+            "size": 132,
+            "id": "dNDb"
+          },
+          {
+            "name": "./node_modules/core-js/library/modules/_wks.js",
+            "size": 358,
+            "id": "dSzd"
+          },
+          {
+            "name": "./node_modules/axios/lib/cancel/Cancel.js",
+            "size": 385,
+            "id": "dVOP"
+          },
+          {
+            "name": "./node_modules/core-js/library/modules/_iter-detect.js",
+            "size": 645,
+            "id": "dY0y"
+          },
+          {
+            "name": "./node_modules/core-js/library/modules/_set-to-string-tag.js",
+            "size": 262,
+            "id": "e6n0"
+          },
+          {
+            "name": "./node_modules/core-js/library/modules/_shared.js",
+            "size": 427,
+            "id": "e8AB"
+          },
+          {
+            "name": "./node_modules/core-js/library/modules/_object-dp.js",
+            "size": 600,
+            "id": "evD5"
+          },
+          {
+            "name": "./node_modules/babel-runtime/helpers/asyncToGenerator.js",
+            "size": 906,
+            "id": "exGp"
+          },
+          {
+            "name": "./node_modules/core-js/library/modules/_promise-resolve.js",
+            "size": 397,
+            "id": "fJUb"
+          },
+          {
+            "name": "./node_modules/core-js/library/modules/es6.symbol.js",
+            "size": 8851,
+            "id": "fWfb"
+          },
+          {
+            "name": "./node_modules/babel-runtime/core-js/object/keys.js",
+            "size": 92,
+            "id": "fZjL"
+          },
+          {
+            "name": "./node_modules/core-js/library/modules/_to-absolute-index.js",
+            "size": 223,
+            "id": "fkB2"
+          },
+          {
+            "name": "./node_modules/axios/lib/core/InterceptorManager.js",
+            "size": 1251,
+            "id": "fuGk"
+          },
+          {
+            "name": "./node_modules/core-js/library/fn/get-iterator.js",
+            "size": 141,
+            "id": "fxRn"
+          },
+          {
+            "name": "./node_modules/core-js/library/modules/core.get-iterator.js",
+            "size": 296,
+            "id": "g8Ux"
+          },
+          {
+            "name": "./node_modules/core-js/library/modules/_string-at.js",
+            "size": 620,
+            "id": "h65t"
+          },
+          {
+            "name": "./node_modules/core-js/library/modules/_hide.js",
+            "size": 286,
+            "id": "hJx8"
+          },
+          {
+            "name": "./node_modules/es6-promise/dist/es6-promise.js",
+            "size": 29288,
+            "id": "hKoQ"
+          },
+          {
+            "name": "./node_modules/core-js/library/modules/_user-agent.js",
+            "size": 127,
+            "id": "iUbK"
+          },
+          {
+            "name": "./node_modules/core-js/library/fn/object/keys.js",
+            "size": 103,
+            "id": "jFbC"
+          },
+          {
+            "name": "./node_modules/core-js/library/modules/es7.promise.try.js",
+            "size": 477,
+            "id": "jKW+"
+          },
+          {
+            "name": "./node_modules/regenerator-runtime/runtime-module.js",
+            "size": 1129,
+            "id": "jyFz"
+          },
+          {
+            "name": "./node_modules/core-js/library/modules/_export.js",
+            "size": 2349,
+            "id": "kM2E"
+          },
+          {
+            "name": "./node_modules/core-js/library/modules/_invoke.js",
+            "size": 701,
+            "id": "knuC"
+          },
+          {
+            "name": "./node_modules/core-js/library/modules/_a-function.js",
+            "size": 125,
+            "id": "lOnJ"
+          },
+          {
+            "name": "./node_modules/js-cookie/src/js.cookie.js",
+            "size": 3886,
+            "id": "lbHh"
+          },
+          {
+            "name": "./node_modules/core-js/library/modules/_object-keys.js",
+            "size": 222,
+            "id": "lktj"
+          },
+          {
+            "name": "./node_modules/core-js/library/modules/es6.object.define-property.js",
+            "size": 217,
+            "id": "mClu"
+          },
+          {
+            "name": "./node_modules/core-js/library/modules/_iter-call.js",
+            "size": 410,
+            "id": "msXi"
+          },
+          {
+            "name": "./node_modules/axios/index.js",
+            "size": 40,
+            "id": "mtWM"
+          },
+          {
+            "name": "./node_modules/babel-runtime/core-js/json/stringify.js",
+            "size": 95,
+            "id": "mvHQ"
+          },
+          {
+            "name": "./node_modules/setimmediate/setImmediate.js",
+            "size": 6473,
+            "id": "mypn"
+          },
+          {
+            "name": "./node_modules/core-js/library/modules/_object-gopn.js",
+            "size": 288,
+            "id": "n0T6"
+          },
+          {
+            "name": "./node_modules/lazysizes/plugins/parent-fit/ls.parent-fit.js",
+            "size": 4330,
+            "id": "ne6Q"
+          },
+          {
+            "name": "./node_modules/axios/lib/helpers/parseHeaders.js",
+            "size": 1393,
+            "id": "oJlt"
+          },
+          {
+            "name": "./node_modules/axios/lib/helpers/cookies.js",
+            "size": 1365,
+            "id": "p1b6"
+          },
+          {
+            "name": "./node_modules/vue-meta/lib/vue-meta.js",
+            "size": 34729,
+            "id": "p3jY"
+          },
+          {
+            "name": "./node_modules/axios/lib/cancel/isCancel.js",
+            "size": 102,
+            "id": "pBtG"
+          },
+          {
+            "name": "./node_modules/babel-runtime/helpers/typeof.js",
+            "size": 1069,
+            "id": "pFYg"
+          },
+          {
+            "name": "./node_modules/axios/lib/helpers/spread.js",
+            "size": 564,
+            "id": "pxG4"
+          },
+          {
+            "name": "./node_modules/core-js/library/modules/_new-promise-capability.js",
+            "size": 504,
+            "id": "qARP"
+          },
+          {
+            "name": "./node_modules/axios/lib/helpers/combineURLs.js",
+            "size": 380,
+            "id": "qRfI"
+          },
+          {
+            "name": "./node_modules/core-js/library/modules/_object-dps.js",
+            "size": 404,
+            "id": "qio6"
+          },
+          {
+            "name": "./node_modules/core-js/library/fn/json/stringify.js",
+            "size": 246,
+            "id": "qkKv"
+          },
+          {
+            "name": "./node_modules/vue-style-loader/lib/addStylesClient.js",
+            "size": 6221,
+            "id": "rjj0"
+          },
+          {
+            "name": "./node_modules/core-js/library/modules/_to-object.js",
+            "size": 132,
+            "id": "sB3e"
+          },
+          {
+            "name": "./node_modules/axios/lib/core/enhanceError.js",
+            "size": 592,
+            "id": "t8qj"
+          },
+          {
+            "name": "./node_modules/core-js/library/modules/_iter-define.js",
+            "size": 2779,
+            "id": "vIB/"
+          },
+          {
+            "name": "multi vue vue-router vue-meta vuex vuelidate lazysizes lazysizes/plugins/parent-fit/ls.parent-fit lazysizes/plugins/object-fit/ls.object-fit",
+            "size": 112,
+            "id": 0
+          },
+          {
+            "name": "./node_modules/core-js/library/modules/_species-constructor.js",
+            "size": 348,
+            "id": "t8x9"
+          },
+          {
+            "name": "./node_modules/axios/lib/axios.js",
+            "size": 1368,
+            "id": "tIFN"
+          },
+          {
+            "name": "./node_modules/vue-style-loader/lib/listToStyles.js",
+            "size": 639,
+            "id": "tTVk"
+          },
+          {
+            "name": "./node_modules/axios/lib/helpers/btoa.js",
+            "size": 986,
+            "id": "thJu"
+          },
+          {
+            "name": "./node_modules/core-js/library/modules/_object-sap.js",
+            "size": 370,
+            "id": "uqUo"
+          },
+          {
+            "name": "./node_modules/core-js/library/modules/_array-includes.js",
+            "size": 924,
+            "id": "vFc/"
+          },
+          {
+            "name": "./node_modules/babel-runtime/core-js/object/assign.js",
+            "size": 94,
+            "id": "woOf"
+          },
+          {
+            "name": "./node_modules/core-js/library/modules/es6.array.iterator.js",
+            "size": 1116,
+            "id": "xGkn"
+          },
+          {
+            "name": "./node_modules/core-js/library/modules/_redefine-all.js",
+            "size": 217,
+            "id": "xH/j"
+          },
+          {
+            "name": "./node_modules/axios/lib/core/dispatchRequest.js",
+            "size": 2199,
+            "id": "xLtR"
+          },
+          {
+            "name": "./node_modules/core-js/library/modules/_enum-bug-keys.js",
+            "size": 160,
+            "id": "xnc9"
+          },
+          {
+            "name": "./node_modules/core-js/library/modules/es6.string.iterator.js",
+            "size": 531,
+            "id": "zQR9"
+          }
+        ]
+      },
+      {
+        "size": 88707,
+        "files": [
+          "app.bdcddd62f69f79427e5f.js"
+        ],
+        "modules": [
+          {
+            "name": "./.nuxt/components/no-ssr.js",
+            "size": 723,
+            "id": "0F0d"
+          },
+          {
+            "name": "./middleware nonrecursive ^\\.\\/(?!-)[^.]+\\.(js)$",
+            "size": 209,
+            "id": "4Atj"
+          },
+          {
+            "name": "./middleware/notAuthenticated.js",
+            "size": 167,
+            "id": "4ws6"
+          },
+          {
+            "name": "./node_modules/css-loader?{\"sourceMap\":false,\"minimize\":true,\"importLoaders\":1,\"alias\":{\"/assets\":\"/Users/johnny/Sites/janczizikow-portfolio/assets\",\"/static\":\"/Users/johnny/Sites/janczizikow-portfolio/static\"}}!./node_modules/vue-loader/lib/style-compiler?{\"vue\":true,\"id\":\"data-v-286b693d\",\"scoped\":false,\"hasInlineConfig\":true}!./node_modules/sass-loader/lib/loader.js?{\"sourceMap\":false}!./node_modules/sass-resources-loader/lib/loader.js?{\"resources\":[\"/Users/johnny/Sites/janczizikow-portfolio/assets/shared.scss\"]}!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./layouts/error.vue",
+            "size": 397,
+            "id": "BI6D"
+          },
+          {
+            "name": "./.nuxt/google-tag-manager.js",
+            "size": 458,
+            "id": "BUco"
+          },
+          {
+            "name": "./node_modules/vue-loader/lib/template-compiler?{\"id\":\"data-v-48c1451e\",\"hasScoped\":true,\"transformToRequire\":{\"video\":\"src\",\"source\":\"src\",\"object\":\"src\",\"embed\":\"src\"},\"preserveWhitespace\":false,\"buble\":{\"transforms\":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./components/Button.vue",
+            "size": 569,
+            "id": "CNyd"
+          },
+          {
+            "name": "./.nuxt/components/nuxt-child.js",
+            "size": 1977,
+            "id": "HBB+"
+          },
+          {
+            "name": "./.nuxt/components/nuxt.js",
+            "size": 1383,
+            "id": "Hot+"
+          },
+          {
+            "name": "./node_modules/css-loader?{\"sourceMap\":false,\"minimize\":true,\"importLoaders\":1,\"alias\":{\"/assets\":\"/Users/johnny/Sites/janczizikow-portfolio/assets\",\"/static\":\"/Users/johnny/Sites/janczizikow-portfolio/static\"}}!./node_modules/vue-loader/lib/style-compiler?{\"vue\":true,\"id\":\"data-v-48c1451e\",\"scoped\":true,\"hasInlineConfig\":true}!./node_modules/sass-loader/lib/loader.js?{\"sourceMap\":false}!./node_modules/sass-resources-loader/lib/loader.js?{\"resources\":[\"/Users/johnny/Sites/janczizikow-portfolio/assets/shared.scss\"]}!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./components/Button.vue",
+            "size": 2871,
+            "id": "IFU8"
+          },
+          {
+            "name": "./.nuxt/store.js",
+            "size": 3017,
+            "id": "J2Ti"
+          },
+          {
+            "name": "./node_modules/babel-loader/lib?{\"babelrc\":false,\"cacheDirectory\":false,\"presets\":[[\"/Users/johnny/Sites/janczizikow-portfolio/node_modules/babel-preset-vue-app/dist/index.common.js\",{\"targets\":{\"ie\":9,\"uglify\":true}}]]}!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./components/Button.vue",
+            "size": 715,
+            "id": "KhDs"
+          },
+          {
+            "name": "./node_modules/vue-style-loader?{\"sourceMap\":false}!./node_modules/css-loader?{\"sourceMap\":false,\"minimize\":true,\"importLoaders\":1,\"alias\":{\"/assets\":\"/Users/johnny/Sites/janczizikow-portfolio/assets\",\"/static\":\"/Users/johnny/Sites/janczizikow-portfolio/static\"}}!./node_modules/vue-loader/lib/style-compiler?{\"vue\":true,\"id\":\"data-v-286b693d\",\"scoped\":false,\"hasInlineConfig\":true}!./node_modules/sass-loader/lib/loader.js?{\"sourceMap\":false}!./node_modules/sass-resources-loader/lib/loader.js?{\"resources\":[\"/Users/johnny/Sites/janczizikow-portfolio/assets/shared.scss\"]}!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./layouts/error.vue",
+            "size": 1045,
+            "id": "L6Fm"
+          },
+          {
+            "name": "./plugins/vuelidate.js",
+            "size": 78,
+            "id": "Lywd"
+          },
+          {
+            "name": "./store/auth.js",
+            "size": 1309,
+            "id": "NaCs"
+          },
+          {
+            "name": "./middleware/authenticated.js",
+            "size": 164,
+            "id": "OQSI"
+          },
+          {
+            "name": "./assets/images/illustrations/404.svg?inline",
+            "size": 4529,
+            "id": "OZZw"
+          },
+          {
+            "name": "./store ^\\.\\/(?!-)[^.]+\\.(js)$",
+            "size": 189,
+            "id": "QA5y"
+          },
+          {
+            "name": "./.nuxt/client.js",
+            "size": 21689,
+            "id": "T23V"
+          },
+          {
+            "name": "./layouts/error.vue",
+            "size": 2196,
+            "id": "To1F"
+          },
+          {
+            "name": "./node_modules/vue-style-loader?{\"sourceMap\":false}!./node_modules/css-loader?{\"sourceMap\":false,\"minimize\":true,\"importLoaders\":1,\"alias\":{\"/assets\":\"/Users/johnny/Sites/janczizikow-portfolio/assets\",\"/static\":\"/Users/johnny/Sites/janczizikow-portfolio/static\"}}!./node_modules/vue-loader/lib/style-compiler?{\"vue\":true,\"id\":\"data-v-48c1451e\",\"scoped\":true,\"hasInlineConfig\":true}!./node_modules/sass-loader/lib/loader.js?{\"sourceMap\":false}!./node_modules/sass-resources-loader/lib/loader.js?{\"resources\":[\"/Users/johnny/Sites/janczizikow-portfolio/assets/shared.scss\"]}!./node_modules/vue-loader/lib/selector.js?type=styles&index=0!./components/Button.vue",
+            "size": 1045,
+            "id": "U5se"
+          },
+          {
+            "name": "./.nuxt/components/nuxt-link.js",
+            "size": 207,
+            "id": "WRRc"
+          },
+          {
+            "name": "./plugins/axios.js",
+            "size": 559,
+            "id": "YFWx"
+          },
+          {
+            "name": "./.nuxt/utils.js",
+            "size": 18644,
+            "id": "YLfZ"
+          },
+          {
+            "name": "./components/Button.vue",
+            "size": 2211,
+            "id": "cDIJ"
+          },
+          {
+            "name": "./node_modules/babel-loader/lib?{\"babelrc\":false,\"cacheDirectory\":false,\"presets\":[[\"/Users/johnny/Sites/janczizikow-portfolio/node_modules/babel-preset-vue-app/dist/index.common.js\",{\"targets\":{\"ie\":9,\"uglify\":true}}]]}!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./layouts/error.vue",
+            "size": 751,
+            "id": "gx6j"
+          },
+          {
+            "name": "./node_modules/vue-loader/lib/template-compiler?{\"id\":\"data-v-286b693d\",\"hasScoped\":false,\"transformToRequire\":{\"video\":\"src\",\"source\":\"src\",\"object\":\"src\",\"embed\":\"src\"},\"preserveWhitespace\":false,\"buble\":{\"transforms\":{}}}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./layouts/error.vue",
+            "size": 556,
+            "id": "iNC9"
+          },
+          {
+            "name": "./.nuxt/router.js",
+            "size": 4003,
+            "id": "mtxM"
+          },
+          {
+            "name": "./.nuxt/index.js",
+            "size": 9852,
+            "id": "qcny"
+          },
+          {
+            "name": "./.nuxt/middleware.js",
+            "size": 1086,
+            "id": "unZF"
+          },
+          {
+            "name": "./store/index.js",
+            "size": 1319,
+            "id": "vdRI"
+          },
+          {
+            "name": "./.nuxt/App.js",
+            "size": 4789,
+            "id": "yTq1"
+          }
+        ]
+      },
+      {
+        "size": 0,
+        "files": [
+          "manifest.16a8b96697ac080dd5ac.js"
+        ],
+        "modules": []
+      }
+    ]
   }
 ]

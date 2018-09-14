@@ -4,16 +4,30 @@
       <h1 slot="header">{{ header }}</h1>
       <p slot="lead">{{ lead }}</p>
     </app-hero>
-    <app-projects/>
+    <app-projects :projects="projects" />
     <app-cta/>
   </main>
 </template>
 
 <script>
+import api from '~/plugins/axios';
 import appHero from '~/components/Home/Hero.vue';
 import appProjects from '~/components/Home/Projects/Projects.vue';
 import appCta from '~/components/Home/Cta.vue';
+
 export default {
+  async asyncData({ isDev, error }) {
+    try {
+      const res = await api.get('/projects');
+      return { projects: res.data }
+    } catch (e) {
+      if (e.request.res) {
+        return error({ statusCode: e.request.res.statusCode, message: e.request.res.statusMessage});
+      } else {
+        return error({ statusCode: e.statusCode, message: e.message});
+      }
+    }
+  },
   data() {
     return {
       header: 'Just a simple dude who wants to build cool stuff.',

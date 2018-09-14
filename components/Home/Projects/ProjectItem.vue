@@ -1,16 +1,16 @@
 <template>
   <nuxt-link
     class="card"
-    :to="'/projects/' + projectURL">
+    :to="`/projects/${slug}`">
     <app-progresive-img
-      :placeholder="true"
       class="card__thumb"
       imgClass="card__img"
-      :src="'/images/' + projectURL + '.jpg'"
-      :alt="title">
+      :placeholder="placeholder"
+      :srcset="srcset"
+      :alt="name">
       <figcaption class="card__inner">
         <p>{{ date }}</p>
-        <h3 class="card__title">{{ title }}</h3>
+        <h3 class="card__title">{{ name }}</h3>
       </figcaption>
     </app-progresive-img>
   </nuxt-link>
@@ -21,13 +21,23 @@ import appProgresiveImg from '~/components/ProgressiveImg.vue';
 
 export default {
   props: {
-    title: { type: String, required: true },
+    name: { type: String, required: true },
+    slug: { type: String, required: true },
     date: [String, Object],
-    category: String
+    category: String,
+    thumbnail: { type: Object, required: true },
+    big: { type: Boolean,required: true }
   },
   computed: {
-    projectURL() {
-      return this.title.toLowerCase().replace(/\W+/, '-');
+    placeholder() {
+      return this.big ? this.thumbnail.big_placeholder.url : this.thumbnail.small_placeholder.url
+    },
+    srcset() {
+      if (this.big) {
+        return `${this.thumbnail.big.url}, ${this.thumbnail.big_retina.url} 2x`;
+      } else {
+        return `${this.thumbnail.small.url}, ${this.thumbnail.small_retina.url} 2x`;
+      }
     }
   },
   components: {

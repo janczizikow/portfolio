@@ -1,9 +1,11 @@
 import axios from 'axios'
 const Cookie = process.browser ? require('js-cookie') : undefined;
 
-const api = axios.create({
-  baseURL: 'https://janczizikow-portfolio-api.herokuapp.com/api/v1/',
-});
+const baseURL = process.env.NODE_ENV === 'production'
+                ? 'https://janczizikow-portfolio-api.herokuapp.com/api/v1/'
+                : 'http://localhost:3001/api/v1'
+
+const api = axios.create({baseURL});
 
 api.defaults.headers.common['Content-Type'] = 'application/json'
 let token = null

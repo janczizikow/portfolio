@@ -4,8 +4,8 @@
       <div class="error__illustration">
         <app-error-illustration/>
       </div>
-      <h1 class="error__title">Page Not Found</h1>
-      <p class="error__text">The page you are looking for doesn’t seem to exist…</p>
+      <h1 class="error__title">{{title}}</h1>
+      <p class="error__text">{{message}}</p>
       <app-button to="/">Go Home</app-button>
     </div>
   </div>
@@ -17,6 +17,25 @@ import appButton from '~/components/Button.vue';
 import appErrorIllustration from '~/assets/images/illustrations/404.svg?inline';
 
 export default {
+  props: {
+    error: { type: [Object, Error] }
+  },
+  computed: {
+    title() {
+      if (this.error.statusCode === 404) {
+        return "Page Not Found";
+      } else {
+        return this.error.message;
+      }
+    },
+    message() {
+      if (this.error.statusCode === 404) {
+        return "The page you are looking for doesn't seem to exist…";
+      } else {
+        return "Sorry, something went wrong";
+      }
+    }
+  },
   components: {
     appButton,
     appErrorIllustration
