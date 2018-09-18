@@ -4,14 +4,13 @@ require('dotenv').config({
 
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby Sleek Starter',
-    siteUrl: 'https://www.example.com',
+    title: 'Jan Czizikow // Web Developer',
+    siteUrl: 'https://www.janczizikow.com',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-flow',
     'gatsby-plugin-eslint',
-    'gatsby-plugin-resolve-src',
     'gatsby-plugin-emotion',
     {
       resolve: 'gatsby-plugin-typography',
@@ -34,8 +33,8 @@ module.exports = {
         name: 'gatsby-sleek-starter',
         short_name: 'sleek',
         start_url: '/',
-        background_color: '#663399',
-        theme_color: '#663399',
+        background_color: '#277cea',
+        theme_color: '#277cea',
         display: 'minimal-ui',
         icon: 'src/assets/images/gatsby-icon.png', // This path is relative to the root of the site.
       },
@@ -66,7 +65,6 @@ module.exports = {
         },
       },
     },
-    'gatsby-transformer-json',
     {
       resolve: 'gatsby-source-filesystem',
       options: {
@@ -83,6 +81,13 @@ module.exports = {
       options: {
         id: process.env.GTM_CONTAINER_ID,
         includeInDevelopment: false,
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-webpack-bundle-analyzer',
+      options: {
+        analyzerPort: 5050,
+        production: true,
       },
     },
     'gatsby-plugin-netlify-cache',

@@ -1,3 +1,1 @@
-export { add, sub, inc, dec } from './counter';
-
-export { storeResult, removeResult } from './result';
+export { openMenu, closeMenu } from './ui';

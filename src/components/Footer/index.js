@@ -1,14 +1,6 @@
-// @flow
 import React from 'react';
-import styled, { css } from 'react-emotion';
-import { Box, Flex } from '@rebass/grid/emotion';
-
-import icon from 'components/icon';
-
-const FooterStyles = styled('footer')`
-  color: ${p => p.theme.colors.white};
-  background-color: ${p => p.theme.colors.dark};
-`;
+import { css } from 'react-emotion';
+import { Box, Flex, Icon } from '../UI';
 
 const footerLinkStyles = css`
   padding: 0 15px;
@@ -26,22 +18,23 @@ const footerLinkStyles = css`
   }
 `;
 
-export default () => {
-  return (
-    <FooterStyles>
-      <Box py={58}>
-        <Flex alignItems="center" justifyContent="center">
-          <a href="/about/" className={footerLinkStyles}>
-            {icon('github', ['24', '24'])}
-          </a>
-          <a href="/about/" className={footerLinkStyles}>
-            {icon('codepen', ['24', '24'])}
-          </a>
-          <a href="/about/" className={footerLinkStyles}>
-            {icon('linkedin', ['24', '24'])}
-          </a>
-        </Flex>
-      </Box>
-    </FooterStyles>
-  );
-};
+const Footer = () => (
+  <Box is="footer" py={58} bg="dark" color="white">
+    <Flex alignItems="center" justifyContent="center">
+      <a href="https://github.com/janczizikow/" className={footerLinkStyles}>
+        {Icon('github', ['24', '24'])}
+      </a>
+      <a href="/about/" className={footerLinkStyles}>
+        {Icon('codepen', ['24', '24'])}
+      </a>
+      <a
+        href="https://www.linkedin.com/in/janczizikow/"
+        className={footerLinkStyles}
+      >
+        {Icon('linkedin', ['24', '24'])}
+      </a>
+    </Flex>
+  </Box>
+);
+
+export default Footer;

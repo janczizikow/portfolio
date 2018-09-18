@@ -11,6 +11,7 @@ const colors = {
   white: '#fff',
 };
 
+// typography
 const fontStack = [
   'Avenir Next',
   '-apple-system',
@@ -25,27 +26,34 @@ const fontStack = [
   'Segoe UI Symbol',
 ];
 
-// typography
 const typography = {
   headerFontFamily: fontStack,
   bodyFontFamily: fontStack,
+  overrideStyles: () => ({
+    body: {
+      color: colors.lightDark,
+    },
+    'h1, h2, h3, h4, h5, h6': {
+      color: colors.dark,
+      fontWeight: 500,
+    },
+  }),
 };
 
 // grid
-// const breakpoints = ['36em', '48em', '62em', '75em'];
-const breakpoints = [576, 768, 992, 1200];
-const gutterWidth = 32;
-const containerWidths = breakpoints.map(
-  breakpoint => breakpoint - gutterWidth / 2
-);
-
-const grid = { breakpoints, gutterWidth, containerWidths };
+const space = [0, 4, 8, 16, 32, 64, 128, 256, 512];
+const breakpoints = ['576px', '768px', '992px', '1200px'];
+const containerWidths = ['100%', 540, 720, 960, 1200];
+const grid = { breakpoints, containerWidths };
 
 const headerHeight = '3.625rem';
 
 export default {
   colors,
+  space,
   typography,
+  breakpoints,
+  containerWidths,
   grid,
   headerHeight,
 };

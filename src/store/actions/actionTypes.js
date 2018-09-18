@@ -1,6 +1,2 @@
-export const INC = 'INC';
-export const DEC = 'DEC';
-export const ADD = 'ADD';
-export const SUB = 'SUB';
-export const STORE_RESULT = 'STORE_RESULT';
-export const REMOVE_RESULT = 'REMOVE_RESULT';
+export const OPEN_MOBILE_MENU = 'OPEN_MOBILE_MENU';
+export const CLOSE_MOBILE_MENU = 'CLOSE_MOBILE_MENU';

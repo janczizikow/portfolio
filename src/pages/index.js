@@ -1,15 +1,40 @@
-// @flow
 import React from 'react';
-// import { Link } from 'gatsby';
-import Layout from 'layout';
-import Hero from 'components/Hero';
-import Projects from 'components/Projects';
-import Cta from 'components/Cta';
+import { graphql } from 'gatsby';
+import Layout from '../layout';
+import { Hero, Projects, Cta } from '../components/Home';
 
-export default () => (
+export default ({
+  data,
+}: {
+  data: { allProject: { edges: { node: { name: string } }[] } },
+}) => (
   <Layout>
     <Hero />
-    <Projects />
+    <Projects projects={data.allProject.edges} />
     <Cta />
   </Layout>
 );
+
+export const pageQuery = graphql`
+  query {
+    allProject {
+      edges {
+        node {
+          id
+          name
+          date
+          slug
+          category
+          description
+          links {
+            text
+            url
+          }
+          thumbnail {
+            url
+          }
+        }
+      }
+    }
+  }
+`;

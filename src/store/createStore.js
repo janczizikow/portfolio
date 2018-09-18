@@ -5,12 +5,10 @@ import {
   compose,
 } from 'redux';
 import thunk from 'redux-thunk';
-import counterReducer from 'store/reducers/counter';
-import resultReducer from 'store/reducers/result';
+import uiReducer from './reducers/ui';
 
 const rootReducer = combineReducers({
-  ctr: counterReducer,
-  res: resultReducer,
+  ui: uiReducer,
 });
 
 /* eslint-disable no-underscore-dangle */

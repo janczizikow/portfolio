@@ -1,21 +1,28 @@
-// @flow
 import React from 'react';
 import { graphql } from 'gatsby';
 import Image from 'gatsby-image';
-import { Flex, Box } from '@rebass/grid/emotion';
-
-import Layout from 'layout';
-import Container from 'components/Container';
-import Button from 'components/Button';
+import Layout from '../layout';
+import {
+  Box,
+  Container,
+  Row,
+  Col,
+  Heading,
+  Text,
+  Emoji,
+  Button,
+} from '../components/UI';
 
 export default ({ data }) => (
   <Layout>
-    <Box py="3rem">
+    <Box py={4}>
       <Container>
-        <Flex alignItems="center" flexWrap="wrap">
-          <Box px={16} width={[1, 1, 1, 1 / 2]}>
-            <h1>Hey, nice to meet you!</h1>
-            <p>
+        <Row alignItems="center" flexWrap="wrap">
+          <Col flex={['0 0 100%', '0 0 100%', '0 0 100%', '0 0 50%']}>
+            <Heading>
+              Hey, nice to meet you! <Emoji label="waving-hand">👋</Emoji>
+            </Heading>
+            <Text>
               I’m Jan, 26 year old web developer from Poland. I’m that guy on
               the picture enjoying Thai Wake Park and trying to wakeboard for
               the first time - it was a blast! Anyways, back to serious stuff,
@@ -29,13 +36,16 @@ export default ({ data }) => (
               this time as a developer. Currently I’m in Berlin, Germany, where
               I joined a coding bootcamp and I’m looking for new job
               opportunities.
-            </p>
-            <Button to="/">View CV</Button>
-          </Box>
-          <Box px={16} order={[-1, -1, -1, 1]} width={[1, 1, 1, 1 / 2]}>
+            </Text>
+            <Button href="/CV.pdf">View CV</Button>
+          </Col>
+          <Col
+            order={[-1, -1, -1, 1]}
+            flex={['0 0 100%', '0 0 100%', '0 0 100%', '0 0 50%']}
+          >
             <Image fluid={data.aboutImage.childImageSharp.fluid} />
-          </Box>
-        </Flex>
+          </Col>
+        </Row>
       </Container>
     </Box>
   </Layout>

@@ -2,6 +2,7 @@
 <PROJECT_ROOT>/content/.*
 <PROJECT_ROOT>/node_modules/.*
 <PROJECT_ROOT>/public/.*
+<PROJECT_ROOT>/.cache/.*
 
 [include]
 
@@ -12,10 +13,10 @@
 [lints]
 
 [options]
-module.system=haste
+all=true
+module.system=node
 module.system.node.resolve_dirname=node_modules
 module.system.node.resolve_dirname=src
-
 munge_underscores=true
 
 [strict]

@@ -7,7 +7,12 @@
     "node": true
   },
   "globals": {
-    "graphql": true
+    "graphql": true,
+    "createSpyObj": true,
+    "React": true,
+    "shallow": true,
+    "render": true,
+    "mount": true
   },
   "rules": {
     "strict": 0,
@@ -16,9 +21,10 @@
     "react/require-default-props": 0,
     "react/jsx-filename-extension": 0,
     "react/jsx-one-expression-per-line": 0,
+    "jsx-a11y/accessible-emoji": 0,
     "arrow-body-style": 0,
-    "import/no-unresolved": 0,
-    "prettier/prettier": ["error", {
+    "no-unused-expressions": [2, { "allowShortCircuit": true }],
+    "prettier/prettier": ["warn", {
       "semi": true,
       "singleQuote": true,
       "trailingComma": "es5"
