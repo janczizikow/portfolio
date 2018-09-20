@@ -5,7 +5,7 @@
           <h2 class="project__title">{{ name }}</h2>
           <p>{{ description }}</p>
           <template v-if="links">
-            <row center middle :gutters="false">
+            <row center middle :gutters="false" class="project__buttons">
               <app-button
                 v-for="(link, i) in links"
                 :key="i"
@@ -105,11 +105,19 @@ export default {
     }
   }
 
+  &__buttons {
+    flex-direction: column;
+
+    @include breakpoint($md) {
+      flex-direction: row;
+    }
+  }
+
   &__btn--second {
     margin-top: 1.5rem;
     margin-left: 0;
 
-    @include breakpoint($sm) {
+    @include breakpoint($md) {
       margin-top: 0;
       margin-left: 1.5rem;
     }
