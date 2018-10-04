@@ -32,10 +32,13 @@ const StyledButton = styled.button`
     border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out,
     transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
   cursor: ${p => (p.disabled ? 'not-allowed' : 'pointer')};
-  &:not(:disabled) {
-    &:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 20px 38px rgba(0, 0, 0, 0.16);
+
+  @media only screen and (min-width: ${p => p.theme.breakpoints[2]}) {
+    &:not(:disabled) {
+      &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 20px 38px rgba(0, 0, 0, 0.16);
+      }
     }
   }
 

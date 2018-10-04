@@ -29,7 +29,7 @@ const Contact = () => (
           </Text>
         </Col>
       </Row>
-      <Row>
+      <Row alignItems="flex-start">
         <Col
           flex={[
             '0 0 100%',

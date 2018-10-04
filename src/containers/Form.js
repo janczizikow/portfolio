@@ -168,7 +168,9 @@ class Form extends Component {
           isOpen={isModalOpen}
           onClose={this.handleModalClose}
           header={
-            <Heading m={0}>{error ? error.name : `Thanks ${name}!`}</Heading>
+            <Heading color="dark" m={0}>
+              {error ? error.name : `Thanks ${name}!`}
+            </Heading>
           }
         >
           {error

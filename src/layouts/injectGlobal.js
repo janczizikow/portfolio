@@ -34,6 +34,10 @@ class Global extends Component {
         -webkit-font-smoothing: antialiased;
       }
 
+      .headroom {
+        height: ${this.props.theme.headerHeight};
+      }
+
       .headroom--scrolled {
         box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.08);
       }
@@ -67,11 +71,7 @@ class Global extends Component {
         textarea:-webkit-autofill,
         textarea:-webkit-autofill:focus,
         textarea:-webkit-autofill:hover {
-          border: 0;
-          border-bottom: 2px solid ${this.props.theme.colors.grey};
-          -webkit-text-fill-color: ${this.props.theme.colors.dark};
-          box-shadow: 0 0 0 1000px ${this.props.theme.colors.white} inset;
-          transition: background-color 5000s ease-in-out 0s;
+          border-radius: 0.25rem;
         }
 
         ::selection {

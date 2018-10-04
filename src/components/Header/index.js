@@ -77,19 +77,25 @@ class Header extends Component {
       <Headroom
         disable={!headroomActive}
         pinStart={500}
+        downTolerance={5}
         wrapperStyle={{
           width: '100%',
-          height: '58px',
+          height: 58,
+          minHeight: 58,
         }}
         style={{
           position: 'fixed',
+          height: 58,
           backgroundColor: theme.colors.bgHeader,
-          WebkitTransition: 'all 0.3s ease',
-          MozTransition: 'all 0.3s ease',
-          OTransition: 'all 0.3s ease',
-          transition: 'all 0.3s ease',
+          WebkitTransition: 'transform 0.3s ease',
+          MozTransition: 'transform 0.3s ease',
+          OTransition: 'transform 0.3s ease',
+          transition: 'transform 0.3s ease',
           zIndex: 10,
         }}
+        itemscope
+        itemtype="http://schema.org/SiteNavigationElement"
+        aria-label="Main navigation"
       >
         <Container fluid>
           <HeaderInner alignItems="center" justifyContent="space-between">

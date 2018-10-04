@@ -13,6 +13,7 @@ const StyledInput = styled('input')`
   font-family: ${p =>
     p.theme.typography.bodyFontFamily.map(font => `'${font}'`).join(', ')};
   line-height: 1.15;
+  color: ${p => p.theme.colors.headingColor};
   background: transparent;
   resize: none; /* prevent resizing the textarea */
 

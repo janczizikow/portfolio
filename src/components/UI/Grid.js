@@ -32,7 +32,15 @@ const Container = ({ fluid, ...rest }) => (
 
 Container.propTypes = propTypes;
 
-const Row = props => <Flex mx={-3} flexWrap="wrap" {...props} />;
+const Row = props => (
+  <Flex
+    mx={-3}
+    alignItems="center"
+    justifyContent="space-between"
+    flexWrap="wrap"
+    {...props}
+  />
+);
 
 const Col = props => (
   <Box px={3} width="100%" css={{ minHeight: 1 }} {...props} />
