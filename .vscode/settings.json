@@ -1,0 +1,5 @@
+{
+  "javascript.format.enable": false,
+  "editor.tabSize": 2,
+  "eslint.packageManager": "yarn"
+}
