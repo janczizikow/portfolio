@@ -35,7 +35,6 @@ exports.sourceNodes = ({ actions: { createNode }, createNodeId }) => {
   return axios
     .get(baseApiUrl)
     .then(res => {
-      console.log(res.data);
       res.data.forEach(project => {
         const nodeData = processProject(project);
         createNode(nodeData);
@@ -64,6 +63,7 @@ exports.onCreateNode = async ({
       });
     } catch (e) {
       // Ignore
+      console.warn(e);
     }
 
     if (thumbnailNode) {
