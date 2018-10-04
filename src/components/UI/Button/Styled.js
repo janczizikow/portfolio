@@ -10,25 +10,34 @@ const loader = keyframes`
 `;
 
 const StyledButton = styled.button`
-  padding: 0.375rem 0.75rem;
+  margin: ${p => (p.space ? '0.75rem' : null)};
+  padding: 0.75rem 2.25rem;
   position: relative;
   display: ${p => (p.block ? 'block' : 'inline-block')};
   border: 1px solid transparent;
   border-radius: ${p => (p.rounded ? '200px' : '0.25rem')};
-  color: ${p => (p.loading ? 'transparent' : p.theme.colors.white)};
+  color: ${p => (p.loading ? 'transparent' : '#fff')};
   background-color: ${p => p.theme.colors[p.color]};
-  font-size: 1rem;
-  font-weight: 400;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 1px;
   line-height: 1.5;
   text-align: center;
   text-decoration: none;
   opacity: ${p => p.disabled && 0.8};
   outline: 0;
+  white-space: nowrap;
   user-select: none;
-  transition: color 0.15s ease-in-out, opacity 0.15s ease-in-out,
-    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out,
-    background-color 0.15s ease-in-out;
+  transition: color 0.3s ease-in-out, opacity 0.3s ease-in-out,
+    border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out,
+    transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
   cursor: ${p => (p.disabled ? 'not-allowed' : 'pointer')};
+  &:not(:disabled) {
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 20px 38px rgba(0, 0, 0, 0.16);
+    }
+  }
 
   &::after {
     content: '';

@@ -1,6 +1,7 @@
 import React from 'react';
 import { css } from 'react-emotion';
-import { Box, Flex, Icon } from '../UI';
+import { Github, Codepen, Linkedin } from 'react-feather';
+import { Box, Flex } from '../UI';
 
 const footerLinkStyles = css`
   padding: 0 15px;
@@ -19,19 +20,19 @@ const footerLinkStyles = css`
 `;
 
 const Footer = () => (
-  <Box is="footer" py={58} bg="dark" color="white">
+  <Box is="footer" py={58} bg="bgAlt" color="white">
     <Flex alignItems="center" justifyContent="center">
       <a href="https://github.com/janczizikow/" className={footerLinkStyles}>
-        {Icon('github', ['24', '24'])}
+        <Github />
       </a>
       <a href="/about/" className={footerLinkStyles}>
-        {Icon('codepen', ['24', '24'])}
+        <Codepen />
       </a>
       <a
         href="https://www.linkedin.com/in/janczizikow/"
         className={footerLinkStyles}
       >
-        {Icon('linkedin', ['24', '24'])}
+        <Linkedin />
       </a>
     </Flex>
   </Box>

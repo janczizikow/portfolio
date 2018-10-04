@@ -1,18 +1,20 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
 import StyledButton from './Styled';
 
-type Props = {
-  to?: string,
-  color: 'primary' | 'secondary' | 'success' | 'error',
-  block?: boolean,
-  rounded?: boolean,
-  disabled?: boolean,
-  loading?: boolean,
-  onClick?: () => mixed,
+const propTypes = {
+  to: PropTypes.string,
+  color: PropTypes.oneOf(['primary', 'secondary', 'success', 'error']),
+  block: PropTypes.bool,
+  rounded: PropTypes.bool,
+  disabled: PropTypes.bool,
+  loading: PropTypes.bool,
+  onClick: PropTypes.func,
+  space: PropTypes.bool,
 };
 
-class Button extends Component<Props, void> {
+class Button extends Component {
   static defaultProps = {
     color: 'primary',
   };
@@ -37,6 +39,7 @@ class Button extends Component<Props, void> {
       link,
       outline,
       rounded,
+      space,
       color,
       ...atributes
     } = this.props;
@@ -56,5 +59,7 @@ class Button extends Component<Props, void> {
     );
   }
 }
+
+Button.propTypes = propTypes;
 
 export default StyledButton.withComponent(Button);

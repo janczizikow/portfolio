@@ -1,12 +1,15 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
 import styled from 'react-emotion';
 import { css } from 'emotion';
-import theme from '../../utils/theme';
+import { withTheme } from 'emotion-theming';
+import colorTheme from '../../utils/theme';
 
-type Props = {
-  to: string,
-  children: string,
+const propTypes = {
+  to: PropTypes.string.isRequired,
+  children: PropTypes.string,
+  theme: PropTypes.instanceOf(Object),
 };
 
 const headerLinkItemStyles = css`
@@ -24,14 +27,12 @@ const headerLinkItemStyles = css`
     width: 0;
     height: 2px;
     height: 0.125rem;
-    background-color: ${theme.colors.primary};
+    background-color: ${colorTheme.colors.primary};
     transition: width 0.24s ease-in-out;
   }
 `;
 
-const activeLinkStyles: string = css`
-  color: ${theme.colors.dark};
-
+const activeLinkStyles = css`
   .${headerLinkItemStyles}::before {
     left: 0;
     right: auto;
@@ -44,11 +45,12 @@ const StyledHeaderLink = styled(Link)`
   display: flex;
   align-items: center;
   height: 100%;
-  color: inherit;
+  color: ${p => p.theme.colors.textColor};
   text-decoration: none;
   transition: color 0.2s;
 
   &:hover {
+    color: ${p => p.theme.colors.headingColor};
     ${activeLinkStyles};
   }
 
@@ -57,14 +59,16 @@ const StyledHeaderLink = styled(Link)`
   }
 `;
 
-const HeaderLink = (props: Props) => {
-  const { to, children } = props;
+const HeaderLink = ({ to, children, theme }) => (
+  <StyledHeaderLink
+    to={to}
+    activeClassName={activeLinkStyles}
+    activeStyle={{ color: theme.colors.headingColor }}
+  >
+    <span className={headerLinkItemStyles}>{children}</span>
+  </StyledHeaderLink>
+);
 
-  return (
-    <StyledHeaderLink to={to} activeClassName={activeLinkStyles}>
-      <span className={headerLinkItemStyles}>{children}</span>
-    </StyledHeaderLink>
-  );
-};
+HeaderLink.propTypes = propTypes;
 
-export default HeaderLink;
+export default withTheme(HeaderLink);

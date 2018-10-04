@@ -4,30 +4,34 @@ import Button from './Button';
 import Emoji from './Emoji';
 import Flex from './Flex';
 import FormGroup from './FormGroup';
+import FormErrorMsg from './FormErrorMsg';
 import * as Grid from './Grid';
-import Icon from './Icon';
+import Heading from './Heading';
+import IconButton from './IconButton';
 import Input from './Input';
 import Label from './Label';
-// import Modal from './Modal';
+import Link from './Link';
+import Modal from './Modal';
 // import Spinner from './Spinner';
 import Text from './Text';
-import Heading from './Heading';
 
 const { Container, Row, Col } = Grid;
 
 export {
   // Alert,
-  Box,
   Button,
+  Box,
   Col,
   Container,
   Emoji,
   Flex,
   FormGroup,
-  Icon,
+  FormErrorMsg,
+  IconButton,
   Input,
   Label,
-  // Modal,
+  Link,
+  Modal,
   Row,
   // Spinner,
   Text,

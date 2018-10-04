@@ -1,3 +1,23 @@
+// themes
+export const colorThemes = {
+  light: {
+    headingColor: '#2a2a30',
+    textColor: '#696c7b',
+    bgColor: '#fff',
+    bgGreyColor: '#f9f9f9',
+    bgHeader: 'hsla(0,0%,100%,.96)',
+    bgAlt: '#2a2a30',
+  },
+  dark: {
+    headingColor: '#fff',
+    textColor: '#adb7be',
+    bgColor: '#232323',
+    bgGreyColor: '#353535',
+    bgHeader: '#27282a',
+    bgAlt: '#27282a',
+  },
+};
+
 // colors
 const colors = {
   primary: '#277cea',
@@ -9,6 +29,7 @@ const colors = {
   grey: '#ededed',
   lightGrey: '#f9f9f9',
   white: '#fff',
+  ...colorThemes.light,
 };
 
 // typography
@@ -31,10 +52,10 @@ const typography = {
   bodyFontFamily: fontStack,
   overrideStyles: () => ({
     body: {
-      color: colors.lightDark,
+      color: colors.textColor,
     },
     'h1, h2, h3, h4, h5, h6': {
-      color: colors.dark,
+      color: colors.headingColor,
       fontWeight: 500,
     },
   }),

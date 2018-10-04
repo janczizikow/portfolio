@@ -1,23 +1,29 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import Headroom from 'react-headroom';
 import styled from 'react-emotion';
+import { withTheme } from 'emotion-theming';
 import { Link } from 'gatsby';
-import * as actionTypes from '../../store/actions/actionTypes';
+import * as actions from '../../store/actions';
 import { Container, Flex } from '../UI';
 import Logo from '../../assets/images/logo.svg';
 import HeaderToggle from './HeaderToggle';
 import HeaderLinks from './HeaderLinks';
 
-type Props = {
-  links?: {
-    to: string,
-    text: string,
-  }[],
-};
-
-type State = {
-  headroomActive: boolean,
+const propTypes = {
+  links: PropTypes.arrayOf(
+    PropTypes.shape({
+      to: PropTypes.string,
+      text: PropTypes.string,
+    })
+  ),
+  openMobileMenu: PropTypes.func,
+  theme: PropTypes.shape({
+    colors: PropTypes.shape({
+      bgHeader: PropTypes.string,
+    }),
+  }),
 };
 
 const HeaderInner = styled(Flex)`
@@ -29,15 +35,15 @@ const HeaderLink = styled(Link)`
   display: flex;
   align-items: center;
   height: 100%;
-  color: ${p => p.theme.colors.dark};
+  color: ${p => p.theme.colors.headingColor};
 `;
 
-class Header extends Component<Props, State> {
+class Header extends Component {
   state = {
     headroomActive: false,
   };
 
-  windowWidth: number = 0;
+  windowWidth = 0;
 
   getWindowWidth = () => {
     this.windowWidth = window.innerWidth;
@@ -64,7 +70,7 @@ class Header extends Component<Props, State> {
   };
 
   render() {
-    const { links, openMobileMenu } = this.props;
+    const { links, openMobileMenu, theme } = this.props;
     const { headroomActive } = this.state;
 
     return (
@@ -73,10 +79,11 @@ class Header extends Component<Props, State> {
         pinStart={500}
         wrapperStyle={{
           width: '100%',
+          height: '58px',
         }}
         style={{
           position: 'fixed',
-          backgroundColor: 'hsla(0,0%,100%,.96)',
+          backgroundColor: theme.colors.bgHeader,
           WebkitTransition: 'all 0.3s ease',
           MozTransition: 'all 0.3s ease',
           OTransition: 'all 0.3s ease',
@@ -98,11 +105,13 @@ class Header extends Component<Props, State> {
   }
 }
 
+Header.propTypes = propTypes;
+
 const mapDispatchToProps = dispatch => ({
-  openMobileMenu: () => dispatch({ type: actionTypes.OPEN_MOBILE_MENU }),
+  openMobileMenu: () => dispatch(actions.openMobileMenu()),
 });
 
 export default connect(
   null,
   mapDispatchToProps
-)(Header);
+)(withTheme(Header));

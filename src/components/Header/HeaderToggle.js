@@ -1,13 +1,18 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styled from 'react-emotion';
+import { Menu } from 'react-feather';
 
-import { Icon } from '../UI';
+const propTypes = {
+  onClick: PropTypes.func,
+};
 
 const ToggleButton = styled.button`
   padding: 0;
   height: 100%;
   background-color: transparent;
   border: 0;
+  color: ${p => p.theme.colors.headingColor};
   outline: 0;
   cursor: pointer;
 
@@ -18,8 +23,10 @@ const ToggleButton = styled.button`
 
 const HeaderToggle = ({ onClick }) => (
   <ToggleButton type="button" onClick={onClick}>
-    {Icon('menu', [24, 24])}
+    <Menu />
   </ToggleButton>
 );
+
+HeaderToggle.propTypes = propTypes;
 
 export default HeaderToggle;

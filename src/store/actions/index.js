@@ -1,1 +1,1 @@
-export { openMenu, closeMenu } from './ui';
+export { openMobileMenu, closeMobileMenu, switchTheme } from './ui';

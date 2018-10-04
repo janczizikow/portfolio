@@ -1,13 +1,21 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
 import styled from 'react-emotion';
-import { Box } from '../UI';
+import { Moon, Sun } from 'react-feather';
+import * as actions from '../../store/actions';
+import { Box, IconButton } from '../UI';
 import HeaderLink from './HeaderLink';
 
-type Props = {
-  links: {
-    to: string,
-    text: string,
-  }[],
+const propTypes = {
+  activeTheme: PropTypes.string,
+  switchTheme: PropTypes.func,
+  links: PropTypes.arrayOf(
+    PropTypes.shape({
+      to: PropTypes.string.isRequired,
+      text: PropTypes.string.isRequired,
+    })
+  ),
 };
 
 const HeaderLinksNav = styled(Box)`
@@ -20,9 +28,7 @@ const HeaderLinksNav = styled(Box)`
   }
 `;
 
-const HeaderLinks = (props: Props) => {
-  const { links } = props;
-
+const HeaderLinks = ({ activeTheme, switchTheme, links }) => {
   let headerLinks = null;
 
   if (links) {
@@ -33,7 +39,27 @@ const HeaderLinks = (props: Props) => {
     ));
   }
 
-  return <HeaderLinksNav is="nav">{headerLinks}</HeaderLinksNav>;
+  return (
+    <HeaderLinksNav is="nav">
+      {headerLinks}
+      <IconButton color="headingColor" pl={3} onClick={switchTheme}>
+        {activeTheme === 'light' ? <Moon /> : <Sun />}
+      </IconButton>
+    </HeaderLinksNav>
+  );
 };
 
-export default HeaderLinks;
+HeaderLinks.propTypes = propTypes;
+
+const mapStateToProps = state => ({
+  activeTheme: state.ui.theme.activeTheme,
+});
+
+const mapDispatchToProps = dispatch => ({
+  switchTheme: () => dispatch(actions.switchTheme()),
+});
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(HeaderLinks);

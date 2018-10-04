@@ -17,12 +17,13 @@
   "rules": {
     "strict": 0,
     "import/no-extraneous-dependencies": 0,
-    "react/prop-types": 0,
     "react/require-default-props": 0,
     "react/jsx-filename-extension": 0,
     "react/jsx-one-expression-per-line": 0,
     "jsx-a11y/accessible-emoji": 0,
-    "arrow-body-style": 0,
+    "no-underscore-dangle": ["error", {
+      "allow": ["_isMounted"]
+    }],
     "no-unused-expressions": [2, { "allowShortCircuit": true }],
     "prettier/prettier": ["warn", {
       "semi": true,
@@ -36,7 +37,6 @@
   ],
   "plugins": [
     "prettier",
-    "flowtype",
     "emotion"
   ]
 }

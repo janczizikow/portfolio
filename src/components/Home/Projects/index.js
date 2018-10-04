@@ -1,8 +1,23 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { css } from 'emotion';
 import { Box, Container, Heading } from '../../UI';
 import ProjectItem from './ProjectItem';
 import theme from '../../../utils/theme';
+
+const propTypes = {
+  projects: PropTypes.arrayOf(
+    PropTypes.shape({
+      node: PropTypes.shape({
+        id: PropTypes.string.isRequired,
+        category: PropTypes.string.isRequired,
+        date: PropTypes.string.isRequired,
+        name: PropTypes.string.isRequired,
+        slug: PropTypes.string.isRequired,
+      }),
+    })
+  ),
+};
 
 const projectsInner = css`
   @media only screen and (min-width: ${theme.breakpoints[1]}) {
@@ -32,19 +47,21 @@ const projectsInner = css`
   }
 `;
 
-const Projects = props => {
-  const { projects } = props;
-
+const Projects = ({ projects }) => {
   let projectsDOM = null;
 
   if (projects) {
-    projectsDOM = projects.map(project => (
-      <ProjectItem key={project.node.id} project={project.node} />
+    projectsDOM = projects.map((project, i) => (
+      <ProjectItem
+        key={project.node.id}
+        project={project.node}
+        bigThumbnail={i === 0}
+      />
     ));
   }
 
   return (
-    <Box bg="lightGrey" py="3rem">
+    <Box id="projects" bg="bgGreyColor" py="3rem">
       <Container>
         <Heading textAlign="center">Projects</Heading>
         <Box css={projectsInner}>{projectsDOM}</Box>
@@ -52,5 +69,7 @@ const Projects = props => {
     </Box>
   );
 };
+
+Projects.propTypes = propTypes;
 
 export default Projects;

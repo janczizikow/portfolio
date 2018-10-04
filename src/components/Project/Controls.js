@@ -1,47 +1,55 @@
 import React from 'react';
-import { Link } from 'gatsby';
-import { Box, Flex, Container, Text, Icon } from '../UI';
+import PropTypes from 'prop-types';
+import { ChevronLeft, ChevronRight } from 'react-feather';
+import Link from './ControlLink';
+import { Box, Flex, Container, Text } from '../UI';
 
-type Props = {
-  prev?: {
-    to: string,
-    text: string,
-  },
-  next?: {
-    to: string,
-    text: string,
-  },
+const propTypes = {
+  prev: PropTypes.shape({
+    slug: PropTypes.string,
+    name: PropTypes.string,
+  }),
+  next: PropTypes.shape({
+    slug: PropTypes.string,
+    name: PropTypes.string,
+  }),
 };
 
-const Controls = ({ prev, next }: Props) => (
+const Controls = ({ prev, next }) => (
   <Container>
     <Box mx="auto" css="max-width: 720px;">
       <Flex py={4} alignItems="center" justifyContent="space-between">
-        {prev && (
-          <Flex flexDirection="column" alignItems="flex-start" textAlign="left">
-            <Text is="span" fontSize="14px">
-              Previous
-            </Text>
-            <Link to={prev.to}>
-              {Icon('chevron-left', ['24', '24'])}
-              {prev.text}
-            </Link>
-          </Flex>
-        )}
-        {next && (
-          <Flex flexDirection="column" alignItems="flex-end" textAlign="right">
-            <Text is="span" fontSize="14px">
-              Next
-            </Text>
-            <Link to={next.to}>
-              {Icon('chevron-right', ['24', '24'])}
-              {next.text}
-            </Link>
-          </Flex>
-        )}
+        <Flex flexDirection="column" alignItems="flex-start" textAlign="left">
+          {prev && (
+            <>
+              <Text is="span" fontSize="14px">
+                Previous
+              </Text>
+              <Link prev to={`/projects/${prev.slug}`}>
+                <ChevronLeft />
+                {prev.name}
+              </Link>
+            </>
+          )}
+        </Flex>
+        <Flex flexDirection="column" alignItems="flex-end" textAlign="right">
+          {next && (
+            <>
+              <Text is="span" fontSize="14px">
+                Next
+              </Text>
+              <Link next to={`/projects/${next.slug}`}>
+                {next.name}
+                <ChevronRight />
+              </Link>
+            </>
+          )}
+        </Flex>
       </Flex>
     </Box>
   </Container>
 );
+
+Controls.propTypes = propTypes;
 
 export default Controls;

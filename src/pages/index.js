@@ -1,19 +1,25 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
-import Layout from '../layout';
 import { Hero, Projects, Cta } from '../components/Home';
 
-export default ({
-  data,
-}: {
-  data: { allProject: { edges: { node: { name: string } }[] } },
-}) => (
-  <Layout>
+const propTypes = {
+  data: PropTypes.shape({
+    allProject: PropTypes.shape({
+      edges: PropTypes.array.isRequired,
+    }),
+  }),
+};
+
+const Home = ({ data }) => (
+  <>
     <Hero />
     <Projects projects={data.allProject.edges} />
     <Cta />
-  </Layout>
+  </>
 );
+
+Home.propTypes = propTypes;
 
 export const pageQuery = graphql`
   query {
@@ -22,19 +28,25 @@ export const pageQuery = graphql`
         node {
           id
           name
-          date
           slug
           category
-          description
-          links {
-            text
-            url
-          }
+          date(formatString: "YYYY, MMM DD")
           thumbnail {
-            url
+            smallThumbnails: childImageSharp {
+              fluid(maxWidth: 720) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+            bigThumbnails: childImageSharp {
+              fluid(maxWidth: 1140) {
+                ...GatsbyImageSharpFluid
+              }
+            }
           }
         }
       }
     }
   }
 `;
+
+export default Home;

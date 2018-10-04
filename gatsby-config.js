@@ -6,10 +6,11 @@ module.exports = {
   siteMetadata: {
     title: 'Jan Czizikow // Web Developer',
     siteUrl: 'https://www.janczizikow.com',
+    description: `This is the site of Jan Czizikow, a Web Developer. The site is just a list of things he's been up to including blog and projects.`,
   },
   plugins: [
+    'gatsby-plugin-remove-trailing-slashes',
     'gatsby-plugin-react-helmet',
-    'gatsby-plugin-flow',
     'gatsby-plugin-eslint',
     'gatsby-plugin-emotion',
     {
@@ -30,33 +31,39 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
-        name: 'gatsby-sleek-starter',
-        short_name: 'sleek',
+        name: 'Jan Czizikow // Web Developer',
+        short_name: 'Jan Czizikow',
         start_url: '/',
         background_color: '#277cea',
         theme_color: '#277cea',
         display: 'minimal-ui',
-        icon: 'src/assets/images/gatsby-icon.png', // This path is relative to the root of the site.
+        icon: 'src/assets/images/favicon.png',
       },
     },
-    // {
-    //   resolve: 'gatsby-plugin-favicon',
-    //   options: {
-    //     logo: 'src/assets/images/gatsby-icon.png',
-    //     injectHTML: true,
-    //     icons: {
-    //       android: true,
-    //       appleIcon: true,
-    //       appleStartup: true,
-    //       coast: false,
-    //       favicons: true,
-    //       firefox: true,
-    //       twitter: false,
-    //       yandex: false,
-    //       windows: false,
-    //     },
-    //   },
-    // },
+    {
+      resolve: 'gatsby-plugin-favicon',
+      options: {
+        logo: './src/assets/images/favicon.png',
+        injectHTML: true,
+        icons: {
+          android: true,
+          appleIcon: true,
+          appleStartup: true,
+          coast: false,
+          favicons: true,
+          firefox: true,
+          twitter: false,
+          yandex: false,
+          windows: false,
+        },
+      },
+    },
+    {
+      resolve: `gatsby-plugin-layout`,
+      options: {
+        component: require.resolve(`./src/layouts/index.js`),
+      },
+    },
     {
       resolve: 'gatsby-plugin-react-svg',
       options: {
@@ -87,7 +94,7 @@ module.exports = {
       resolve: 'gatsby-plugin-webpack-bundle-analyzer',
       options: {
         analyzerPort: 5050,
-        production: true,
+        production: false,
       },
     },
     'gatsby-plugin-netlify-cache',

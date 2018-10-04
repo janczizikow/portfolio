@@ -1,17 +1,23 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { css } from 'emotion';
-import Layout from '../layout';
 import { Box, Container, Heading, Text, Button } from '../components/UI';
 import Controls from '../components/Project/Controls';
+import theme from '../utils/theme';
 
-type Props = {
-  pageContext: {
-    name: string,
-    description: string,
-    photos: {
-      url: string,
-    }[],
-  },
+const propTypes = {
+  pageContext: PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
+    photos: PropTypes.arrayOf(
+      PropTypes.shape({
+        id: PropTypes.number.isRequired,
+        photo: PropTypes.shape({
+          url: PropTypes.string,
+        }),
+      })
+    ),
+  }),
 };
 
 const projectTitleStyles = css`
@@ -25,22 +31,25 @@ const projectTitleStyles = css`
     width: 50px;
     height: 2px;
     transform: translateX(-50%);
-    background-color: #277cea;
+    background-color: ${theme.colors.primary};
   }
 `;
 
-export default ({ pageContext }: Props) => {
-  const { name, description, links } = pageContext;
+const ProjectPage = ({
+  pageContext: { name, description, links, next, prev, photos },
+}) => {
   let projectLinks = null;
+
   if (links) {
     projectLinks = links.map(link => (
-      <Button key={link.url} href={link.url}>
+      <Button space key={link.url} href={link.url}>
         {link.text}
       </Button>
     ));
   }
+
   return (
-    <Layout>
+    <>
       <Container>
         <Box textAlign="center" py={5} mx="auto" css="max-width: 720px;">
           <Heading css={projectTitleStyles}>{name}</Heading>
@@ -48,14 +57,20 @@ export default ({ pageContext }: Props) => {
           {projectLinks}
         </Box>
       </Container>
-      <Box bg="lightGrey" py={5}>
+      <Box bg="bgGreyColor" py={5}>
         <Container>
           <Box textAlign="center" mx="auto" css="max-width: 720px;">
-            <p>Images here</p>
+            {photos.map((p, i) => (
+              <img key={p.id} src={p.photo.url} alt={`${name}-${i}`} />
+            ))}
           </Box>
         </Container>
       </Box>
-      <Controls />
-    </Layout>
+      <Controls next={next} prev={prev} />
+    </>
   );
 };
+
+ProjectPage.propTypes = propTypes;
+
+export default ProjectPage;
