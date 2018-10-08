@@ -93,8 +93,8 @@ class Header extends Component {
           transition: 'transform 0.3s ease',
           zIndex: 10,
         }}
-        itemscope
-        itemtype="http://schema.org/SiteNavigationElement"
+        itemScope
+        itemType="http://schema.org/SiteNavigationElement"
         aria-label="Main navigation"
       >
         <Container fluid>

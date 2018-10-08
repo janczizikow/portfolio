@@ -62,10 +62,13 @@ const StyledHeaderLink = styled(Link)`
 const HeaderLink = ({ to, children, theme }) => (
   <StyledHeaderLink
     to={to}
+    itemProp="url"
     activeClassName={activeLinkStyles}
     activeStyle={{ color: theme.colors.headingColor }}
   >
-    <span className={headerLinkItemStyles}>{children}</span>
+    <span itemProp="name" className={headerLinkItemStyles}>
+      {children}
+    </span>
   </StyledHeaderLink>
 );
 
