@@ -2,7 +2,7 @@ import styled, { keyframes } from 'react-emotion';
 
 const loader = keyframes`
   0% {
-    transform: translate(-50%, -50%) rotatate(0deg);
+    transform: translate(-50%, -50%) rotate(0deg);
   }
   100% {
     transform: translate(-50%, -50%) rotate(360deg);
