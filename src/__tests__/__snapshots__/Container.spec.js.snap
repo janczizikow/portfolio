@@ -1,0 +1,138 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Container /> renders with correct styles 1`] = `
+.emotion-2 {
+  max-width: 100%;
+}
+
+@media (min-width:576px) {
+  .emotion-2 {
+    max-width: 540px;
+  }
+}
+
+@media (min-width:768px) {
+  .emotion-2 {
+    max-width: 720px;
+  }
+}
+
+@media (min-width:992px) {
+  .emotion-2 {
+    max-width: 960px;
+  }
+}
+
+@media (min-width:1200px) {
+  .emotion-2 {
+    max-width: 1200px;
+  }
+}
+
+.emotion-0 {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 16px;
+  padding-right: 16px;
+  max-width: 100%;
+}
+
+@media (min-width:576px) {
+  .emotion-0 {
+    max-width: 540px;
+  }
+}
+
+@media (min-width:768px) {
+  .emotion-0 {
+    max-width: 720px;
+  }
+}
+
+@media (min-width:992px) {
+  .emotion-0 {
+    max-width: 960px;
+  }
+}
+
+@media (min-width:1200px) {
+  .emotion-0 {
+    max-width: 1200px;
+  }
+}
+
+<Container>
+  <Box
+    blacklist={
+      Array [
+        "css",
+        "width",
+        "m",
+        "mt",
+        "mr",
+        "mb",
+        "ml",
+        "mx",
+        "my",
+        "p",
+        "pt",
+        "pr",
+        "pb",
+        "pl",
+        "px",
+        "py",
+        "flex",
+        "alignSelf",
+        "order",
+        "color",
+        "bg",
+        "textAlign",
+      ]
+    }
+    className="emotion-2"
+    is="div"
+    mx="auto"
+    px={3}
+    width="100%"
+  >
+    <ForwardRef
+      blacklist={
+        Array [
+          "css",
+          "width",
+          "m",
+          "mt",
+          "mr",
+          "mb",
+          "ml",
+          "mx",
+          "my",
+          "p",
+          "pt",
+          "pr",
+          "pb",
+          "pl",
+          "px",
+          "py",
+          "flex",
+          "alignSelf",
+          "order",
+          "color",
+          "bg",
+          "textAlign",
+        ]
+      }
+      className="emotion-0"
+      is="div"
+      mx="auto"
+      px={3}
+      width="100%"
+    >
+      <div
+        className="emotion-0"
+      />
+    </ForwardRef>
+  </Box>
+</Container>
+`;

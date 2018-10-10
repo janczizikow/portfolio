@@ -1,10 +1,10 @@
-import Header from './index';
+import { Row } from '../components/UI';
 
-describe('<Header />', () => {
+describe('<Row />', () => {
   let wrapper;
 
   beforeEach(() => {
-    wrapper = shallow(<Header />);
+    wrapper = shallow(<Row />);
   });
 
   it('renders without crashing', () => {

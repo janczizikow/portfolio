@@ -1,0 +1,98 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Footer /> renders with correct styles 1`] = `
+<Box
+  bg="bgAlt"
+  blacklist={
+    Array [
+      "css",
+      "width",
+      "m",
+      "mt",
+      "mr",
+      "mb",
+      "ml",
+      "mx",
+      "my",
+      "p",
+      "pt",
+      "pr",
+      "pb",
+      "pl",
+      "px",
+      "py",
+      "flex",
+      "alignSelf",
+      "order",
+      "color",
+      "bg",
+      "textAlign",
+    ]
+  }
+  color="white"
+  is="footer"
+  py={58}
+>
+  <Flex
+    alignItems="center"
+    blacklist={
+      Array [
+        "css",
+        "flexWrap",
+        "flexDirection",
+        "alignItems",
+        "justifyContent",
+        "css",
+        "width",
+        "m",
+        "mt",
+        "mr",
+        "mb",
+        "ml",
+        "mx",
+        "my",
+        "p",
+        "pt",
+        "pr",
+        "pb",
+        "pl",
+        "px",
+        "py",
+        "flex",
+        "alignSelf",
+        "order",
+        "color",
+        "bg",
+        "textAlign",
+      ]
+    }
+    is={[Function]}
+    justifyContent="center"
+  >
+    <Styled(a)
+      href="https://github.com/janczizikow/"
+    >
+      <Github
+        color="currentColor"
+        size="24"
+      />
+    </Styled(a)>
+    <Styled(a)
+      href="/about/"
+    >
+      <Codepen
+        color="currentColor"
+        size="24"
+      />
+    </Styled(a)>
+    <Styled(a)
+      href="https://www.linkedin.com/in/janczizikow/"
+    >
+      <Linkedin
+        color="currentColor"
+        size="24"
+      />
+    </Styled(a)>
+  </Flex>
+</Box>
+`;

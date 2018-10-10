@@ -95,7 +95,6 @@ class Header extends Component {
         }}
         itemScope
         itemType="http://schema.org/SiteNavigationElement"
-        aria-label="Main navigation"
       >
         <Container fluid>
           <HeaderInner alignItems="center" justifyContent="space-between">

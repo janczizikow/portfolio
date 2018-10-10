@@ -1,3 +1,6 @@
+# Test
+coverage/
+
 # Project dependencies
 .cache
 node_modules

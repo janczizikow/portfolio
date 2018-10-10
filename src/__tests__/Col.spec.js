@@ -1,10 +1,10 @@
-import Cta from './index';
+import { Col } from '../components/UI';
 
-describe('<Cta />', () => {
+describe('<Col />', () => {
   let wrapper;
 
   beforeEach(() => {
-    wrapper = shallow(<Cta />);
+    wrapper = shallow(<Col />);
   });
 
   it('renders without crashing', () => {

@@ -1,7 +1,13 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { injectGlobal } from 'react-emotion';
 import { withTheme } from 'emotion-theming';
-/* eslint-disable */
+
+const propTypes = {
+  theme: PropTypes.instanceOf(Object),
+  children: PropTypes.instanceOf(Object),
+};
+
 class Global extends Component {
   componentDidUpdate(prevProps) {
     const { theme } = this.props;
@@ -11,11 +17,13 @@ class Global extends Component {
     }
 
     if (theme.colors.textColor !== prevProps.theme.colors.textColor) {
-      window.document.body.style.color = this.props.theme.colors.textColor;
+      window.document.body.style.color = theme.colors.textColor;
     }
   }
 
   render() {
+    const { theme, children } = this.props;
+
     injectGlobal`
       *::before,
       *::after,
@@ -30,12 +38,13 @@ class Global extends Component {
       body {
         padding: 0;
         margin: 0;
-        background: ${this.props.theme.colors.bgColor};
+        background: ${theme.colors.bgColor};
+        -moz-osx-font-smoothing: grayscale;
         -webkit-font-smoothing: antialiased;
       }
 
       .headroom {
-        height: ${this.props.theme.headerHeight};
+        height: ${theme.headerHeight};
       }
 
       .headroom--scrolled {
@@ -76,11 +85,14 @@ class Global extends Component {
 
         ::selection {
           color: #fff;
-          background-color: ${this.props.theme.colors.primary};
+          background-color: ${theme.colors.primary};
         }
     `;
-    return React.Children.only(this.props.children);
+
+    return React.Children.only(children);
   }
 }
+
+Global.propTypes = propTypes;
 
 export default withTheme(Global);

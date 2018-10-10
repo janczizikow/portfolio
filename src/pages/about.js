@@ -21,8 +21,8 @@ const About = ({ data }) => (
   <Box py={4}>
     <Container>
       <Row alignItems="center" flexWrap="wrap">
-        <Col flex={['0 0 100%', '0 0 100%', '0 0 100%', '0 0 50%']}>
-          <Heading mt={[4, 4, 4, 0]}>
+        <Col flex={['0 0 100%', null, null, '0 0 50%']}>
+          <Heading mt={[4, null, null, 0]}>
             Hey, nice to meet you! <Emoji label="waving-hand">👋</Emoji>
           </Heading>
           <Text>
@@ -45,8 +45,8 @@ const About = ({ data }) => (
           </Button>
         </Col>
         <Col
-          order={[-1, -1, -1, 1]}
-          flex={['0 0 100%', '0 0 100%', '0 0 100%', '0 0 50%']}
+          order={[-1, null, null, 1]}
+          flex={['0 0 100%', null, null, '0 0 50%']}
         >
           <Image fluid={data.aboutImage.childImageSharp.fluid} />
         </Col>

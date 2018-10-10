@@ -18,7 +18,7 @@ const Container = ({ fluid, ...rest }) => (
     mx="auto"
     px={3}
     width="100%"
-    css={
+    className={
       !fluid &&
       css(
         mq({
