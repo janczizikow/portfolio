@@ -6,15 +6,9 @@ import { Box, Container, Row, Col, Heading, Text } from '../../UI';
 import HeroImg from '../../../assets/illustrations/illustration.svg';
 
 const scrollDownAnimation = keyframes`
-  0% {
-    transform: translateY(-16px);
-  }
-  50% {
-    transform: translateY(0);
-  }
-  100% {
-    transform: translateY(-16px);
-  }
+  0% { transform: translateY(-16px) }
+  50% { transform: translateY(0) }
+  100% { transform: translateY(-16px) }
 `;
 
 const ScrollDownLink = styled(AnchorLink)`
@@ -47,7 +41,7 @@ const Hero = () => (
   <Box py={4}>
     <Container>
       <Row alignItems="center" flexWrap="wrap">
-        <Col flex={['0 0 100%', '0 0 100%', '0 0 100%', '0 0 50%']}>
+        <Col flex={['0 0 100%', null, null, '0 0 50%']}>
           <Heading is="h1" fontSize="2rem">
             Just a simple dude who wants to build cool stuff.
           </Heading>
@@ -64,8 +58,8 @@ const Hero = () => (
             </ScrollDown>
           </ScrollDownLink>
         </Col>
-        <ColMd flex={['0 0 100%', '0 0 100%', '0 0 100%', '0 0 50%']}>
-          <img src={HeroImg} alt="illustration" style={{ minHeight: 453 }} />
+        <ColMd flex={['0 0 100%', null, null, '0 0 50%']}>
+          <img src={HeroImg} alt="illustration" css={{ minHeight: 453 }} />
         </ColMd>
       </Row>
     </Container>
