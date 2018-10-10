@@ -3,6 +3,7 @@ const babelOptions = {
   plugins: [
     '@babel/plugin-proposal-optional-chaining',
     '@babel/plugin-proposal-class-properties',
+    'babel-plugin-emotion',
   ],
 };
 

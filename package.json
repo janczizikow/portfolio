@@ -127,6 +127,7 @@
       "__PATH_PREFIX__": ""
     },
     "testURL": "http://localhost",
+    "snapshotSerializers": ["enzyme-to-json/serializer", "jest-emotion/serializer"],
     "setupFiles": [
       "<rootDir>/loadershim.js"
     ]
