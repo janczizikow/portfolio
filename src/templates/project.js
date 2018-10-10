@@ -17,6 +17,10 @@ const propTypes = {
         }),
       })
     ),
+    next: PropTypes.shape({
+      name: PropTypes.string,
+      slug: PropTypes.string,
+    }),
   }),
 };
 
@@ -51,7 +55,7 @@ const ProjectPage = ({
   return (
     <>
       <Container>
-        <Box textAlign="center" py={5} mx="auto" css="max-width: 720px;">
+        <Box py={5} mx="auto" textAlign="center" css="max-width: 720px;">
           <Heading css={projectTitleStyles}>{name}</Heading>
           <Text>{description}</Text>
           {projectLinks}
