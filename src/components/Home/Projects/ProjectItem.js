@@ -5,9 +5,13 @@ import styled from 'react-emotion';
 import Image from 'gatsby-image';
 import { Heading, Text } from '../../UI';
 
-// FIXME: more strict props
 const propTypes = {
-  project: PropTypes.object, // eslint-disable-line
+  project: PropTypes.shape({
+    id: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+    slug: PropTypes.string.isRequired,
+    date: PropTypes.string,
+  }),
   bigThumbnail: PropTypes.bool,
 };
 

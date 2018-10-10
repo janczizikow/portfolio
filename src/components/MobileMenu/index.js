@@ -70,7 +70,7 @@ const MobileMenu = ({ isMobileMenuOpen, closeMobileMenu, links }) => (
             justifyContent="space-between"
             color="white"
           >
-            <Link onClick={closeMobileMenu} style={{ color: '#fff' }} to="/">
+            <Link onClick={closeMobileMenu} css={{ color: '#fff' }} to="/">
               <Logo />
             </Link>
             <MobileMenuClose onClick={closeMobileMenu} />
