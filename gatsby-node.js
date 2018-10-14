@@ -1,4 +1,12 @@
-require('dotenv').config({ path: '.env' });
+/* eslint-disable
+    import/newline-after-import,
+    iterators/generators,
+    no-console,
+    no-param-reassign,
+    no-restricted-syntax,
+    no-await-in-loop
+*/
+// require('dotenv').config({ path: '.env' });
 const path = require('path');
 const crypto = require('crypto');
 const axios = require('axios');
@@ -50,6 +58,7 @@ exports.onCreateNode = async ({
   store,
   cache,
   actions: { createNode, createParentChildLink },
+  createNodeId,
 }) => {
   if (node.internal && node.internal.type === 'Project') {
     let thumbnailNode;
@@ -70,30 +79,33 @@ exports.onCreateNode = async ({
       delete node.thumbnail;
       node.thumbnail___NODE = thumbnailNode.id;
     }
-    // for (const photo of node.photos) {
-    //   let fileNode;
-    //   try {
-    //     fileNode = await createRemoteFileNode({
-    //       url: photo.photo.url,
-    //       store,
-    //       cache,
-    //       createNode,
-    //       createNodeId: () => `project-${node.name}-photo-${photo.id}`,
-    //     });
 
-    //     fileNode.parent = node.id;
-    //     createParentChildLink({ parent: node, child: fileNode });
-    //   } catch (error) {
-    //     console.warn('error creating node', error);
-    //   }
-    // }
+    for (const photo of node.photos) {
+      let fileNode;
+
+      try {
+        fileNode = await createRemoteFileNode({
+          url: photo.photo.url,
+          store,
+          cache,
+          createNode,
+          createNodeId,
+        });
+
+        if (fileNode) {
+          createParentChildLink({ parent: node, child: fileNode });
+        }
+      } catch (error) {
+        console.warn('error creating node', error);
+      }
+    }
   }
 };
 
 // Implement the Gatsby API “createPages”. This is called once the
 // data layer is bootstrapped to let plugins create pages from data.
-exports.createPages = ({ graphql, actions: { createPage } }) => {
-  return new Promise((resolve, reject) => {
+exports.createPages = ({ graphql, actions: { createPage } }) =>
+  new Promise((resolve, reject) => {
     const projectTemplate = path.resolve(`src/templates/project.js`);
     // Query for project nodes to use in creating pages.
     resolve(
@@ -102,18 +114,13 @@ exports.createPages = ({ graphql, actions: { createPage } }) => {
           allProject {
             edges {
               node {
+                id
                 name
                 slug
                 description
                 links {
                   text
                   url
-                }
-                photos {
-                  id
-                  photo {
-                    url
-                  }
                 }
                 next {
                   name
@@ -138,16 +145,15 @@ exports.createPages = ({ graphql, actions: { createPage } }) => {
             path: `/projects/${node.slug}`,
             component: projectTemplate,
             context: {
+              id: node.id,
               name: node.name,
               description: node.description,
               links: node.links,
               next: node.next,
               prev: node.prev,
-              photos: node.photos,
             },
           });
         });
       })
     );
   });
-};

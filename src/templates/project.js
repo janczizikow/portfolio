@@ -1,5 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { graphql } from 'gatsby';
+import Image from 'gatsby-image';
 import { css } from 'emotion';
 import { Box, Container, Heading, Text, Button } from '../components/UI';
 import Controls from '../components/Project/Controls';
@@ -9,14 +11,6 @@ const propTypes = {
   pageContext: PropTypes.shape({
     name: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
-    photos: PropTypes.arrayOf(
-      PropTypes.shape({
-        id: PropTypes.number.isRequired,
-        photo: PropTypes.shape({
-          url: PropTypes.string,
-        }),
-      })
-    ),
     next: PropTypes.shape({
       name: PropTypes.string,
       slug: PropTypes.string,
@@ -40,7 +34,10 @@ const projectTitleStyles = css`
 `;
 
 const ProjectPage = ({
-  pageContext: { name, description, links, next, prev, photos },
+  pageContext: { name, description, links, next, prev },
+  data: {
+    ProjectImages: { childrenFile: photos },
+  },
 }) => {
   let projectLinks = null;
 
@@ -64,8 +61,13 @@ const ProjectPage = ({
       <Box bg="bgGreyColor" py={5}>
         <Container>
           <Box textAlign="center" mx="auto" css="max-width: 720px;">
-            {photos.map((p, i) => (
-              <img key={p.id} src={p.photo.url} alt={`${name}-${i}`} />
+            {photos.map((photo, i) => (
+              <Image
+                key={photo.id}
+                css={{ marginBottom: '1.5rem' }}
+                fluid={photo.childImageSharp.fluid}
+                alt={`${name}-${i}`}
+              />
             ))}
           </Box>
         </Container>
@@ -76,5 +78,20 @@ const ProjectPage = ({
 };
 
 ProjectPage.propTypes = propTypes;
+
+export const pageQuery = graphql`
+  query($id: String!) {
+    ProjectImages: project(id: { eq: $id }) {
+      childrenFile {
+        id
+        childImageSharp {
+          fluid(maxWidth: 720, quality: 85) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+    }
+  }
+`;
 
 export default ProjectPage;
