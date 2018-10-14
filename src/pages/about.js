@@ -17,7 +17,13 @@ const propTypes = {
   data: PropTypes.instanceOf(Object),
 };
 
-const About = ({ data }) => (
+const About = ({
+  data: {
+    aboutImage: {
+      childImageSharp: { fluid: aboutImg },
+    },
+  },
+}) => (
   <Box py={4}>
     <Container>
       <Row alignItems="center" flexWrap="wrap">
@@ -39,7 +45,6 @@ const About = ({ data }) => (
             developer. Currently I’m in Berlin, Germany, where I joined a coding
             bootcamp and I’m looking for new job opportunities.
           </Text>
-
           <Button rounded href="/CV.pdf">
             View CV
           </Button>
@@ -48,7 +53,7 @@ const About = ({ data }) => (
           order={[-1, null, null, 1]}
           flex={['0 0 100%', null, null, '0 0 50%']}
         >
-          <Image fluid={data.aboutImage.childImageSharp.fluid} />
+          <Image fluid={aboutImg} />
         </Col>
       </Row>
     </Container>
