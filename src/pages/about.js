@@ -35,7 +35,7 @@ const About = ({
             I’m Jan, 26 year old web developer from Poland. I’m that guy on the
             picture enjoying Thai Wake Park and trying to wakeboard for the
             first time - it was a blast! Anyways, back to serious stuff, during
-            my business studies at collage I got interested in building
+            my business studies at college I got interested in building
             websites. After graduating I worked for roughly a year as a UX
             Project Manager in an e-commerce company. As my job involved working
             with UX designers and developers, my interested in web development
