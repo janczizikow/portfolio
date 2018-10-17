@@ -1,11 +1,9 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { connect } from 'react-redux';
 import Headroom from 'react-headroom';
 import styled from 'react-emotion';
 import { withTheme } from 'emotion-theming';
 import { Link } from 'gatsby';
-import * as actions from '../../store/actions';
 import { Container, Flex } from '../UI';
 import Logo from '../../assets/images/logo.svg';
 import HeaderToggle from './HeaderToggle';
@@ -101,7 +99,7 @@ class Header extends Component {
             <HeaderLink to="/">
               <Logo />
             </HeaderLink>
-            <HeaderToggle onClick={openMobileMenu} />
+            <HeaderToggle onClick={() => openMobileMenu()} />
             <HeaderLinks links={links} />
           </HeaderInner>
         </Container>
@@ -112,11 +110,4 @@ class Header extends Component {
 
 Header.propTypes = propTypes;
 
-const mapDispatchToProps = dispatch => ({
-  openMobileMenu: () => dispatch(actions.openMobileMenu()),
-});
-
-export default connect(
-  null,
-  mapDispatchToProps
-)(withTheme(Header));
+export default withTheme(Header);

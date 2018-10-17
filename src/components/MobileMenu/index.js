@@ -1,10 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { connect } from 'react-redux';
 import { Link } from 'gatsby';
 import styled from 'react-emotion';
 import posed, { PoseGroup } from 'react-pose';
-import * as actions from '../../store/actions';
 import { Flex, Container } from '../UI';
 import MobileMenuClose from './MobileMenuClose';
 import MobileMenuLink from './MobileMenuLink';
@@ -101,15 +99,4 @@ const MobileMenu = ({ isMobileMenuOpen, closeMobileMenu, links }) => (
 
 MobileMenu.propTypes = propTypes;
 
-const mapStateToProps = state => ({
-  isMobileMenuOpen: state.ui.isMobileMenuOpen,
-});
-
-const mapDispatchToProps = dispatch => ({
-  closeMobileMenu: () => dispatch(actions.closeMobileMenu()),
-});
-
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(MobileMenu);
+export default MobileMenu;
