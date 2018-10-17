@@ -5,6 +5,7 @@ import Helmet from 'react-helmet';
 import { StaticQuery, graphql } from 'gatsby';
 import { ThemeProvider } from 'emotion-theming';
 import Global from './injectGlobal';
+import * as actions from '../store/actions';
 import { Box, Flex } from '../components/UI';
 import Header from '../components/Header';
 import MobileMenu from '../components/MobileMenu';
@@ -13,9 +14,24 @@ import Footer from '../components/Footer';
 const propTypes = {
   children: PropTypes.node.isRequired,
   theme: PropTypes.instanceOf(Object).isRequired,
+  openMobileMenu: PropTypes.func.isRequired,
+  closeMobileMenu: PropTypes.func.isRequired,
+  isMobileMenuOpen: PropTypes.bool.isRequired,
 };
 
-const Layout = ({ children, theme }) => (
+const links = [
+  { to: '/', text: 'Projects' },
+  { to: '/about', text: 'About' },
+  { to: '/contact', text: 'Contact' },
+];
+
+const Layout = ({
+  children,
+  theme,
+  isMobileMenuOpen,
+  openMobileMenu,
+  closeMobileMenu,
+}) => (
   <StaticQuery
     query={graphql`
       query SiteTitleQuery {
@@ -48,19 +64,11 @@ const Layout = ({ children, theme }) => (
         <ThemeProvider theme={theme}>
           <Global>
             <Flex flexDirection="column" css="min-height: 100vh;">
-              <Header
-                links={[
-                  { to: '/', text: 'Projects' },
-                  { to: '/about', text: 'About' },
-                  { to: '/contact', text: 'Contact' },
-                ]}
-              />
+              <Header openMobileMenu={openMobileMenu} links={links} />
               <MobileMenu
-                links={[
-                  { to: '/', text: 'Projects' },
-                  { to: '/about', text: 'About' },
-                  { to: '/contact', text: 'Contact' },
-                ]}
+                isMobileMenuOpen={isMobileMenuOpen}
+                closeMobileMenu={closeMobileMenu}
+                links={links}
               />
               <Box is="main" flex={1}>
                 {children}
@@ -78,6 +86,15 @@ Layout.propTypes = propTypes;
 
 const mapStateToProps = state => ({
   theme: state.ui.theme,
+  isMobileMenuOpen: state.ui.isMobileMenuOpen,
 });
 
-export default connect(mapStateToProps)(Layout);
+const mapDispatchToProps = dispatch => ({
+  openMobileMenu: () => dispatch(actions.openMobileMenu()),
+  closeMobileMenu: () => dispatch(actions.closeMobileMenu()),
+});
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Layout);
