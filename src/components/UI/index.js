@@ -4,6 +4,7 @@ import Button from './Button';
 import Emoji from './Emoji';
 import Flex from './Flex';
 import FormGroup from './FormGroup';
+import FormInput from './FormInput';
 import FormErrorMsg from './FormErrorMsg';
 import * as Grid from './Grid';
 import Heading from './Heading';
@@ -26,6 +27,7 @@ export {
   Emoji,
   Flex,
   FormGroup,
+  FormInput,
   FormErrorMsg,
   IconButton,
   Input,

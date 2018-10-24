@@ -1,5 +1,5 @@
 import * as actionTypes from '../actions/actionTypes';
-import { updateStateObject } from '../utils';
+import { updateStateObject } from '../../utils';
 import theme, { colorThemes } from '../../utils/theme';
 
 const initialState = {
