@@ -2,17 +2,8 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Field, reduxForm } from 'redux-form';
 import api from '../utils/axios';
-import {
-  Row,
-  Col,
-  FormGroup,
-  FormErrorMsg,
-  Input,
-  Label,
-  Button,
-  Heading,
-  Modal,
-} from '../components/UI';
+import { validate } from '../utils';
+import { Row, Col, FormInput, Button, Heading, Modal } from '../components/UI';
 
 const propTypes = {
   handleSubmit: PropTypes.func,
@@ -21,47 +12,6 @@ const propTypes = {
   submitting: PropTypes.bool,
 };
 
-const renderField = ({
-  input,
-  label,
-  type,
-  tag,
-  rows,
-  meta: { touched, error },
-}) => (
-  <FormGroup invalid={touched && error}>
-    <Label invalid={touched && error} htmlFor={input.name}>
-      {label}
-    </Label>
-    <Input
-      {...input}
-      rows={rows}
-      tag={tag}
-      invalid={touched && error}
-      type={type}
-    />
-    {error && touched && <FormErrorMsg>{error}</FormErrorMsg>}
-  </FormGroup>
-);
-
-const validate = values => {
-  const errors = {};
-  if (!values.name) {
-    errors.name = 'This field is required';
-  }
-
-  if (!values.email) {
-    errors.email = 'This field is required';
-  } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)) {
-    errors.email = 'Email address is invalid';
-  }
-
-  if (!values.message) {
-    errors.message = 'This field is required';
-  }
-
-  return errors;
-};
 class Form extends Component {
   state = {
     isModalOpen: false,
@@ -132,7 +82,7 @@ class Form extends Component {
               <Field
                 name="name"
                 type="text"
-                component={renderField}
+                component={FormInput}
                 label="Name"
               />
             </Col>
@@ -140,7 +90,7 @@ class Form extends Component {
               <Field
                 name="email"
                 type="email"
-                component={renderField}
+                component={FormInput}
                 label="Email"
               />
             </Col>
@@ -151,7 +101,7 @@ class Form extends Component {
                 name="message"
                 label="Message"
                 props={{ tag: 'textarea', rows: 7 }}
-                component={renderField}
+                component={FormInput}
               />
               <Button
                 rounded
