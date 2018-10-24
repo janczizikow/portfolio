@@ -824,17 +824,29 @@
   resolved "https://registry.yarnpkg.com/@emotion/hash/-/hash-0.6.5.tgz#097729b84a5164f71f9acd2570ecfd1354d7b360"
   integrity sha512-JlZbn5+adseTdDPTUkx/O1/UZbhaGR5fCLLWQDCIJ4eP9fJcVdP/qjlTveEX6mkNoJHWFbZ47wArWQQ0Qk6nMA==
 
-"@emotion/is-prop-valid@^0.6.1", "@emotion/is-prop-valid@^0.6.5":
+"@emotion/is-prop-valid@^0.6.1":
   version "0.6.7"
   resolved "https://registry.yarnpkg.com/@emotion/is-prop-valid/-/is-prop-valid-0.6.7.tgz#1767d39c29ba786b7afc3d8d727a2896995f01eb"
   integrity sha512-cK5YUueFhAff0GqL5PqPruBCSdiQ9Gatuc2p7uHOsXh1hx+4aKLF3frPSTobFElwlGUypVwF5pjB3hhc7DebjQ==
   dependencies:
     "@emotion/memoize" "^0.6.5"
 
+"@emotion/is-prop-valid@^0.6.5":
+  version "0.6.8"
+  resolved "https://registry.yarnpkg.com/@emotion/is-prop-valid/-/is-prop-valid-0.6.8.tgz#68ad02831da41213a2089d2cab4e8ac8b30cbd85"
+  integrity sha512-IMSL7ekYhmFlILXcouA6ket3vV7u9BqStlXzbKOF9HBtpUPMMlHU+bBxrLOa2NvleVwNIxeq/zL8LafLbeUXcA==
+  dependencies:
+    "@emotion/memoize" "^0.6.6"
+
 "@emotion/memoize@^0.6.1", "@emotion/memoize@^0.6.5":
   version "0.6.5"
   resolved "https://registry.yarnpkg.com/@emotion/memoize/-/memoize-0.6.5.tgz#f868c314b889e7c3d84868a1d1cc323fbb40ca86"
   integrity sha512-n1USr7yICA4LFIv7z6kKsXM8rZJxd1btKCBmDewlit+3OJ2j4bDfgXTAxTHYbPkHS/eztHmFWfsbxW2Pu5mDqA==
+
+"@emotion/memoize@^0.6.6":
+  version "0.6.6"
+  resolved "https://registry.yarnpkg.com/@emotion/memoize/-/memoize-0.6.6.tgz#004b98298d04c7ca3b4f50ca2035d4f60d2eed1b"
+  integrity sha512-h4t4jFjtm1YV7UirAFuSuFGyLa+NNxjdkq6DpFLANNQY5rHueFZHVY+8Cu1HYVP6DrheB0kv4m5xPjo7eKT7yQ==
 
 "@emotion/serialize@^0.9.0":
   version "0.9.0"
@@ -1203,15 +1215,10 @@
   resolved "https://registry.yarnpkg.com/@types/mkdirp/-/mkdirp-0.3.29.tgz#7f2ad7ec55f914482fc9b1ec4bb1ae6028d46066"
   integrity sha1-fyrX7FX5FEgvybHsS7GuYCjUYGY=
 
-"@types/node@*":
+"@types/node@*", "@types/node@^10.0.5":
   version "10.12.0"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-10.12.0.tgz#ea6dcbddbc5b584c83f06c60e82736d8fbb0c235"
   integrity sha512-3TUHC3jsBAB7qVRGxT6lWyYo2v96BMmD2PTcl47H25Lu7UXtFH/2qqmKiVrnel6Ne//0TFYf6uvNX+HW2FRkLQ==
-
-"@types/node@^10.0.5":
-  version "10.10.1"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-10.10.1.tgz#d5c96ca246a418404914d180b7fdd625ad18eca6"
-  integrity sha512-nzsx28VwfaIykfzMAG9TB3jxF5Nn+1/WMKnmVZc8TsB+LMIVvwUscVn7PAq+LFaY5ng5u4jp5mRROSswo76PPA==
 
 "@types/node@^7.0.11":
   version "7.10.0"
@@ -6297,11 +6304,6 @@ fragment-cache@^0.2.1:
   integrity sha1-QpD60n8T6Jvn8zeZxrxaCr//DRk=
   dependencies:
     map-cache "^0.2.2"
-
-framesync@^3.1.8:
-  version "3.1.9"
-  resolved "https://registry.yarnpkg.com/framesync/-/framesync-3.1.9.tgz#f65f815c711cf876f343b1f63da6e18b1384172f"
-  integrity sha512-avNik/k8Wy0r+A2LkoS+4mBb9PoamhBni2u64gRgs5kc1YrApshw6vDL0tqWxdqcUOXSSg6gI9oN0l0GN/FFjA==
 
 framesync@^4.0.0:
   version "4.0.1"
@@ -12295,10 +12297,15 @@ react-hot-loader@^4.1.0:
     react-lifecycles-compat "^3.0.4"
     shallowequal "^1.0.2"
 
-react-is@^16.4.2, react-is@^16.5.1, react-is@^16.5.2:
+react-is@^16.4.2, react-is@^16.5.2:
   version "16.5.2"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.5.2.tgz#e2a7b7c3f5d48062eb769fcb123505eb928722e3"
   integrity sha512-hSl7E6l25GTjNEZATqZIuWOgSnpXb3kD0DVCujmg46K5zLxsbiKaaT6VO9slkSBDPZfYs30lwfJwbOFOnoEnKQ==
+
+react-is@^16.5.1:
+  version "16.6.0"
+  resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.6.0.tgz#456645144581a6e99f6816ae2bd24ee94bdd0c01"
+  integrity sha512-q8U7k0Fi7oxF1HvQgyBjPwDXeMplEsArnKt2iYhuIF86+GBbgLHdAmokL3XUFjTd7Q363OSNG55FOGUdONVn1g==
 
 react-lifecycles-compat@^3.0.0, react-lifecycles-compat@^3.0.4:
   version "3.0.4"
@@ -14036,11 +14043,11 @@ styled-system@^3.0.1, styled-system@^3.1.3:
     prop-types "^15.6.2"
 
 stylefire@^2.0.7:
-  version "2.0.7"
-  resolved "https://registry.yarnpkg.com/stylefire/-/stylefire-2.0.7.tgz#ccb121dbd7e96fb92c311413639830cc2d4c7eab"
-  integrity sha512-jKzMP73SVpiDy7L5+nm20SUAd2LJ3CKiGfpvn3cAQKLlztRoe0F7PnDApA4TxWsAwQvjvYrkv0i+BvJ1eUCf/w==
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/stylefire/-/stylefire-2.1.0.tgz#356dc7951da17f4f55f5f5e6473f2327c17e7077"
+  integrity sha512-DeO5v4w4xwvSoatWkfD++tpPqoolSxZtmrL7mFwxHp70AXJuzvwDVlTkpaXwPXvfevXwiGXA224gOnIk2pLiRA==
   dependencies:
-    framesync "^3.1.8"
+    framesync "^4.0.0"
     hey-listen "^1.0.4"
     style-value-types "^3.0.6"
     tslib "^1.9.1"
