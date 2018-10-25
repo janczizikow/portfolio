@@ -28,7 +28,7 @@ const propTypes = {
   tag: PropTypes.string,
   type: PropTypes.string,
   block: PropTypes.bool,
-  invalid: PropTypes.bool,
+  invalid: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
 };
 
 const defaultProps = {

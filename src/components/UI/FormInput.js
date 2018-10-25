@@ -1,26 +1,21 @@
 import React from 'react';
 import { FormGroup, Label, Input, FormErrorMsg } from './index';
 
-const FormInput = ({
-  input,
-  label,
-  type,
-  tag,
-  rows,
-  meta: { touched, error },
-}) => (
-  <FormGroup invalid={touched && error}>
-    <Label invalid={touched && error} htmlFor={input.name}>
+const FormInput = ({ label, field, form: { touched, errors }, ...rest }) => (
+  <FormGroup invalid={touched[field.name] && errors[field.name]}>
+    <Label
+      invalid={touched[field.name] && errors[field.name]}
+      htmlFor={field.name}
+    >
       {label}
     </Label>
     <Input
-      {...input}
-      rows={rows}
-      tag={tag}
-      invalid={touched && error}
-      type={type}
+      {...field}
+      {...rest}
+      invalid={touched[field.name] && errors[field.name]}
     />
-    {error && touched && <FormErrorMsg>{error}</FormErrorMsg>}
+    {touched[field.name] &&
+      errors[field.name] && <FormErrorMsg>{errors[field.name]}</FormErrorMsg>}
   </FormGroup>
 );
 
