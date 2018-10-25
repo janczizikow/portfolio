@@ -6,7 +6,7 @@ const propTypes = {
   block: PropTypes.bool,
   bold: PropTypes.bool,
   hidden: PropTypes.bool,
-  invalid: PropTypes.bool,
+  invalid: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
   className: PropTypes.string,
   children: PropTypes.node,
   disabled: PropTypes.bool,

@@ -1,5 +1,5 @@
 import React from 'react';
-import Form from '../containers/Form';
+import Form from '../components/Contact/Form';
 import {
   Box,
   Container,
