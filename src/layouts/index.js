@@ -6,6 +6,7 @@ import Helmet from 'react-helmet';
 import { StaticQuery, graphql } from 'gatsby';
 import { ThemeProvider } from 'emotion-theming';
 import Global from './injectGlobal';
+import ErrorBoundry from '../components/ErrorBoundry';
 import * as actions from '../store/actions';
 import { Box, Flex } from '../components/UI';
 import Header from '../components/Header';
@@ -65,18 +66,20 @@ const Layout = ({
         </Helmet>
         <ThemeProvider theme={theme}>
           <Global>
-            <Flex flexDirection="column" css="min-height: 100vh;">
-              <Header openMobileMenu={openMobileMenu} links={links} />
-              <MobileMenu
-                isMobileMenuOpen={isMobileMenuOpen}
-                closeMobileMenu={closeMobileMenu}
-                links={links}
-              />
-              <Box is="main" flex={1}>
-                {children}
-              </Box>
-              <Footer />
-            </Flex>
+            <ErrorBoundry>
+              <Flex flexDirection="column" css="min-height: 100vh;">
+                <Header openMobileMenu={openMobileMenu} links={links} />
+                <MobileMenu
+                  isMobileMenuOpen={isMobileMenuOpen}
+                  closeMobileMenu={closeMobileMenu}
+                  links={links}
+                />
+                <Box is="main" flex={1}>
+                  {children}
+                </Box>
+                <Footer />
+              </Flex>
+            </ErrorBoundry>
           </Global>
         </ThemeProvider>
       </>

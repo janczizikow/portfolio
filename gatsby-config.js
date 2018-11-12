@@ -15,6 +15,12 @@ module.exports = {
     'gatsby-plugin-eslint',
     'gatsby-plugin-emotion',
     {
+      resolve: 'plugin-sentry',
+      options: {
+        dsn: process.env.SENTRY_DSN,
+      },
+    },
+    {
       resolve: 'gatsby-plugin-typography',
       options: {
         pathToConfigModule: 'src/utils/typography.js',

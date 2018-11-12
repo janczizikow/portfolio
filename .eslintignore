@@ -1,4 +1,5 @@
 node_modules/*
 coverage/*
 .cache/*
+plugins/*
 proptypes-to-flow-codemod/*
