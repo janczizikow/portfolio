@@ -1,7 +1,28 @@
+// @flow
 import React from 'react';
 import { FormGroup, Label, Input, FormErrorMsg } from './index';
 
-const FormInput = ({ label, field, form: { touched, errors }, ...rest }) => (
+type Props = {
+  label: string,
+  field: {
+    name: string,
+  },
+  form: {
+    touched: {
+      [key: string]: boolean,
+    },
+    errors: {
+      [key: string]: string,
+    },
+  },
+};
+
+const FormInput = ({
+  label,
+  field,
+  form: { touched, errors },
+  ...rest
+}: Props) => (
   <FormGroup invalid={touched[field.name] && errors[field.name]}>
     <Label
       invalid={touched[field.name] && errors[field.name]}

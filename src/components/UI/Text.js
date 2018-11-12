@@ -1,3 +1,4 @@
+// @flow
 import system from 'system-components/emotion';
 
 const Text = system(

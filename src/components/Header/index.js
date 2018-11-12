@@ -1,27 +1,26 @@
+// @flow
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 import Headroom from 'react-headroom';
 import styled from 'react-emotion';
 import { withTheme } from 'emotion-theming';
 import { Link } from 'gatsby';
+import type { Theme } from '../../utils/types';
 import { Container, Flex } from '../UI';
 import Logo from '../../assets/images/logo.svg';
 import HeaderToggle from './HeaderToggle';
 import HeaderLinks from './HeaderLinks';
 
-const propTypes = {
-  links: PropTypes.arrayOf(
-    PropTypes.shape({
-      to: PropTypes.string,
-      text: PropTypes.string,
-    })
-  ),
-  openMobileMenu: PropTypes.func,
-  theme: PropTypes.shape({
-    colors: PropTypes.shape({
-      bgHeader: PropTypes.string,
-    }),
-  }),
+type HeaderProps = {
+  links?: {
+    to: string,
+    text: string,
+  }[],
+  openMobileMenu: () => mixed,
+  theme: Theme,
+};
+
+type HeaderState = {
+  headroomActive: boolean,
 };
 
 const HeaderInner = styled(Flex)`
@@ -36,7 +35,7 @@ const HeaderLink = styled(Link)`
   color: ${p => p.theme.colors.headingColor};
 `;
 
-class Header extends Component {
+class Header extends Component<HeaderProps, HeaderState> {
   state = {
     headroomActive: false,
   };
@@ -99,7 +98,7 @@ class Header extends Component {
             <HeaderLink to="/">
               <Logo />
             </HeaderLink>
-            <HeaderToggle onClick={() => openMobileMenu()} />
+            <HeaderToggle onClick={openMobileMenu} />
             <HeaderLinks links={links} />
           </HeaderInner>
         </Container>
@@ -107,7 +106,5 @@ class Header extends Component {
     );
   }
 }
-
-Header.propTypes = propTypes;
 
 export default withTheme(Header);

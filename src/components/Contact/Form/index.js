@@ -1,13 +1,22 @@
+// @flow
 import React, { Component } from 'react';
 import { Heading, Modal } from '../../UI';
 import ContactForm from './ContactForm';
 
-class Form extends Component {
+type MessagePayload = { error: { name: string } } | { name: string };
+
+type State = {
+  isModalOpen: boolean,
+  message: null | MessagePayload,
+};
+
+class Form extends Component<{}, State> {
   state = {
     isModalOpen: false,
+    message: null,
   };
 
-  displayMessage = payload => {
+  displayMessage = (payload: MessagePayload) => {
     this.setState({
       isModalOpen: true,
       message: payload,

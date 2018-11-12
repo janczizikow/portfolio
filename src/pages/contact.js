@@ -1,3 +1,4 @@
+// @flow
 import React from 'react';
 import Form from '../components/Contact/Form';
 import {

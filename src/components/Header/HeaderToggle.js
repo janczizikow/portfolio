@@ -1,25 +1,27 @@
+// @flow
 import React from 'react';
-import PropTypes from 'prop-types';
 import { Menu } from 'react-feather';
 import { IconButton } from '../UI';
 import presets from '../../utils/presets';
 
-const propTypes = {
-  onClick: PropTypes.func,
+type Props = {
+  onClick: () => mixed,
 };
 
-const HeaderToggle = ({ onClick }) => (
-  <IconButton
-    type="button"
-    aria-label="mobile menu"
-    color="headingColor"
-    css={{ [presets.lg]: { display: 'none' } }}
-    onClick={onClick}
-  >
-    <Menu />
-  </IconButton>
-);
+const HeaderToggle = (props: Props) => {
+  const { onClick } = props;
 
-HeaderToggle.propTypes = propTypes;
+  return (
+    <IconButton
+      type="button"
+      aria-label="mobile menu"
+      color="headingColor"
+      css={{ [presets.lg]: { display: 'none' } }}
+      onClick={onClick}
+    >
+      <Menu />
+    </IconButton>
+  );
+};
 
 export default HeaderToggle;

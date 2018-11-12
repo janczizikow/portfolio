@@ -1,3 +1,4 @@
 node_modules/*
 coverage/*
 .cache/*
+proptypes-to-flow-codemod/*

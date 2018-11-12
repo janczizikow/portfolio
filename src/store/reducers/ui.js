@@ -1,6 +1,15 @@
+// @flow
 import * as actionTypes from '../actions/actionTypes';
 import { updateStateObject } from '../../utils';
 import theme, { colorThemes } from '../../utils/theme';
+import type { Theme } from '../../utils/types';
+import type { UIActions } from '../actions/ui';
+
+export type UIState = {
+  +isMobileMenuOpen: boolean,
+  +isModalOpen: boolean,
+  +theme: Theme,
+};
 
 const initialState = {
   isMobileMenuOpen: false,
@@ -11,17 +20,17 @@ const initialState = {
   },
 };
 
-const openMobileMenu = state =>
+const openMobileMenu = (state: UIState) =>
   updateStateObject(state, {
     isMobileMenuOpen: true,
   });
 
-const closeMobileMenu = state =>
+const closeMobileMenu = (state: UIState) =>
   updateStateObject(state, {
     isMobileMenuOpen: false,
   });
 
-const switchTheme = state => {
+const switchTheme = (state: UIState) => {
   const colorTheme =
     state.theme.activeTheme === 'light' ? colorThemes.dark : colorThemes.light;
 
@@ -37,7 +46,7 @@ const switchTheme = state => {
   });
 };
 
-const reducer = (state = initialState, action) => {
+const reducer = (state: UIState = initialState, action: UIActions): UIState => {
   switch (action.type) {
     case actionTypes.OPEN_MOBILE_MENU:
       return openMobileMenu(state);

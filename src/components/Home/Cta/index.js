@@ -1,3 +1,4 @@
+// @flow
 import React from 'react';
 import { Box, Container, Heading, Button } from '../../UI';
 

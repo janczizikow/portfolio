@@ -1,0 +1,9 @@
+{
+  "globals": {
+    "createSpyObj": true,
+    "React": true,
+    "shallow": true,
+    "render": true,
+    "mount": true
+  }
+}

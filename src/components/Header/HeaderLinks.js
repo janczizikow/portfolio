@@ -1,21 +1,20 @@
+// @flow
 import React from 'react';
-import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import styled from 'react-emotion';
 import { Moon, Sun } from 'react-feather';
 import * as actions from '../../store/actions';
+import type { State, Dispatch } from '../../utils/types';
 import { Box, IconButton } from '../UI';
 import HeaderLink from './HeaderLink';
 
-const propTypes = {
-  activeTheme: PropTypes.string,
-  switchTheme: PropTypes.func,
-  links: PropTypes.arrayOf(
-    PropTypes.shape({
-      to: PropTypes.string.isRequired,
-      text: PropTypes.string.isRequired,
-    })
-  ),
+type HeaderLinksProps = {
+  activeTheme: 'light' | 'dark',
+  switchTheme: () => any,
+  links?: {
+    to: string,
+    text: string,
+  }[],
 };
 
 const HeaderLinksNav = styled(Box)`
@@ -28,7 +27,8 @@ const HeaderLinksNav = styled(Box)`
   }
 `;
 
-const HeaderLinks = ({ activeTheme, switchTheme, links }) => {
+const HeaderLinks = (props: HeaderLinksProps) => {
+  const { activeTheme, switchTheme, links } = props;
   let headerLinks = null;
 
   if (links) {
@@ -49,13 +49,11 @@ const HeaderLinks = ({ activeTheme, switchTheme, links }) => {
   );
 };
 
-HeaderLinks.propTypes = propTypes;
-
-const mapStateToProps = state => ({
+const mapStateToProps = (state: State) => ({
   activeTheme: state.ui.theme.activeTheme,
 });
 
-const mapDispatchToProps = dispatch => ({
+const mapDispatchToProps = (dispatch: Dispatch) => ({
   switchTheme: () => dispatch(actions.switchTheme()),
 });
 

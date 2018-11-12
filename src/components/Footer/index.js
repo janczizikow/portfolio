@@ -1,3 +1,4 @@
+// @flow
 import React from 'react';
 import { Github, Codepen, Linkedin } from 'react-feather';
 import { Box, Flex } from '../UI';

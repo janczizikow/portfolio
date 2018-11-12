@@ -1,38 +1,38 @@
+// @flow
 import React from 'react';
-import PropTypes from 'prop-types';
 import { css } from 'emotion';
 import facepaint from 'facepaint';
 import Box from './Box';
 import Flex from './Flex';
 import theme from '../../utils/theme';
 
-const propTypes = {
-  fluid: PropTypes.bool,
-};
+type ContainerProps = { fluid?: boolean };
 
 const { breakpoints, containerWidths } = theme;
 const mq = facepaint(breakpoints.map(bp => `@media (min-width: ${bp})`));
 
-const Container = ({ fluid, ...rest }) => (
-  <Box
-    mx="auto"
-    px={3}
-    width="100%"
-    className={
-      !fluid &&
-      css(
-        mq({
-          maxWidth: containerWidths,
-        })
-      )
-    }
-    {...rest}
-  />
-);
+const Container = (props: ContainerProps) => {
+  const { fluid, ...rest } = props;
 
-Container.propTypes = propTypes;
+  return (
+    <Box
+      mx="auto"
+      px={3}
+      width="100%"
+      className={
+        !fluid &&
+        css(
+          mq({
+            maxWidth: containerWidths,
+          })
+        )
+      }
+      {...rest}
+    />
+  );
+};
 
-const Row = props => (
+const Row = (props: any) => (
   <Flex
     mx={-3}
     alignItems="center"
@@ -42,7 +42,7 @@ const Row = props => (
   />
 );
 
-const Col = props => (
+const Col = (props: any) => (
   <Box px={3} width="100%" css={{ minHeight: 1 }} {...props} />
 );
 

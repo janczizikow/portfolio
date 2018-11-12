@@ -1,22 +1,24 @@
+// @flow
 import React from 'react';
-import PropTypes from 'prop-types';
 import { css } from 'emotion';
 import { Box, Container, Heading } from '../../UI';
 import ProjectItem from './ProjectItem';
 import theme from '../../../utils/theme';
+import type { Project } from '../../../utils/types';
 
-const propTypes = {
-  projects: PropTypes.arrayOf(
-    PropTypes.shape({
-      node: PropTypes.shape({
-        id: PropTypes.string.isRequired,
-        category: PropTypes.string.isRequired,
-        date: PropTypes.string.isRequired,
-        name: PropTypes.string.isRequired,
-        slug: PropTypes.string.isRequired,
-      }),
-    })
-  ),
+type ProjectsProps = {
+  projects: Array<{
+    node: {
+      thumbnail: {
+        bigThumbnails: {
+          fluid: string,
+        },
+        smallThumbnails: {
+          fluid: string,
+        },
+      },
+    } & Project,
+  }>,
 };
 
 const projectsInner = css`
@@ -47,7 +49,8 @@ const projectsInner = css`
   }
 `;
 
-const Projects = ({ projects }) => {
+const Projects = (props: ProjectsProps) => {
+  const { projects } = props;
   let projectsDOM = null;
 
   if (projects) {
@@ -69,7 +72,5 @@ const Projects = ({ projects }) => {
     </Box>
   );
 };
-
-Projects.propTypes = propTypes;
 
 export default Projects;

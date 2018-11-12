@@ -1,17 +1,17 @@
-import React, { PureComponent } from 'react';
-import PropTypes from 'prop-types';
+// @flow
+import React, { PureComponent, type Node } from 'react';
 import posed, { PoseGroup } from 'react-pose';
 
-const propTypes = {
-  children: PropTypes.node.isRequired,
-  location: PropTypes.shape({
-    pathname: PropTypes.string,
-  }),
+type PageTransitionProps = {
+  children: Node,
+  location: {
+    pathname: string,
+  },
 };
 
 const timeout = 250;
 
-class PageTransition extends PureComponent {
+class PageTransition extends PureComponent<PageTransitionProps> {
   render() {
     const { children, location } = this.props;
 
@@ -26,7 +26,5 @@ class PageTransition extends PureComponent {
     );
   }
 }
-
-PageTransition.propTypes = propTypes;
 
 export default PageTransition;

@@ -1,5 +1,5 @@
+// @flow
 import React from 'react';
-import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
 import Image from 'gatsby-image';
 import { css } from 'emotion';
@@ -7,15 +7,33 @@ import { Box, Container, Heading, Text, Button } from '../components/UI';
 import Controls from '../components/Project/Controls';
 import theme from '../utils/theme';
 
-const propTypes = {
-  pageContext: PropTypes.shape({
-    name: PropTypes.string.isRequired,
-    description: PropTypes.string.isRequired,
-    next: PropTypes.shape({
-      name: PropTypes.string,
-      slug: PropTypes.string,
-    }),
-  }),
+type ProjectProps = {
+  pageContext: {
+    name: string,
+    description: string,
+    links?: Array<{
+      url: string,
+      text: string,
+    }>,
+    next?: {
+      name: string,
+      slug: string,
+    },
+    prev?: {
+      name: string,
+      slug: string,
+    },
+  },
+  data: {
+    ProjectImages: {
+      childrenFile: Array<{
+        id: string,
+        childImageSharp: {
+          fluid: string,
+        },
+      }>,
+    },
+  },
 };
 
 const projectTitleStyles = css`
@@ -38,7 +56,7 @@ const ProjectPage = ({
   data: {
     ProjectImages: { childrenFile: photos },
   },
-}) => {
+}: ProjectProps) => {
   let projectLinks = null;
 
   if (links) {
@@ -76,8 +94,6 @@ const ProjectPage = ({
     </>
   );
 };
-
-ProjectPage.propTypes = propTypes;
 
 export const pageQuery = graphql`
   query($id: String!) {

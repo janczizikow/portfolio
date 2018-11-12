@@ -1,3 +1,4 @@
+// @flow
 import React from 'react';
 import styled from 'react-emotion';
 import { Box, Container, Heading, Text, Button } from '../components/UI';

@@ -1,3 +1,4 @@
+// @flow
 import system from 'system-components/emotion';
 import Box from './Box';
 

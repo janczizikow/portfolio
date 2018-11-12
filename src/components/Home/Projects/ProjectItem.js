@@ -1,18 +1,23 @@
+// @flow
 import React from 'react';
-import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
 import styled from 'react-emotion';
 import Image from 'gatsby-image';
 import { Heading, Text } from '../../UI';
+import type { Project } from '../../../utils/types';
 
-const propTypes = {
-  project: PropTypes.shape({
-    id: PropTypes.string.isRequired,
-    name: PropTypes.string.isRequired,
-    slug: PropTypes.string.isRequired,
-    date: PropTypes.string,
-  }),
-  bigThumbnail: PropTypes.bool,
+type ProjectItemProps = {
+  project: {
+    thumbnail: {
+      bigThumbnails: {
+        fluid: string,
+      },
+      smallThumbnails: {
+        fluid: string,
+      },
+    },
+  } & Project,
+  bigThumbnail: boolean,
 };
 
 const ProjectItemLink = styled(Link)`
@@ -113,29 +118,31 @@ const ProjectInner = styled('figcaption')`
   z-index: 2;
 `;
 
-const ProjectItem = ({ project, bigThumbnail }) => (
-  <ProjectItemLink to={`projects/${project.slug}`}>
-    <ProjectThumbnail>
-      <ProjectImage
-        backgroundColor
-        title={project.name}
-        alt={project.name}
-        fluid={
-          bigThumbnail
-            ? project.thumbnail.bigThumbnails.fluid
-            : project.thumbnail.smallThumbnails.fluid
-        }
-      />
-      <ProjectInner>
-        <Text>{project.date}</Text>
-        <Heading is="h3" color="white">
-          {project.name}
-        </Heading>
-      </ProjectInner>
-    </ProjectThumbnail>
-  </ProjectItemLink>
-);
+const ProjectItem = (props: ProjectItemProps) => {
+  const { project, bigThumbnail } = props;
 
-ProjectItem.propTypes = propTypes;
+  return (
+    <ProjectItemLink to={`projects/${project.slug}`}>
+      <ProjectThumbnail>
+        <ProjectImage
+          backgroundColor
+          title={project.name}
+          alt={project.name}
+          fluid={
+            bigThumbnail
+              ? project.thumbnail.bigThumbnails.fluid
+              : project.thumbnail.smallThumbnails.fluid
+          }
+        />
+        <ProjectInner>
+          <Text>{project.date}</Text>
+          <Heading is="h3" color="white">
+            {project.name}
+          </Heading>
+        </ProjectInner>
+      </ProjectThumbnail>
+    </ProjectItemLink>
+  );
+};
 
 export default ProjectItem;

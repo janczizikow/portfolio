@@ -12,3 +12,6 @@ yarn-error.log
 
 # Environment variables
 .env*
+
+# Codemods
+proptypes-to-flow-codemod/*

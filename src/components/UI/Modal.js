@@ -1,20 +1,21 @@
+// @flow
 import React from 'react';
-import PropTypes from 'prop-types';
+import type { Node } from 'react';
 import ReactModal from 'react-modal';
 import { X } from 'react-feather';
 import { keyframes } from 'react-emotion';
 import { css } from 'emotion';
 import { Box, IconButton } from './index';
 
-if (process.env.NODE_ENV !== 'test') ReactModal.setAppElement('#___gatsby');
-
-const propTypes = {
-  isOpen: PropTypes.bool.isRequired,
-  onClose: PropTypes.func,
-  header: PropTypes.node,
-  children: PropTypes.node,
-  footer: PropTypes.node,
+type ModalProps = {
+  isOpen: boolean,
+  onClose?: () => void,
+  header?: Node,
+  children?: Node,
+  footer?: Node,
 };
+
+if (process.env.NODE_ENV !== 'test') ReactModal.setAppElement('#___gatsby');
 
 const fadeIn = keyframes`
   from { opacity: 0; }
@@ -61,27 +62,29 @@ const modalCloseBtn = css`
   cursor: pointer;
 `;
 
-const Modal = ({ isOpen, onClose, header, footer, children }) => (
-  <ReactModal
-    isOpen={isOpen}
-    onRequestClose={onClose}
-    closeTimeoutMS={300}
-    htmlOpenClassName="lock-scroll"
-    bodyOpenClassName="lock-scroll"
-    overlayClassName={overlay}
-    className={modalContent}
-  >
-    <Box p={3} pr="56px">
-      {header}
-      <IconButton heightAuto onClick={onClose} css={modalCloseBtn}>
-        <X />
-      </IconButton>
-    </Box>
-    <Box p={3}>{children}</Box>
-    {footer && <Box p={3}>{footer}</Box>}
-  </ReactModal>
-);
+const Modal = (props: ModalProps) => {
+  const { isOpen, onClose, header, footer, children } = props;
 
-Modal.propTypes = propTypes;
+  return (
+    <ReactModal
+      isOpen={isOpen}
+      onRequestClose={onClose}
+      closeTimeoutMS={300}
+      htmlOpenClassName="lock-scroll"
+      bodyOpenClassName="lock-scroll"
+      overlayClassName={overlay}
+      className={modalContent}
+    >
+      <Box p={3} pr="56px">
+        {header}
+        <IconButton heightAuto onClick={onClose} css={modalCloseBtn}>
+          <X />
+        </IconButton>
+      </Box>
+      <Box p={3}>{children}</Box>
+      {footer && <Box p={3}>{footer}</Box>}
+    </ReactModal>
+  );
+};
 
 export default Modal;

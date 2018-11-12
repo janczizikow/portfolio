@@ -1,25 +1,35 @@
+// @flow
 import React from 'react';
-import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
 import { Hero, Projects, Cta } from '../components/Home';
+import type { Project } from '../utils/types';
 
-const propTypes = {
-  data: PropTypes.shape({
-    allProject: PropTypes.shape({
-      edges: PropTypes.array.isRequired,
-    }),
-  }),
+type Props = {
+  data: {
+    allProject: {
+      edges: Array<{
+        node: {
+          thumbnail: {
+            smallThumbnails: {
+              fluid: string,
+            },
+            bigThumbnails: {
+              fluid: string,
+            },
+          },
+        } & Project,
+      }>,
+    },
+  },
 };
 
-const Home = ({ data }) => (
+const Home = ({ data }: Props) => (
   <>
     <Hero />
     <Projects projects={data.allProject.edges} />
     <Cta />
   </>
 );
-
-Home.propTypes = propTypes;
 
 export const pageQuery = graphql`
   query {

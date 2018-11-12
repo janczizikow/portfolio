@@ -1,5 +1,5 @@
+// @flow
 import React from 'react';
-import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
 import Image from 'gatsby-image';
 import {
@@ -13,8 +13,14 @@ import {
   Button,
 } from '../components/UI';
 
-const propTypes = {
-  data: PropTypes.instanceOf(Object),
+type AboutProps = {
+  data: {
+    aboutImage: {
+      childImageSharp: {
+        fluid: string,
+      },
+    },
+  },
 };
 
 const About = ({
@@ -23,7 +29,7 @@ const About = ({
       childImageSharp: { fluid: aboutImg },
     },
   },
-}) => (
+}: AboutProps) => (
   <Box py={4}>
     <Container>
       <Row alignItems="center" flexWrap="wrap">
@@ -59,8 +65,6 @@ const About = ({
     </Container>
   </Box>
 );
-
-About.propTypes = propTypes;
 
 export const pageQuery = graphql`
   query {

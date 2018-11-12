@@ -1,5 +1,5 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+// @flow
+import * as React from 'react';
 import styled from 'react-emotion';
 
 const StyledInput = styled('input')`
@@ -24,20 +24,23 @@ const StyledInput = styled('input')`
   }
 `;
 
-const propTypes = {
-  tag: PropTypes.string,
-  type: PropTypes.string,
-  block: PropTypes.bool,
-  invalid: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
+type InputProps = {
+  tag: string,
+  type: string,
+  block?: boolean,
+  invalid: string | boolean,
+  defaultProps: {
+    tag: 'input',
+    text: 'text',
+  },
 };
 
-const defaultProps = {
-  tag: 'input',
-  type: 'text',
-};
 /* eslint-disable no-param-reassign */
-const Input = React.forwardRef(
-  ({ tag: Tag, type, block, invalid, color, ...attributes }, ref) => {
+const Input: React.ComponentType<InputProps> = React.forwardRef(
+  (
+    { tag: Tag = 'input', type = 'text', block, invalid, color, ...attributes },
+    ref
+  ) => {
     if (Tag === 'input') {
       attributes.type = type;
     }
@@ -54,8 +57,5 @@ const Input = React.forwardRef(
     return <Tag ref={ref} {...attributes} />;
   }
 );
-
-Input.propTypes = propTypes;
-Input.defaultProps = defaultProps;
 
 export default StyledInput.withComponent(Input);

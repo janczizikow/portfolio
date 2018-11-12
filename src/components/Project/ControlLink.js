@@ -1,3 +1,4 @@
+// @flow
 import { Link } from 'gatsby';
 import styled from 'react-emotion';
 

@@ -1,5 +1,5 @@
+// @flow
 import React from 'react';
-import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
 import styled from 'react-emotion';
 import posed, { PoseGroup } from 'react-pose';
@@ -8,15 +8,13 @@ import MobileMenuClose from './MobileMenuClose';
 import MobileMenuLink from './MobileMenuLink';
 import Logo from '../../assets/images/logo.svg';
 
-const propTypes = {
-  isMobileMenuOpen: PropTypes.bool,
-  closeMobileMenu: PropTypes.func,
-  links: PropTypes.arrayOf(
-    PropTypes.shape({
-      to: PropTypes.string,
-      text: PropTypes.string,
-    })
-  ),
+type MobileMenuProps = {
+  isMobileMenuOpen?: boolean,
+  closeMobileMenu?: () => mixed,
+  links: {
+    to: string,
+    text: string,
+  }[],
 };
 
 const Menu = posed.div({
@@ -58,45 +56,47 @@ const Box = styled(LinkTransitionContainer)`
   width: 100%;
 `;
 
-const MobileMenu = ({ isMobileMenuOpen, closeMobileMenu, links }) => (
-  <PoseGroup flipMove={false}>
-    {isMobileMenuOpen && (
-      <StyledMenu key="mobileMenu" pose>
-        <Container fluid>
-          <MenuTop
-            alignItems="center"
-            justifyContent="space-between"
-            color="white"
-          >
-            <Link onClick={closeMobileMenu} css={{ color: '#fff' }} to="/">
-              <Logo />
-            </Link>
-            <MobileMenuClose onClick={closeMobileMenu} />
-          </MenuTop>
-          <MenuLinks alignItems="center" width="100%">
-            <Box>
-              {links.map(link => (
-                <LinkTransition
-                  key={link.text}
-                  style={{ opacity: 0, transform: 'translateY(-24px)' }}
-                >
-                  <MobileMenuLink
-                    onClick={closeMobileMenu}
-                    activeStyle={{ opacity: 1 }}
-                    to={link.to}
-                  >
-                    {link.text}
-                  </MobileMenuLink>
-                </LinkTransition>
-              ))}
-            </Box>
-          </MenuLinks>
-        </Container>
-      </StyledMenu>
-    )}
-  </PoseGroup>
-);
+const MobileMenu = (props: MobileMenuProps) => {
+  const { isMobileMenuOpen, closeMobileMenu, links } = props;
 
-MobileMenu.propTypes = propTypes;
+  return (
+    <PoseGroup flipMove={false}>
+      {isMobileMenuOpen && (
+        <StyledMenu key="mobileMenu" pose>
+          <Container fluid>
+            <MenuTop
+              alignItems="center"
+              justifyContent="space-between"
+              color="white"
+            >
+              <Link onClick={closeMobileMenu} css={{ color: '#fff' }} to="/">
+                <Logo />
+              </Link>
+              <MobileMenuClose onClick={closeMobileMenu} />
+            </MenuTop>
+            <MenuLinks alignItems="center" width="100%">
+              <Box>
+                {links.map(link => (
+                  <LinkTransition
+                    key={link.text}
+                    style={{ opacity: 0, transform: 'translateY(-24px)' }}
+                  >
+                    <MobileMenuLink
+                      onClick={closeMobileMenu}
+                      activeStyle={{ opacity: 1 }}
+                      to={link.to}
+                    >
+                      {link.text}
+                    </MobileMenuLink>
+                  </LinkTransition>
+                ))}
+              </Box>
+            </MenuLinks>
+          </Container>
+        </StyledMenu>
+      )}
+    </PoseGroup>
+  );
+};
 
 export default MobileMenu;

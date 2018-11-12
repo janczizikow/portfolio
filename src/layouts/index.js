@@ -1,5 +1,6 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+// @flow
+import React, { type Node } from 'react';
+// import type { Dispatch } from 'redux';
 import { connect } from 'react-redux';
 import Helmet from 'react-helmet';
 import { StaticQuery, graphql } from 'gatsby';
@@ -10,13 +11,14 @@ import { Box, Flex } from '../components/UI';
 import Header from '../components/Header';
 import MobileMenu from '../components/MobileMenu';
 import Footer from '../components/Footer';
+import type { Theme, State, Dispatch } from '../utils/types';
 
-const propTypes = {
-  children: PropTypes.node.isRequired,
-  theme: PropTypes.instanceOf(Object).isRequired,
-  openMobileMenu: PropTypes.func.isRequired,
-  closeMobileMenu: PropTypes.func.isRequired,
-  isMobileMenuOpen: PropTypes.bool.isRequired,
+type Props = {
+  children: Node,
+  theme: Theme,
+  isMobileMenuOpen: boolean,
+  openMobileMenu: () => mixed,
+  closeMobileMenu: () => mixed,
 };
 
 const links = [
@@ -31,7 +33,7 @@ const Layout = ({
   isMobileMenuOpen,
   openMobileMenu,
   closeMobileMenu,
-}) => (
+}: Props) => (
   <StaticQuery
     query={graphql`
       query SiteTitleQuery {
@@ -82,14 +84,12 @@ const Layout = ({
   />
 );
 
-Layout.propTypes = propTypes;
-
-const mapStateToProps = state => ({
+const mapStateToProps = (state: State) => ({
   theme: state.ui.theme,
   isMobileMenuOpen: state.ui.isMobileMenuOpen,
 });
 
-const mapDispatchToProps = dispatch => ({
+const mapDispatchToProps = (dispatch: Dispatch) => ({
   openMobileMenu: () => dispatch(actions.openMobileMenu()),
   closeMobileMenu: () => dispatch(actions.closeMobileMenu()),
 });

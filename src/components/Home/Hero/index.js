@@ -1,3 +1,4 @@
+// @flow
 import React from 'react';
 import styled, { keyframes } from 'react-emotion';
 import AnchorLink from 'react-anchor-link-smooth-scroll';

@@ -1,0 +1,19 @@
+[ignore]
+<PROJECT_ROOT>/content/.*
+<PROJECT_ROOT>/node_modules/.*
+<PROJECT_ROOT>/public/.*
+<PROJECT_ROOT>/src/__tests__/.*
+
+[include]
+
+[libs]
+
+[lints]
+
+[options]
+module.system=haste
+module.system.node.resolve_dirname=node_modules
+module.system.node.resolve_dirname=src
+# module.name_mapper='Types' -> '<PROJECT_ROOT>/src/utils/types.js'
+
+[strict]

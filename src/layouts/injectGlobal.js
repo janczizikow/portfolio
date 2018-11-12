@@ -1,14 +1,15 @@
+// @flow
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 import { injectGlobal } from 'react-emotion';
 import { withTheme } from 'emotion-theming';
+import type { Theme } from '../utils/types';
 
-const propTypes = {
-  theme: PropTypes.instanceOf(Object),
-  children: PropTypes.instanceOf(Object),
+type GlobalProps = {
+  theme: Theme,
+  children: {},
 };
 
-class Global extends Component {
+class Global extends Component<GlobalProps> {
   componentDidUpdate(prevProps) {
     const { theme } = this.props;
 
@@ -92,7 +93,5 @@ class Global extends Component {
     return React.Children.only(children);
   }
 }
-
-Global.propTypes = propTypes;
 
 export default withTheme(Global);

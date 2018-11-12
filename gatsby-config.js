@@ -11,6 +11,7 @@ module.exports = {
   plugins: [
     'gatsby-plugin-remove-trailing-slashes',
     'gatsby-plugin-react-helmet',
+    'gatsby-plugin-flow',
     'gatsby-plugin-eslint',
     'gatsby-plugin-emotion',
     {

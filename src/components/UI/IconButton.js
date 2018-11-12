@@ -1,8 +1,14 @@
+// @flow
 import React from 'react';
 import { css, cx } from 'emotion';
 import Flex from './Flex';
 
-const IconButton = ({ heightAuto, className, ...rest }) => (
+type IconButtonProps = {
+  heightAuto?: boolean,
+  className?: string,
+};
+
+const IconButton = ({ heightAuto, className, ...rest }: IconButtonProps) => (
   <Flex
     is="button"
     type="button"
@@ -24,5 +30,9 @@ const IconButton = ({ heightAuto, className, ...rest }) => (
     {...rest}
   />
 );
+
+IconButton.defaultProps = {
+  heightAuto: false,
+};
 
 export default IconButton;

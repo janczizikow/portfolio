@@ -1,19 +1,20 @@
+// @flow
+import type { Node, ComponentType } from 'react';
 import styled from 'react-emotion';
-import PropTypes from 'prop-types';
 
-const propTypes = {
-  htmlFor: PropTypes.string.isRequired,
-  block: PropTypes.bool,
-  bold: PropTypes.bool,
-  hidden: PropTypes.bool,
-  invalid: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
-  className: PropTypes.string,
-  children: PropTypes.node,
-  disabled: PropTypes.bool,
-  check: PropTypes.bool,
+type LabelProps = {
+  htmlFor: string,
+  block?: boolean,
+  bold?: boolean,
+  hidden?: boolean,
+  invalid?: string | boolean,
+  className?: string,
+  children?: Node,
+  disabled?: boolean,
+  check?: boolean,
 };
 
-const Label = styled.label`
+const Label: ComponentType<LabelProps> = styled.label`
   display: ${p => {
     if (p.hidden) {
       return 'none';
@@ -27,7 +28,5 @@ const Label = styled.label`
   }};
   color: ${p => p.invalid && p.theme.colors.error};
 `;
-
-Label.propTypes = propTypes;
 
 export default Label;

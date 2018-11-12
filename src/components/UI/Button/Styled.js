@@ -1,3 +1,4 @@
+// @flow
 import styled, { keyframes } from 'react-emotion';
 
 const loader = keyframes`

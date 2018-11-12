@@ -1,18 +1,16 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+// @flow
+import React, { type Node } from 'react';
 import { Provider } from 'react-redux';
 import configureStore from '../store/configureStore';
 
-const propTypes = {
-  element: PropTypes.node.isRequired,
+type withProviderProps = {
+  element: Node,
 };
 
 const store = configureStore();
 
-const withProvider = ({ element }) => (
+const withProvider = ({ element }: withProviderProps) => (
   <Provider store={store}>{element}</Provider>
 );
-
-withProvider.propTypes = propTypes;
 
 export default withProvider;

@@ -1,3 +1,4 @@
+// import type { Theme } from 'Types';
 // themes
 export const colorThemes = {
   light: {
@@ -69,7 +70,7 @@ const grid = { breakpoints, containerWidths };
 
 const headerHeight = '3.625rem';
 
-export default {
+const theme = {
   colors,
   space,
   typography,
@@ -78,3 +79,5 @@ export default {
   grid,
   headerHeight,
 };
+
+export default theme;
