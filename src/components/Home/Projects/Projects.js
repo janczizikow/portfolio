@@ -7,31 +7,6 @@ import ProjectItem from './ProjectItem';
 import theme from '../../../utils/theme';
 import type { Project } from '../../../utils/types';
 
-export const PROJECTS_QUERY = graphql`
-  query ProjectsQuery {
-    projects: allContentfulProject(sort: { fields: date, order: DESC }) {
-      edges {
-        node {
-          id
-          name
-          slug
-          date(formatString: "YYYY, MMM DD")
-          bigThumb: bigThumbnail {
-            fluid(maxWidth: 1140) {
-              ...GatsbyContentfulFluid
-            }
-          }
-          smallThumb: bigThumbnail {
-            fluid(maxWidth: 720) {
-              ...GatsbyContentfulFluid
-            }
-          }
-        }
-      }
-    }
-  }
-`;
-
 type ProjectsProps = {
   projects: {
     edges: Array<{
@@ -81,7 +56,30 @@ const projectsInner = css`
 
 const Projects = () => (
   <StaticQuery
-    query={PROJECTS_QUERY}
+    query={graphql`
+      {
+        projects: allContentfulProject(sort: { fields: date, order: DESC }) {
+          edges {
+            node {
+              id
+              name
+              slug
+              date(formatString: "YYYY, MMM DD")
+              bigThumb: bigThumbnail {
+                fluid(maxWidth: 1140) {
+                  ...GatsbyContentfulFluid
+                }
+              }
+              smallThumb: bigThumbnail {
+                fluid(maxWidth: 720) {
+                  ...GatsbyContentfulFluid
+                }
+              }
+            }
+          }
+        }
+      }
+    `}
     render={({ projects }: ProjectsProps) => (
       <Box id="projects" bg="bgGreyColor" py="3rem">
         <Container>
