@@ -8,15 +8,12 @@ export type Project = {
   links?: {
     text: string,
     url: string,
-  },
-  next?: {
-    name: string,
-    slug: string,
-  },
-  prev?: {
-    name: string,
-    slug: string,
-  },
+  }[],
+};
+
+export type ProjectNav = {
+  name: string,
+  slug: string,
 };
 
 type Colors = {

@@ -15,12 +15,6 @@ module.exports = {
     'gatsby-plugin-eslint',
     'gatsby-plugin-emotion',
     {
-      resolve: 'plugin-sentry',
-      options: {
-        dsn: process.env.SENTRY_DSN,
-      },
-    },
-    {
       resolve: 'gatsby-plugin-typography',
       options: {
         pathToConfigModule: 'src/utils/typography.js',
@@ -80,12 +74,26 @@ module.exports = {
       },
     },
     {
+      resolve: 'plugin-sentry',
+      options: {
+        dsn: process.env.SENTRY_DSN,
+      },
+    },
+    {
+      resolve: 'gatsby-source-contentful',
+      options: {
+        spaceId: process.env.CONTENTFUL_SPACE_ID,
+        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+      },
+    },
+    {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'images',
         path: `${__dirname}/src/assets/images`,
       },
     },
+    'gatsby-transformer-remark',
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
     'gatsby-plugin-offline',

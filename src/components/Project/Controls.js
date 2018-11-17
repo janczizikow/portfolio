@@ -3,16 +3,11 @@ import React from 'react';
 import { ChevronLeft, ChevronRight } from 'react-feather';
 import Link from './ControlLink';
 import { Box, Flex, Container, Text } from '../UI';
+import { type ProjectNav } from '../../utils/types';
 
 type ControlsProps = {
-  prev?: {
-    slug: string,
-    name: string,
-  },
-  next?: {
-    slug: string,
-    name: string,
-  },
+  prev: ProjectNav | void,
+  next?: ProjectNav | void,
 };
 
 const Controls = (props: ControlsProps) => {

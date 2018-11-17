@@ -7,16 +7,18 @@ import { Heading, Text } from '../../UI';
 import type { Project } from '../../../utils/types';
 
 type ProjectItemProps = {
-  project: {
-    thumbnail: {
-      bigThumbnails: {
-        fluid: string,
-      },
-      smallThumbnails: {
-        fluid: string,
+  project: Project & {
+    bigThumb: {
+      fluid: {
+        src: string,
       },
     },
-  } & Project,
+    smallThumb: {
+      fluid: {
+        src: string,
+      },
+    },
+  },
   bigThumbnail: boolean,
 };
 
@@ -129,9 +131,7 @@ const ProjectItem = (props: ProjectItemProps) => {
           title={project.name}
           alt={project.name}
           fluid={
-            bigThumbnail
-              ? project.thumbnail.bigThumbnails.fluid
-              : project.thumbnail.smallThumbnails.fluid
+            bigThumbnail ? project.bigThumb.fluid : project.smallThumb.fluid
           }
         />
         <ProjectInner>

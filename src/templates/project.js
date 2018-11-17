@@ -3,38 +3,33 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import Image from 'gatsby-image';
 import { css } from 'emotion';
+import { v4 } from 'node-uuid';
 import { Box, Container, Heading, Text, Button } from '../components/UI';
 import Controls from '../components/Project/Controls';
 import theme from '../utils/theme';
+import { type ProjectNav } from '../utils/types';
 
-type ProjectProps = {
-  pageContext: {
-    name: string,
-    description: string,
-    links?: Array<{
-      url: string,
-      text: string,
-    }>,
-    next?: {
-      name: string,
-      slug: string,
-    },
-    prev?: {
-      name: string,
-      slug: string,
-    },
-  },
+interface ProjectProps {
   data: {
-    ProjectImages: {
-      childrenFile: Array<{
-        id: string,
-        childImageSharp: {
-          fluid: string,
-        },
+    project: {
+      name: string,
+      descriptionNode: {
+        description: string,
+      },
+      links?: Array<{
+        url: string,
+        text: string,
+      }>,
+      photos: Array<{
+        fluid: string,
       }>,
     },
-  },
-};
+  };
+  pageContext: {
+    next: ProjectNav | void,
+    prev: ProjectNav | void,
+  };
+}
 
 const projectTitleStyles = css`
   position: relative;
@@ -52,9 +47,9 @@ const projectTitleStyles = css`
 `;
 
 const ProjectPage = ({
-  pageContext: { name, description, links, next, prev },
+  pageContext: { next, prev },
   data: {
-    ProjectImages: { childrenFile: photos },
+    project: { name, descriptionNode, links, photos },
   },
 }: ProjectProps) => {
   let projectLinks = null;
@@ -72,7 +67,7 @@ const ProjectPage = ({
       <Container>
         <Box py={5} mx="auto" textAlign="center" css="max-width: 720px;">
           <Heading css={projectTitleStyles}>{name}</Heading>
-          <Text>{description}</Text>
+          <Text>{descriptionNode.description}</Text>
           {projectLinks}
         </Box>
       </Container>
@@ -81,9 +76,9 @@ const ProjectPage = ({
           <Box textAlign="center" mx="auto" css="max-width: 720px;">
             {photos.map((photo, i) => (
               <Image
-                key={photo.id}
+                key={v4()}
                 css={{ marginBottom: '1.5rem' }}
-                fluid={photo.childImageSharp.fluid}
+                fluid={photo.fluid}
                 alt={`${name}-${i}`}
               />
             ))}
@@ -95,15 +90,20 @@ const ProjectPage = ({
   );
 };
 
-export const pageQuery = graphql`
-  query($id: String!) {
-    ProjectImages: project(id: { eq: $id }) {
-      childrenFile {
-        id
-        childImageSharp {
-          fluid(maxWidth: 720, quality: 85) {
-            ...GatsbyImageSharpFluid
-          }
+export const projectQuery = graphql`
+  query projectQuery($id: String!) {
+    project: contentfulProject(id: { eq: $id }) {
+      name
+      descriptionNode: childContentfulProjectDescriptionTextNode {
+        description
+      }
+      links {
+        text
+        url
+      }
+      photos {
+        fluid(maxWidth: 720, quality: 80) {
+          ...GatsbyContentfulFluid
         }
       }
     }

@@ -4,11 +4,11 @@ import Headroom from 'react-headroom';
 import styled from 'react-emotion';
 import { withTheme } from 'emotion-theming';
 import { Link } from 'gatsby';
-import type { Theme } from '../../utils/types';
 import { Container, Flex } from '../UI';
 import Logo from '../../assets/images/logo.svg';
 import HeaderToggle from './HeaderToggle';
 import HeaderLinks from './HeaderLinks';
+import type { Theme } from '../../utils/types';
 
 type HeaderProps = {
   links?: {
