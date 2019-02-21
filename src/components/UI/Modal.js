@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import ReactModal from 'react-modal';
-import { X } from 'react-feather';
+import { FiX } from 'react-icons/fi';
 import { keyframes } from 'react-emotion';
 import { css } from 'emotion';
 import { Box, IconButton } from './index';
@@ -74,7 +74,7 @@ const Modal = ({ isOpen, onClose, header, footer, children }) => (
     <Box p={3} pr="56px">
       {header}
       <IconButton heightAuto onClick={onClose} css={modalCloseBtn}>
-        <X />
+        <FiX size={24} />
       </IconButton>
     </Box>
     <Box p={3}>{children}</Box>

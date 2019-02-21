@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Menu } from 'react-feather';
+import { FiMenu } from 'react-icons/fi';
 import { IconButton } from '../UI';
 import presets from '../../utils/presets';
 
@@ -16,7 +16,7 @@ const HeaderToggle = ({ onClick }) => (
     css={{ [presets.lg]: { display: 'none' } }}
     onClick={onClick}
   >
-    <Menu />
+    <FiMenu size={24} />
   </IconButton>
 );
 

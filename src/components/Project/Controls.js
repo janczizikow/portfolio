@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { ChevronLeft, ChevronRight } from 'react-feather';
+import { FiChevronLeft, FiChevronRight } from 'react-icons/fi';
 import Link from './ControlLink';
 import { Box, Flex, Container, Text } from '../UI';
 
@@ -26,7 +26,7 @@ const Controls = ({ prev, next }) => (
                 Previous
               </Text>
               <Link prev to={`/projects/${prev.slug}`}>
-                <ChevronLeft />
+                <FiChevronLeft size={24} />
                 {prev.name}
               </Link>
             </>
@@ -40,7 +40,7 @@ const Controls = ({ prev, next }) => (
               </Text>
               <Link next to={`/projects/${next.slug}`}>
                 {next.name}
-                <ChevronRight />
+                <FiChevronRight size={24} />
               </Link>
             </>
           )}

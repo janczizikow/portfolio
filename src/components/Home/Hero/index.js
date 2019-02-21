@@ -1,7 +1,7 @@
 import React from 'react';
 import styled, { keyframes } from 'react-emotion';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
-import { ChevronDown } from 'react-feather';
+import { FiChevronDown } from 'react-icons/fi';
 import { Box, Container, Row, Col, Heading, Text } from '../../UI';
 import HeroImg from '../../../assets/illustrations/illustration.svg';
 
@@ -54,7 +54,7 @@ const Hero = () => (
           </Text>
           <ScrollDownLink href="#projects">
             <ScrollDown>
-              <ChevronDown />
+              <FiChevronDown size={24} />
             </ScrollDown>
           </ScrollDownLink>
         </Col>
