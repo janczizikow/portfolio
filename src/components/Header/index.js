@@ -99,7 +99,7 @@ class Header extends Component {
             <HeaderLink to="/">
               <Logo />
             </HeaderLink>
-            <HeaderToggle onClick={() => openMobileMenu()} />
+            <HeaderToggle onClick={openMobileMenu} />
             <HeaderLinks links={links} />
           </HeaderInner>
         </Container>
