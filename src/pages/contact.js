@@ -1,4 +1,5 @@
 import React from 'react';
+import SEO from '../components/SEO';
 import Form from '../components/Contact/Form';
 import {
   Box,
@@ -13,6 +14,7 @@ import {
 
 const Contact = () => (
   <Box py={5}>
+    <SEO title="Contact" />
     <Container>
       <Row>
         <Col>

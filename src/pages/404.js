@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'react-emotion';
+import SEO from '../components/SEO';
 import { Box, Container, Heading, Text, Button } from '../components/UI';
 import ErrorIllustration from '../assets/illustrations/404.svg';
 
@@ -10,6 +11,7 @@ const ErrorImg = styled.img`
 
 const NotFoundPage = () => (
   <Box bg="#f4f6fb" textAlign="center" py={5}>
+    <SEO title="Page not found" />
     <Container>
       <ErrorImg src={ErrorIllustration} alt="404" />
       <Heading color="dark" is="h1" mt={-5}>

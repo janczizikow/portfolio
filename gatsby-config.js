@@ -4,9 +4,10 @@ require('dotenv').config({
 
 module.exports = {
   siteMetadata: {
-    title: 'Jan Czizikow // Web Developer',
+    title: 'Jan Czizikow',
     siteUrl: 'https://www.janczizikow.com',
     description: `This is the site of Jan Czizikow, a Web Developer. The site is just a list of things he's been up to including blog and projects.`,
+    author: `@jan_czizikow`,
   },
   plugins: [
     'gatsby-plugin-remove-trailing-slashes',
