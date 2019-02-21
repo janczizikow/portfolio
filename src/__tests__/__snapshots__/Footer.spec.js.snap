@@ -72,25 +72,22 @@ exports[`<Footer /> renders with correct styles 1`] = `
     <Styled(a)
       href="https://github.com/janczizikow/"
     >
-      <Github
-        color="currentColor"
-        size="24"
+      <FiGithub
+        size={24}
       />
     </Styled(a)>
     <Styled(a)
       href="/about/"
     >
-      <Codepen
-        color="currentColor"
-        size="24"
+      <FiCodepen
+        size={24}
       />
     </Styled(a)>
     <Styled(a)
       href="https://www.linkedin.com/in/janczizikow/"
     >
-      <Linkedin
-        color="currentColor"
-        size="24"
+      <FiLinkedin
+        size={24}
       />
     </Styled(a)>
   </Flex>
