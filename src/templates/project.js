@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
 import Image from 'gatsby-image';
 import { css } from 'emotion';
+import SEO from '../components/SEO';
 import { Box, Container, Heading, Text, Button } from '../components/UI';
 import Controls from '../components/Project/Controls';
 import theme from '../utils/theme';
@@ -14,6 +15,13 @@ const propTypes = {
     next: PropTypes.shape({
       name: PropTypes.string,
       slug: PropTypes.string,
+    }),
+  }),
+  data: PropTypes.shape({
+    ProjectImages: PropTypes.shape({
+      childrenFile: PropTypes.shape({
+        photos: PropTypes.array,
+      }),
     }),
   }),
 };
@@ -51,6 +59,7 @@ const ProjectPage = ({
 
   return (
     <>
+      <SEO title={name} description={description} />
       <Container>
         <Box py={5} mx="auto" textAlign="center" css="max-width: 720px;">
           <Heading css={projectTitleStyles}>{name}</Heading>
