@@ -20,7 +20,9 @@
     "react/require-default-props": 0,
     "react/jsx-filename-extension": 0,
     "react/jsx-one-expression-per-line": 0,
-    "react/jsx-wrap-multilines": ["error", {"declaration": false }],
+    "react/jsx-wrap-multilines": ["error", {
+      "declaration": false
+    }],
     "jsx-a11y/accessible-emoji": 0,
     "no-underscore-dangle": ["error", {
       "allow": ["_isMounted"]
@@ -33,7 +35,9 @@
       "semi": true,
       "singleQuote": true,
       "trailingComma": "es5"
-    }]
+    }],
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn"
   },
   "extends": [
     "airbnb",
@@ -41,6 +45,7 @@
     "prettier/react"
   ],
   "plugins": [
+    "react-hooks",
     "prettier",
     "emotion"
   ],
