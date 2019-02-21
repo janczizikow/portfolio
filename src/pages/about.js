@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
 import Image from 'gatsby-image';
+import SEO from '../components/SEO';
 import {
   Box,
   Container,
@@ -25,6 +26,7 @@ const About = ({
   },
 }) => (
   <Box py={4}>
+    <SEO title="About" />
     <Container>
       <Row alignItems="center" flexWrap="wrap">
         <Col flex={['0 0 100%', null, null, '0 0 50%']}>
