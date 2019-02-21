@@ -5,6 +5,7 @@ import StyledButton from './Styled';
 
 const propTypes = {
   to: PropTypes.string,
+  href: PropTypes.string,
   color: PropTypes.oneOf(['primary', 'secondary', 'success', 'error']),
   block: PropTypes.bool,
   rounded: PropTypes.bool,
@@ -36,8 +37,6 @@ class Button extends Component {
       disabled,
       loading,
       block,
-      link,
-      outline,
       rounded,
       space,
       color,

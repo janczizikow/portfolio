@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React from 'react';
 import { FormGroup, Label, Input, FormErrorMsg } from './index';
 
@@ -14,8 +15,9 @@ const FormInput = ({ label, field, form: { touched, errors }, ...rest }) => (
       {...rest}
       invalid={touched[field.name] && errors[field.name]}
     />
-    {touched[field.name] &&
-      errors[field.name] && <FormErrorMsg>{errors[field.name]}</FormErrorMsg>}
+    {touched[field.name] && errors[field.name] && (
+      <FormErrorMsg>{errors[field.name]}</FormErrorMsg>
+    )}
   </FormGroup>
 );
 

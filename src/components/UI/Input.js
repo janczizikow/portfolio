@@ -37,7 +37,7 @@ const defaultProps = {
 };
 /* eslint-disable no-param-reassign */
 const Input = React.forwardRef(
-  ({ tag: Tag, type, block, invalid, color, ...attributes }, ref) => {
+  ({ tag: Tag, type, block, invalid, ...attributes }, ref) => {
     if (Tag === 'input') {
       attributes.type = type;
     }
