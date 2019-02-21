@@ -10,25 +10,33 @@ export const ThemeContext = React.createContext({
 });
 
 const Theme = ({ children }) => {
-  const [theme, setTheme] = useState(defaultTheme);
-  const [activeTheme, setActiveTheme] = useState('light');
+  const [state, setState] = useState({
+    theme: defaultTheme,
+    activeTheme: 'light',
+  });
 
   const toggleTheme = () => {
-    if (activeTheme === 'light') {
-      setActiveTheme('dark');
-    } else {
-      setActiveTheme('light');
-    }
+    const { theme } = state;
+    const nextTheme = state.activeTheme === 'light' ? 'dark' : 'light';
 
-    setTheme({
-      ...theme,
-      colors: { ...theme.colors, ...colorThemes[activeTheme] },
+    setState({
+      theme: {
+        ...theme,
+        colors: { ...theme.colors, ...colorThemes[nextTheme] },
+      },
+      activeTheme: nextTheme,
     });
   };
 
   return (
-    <ThemeContext.Provider value={{ theme, activeTheme, toggleTheme }}>
-      <ThemeProvider theme={theme}>{children}</ThemeProvider>
+    <ThemeContext.Provider
+      value={{
+        theme: state.theme,
+        activeTheme: state.activeTheme,
+        toggleTheme,
+      }}
+    >
+      <ThemeProvider theme={state.theme}>{children}</ThemeProvider>
     </ThemeContext.Provider>
   );
 };
