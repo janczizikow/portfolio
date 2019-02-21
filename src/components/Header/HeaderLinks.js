@@ -1,15 +1,12 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
-import { connect } from 'react-redux';
 import styled from 'react-emotion';
-import { Moon, Sun } from 'react-feather';
-import * as actions from '../../store/actions';
-import { Box, IconButton } from '../UI';
+import { FiMoon, FiSun } from 'react-icons/fi';
 import HeaderLink from './HeaderLink';
+import { Box, IconButton } from '../UI';
+import { ThemeContext } from '../Theme/Theme';
 
 const propTypes = {
-  activeTheme: PropTypes.string,
-  switchTheme: PropTypes.func,
   links: PropTypes.arrayOf(
     PropTypes.shape({
       to: PropTypes.string.isRequired,
@@ -28,7 +25,8 @@ const HeaderLinksNav = styled(Box)`
   }
 `;
 
-const HeaderLinks = ({ activeTheme, switchTheme, links }) => {
+const HeaderLinks = ({ links }) => {
+  const theme = useContext(ThemeContext);
   let headerLinks = null;
 
   if (links) {
@@ -42,8 +40,12 @@ const HeaderLinks = ({ activeTheme, switchTheme, links }) => {
   return (
     <HeaderLinksNav is="nav">
       {headerLinks}
-      <IconButton color="headingColor" pl={3} onClick={switchTheme}>
-        {activeTheme === 'light' ? <Moon /> : <Sun />}
+      <IconButton color="headingColor" pl={3} onClick={theme.toggleTheme}>
+        {theme.activeTheme === 'light' ? (
+          <FiMoon size={24} />
+        ) : (
+          <FiSun size={24} />
+        )}
       </IconButton>
     </HeaderLinksNav>
   );
@@ -51,15 +53,4 @@ const HeaderLinks = ({ activeTheme, switchTheme, links }) => {
 
 HeaderLinks.propTypes = propTypes;
 
-const mapStateToProps = state => ({
-  activeTheme: state.ui.theme.activeTheme,
-});
-
-const mapDispatchToProps = dispatch => ({
-  switchTheme: () => dispatch(actions.switchTheme()),
-});
-
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(HeaderLinks);
+export default HeaderLinks;
