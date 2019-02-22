@@ -6578,10 +6578,10 @@ gatsby-plugin-nprogress@^2.0.5:
     "@babel/runtime" "^7.0.0"
     nprogress "^0.2.0"
 
-gatsby-plugin-offline@^2.0.8:
-  version "2.0.8"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-offline/-/gatsby-plugin-offline-2.0.8.tgz#1dc9ad57aee70137a17d79e75d7e26e9f471ae3b"
-  integrity sha512-8fp9T1/t7rUC0AVmruOtG397/tvhQsCECKzDsAX1MICIGzZ6TRjiyfod0oepyofpGD6GCnXcRkQdG9bRGHXIQQ==
+gatsby-plugin-offline@^2.0.15:
+  version "2.0.15"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-offline/-/gatsby-plugin-offline-2.0.15.tgz#bfebfc28aafcab29cb57732abc5d211137d2ed6c"
+  integrity sha512-21+eGMZ0s+r8o6G5UoFnr2r9ZUHM1VVLf+l1tXqPXTL9KeLOHCgSi+JUklv/gyFLjh/49AiEjaxmk2WL8VYfVg==
   dependencies:
     "@babel/runtime" "^7.0.0"
     cheerio "^1.0.0-rc.2"
