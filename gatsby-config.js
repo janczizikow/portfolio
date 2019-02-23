@@ -92,6 +92,16 @@ module.exports = {
       },
     },
     {
+      resolve: 'gatsby-plugin-sentry',
+      options: {
+        dsn: process.env.SENTRY_DSN,
+        // Optional settings, see https://docs.sentry.io/clients/node/config/#optional-settings
+        environment: process.env.NODE_ENV,
+        enabled: (() =>
+          ['production', 'stage'].indexOf(process.env.NODE_ENV) !== -1)(),
+      },
+    },
+    {
       resolve: 'gatsby-plugin-webpack-bundle-analyzer',
       options: {
         analyzerPort: 5050,
