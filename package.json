@@ -63,7 +63,7 @@
     "react": "^16.8.3",
     "react-anchor-link-smooth-scroll": "^1.0.11",
     "react-dom": "^16.8.3",
-    "react-emotion": "^9.2.12",
+    "react-emotion": "^10.0.0",
     "react-headroom": "^2.2.4",
     "react-helmet": "^5.2.0",
     "react-icons": "^3.4.0",
