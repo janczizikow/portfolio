@@ -1,20 +1,36 @@
-import system from 'system-components/emotion';
+import styled from '@emotion/styled';
+import {
+  width,
+  height,
+  space,
+  flex,
+  alignSelf,
+  order,
+  color,
+  textAlign,
+} from 'styled-system';
 
-const Box = system(
-  {
-    is: 'div',
-  },
-  'width',
-  'space',
-  'flex',
-  'alignSelf',
-  'order',
-  'color',
-  'textAlign',
-  props => ({
-    height: props.height,
-  })
-);
+const Box = styled.div`
+  ${width}
+  ${height}
+  ${space}
+  ${flex}
+  ${alignSelf}
+  ${order}
+  ${color}
+  ${textAlign}
+`;
+
+Box.propTypes = {
+  ...width.propTypes,
+  ...height.propTypes,
+  ...space.propTypes,
+  ...flex.propTypes,
+  ...alignSelf.propTypes,
+  ...order.propTypes,
+  ...color.propTypes,
+  ...textAlign.propTypes,
+};
 
 Box.displayName = 'Box';
 
