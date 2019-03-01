@@ -25,7 +25,7 @@ const Layout = ({ children }) => {
   return (
     <Theme>
       <Global />
-      <Flex flexDirection="column" css="min-height: 100vh;">
+      <Flex flexDirection="column" css={{ minHeight: '100vh' }}>
         <Header openMobileMenu={openMobileMenu} links={links} />
         <MobileMenu
           isMobileMenuOpen={isMobileMenuOpen}
