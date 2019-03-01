@@ -1,4 +1,4 @@
-import styled from 'react-emotion';
+import styled from '@emotion/styled';
 
 const FooterLink = styled.a`
   padding: 0 15px;

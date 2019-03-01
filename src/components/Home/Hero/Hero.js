@@ -1,5 +1,6 @@
 import React from 'react';
-import styled, { keyframes } from 'react-emotion';
+import { keyframes } from '@emotion/core';
+import styled from '@emotion/styled';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 import { FiChevronDown } from 'react-icons/fi';
 import { Box, Container, Row, Col, Heading, Text } from '../../UI';

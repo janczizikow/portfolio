@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { css } from 'emotion';
+import { css } from '@emotion/core';
 import { Box, Container, Heading } from '../../UI';
 import ProjectItem from './ProjectItem';
 import theme from '../../../utils/theme';

@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
-import styled from 'react-emotion';
+import styled from '@emotion/styled';
 import { FiMoon, FiSun } from 'react-icons/fi';
 import HeaderLink from './HeaderLink';
 import { Box, IconButton } from '../UI';

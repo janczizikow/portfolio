@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
 import Image from 'gatsby-image';
-import { css } from 'emotion';
+import { css } from '@emotion/core';
 import SEO from '../components/SEO';
 import { Box, Container, Heading, Text, Button } from '../components/UI';
 import Controls from '../components/Project/Controls';
