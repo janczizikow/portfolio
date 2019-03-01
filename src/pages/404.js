@@ -17,7 +17,7 @@ const NotFoundPage = () => (
       <Heading color="dark" is="h1" mt={-5}>
         Page Not Found
       </Heading>
-      <Text color="greyLight" css="width: 280px;" my={3} mx="auto">
+      <Text color="greyLight" css={{ width: '280px' }} my={3} mx="auto">
         The page you are looking for doesn&apos;t seem to exist…
       </Text>
       <Button to="/">Go home</Button>

@@ -17,7 +17,7 @@ const propTypes = {
 
 const Controls = ({ prev, next }) => (
   <Container>
-    <Box mx="auto" css="max-width: 720px;">
+    <Box mx="auto" css={{ maxWidth: '720px' }}>
       <Flex py={4} alignItems="center" justifyContent="space-between">
         <Flex flexDirection="column" alignItems="flex-start" textAlign="left">
           {prev && (
