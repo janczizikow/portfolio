@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Headroom from 'react-headroom';
-import styled from 'react-emotion';
+import styled from '@emotion/styled';
 import { withTheme } from 'emotion-theming';
 import { Link } from 'gatsby';
 import { Container, Flex } from '../UI';

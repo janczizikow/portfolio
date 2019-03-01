@@ -1,5 +1,5 @@
 import { Link } from 'gatsby';
-import styled from 'react-emotion';
+import styled from '@emotion/styled';
 
 const ControlLink = styled(Link)`
   margin-left: ${p => p.prev && '-0.5rem'};

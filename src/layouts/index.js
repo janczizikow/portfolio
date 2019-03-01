@@ -24,20 +24,19 @@ const Layout = ({ children }) => {
 
   return (
     <Theme>
-      <Global>
-        <Flex flexDirection="column" css="min-height: 100vh;">
-          <Header openMobileMenu={openMobileMenu} links={links} />
-          <MobileMenu
-            isMobileMenuOpen={isMobileMenuOpen}
-            closeMobileMenu={closeMobileMenu}
-            links={links}
-          />
-          <Box is="main" flex={1}>
-            {children}
-          </Box>
-          <Footer />
-        </Flex>
-      </Global>
+      <Global />
+      <Flex flexDirection="column" css="min-height: 100vh;">
+        <Header openMobileMenu={openMobileMenu} links={links} />
+        <MobileMenu
+          isMobileMenuOpen={isMobileMenuOpen}
+          closeMobileMenu={closeMobileMenu}
+          links={links}
+        />
+        <Box is="main" flex={1}>
+          {children}
+        </Box>
+        <Footer />
+      </Flex>
     </Theme>
   );
 };

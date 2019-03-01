@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { css, cx } from 'emotion';
+import { css } from '@emotion/core';
 import Flex from './Flex';
 
-const IconButton = ({ heightAuto, className, ...rest }) => (
+const IconButton = ({ heightAuto, ...rest }) => (
   <Flex
     is="button"
     type="button"
@@ -12,7 +12,7 @@ const IconButton = ({ heightAuto, className, ...rest }) => (
     flexDirection="column"
     alignItems="center"
     justifyContent="center"
-    className={cx(
+    css={[
       css`
         height: ${heightAuto ? 'auto' : '100%'};
         border: 0;
@@ -20,8 +20,7 @@ const IconButton = ({ heightAuto, className, ...rest }) => (
         overflow: hidden;
         cursor: pointer;
       `,
-      className
-    )}
+    ]}
     {...rest}
   />
 );

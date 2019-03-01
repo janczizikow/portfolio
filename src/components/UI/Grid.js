@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { css } from 'emotion';
+import { css } from '@emotion/core';
 import facepaint from 'facepaint';
 import Box from './Box';
 import Flex from './Flex';

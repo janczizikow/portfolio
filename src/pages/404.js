@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'react-emotion';
+import styled from '@emotion/styled';
 import SEO from '../components/SEO';
 import { Box, Container, Heading, Text, Button } from '../components/UI';
 import ErrorIllustration from '../assets/illustrations/404.svg';
