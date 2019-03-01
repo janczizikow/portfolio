@@ -1,17 +1,20 @@
-import system from 'system-components/emotion';
+import styled from '@emotion/styled';
+import { space, color, fontSize, textAlign, lineHeight } from 'styled-system';
 
-const Text = system(
-  {
-    is: 'p',
-  },
-  'space',
-  'color',
-  'fontSize',
-  'textAlign',
-  'lineHeight',
-  'letterSpacing'
-);
+const Text = styled.p`
+  ${space}
+  ${color}
+  ${fontSize}
+  ${textAlign}
+  ${lineHeight}
+`;
 
+Text.propTypes = {
+  ...space.propTypes,
+  ...color.propTypes,
+  ...fontSize.propTypes,
+  ...textAlign.propTypes,
+};
 Text.displayName = 'Text';
 
 export default Text;

@@ -13293,14 +13293,6 @@ style-value-types@^3.0.6, style-value-types@^3.0.7:
   resolved "https://registry.yarnpkg.com/style-value-types/-/style-value-types-3.0.7.tgz#6e7a22cc8b1a4465193268ed66ad5f2a82579054"
   integrity sha512-7vzeicDiPNnJjvTYfJbQhZ7P3OCkXfvkJOJQ+ifFnXNTA/7KBxMZacHLvlRjM5/TtXbVdrZE6u+2nzSUSPrbSQ==
 
-styled-system@^3.2.1:
-  version "3.2.1"
-  resolved "https://registry.yarnpkg.com/styled-system/-/styled-system-3.2.1.tgz#491e1e6f88d7ee021f6f49376f12852cde8007cb"
-  integrity sha512-ag0Yp7UeVHHc3t+1uM3jvlljaZYzwqpbJ8hMrFvpaKfUd8xsB9JeQXLwMpEsz8iLx8Lz/+9j0coWFZjmw8MogQ==
-  dependencies:
-    "@babel/runtime" "^7.1.2"
-    prop-types "^15.6.2"
-
 styled-system@^4.0.1:
   version "4.0.1"
   resolved "https://registry.yarnpkg.com/styled-system/-/styled-system-4.0.1.tgz#0f37a25cadbb172fbe03c4d19de9dfaabe6b6d02"
@@ -13511,13 +13503,6 @@ synchronous-promise@^2.0.5:
   version "2.0.6"
   resolved "https://registry.yarnpkg.com/synchronous-promise/-/synchronous-promise-2.0.6.tgz#de76e0ea2b3558c1e673942e47e714a930fa64aa"
   integrity sha512-TyOuWLwkmtPL49LHCX1caIwHjRzcVd62+GF6h8W/jHOeZUFHpnd2XJDVuUlaTaLPH1nuu2M69mfHr5XbQJnf/g==
-
-system-components@^3.0.3:
-  version "3.0.3"
-  resolved "https://registry.yarnpkg.com/system-components/-/system-components-3.0.3.tgz#068449867de23b5365d88f9fb21a9460039a25bf"
-  integrity sha512-AqxDTwE+nizKW5aiNz4CdvMK9SDY681p2JIQM10jppCF/j6OWFc5fRvloWZyD7k+BSmDHH/sDsdCO6+f3s7FtQ==
-  dependencies:
-    styled-system "^3.2.1"
 
 table@^5.0.0, table@^5.2.3:
   version "5.2.3"
