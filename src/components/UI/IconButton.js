@@ -5,29 +5,26 @@ import Flex from './Flex';
 
 const IconButton = ({ heightAuto, ...rest }) => (
   <Flex
-    is="button"
+    as="button"
     type="button"
     p={0}
     bg="transparent"
     flexDirection="column"
     alignItems="center"
     justifyContent="center"
-    css={[
-      css`
-        height: ${heightAuto ? 'auto' : '100%'};
-        border: 0;
-        outline: 0;
-        overflow: hidden;
-        cursor: pointer;
-      `,
-    ]}
+    css={css`
+      height: ${heightAuto ? 'auto' : '100%'};
+      border: 0;
+      outline: 0;
+      overflow: hidden;
+      cursor: pointer;
+    `}
     {...rest}
   />
 );
 
 IconButton.propTypes = {
   heightAuto: PropTypes.bool,
-  className: PropTypes.string,
 };
 
 export default IconButton;
