@@ -5,8 +5,6 @@ exports[`<Footer /> renders with correct styles 1`] = `
   bg="bgAlt"
   blacklist={
     Array [
-      "css",
-      "width",
       "m",
       "mt",
       "mr",
@@ -21,12 +19,73 @@ exports[`<Footer /> renders with correct styles 1`] = `
       "pl",
       "px",
       "py",
-      "flex",
-      "alignSelf",
-      "order",
+      "width",
+      "fontSize",
       "color",
       "bg",
+      "fontFamily",
       "textAlign",
+      "lineHeight",
+      "fontWeight",
+      "fontStyle",
+      "letterSpacing",
+      "display",
+      "maxWidth",
+      "minWidth",
+      "height",
+      "maxHeight",
+      "minHeight",
+      "size",
+      "ratio",
+      "verticalAlign",
+      "alignItems",
+      "alignContent",
+      "justifyItems",
+      "justifyContent",
+      "flexWrap",
+      "flexBasis",
+      "flexDirection",
+      "flex",
+      "justifySelf",
+      "alignSelf",
+      "order",
+      "gridGap",
+      "gridColumnGap",
+      "gridRowGap",
+      "gridColumn",
+      "gridRow",
+      "gridAutoFlow",
+      "gridAutoColumns",
+      "gridAutoRows",
+      "gridTemplateColumns",
+      "gridTemplateRows",
+      "gridTemplateAreas",
+      "gridArea",
+      "border",
+      "borderTop",
+      "borderRight",
+      "borderBottom",
+      "borderLeft",
+      "borderColor",
+      "borderRadius",
+      "boxShadow",
+      "opacity",
+      "overflow",
+      "background",
+      "backgroundImage",
+      "backgroundPosition",
+      "backgroundRepeat",
+      "backgroundSize",
+      "position",
+      "zIndex",
+      "top",
+      "right",
+      "bottom",
+      "left",
+      "textStyle",
+      "colors",
+      "variant",
+      "theme",
     ]
   }
   color="white"
@@ -35,61 +94,36 @@ exports[`<Footer /> renders with correct styles 1`] = `
 >
   <Flex
     alignItems="center"
-    blacklist={
-      Array [
-        "css",
-        "flexWrap",
-        "flexDirection",
-        "alignItems",
-        "justifyContent",
-        "css",
-        "width",
-        "m",
-        "mt",
-        "mr",
-        "mb",
-        "ml",
-        "mx",
-        "my",
-        "p",
-        "pt",
-        "pr",
-        "pb",
-        "pl",
-        "px",
-        "py",
-        "flex",
-        "alignSelf",
-        "order",
-        "color",
-        "bg",
-        "textAlign",
-      ]
-    }
-    is={[Function]}
+    display="flex"
     justifyContent="center"
   >
-    <Styled(a)
+    <FooterLink
       href="https://github.com/janczizikow/"
+      rel="noopener noreferrer"
+      target="_blank"
     >
       <FiGithub
         size={24}
       />
-    </Styled(a)>
-    <Styled(a)
-      href="/about/"
+    </FooterLink>
+    <FooterLink
+      href="https://codepen.io/hollow3d/"
+      rel="noopener noreferrer"
+      target="_blank"
     >
       <FiCodepen
         size={24}
       />
-    </Styled(a)>
-    <Styled(a)
+    </FooterLink>
+    <FooterLink
       href="https://www.linkedin.com/in/janczizikow/"
+      rel="noopener noreferrer"
+      target="_blank"
     >
       <FiLinkedin
         size={24}
       />
-    </Styled(a)>
+    </FooterLink>
   </Flex>
 </Box>
 `;
