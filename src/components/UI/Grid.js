@@ -18,14 +18,7 @@ const Container = ({ fluid, ...rest }) => (
     mx="auto"
     px={3}
     width="100%"
-    css={
-      !fluid &&
-      css(
-        mq({
-          maxWidth: containerWidths,
-        })
-      )
-    }
+    css={!fluid && css(mq({ maxWidth: containerWidths }))}
     {...rest}
   />
 );

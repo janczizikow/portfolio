@@ -14,7 +14,7 @@ const NotFoundPage = () => (
     <SEO title="Page not found" />
     <Container>
       <ErrorImg src={ErrorIllustration} alt="404" />
-      <Heading color="dark" as="h1" mt={-5}>
+      <Heading color="dark" is="h1" mt={-5}>
         Page Not Found
       </Heading>
       <Text color="greyLight" css={{ width: '280px' }} my={3} mx="auto">

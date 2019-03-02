@@ -22,7 +22,7 @@ const Controls = ({ prev, next }) => (
         <Flex flexDirection="column" alignItems="flex-start" textAlign="left">
           {prev && (
             <>
-              <Text as="span" fontSize="14px">
+              <Text is="span" fontSize="14px">
                 Previous
               </Text>
               <Link prev to={`/projects/${prev.slug}`}>
@@ -35,7 +35,7 @@ const Controls = ({ prev, next }) => (
         <Flex flexDirection="column" alignItems="flex-end" textAlign="right">
           {next && (
             <>
-              <Text as="span" fontSize="14px">
+              <Text is="span" fontSize="14px">
                 Next
               </Text>
               <Link next to={`/projects/${next.slug}`}>

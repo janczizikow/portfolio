@@ -128,7 +128,7 @@ const ProjectItem = ({ project, bigThumbnail }) => (
       />
       <ProjectInner>
         <Text color="#fff">{project.date}</Text>
-        <Heading as="h3" color="white">
+        <Heading is="h3" color="white">
           {project.name}
         </Heading>
       </ProjectInner>
