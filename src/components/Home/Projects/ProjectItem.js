@@ -64,23 +64,23 @@ const ProjectItemLink = styled(Link)`
       margin: 0;
     }
 
-    &:first-child {
+    &:first-of-type {
       grid-area: one;
     }
 
-    &:nth-child(2) {
+    &:nth-of-type(2) {
       grid-area: two;
     }
 
-    &:nth-child(3) {
+    &:nth-of-type(3) {
       grid-area: three;
     }
 
-    &:nth-child(4) {
+    &:nth-of-type(4) {
       grid-area: four;
     }
 
-    &:nth-child(5) {
+    &:nth-of-type(5) {
       grid-area: five;
     }
   }
