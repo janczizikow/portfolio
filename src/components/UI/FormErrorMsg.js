@@ -2,7 +2,7 @@ import styled from '@emotion/styled';
 import Text from './Text';
 
 const defaultProps = {
-  as: 'span',
+  is: 'span',
 };
 
 const FormErrorMsg = styled(Text)`

@@ -6,7 +6,7 @@ import Flex from '../UI/Flex';
 import FooterLink from './FooterLink';
 
 const Footer = () => (
-  <Box as="footer" py={58} bg="bgAlt" color="white">
+  <Box is="footer" py={58} bg="bgAlt" color="white">
     <Flex alignItems="center" justifyContent="center">
       <FooterLink
         href="https://github.com/janczizikow/"

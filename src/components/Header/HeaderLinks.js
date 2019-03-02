@@ -38,7 +38,7 @@ const HeaderLinks = ({ links }) => {
   }
 
   return (
-    <HeaderLinksNav as="nav">
+    <HeaderLinksNav is="nav">
       {headerLinks}
       <IconButton color="headingColor" pl={3} onClick={theme.toggleTheme}>
         {theme.activeTheme === 'light' ? (

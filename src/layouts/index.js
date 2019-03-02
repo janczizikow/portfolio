@@ -32,7 +32,7 @@ const Layout = ({ children }) => {
           closeMobileMenu={closeMobileMenu}
           links={links}
         />
-        <Box as="main" flex={1}>
+        <Box is="main" flex={1}>
           {children}
         </Box>
         <Footer />

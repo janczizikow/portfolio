@@ -2,7 +2,7 @@ import styled from '@emotion/styled';
 import Text from './Text';
 
 const defaultProps = {
-  as: 'a',
+  is: 'a',
 };
 
 const Link = styled(Text)`
