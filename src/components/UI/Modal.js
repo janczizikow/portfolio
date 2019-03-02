@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import ReactModal from 'react-modal';
 import { FiX } from 'react-icons/fi';
-import { css, keyframes } from '@emotion/core';
+import { ClassNames, css, keyframes } from '@emotion/core';
 import { Box, IconButton } from './index';
 
 if (process.env.NODE_ENV !== 'test') ReactModal.setAppElement('#___gatsby');
@@ -61,24 +61,28 @@ const modalCloseBtn = css`
 `;
 
 const Modal = ({ isOpen, onClose, header, footer, children }) => (
-  <ReactModal
-    isOpen={isOpen}
-    onRequestClose={onClose}
-    closeTimeoutMS={300}
-    htmlOpenClassName="lock-scroll"
-    bodyOpenClassName="lock-scroll"
-    overlayClassName={overlay}
-    className={modalContent}
-  >
-    <Box p={3} pr="56px">
-      {header}
-      <IconButton heightAuto onClick={onClose} css={modalCloseBtn}>
-        <FiX size={24} />
-      </IconButton>
-    </Box>
-    <Box p={3}>{children}</Box>
-    {footer && <Box p={3}>{footer}</Box>}
-  </ReactModal>
+  <ClassNames>
+    {classNames => (
+      <ReactModal
+        isOpen={isOpen}
+        onRequestClose={onClose}
+        closeTimeoutMS={300}
+        htmlOpenClassName="lock-scroll"
+        bodyOpenClassName="lock-scroll"
+        overlayClassName={classNames.css`${overlay}`}
+        className={classNames.css`${modalContent}`}
+      >
+        <Box p={3} pr="56px">
+          {header}
+          <IconButton heightAuto onClick={onClose} css={modalCloseBtn}>
+            <FiX size={24} />
+          </IconButton>
+        </Box>
+        <Box p={3}>{children}</Box>
+        {footer && <Box p={3}>{footer}</Box>}
+      </ReactModal>
+    )}
+  </ClassNames>
 );
 
 Modal.propTypes = propTypes;
