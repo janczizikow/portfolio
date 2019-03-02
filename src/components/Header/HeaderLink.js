@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
 import styled from '@emotion/styled';
-import { css } from '@emotion/core';
+import { ClassNames, css } from '@emotion/core';
 import { withTheme } from 'emotion-theming';
 import colorTheme from '../../utils/theme';
 
@@ -33,7 +33,7 @@ const headerLinkItemStyles = css`
 `;
 
 const activeLinkStyles = css`
-  .${headerLinkItemStyles}::before {
+  span::before {
     left: 0;
     right: auto;
     width: 100%;
@@ -54,22 +54,26 @@ const StyledHeaderLink = styled(Link)`
     ${activeLinkStyles};
   }
 
-  &:last-child {
+  &:last-of-type {
     padding-right: 0;
   }
 `;
 
 const HeaderLink = ({ to, children, theme }) => (
-  <StyledHeaderLink
-    to={to}
-    itemProp="url"
-    activeClassName={activeLinkStyles}
-    activeStyle={{ color: theme.colors.headingColor }}
-  >
-    <span itemProp="name" className={headerLinkItemStyles}>
-      {children}
-    </span>
-  </StyledHeaderLink>
+  <ClassNames>
+    {classNames => (
+      <StyledHeaderLink
+        to={to}
+        itemProp="url"
+        activeClassName={classNames.css`${activeLinkStyles}`}
+        activeStyle={{ color: theme.colors.headingColor }}
+      >
+        <span itemProp="name" css={headerLinkItemStyles}>
+          {children}
+        </span>
+      </StyledHeaderLink>
+    )}
+  </ClassNames>
 );
 
 HeaderLink.propTypes = propTypes;
