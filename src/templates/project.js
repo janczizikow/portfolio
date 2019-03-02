@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
 import Image from 'gatsby-image';
 import { css } from '@emotion/core';
+import Layout from '../layouts';
 import SEO from '../components/SEO';
 import { Box, Container, Heading, Text, Button } from '../components/UI';
 import Controls from '../components/Project/Controls';
@@ -58,7 +59,7 @@ const ProjectPage = ({
   }
 
   return (
-    <>
+    <Layout>
       <SEO title={name} description={description} />
       <Container>
         <Box py={5} mx="auto" textAlign="center" css={{ maxWidth: '720px' }}>
@@ -82,7 +83,7 @@ const ProjectPage = ({
         </Container>
       </Box>
       <Controls next={next} prev={prev} />
-    </>
+    </Layout>
   );
 };
 

@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
+import Layout from '../layouts';
 import SEO from '../components/SEO';
 import { Hero, Projects, Cta } from '../components/Home';
 
@@ -13,12 +14,12 @@ const propTypes = {
 };
 
 const Home = ({ data }) => (
-  <>
+  <Layout>
     <SEO title="Web Developer" />
     <Hero />
     <Projects projects={data.allProject.edges} />
     <Cta />
-  </>
+  </Layout>
 );
 
 Home.propTypes = propTypes;
