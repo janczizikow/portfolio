@@ -43,7 +43,7 @@ const Hero = () => (
     <Container>
       <Row alignItems="center" flexWrap="wrap">
         <Col flex={['0 0 100%', null, null, '0 0 50%']}>
-          <Heading is="h1" fontSize="2rem">
+          <Heading as="h1" fontSize="2rem">
             Just a simple dude who wants to build cool stuff.
           </Heading>
           <Text>
