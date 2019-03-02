@@ -7,8 +7,9 @@ import {
   lineHeight,
   letterSpacing,
 } from 'styled-system';
+import tag from 'clean-tag';
 
-const Heading = styled.h2`
+const Heading = styled(tag.h2)`
   ${space}
   ${color}
   ${fontSize}
@@ -24,6 +25,9 @@ Heading.propTypes = {
   ...textAlign.propTypes,
   ...lineHeight.propTypes,
   ...letterSpacing.propTypes,
+};
+Heading.defaultProps = {
+  color: 'headingColor',
 };
 Heading.displayName = 'Heading';
 

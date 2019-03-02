@@ -33,6 +33,7 @@
     "@emotion/core": "^10.0.7",
     "@emotion/styled": "^10.0.7",
     "axios": "^0.18.0",
+    "clean-tag": "^2.0.3",
     "dotenv": "^6.0.0",
     "emotion-theming": "^10.0.7",
     "facepaint": "^1.2.1",

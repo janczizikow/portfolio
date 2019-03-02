@@ -25,7 +25,8 @@ const Label = styled.label`
 
     return 'inline-block';
   }};
-  color: ${p => p.invalid && p.theme.colors.error};
+  color: ${p =>
+    (p.invalid && p.theme.colors.error) || p.theme.colors.textColor};
 `;
 
 Label.propTypes = propTypes;
