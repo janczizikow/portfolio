@@ -1,41 +1,15 @@
-// import Alert from './Alert';
-import Box from './Box';
-import Button from './Button';
-import Emoji from './Emoji';
-import Flex from './Flex';
-import FormGroup from './FormGroup';
-import FormInput from './FormInput';
-import FormErrorMsg from './FormErrorMsg';
-import * as Grid from './Grid';
-import Heading from './Heading';
-import IconButton from './IconButton';
-import Input from './Input';
-import Label from './Label';
-import Link from './Link';
-import Modal from './Modal';
-// import Spinner from './Spinner';
-import Text from './Text';
-
-const { Container, Row, Col } = Grid;
-
-export {
-  // Alert,
-  Button,
-  Box,
-  Col,
-  Container,
-  Emoji,
-  Flex,
-  FormGroup,
-  FormInput,
-  FormErrorMsg,
-  IconButton,
-  Input,
-  Label,
-  Link,
-  Modal,
-  Row,
-  // Spinner,
-  Text,
-  Heading,
-};
+export { default as Box } from './Box';
+export { default as Button } from './Button';
+export { default as Emoji } from './Emoji';
+export { default as Flex } from './Flex';
+export { default as FormGroup } from './FormGroup';
+export { default as FormInput } from './FormInput';
+export { default as FormErrorMsg } from './FormErrorMsg';
+export { Container, Row, Col } from './Grid';
+export { default as Heading } from './Heading';
+export { default as IconButton } from './IconButton';
+export { default as Input } from './Input';
+export { default as Label } from './Label';
+export { default as Link } from './Link';
+export { default as Modal } from './Modal';
+export { default as Text } from './Text';
