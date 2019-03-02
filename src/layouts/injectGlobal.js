@@ -8,16 +8,12 @@ const propTypes = {
 };
 
 class Global extends Component {
-  componentDidUpdate(prevProps) {
+  shouldComponentUpdate(nextProps) {
     const { theme } = this.props;
-
-    if (theme.colors.bgColor !== prevProps.theme.colors.bgColor) {
-      window.document.body.style.backgroundColor = theme.colors.bgColor;
-    }
-
-    if (theme.colors.textColor !== prevProps.theme.colors.textColor) {
-      window.document.body.style.color = theme.colors.textColor;
-    }
+    return (
+      theme.colors.bgColor !== nextProps.theme.colors.bgColor ||
+      theme.colors.textColor !== nextProps.theme.colors.textColor
+    );
   }
 
   render() {

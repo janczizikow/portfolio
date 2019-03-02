@@ -9,8 +9,9 @@ import {
   color,
   textAlign,
 } from 'styled-system';
+import tag from 'clean-tag';
 
-const Box = styled.div`
+const Box = styled(tag)`
   ${width}
   ${height}
   ${space}
