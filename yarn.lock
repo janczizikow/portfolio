@@ -5993,10 +5993,10 @@ gatsby-plugin-favicon@^3.1.4:
     html-react-parser "^0.4.6"
     lodash "^4.17.10"
 
-gatsby-plugin-google-tagmanager@^2.0.5:
-  version "2.0.9"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-google-tagmanager/-/gatsby-plugin-google-tagmanager-2.0.9.tgz#5d1db05fde25ca65789411bb1df535ed0789b575"
-  integrity sha512-+PeXpDn7fig0bzRKWhUxVz9cWZ7HqWoEsxHHBtIo2DKA1ZWy2wxWUqqWcTQEAAgYuGzZNj73yzbRJAf22d/xkA==
+gatsby-plugin-google-tagmanager@^2.0.10:
+  version "2.0.10"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-google-tagmanager/-/gatsby-plugin-google-tagmanager-2.0.10.tgz#36e8b77afa28c83e0c3b16be5b6a88956c9e3447"
+  integrity sha512-+qAPi15QsQMJLyhOtdM6JO+ermbPDaKsSTbShWLQCQB89ysK2qZczQT1AfcwtCUpRl1sKkohjSBeBjBLBNpmpg==
   dependencies:
     "@babel/runtime" "^7.0.0"
 
