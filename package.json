@@ -30,7 +30,7 @@
     "test:watch": "jest --watch"
   },
   "dependencies": {
-    "@emotion/core": "^10.0.7",
+    "@emotion/core": "^10.0.9",
     "@emotion/styled": "^10.0.7",
     "axios": "^0.18.0",
     "clean-tag": "^2.0.3",
