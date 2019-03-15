@@ -70,7 +70,7 @@
     "react-modal": "^3.6.1",
     "react-pose": "^3.3.7",
     "react-typography": "^0.16.19",
-    "styled-system": "^4.0.1",
+    "styled-system": "^4.0.4",
     "typography": "^0.16.17",
     "typography-theme-bootstrap": "^0.16.7",
     "yup": "^0.26.6"
