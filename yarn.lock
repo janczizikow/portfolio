@@ -13932,10 +13932,10 @@ typography-normalize@^0.16.18:
   resolved "https://registry.yarnpkg.com/typography-normalize/-/typography-normalize-0.16.18.tgz#19e8db32c6881d3745b7d67dc63ee6f6cfb681d1"
   integrity sha512-HZCOoyg4bbwuy0W6kFOKS8duMhUUO1Oxl8/NgRKDG7kJYGjfmqj6LBjQ4dYGrcuPabYHhP0xmAaYNasEUooYBw==
 
-typography-theme-bootstrap@^0.16.7:
-  version "0.16.18"
-  resolved "https://registry.yarnpkg.com/typography-theme-bootstrap/-/typography-theme-bootstrap-0.16.18.tgz#7110cbeb844419d460bc478c4b261a7b194047ab"
-  integrity sha512-b2pB4E4WCYGNpcVNCvNf7QIJSjKVCo9EUtCclfKRzl3uazNkdi3vj1mIgcOYAOLbq+owDpaU6puK6wHGhtdCbw==
+typography-theme-bootstrap@^0.16.19:
+  version "0.16.19"
+  resolved "https://registry.yarnpkg.com/typography-theme-bootstrap/-/typography-theme-bootstrap-0.16.19.tgz#17b999dc2c322b3eaacc829dba52ed54e2141fbe"
+  integrity sha512-Ls7aAqSUkQj7GY5FzMZcyjUtJbHH721JYEFN0kY8e+onDe0HFNuJ8jmg3fCX2ujFxEUmf1RJ4in9X0RkTv+suw==
   dependencies:
     gray-percentage "^2.0.0"
 
