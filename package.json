@@ -48,7 +48,7 @@
     "gatsby-plugin-netlify": "^2.0.12",
     "gatsby-plugin-netlify-cache": "^1.1.0",
     "gatsby-plugin-nprogress": "^2.0.10",
-    "gatsby-plugin-offline": "^2.0.8",
+    "gatsby-plugin-offline": "^2.0.25",
     "gatsby-plugin-react-helmet": "^3.0.8",
     "gatsby-plugin-react-svg": "^2.1.0",
     "gatsby-plugin-sentry": "^1.0.1",
