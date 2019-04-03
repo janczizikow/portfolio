@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import PropTypes from 'prop-types';
+import { ThemeProvider } from 'emotion-theming';
 import Global from './injectGlobal';
-import Theme from '../components/Theme';
+import ThemeContext from '../context/ThemeContext';
 import { Box, Flex } from '../components/UI';
 import Header from '../components/Header';
 import MobileMenu from '../components/MobileMenu';
@@ -18,12 +19,13 @@ const links = [
 ];
 
 const Layout = ({ children }) => {
+  const { theme } = useContext(ThemeContext);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const openMobileMenu = () => setIsMobileMenuOpen(true);
   const closeMobileMenu = () => setIsMobileMenuOpen(false);
 
   return (
-    <Theme>
+    <ThemeProvider theme={theme}>
       <Global />
       <Flex flexDirection="column" css={{ minHeight: '100vh' }}>
         <Header openMobileMenu={openMobileMenu} links={links} />
@@ -37,7 +39,7 @@ const Layout = ({ children }) => {
         </Box>
         <Footer />
       </Flex>
-    </Theme>
+    </ThemeProvider>
   );
 };
 

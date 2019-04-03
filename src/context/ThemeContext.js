@@ -1,15 +1,14 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import { ThemeProvider } from 'emotion-theming';
-import defaultTheme, { colorThemes } from '../../utils/theme';
+import defaultTheme, { colorThemes } from '../utils/theme';
 
-export const ThemeContext = React.createContext({
+const ThemeContext = React.createContext({
   theme: {},
   activeTheme: '',
   toggleTheme: () => {},
 });
 
-const Theme = ({ children }) => {
+const ThemeProvider = ({ children }) => {
   const [state, setState] = useState({
     theme: defaultTheme,
     activeTheme: 'light',
@@ -36,13 +35,13 @@ const Theme = ({ children }) => {
         toggleTheme,
       }}
     >
-      <ThemeProvider theme={state.theme}>{children}</ThemeProvider>
+      {children}
     </ThemeContext.Provider>
   );
 };
 
-Theme.propTypes = {
+ThemeProvider.propTypes = {
   children: PropTypes.node,
 };
 
-export default Theme;
+export { ThemeContext as default, ThemeProvider };
