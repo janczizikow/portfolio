@@ -82,7 +82,10 @@ module.exports = {
     },
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
-    'gatsby-plugin-offline',
+    // https://github.com/gatsbyjs/gatsby/issues/11006
+    // I give up -_-
+    // 'gatsby-plugin-offline',
+    'gatsby-plugin-remove-serviceworker',
     'gatsby-plugin-sitemap',
     {
       resolve: 'gatsby-plugin-google-tagmanager',
