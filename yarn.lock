@@ -6083,6 +6083,11 @@ gatsby-plugin-react-svg@^2.1.0:
   dependencies:
     svg-react-loader "^0.4.4"
 
+gatsby-plugin-remove-serviceworker@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-remove-serviceworker/-/gatsby-plugin-remove-serviceworker-1.0.0.tgz#9fb433bc8bd766e14e1d3711c4ac6f051e1dff7c"
+  integrity sha1-n7QzvIvXZuFOHTcRxKxvBR4d/3w=
+
 gatsby-plugin-remove-trailing-slashes@^2.0.10:
   version "2.0.10"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-remove-trailing-slashes/-/gatsby-plugin-remove-trailing-slashes-2.0.10.tgz#04390642e7e52ecf08bc1a14dd9dfc69b0866106"
