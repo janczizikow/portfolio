@@ -53,7 +53,7 @@ const Hero = () => (
             services. Familiar with development and deployment processes for
             many web-based technologies.
           </Text>
-          <ScrollDownLink href="#projects">
+          <ScrollDownLink href="#projects" aria-label="Projects">
             <ScrollDown>
               <FiChevronDown size={24} />
             </ScrollDown>
