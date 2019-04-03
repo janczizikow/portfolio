@@ -12,6 +12,7 @@ const Footer = () => (
         href="https://github.com/janczizikow/"
         target="_blank"
         rel="noopener noreferrer"
+        aria-label="Github"
       >
         <FiGithub size={24} />
       </FooterLink>
@@ -19,6 +20,7 @@ const Footer = () => (
         href="https://codepen.io/hollow3d/"
         target="_blank"
         rel="noopener noreferrer"
+        aria-label="Codepen"
       >
         <FiCodepen size={24} />
       </FooterLink>
@@ -26,6 +28,7 @@ const Footer = () => (
         href="https://www.linkedin.com/in/janczizikow/"
         target="_blank"
         rel="noopener noreferrer"
+        aria-label="Linkedin"
       >
         <FiLinkedin size={24} />
       </FooterLink>
