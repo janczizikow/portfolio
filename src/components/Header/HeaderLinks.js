@@ -4,7 +4,7 @@ import styled from '@emotion/styled';
 import { FiMoon, FiSun } from 'react-icons/fi';
 import HeaderLink from './HeaderLink';
 import { Box, IconButton } from '../UI';
-import { ThemeContext } from '../Theme/Theme';
+import ThemeContext from '../../context/ThemeContext';
 
 const propTypes = {
   links: PropTypes.arrayOf(
