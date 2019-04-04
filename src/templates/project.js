@@ -19,9 +19,7 @@ const propTypes = {
   }),
   data: PropTypes.shape({
     ProjectImages: PropTypes.shape({
-      childrenFile: PropTypes.shape({
-        photos: PropTypes.array,
-      }),
+      childrenFile: PropTypes.array,
     }),
   }),
 };
@@ -46,45 +44,38 @@ const ProjectPage = ({
   data: {
     ProjectImages: { childrenFile: photos },
   },
-}) => {
-  let projectLinks = null;
-
-  if (links) {
-    projectLinks = links.map(link => (
-      <Button space key={link.url} href={link.url}>
-        {link.text}
-      </Button>
-    ));
-  }
-
-  return (
-    <>
-      <SEO title={name} description={description} />
+}) => (
+  <>
+    <SEO title={name} description={description} />
+    <Container>
+      <Box py={5} mx="auto" textAlign="center" css={{ maxWidth: '720px' }}>
+        <Heading css={projectTitleStyles}>{name}</Heading>
+        <Text>{description}</Text>
+        {links &&
+          links.map(link => (
+            <Button space key={link.url} href={link.url}>
+              {link.text}
+            </Button>
+          ))}
+      </Box>
+    </Container>
+    <Box bg="bgGreyColor" py={5}>
       <Container>
-        <Box py={5} mx="auto" textAlign="center" css={{ maxWidth: '720px' }}>
-          <Heading css={projectTitleStyles}>{name}</Heading>
-          <Text>{description}</Text>
-          {projectLinks}
+        <Box textAlign="center" mx="auto" css={{ maxWidth: '720px' }}>
+          {photos.map((photo, i) => (
+            <Image
+              key={photo.id}
+              css={{ marginBottom: '1.5rem' }}
+              fluid={photo.childImageSharp.fluid}
+              alt={`${name}-${i}`}
+            />
+          ))}
         </Box>
       </Container>
-      <Box bg="bgGreyColor" py={5}>
-        <Container>
-          <Box textAlign="center" mx="auto" css={{ maxWidth: '720px' }}>
-            {photos.map((photo, i) => (
-              <Image
-                key={photo.id}
-                css={{ marginBottom: '1.5rem' }}
-                fluid={photo.childImageSharp.fluid}
-                alt={`${name}-${i}`}
-              />
-            ))}
-          </Box>
-        </Container>
-      </Box>
-      <Controls next={next} prev={prev} />
-    </>
-  );
-};
+    </Box>
+    <Controls next={next} prev={prev} />
+  </>
+);
 
 ProjectPage.propTypes = propTypes;
 
