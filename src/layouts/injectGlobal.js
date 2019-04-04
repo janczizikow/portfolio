@@ -22,14 +22,8 @@ class Global extends Component {
     return (
       <EmotionGlobal
         styles={css`
-          *::before,
-          *::after,
-          * {
-            box-sizing: border-box;
-          }
-
           html {
-            box-sizing: border-box;
+            overflow-y: initial;
           }
 
           body {
