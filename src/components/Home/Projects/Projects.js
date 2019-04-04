@@ -47,28 +47,23 @@ const projectsInner = css`
   }
 `;
 
-const Projects = ({ projects }) => {
-  let projectsDOM = null;
-
-  if (projects) {
-    projectsDOM = projects.map((project, i) => (
-      <ProjectItem
-        key={project.node.id}
-        project={project.node}
-        bigThumbnail={i === 0}
-      />
-    ));
-  }
-
-  return (
-    <Box id="projects" bg="bgGreyColor" py="3rem">
-      <Container>
-        <Heading textAlign="center">Projects</Heading>
-        <Box css={projectsInner}>{projectsDOM}</Box>
-      </Container>
-    </Box>
-  );
-};
+const Projects = ({ projects }) => (
+  <Box id="projects" bg="bgGreyColor" py="3rem">
+    <Container>
+      <Heading textAlign="center">Projects</Heading>
+      <Box css={projectsInner}>
+        {projects &&
+          projects.map((project, i) => (
+            <ProjectItem
+              key={project.node.id}
+              project={project.node}
+              bigThumbnail={i === 0}
+            />
+          ))}
+      </Box>
+    </Container>
+  </Box>
+);
 
 Projects.propTypes = propTypes;
 

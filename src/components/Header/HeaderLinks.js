@@ -26,26 +26,18 @@ const HeaderLinksNav = styled(Box)`
 `;
 
 const HeaderLinks = ({ links }) => {
-  const theme = useContext(ThemeContext);
-  let headerLinks = null;
-
-  if (links) {
-    headerLinks = links.map(link => (
-      <HeaderLink key={link.text} to={link.to}>
-        {link.text}
-      </HeaderLink>
-    ));
-  }
+  const { activeTheme, toggleTheme } = useContext(ThemeContext);
 
   return (
     <HeaderLinksNav is="nav">
-      {headerLinks}
-      <IconButton color="headingColor" pl={3} onClick={theme.toggleTheme}>
-        {theme.activeTheme === 'light' ? (
-          <FiMoon size={24} />
-        ) : (
-          <FiSun size={24} />
-        )}
+      {links &&
+        links.map(link => (
+          <HeaderLink key={link.text} to={link.to}>
+            {link.text}
+          </HeaderLink>
+        ))}
+      <IconButton color="headingColor" pl={3} onClick={toggleTheme}>
+        {activeTheme === 'light' ? <FiMoon size={24} /> : <FiSun size={24} />}
       </IconButton>
     </HeaderLinksNav>
   );
