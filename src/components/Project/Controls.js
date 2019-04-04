@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { FiChevronLeft, FiChevronRight } from 'react-icons/fi';
-import Link from './ControlLink';
+import ControlLink from './ControlLink';
 import { Box, Flex, Container, Text } from '../UI';
 
 const propTypes = {
@@ -25,10 +25,10 @@ const Controls = ({ prev, next }) => (
               <Text is="span" fontSize="14px">
                 Previous
               </Text>
-              <Link prev to={`/projects/${prev.slug}`}>
+              <ControlLink prev to={`/projects/${prev.slug}`}>
                 <FiChevronLeft size={24} />
                 {prev.name}
-              </Link>
+              </ControlLink>
             </>
           )}
         </Flex>
@@ -38,10 +38,10 @@ const Controls = ({ prev, next }) => (
               <Text is="span" fontSize="14px">
                 Next
               </Text>
-              <Link next to={`/projects/${next.slug}`}>
+              <ControlLink next to={`/projects/${next.slug}`}>
                 {next.name}
                 <FiChevronRight size={24} />
-              </Link>
+              </ControlLink>
             </>
           )}
         </Flex>
