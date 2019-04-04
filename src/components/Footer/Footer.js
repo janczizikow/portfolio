@@ -5,7 +5,7 @@ import Box from '../UI/Box';
 import Flex from '../UI/Flex';
 import FooterLink from './FooterLink';
 
-const Footer = () => (
+const Footer = React.memo(() => (
   <Box is="footer" py={58} bg="bgAlt" color="white">
     <Flex alignItems="center" justifyContent="center">
       <FooterLink
@@ -34,6 +34,6 @@ const Footer = () => (
       </FooterLink>
     </Flex>
   </Box>
-);
+));
 
 export default Footer;

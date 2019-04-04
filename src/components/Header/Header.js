@@ -37,23 +37,10 @@ const HeaderLink = styled(Link)`
 `;
 
 class Header extends Component {
-  state = {
-    headroomActive: false,
-  };
-
   windowWidth = 0;
 
-  getWindowWidth = () => {
-    this.windowWidth = window.innerWidth;
-    if (this.windowWidth < 992) {
-      this.setState({
-        headroomActive: false,
-      });
-    } else {
-      this.setState({
-        headroomActive: true,
-      });
-    }
+  state = {
+    headroomActive: false,
   };
 
   componentDidMount = () => {
@@ -63,8 +50,31 @@ class Header extends Component {
     window.addEventListener('resize', this.getWindowWidth);
   };
 
+  shouldComponentUpdate(nextProps, nextState) {
+    const { theme } = this.props;
+    const { headroomActive } = this.state;
+    const themeChanged =
+      theme.colors.bgHeader !== nextProps.theme.colors.bgHeader;
+    const stateChanged = headroomActive !== nextState.headroomActive;
+
+    if (!themeChanged && !stateChanged) {
+      return false;
+    }
+
+    return true;
+  }
+
   componentWillUnmount = () => {
     window.removeEventListener('resize', this.getWindowWidth);
+  };
+
+  getWindowWidth = () => {
+    this.windowWidth = window.innerWidth;
+    if (this.windowWidth < 992) {
+      this.setState({ headroomActive: false });
+    } else {
+      this.setState({ headroomActive: true });
+    }
   };
 
   render() {
