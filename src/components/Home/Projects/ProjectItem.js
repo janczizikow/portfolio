@@ -114,7 +114,7 @@ const ProjectInner = styled('figcaption')`
 `;
 
 const ProjectItem = ({ project, bigThumbnail }) => (
-  <ProjectItemLink to={`projects/${project.slug}`}>
+  <ProjectItemLink to={`/projects/${project.slug}`}>
     <ProjectThumbnail>
       <ProjectImage
         backgroundColor
