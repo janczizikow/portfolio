@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import styled from '@emotion/styled';
 import { FiMoon, FiSun } from 'react-icons/fi';
 import HeaderLink from './HeaderLink';
-import { Box, IconButton } from '../UI';
+import { Box, Flex, IconButton } from '../UI';
 import ThemeContext from '../../context/ThemeContext';
 
 const propTypes = {
@@ -29,17 +29,19 @@ const HeaderLinks = ({ links }) => {
   const { activeTheme, toggleTheme } = useContext(ThemeContext);
 
   return (
-    <HeaderLinksNav is="nav">
-      {links &&
-        links.map(link => (
-          <HeaderLink key={link.text} to={link.to}>
-            {link.text}
-          </HeaderLink>
-        ))}
+    <Flex css={{ height: '100%' }}>
+      <HeaderLinksNav is="nav">
+        {links &&
+          links.map(link => (
+            <HeaderLink key={link.text} to={link.to}>
+              {link.text}
+            </HeaderLink>
+          ))}
+      </HeaderLinksNav>
       <IconButton color="headingColor" pl={3} onClick={toggleTheme}>
         {activeTheme === 'light' ? <FiMoon size={24} /> : <FiSun size={24} />}
       </IconButton>
-    </HeaderLinksNav>
+    </Flex>
   );
 };
 

@@ -35,8 +35,8 @@ const StyledMenu = styled(Menu)`
   right: 0;
   width: 100%;
   height: 100%;
+  background-color: ${p => p.theme.colors.bgAlt};
   overflow-y: auto;
-  background: ${p => p.theme.colors.bgAlt};
   z-index: 999;
 `;
 
@@ -47,6 +47,7 @@ const MenuTop = styled(Flex)`
 const MenuLinks = styled(Flex)`
   width: 100%;
   height: calc(100vh - ${p => p.theme.headerHeight});
+  background-color: ${p => p.theme.colors.bgAlt};
   overflow: auto;
 `;
 

@@ -5,9 +5,10 @@ import styled from '@emotion/styled';
 import { withTheme } from 'emotion-theming';
 import { Link } from 'gatsby';
 import { Container, Flex } from '../UI';
-import Logo from '../../assets/images/logo.svg';
 import HeaderToggle from './HeaderToggle';
 import HeaderLinks from './HeaderLinks';
+import Logo from '../../assets/images/logo.svg';
+import presets from '../../utils/presets';
 
 const propTypes = {
   links: PropTypes.arrayOf(
@@ -106,10 +107,15 @@ class Header extends Component {
       >
         <Container fluid>
           <HeaderInner alignItems="center" justifyContent="space-between">
-            <HeaderLink to="/">
-              <Logo />
-            </HeaderLink>
-            <HeaderToggle onClick={openMobileMenu} />
+            <Flex alignItems="center" css={{ height: '100%' }}>
+              <HeaderToggle onClick={openMobileMenu} />
+              <HeaderLink
+                to="/"
+                css={{ marginLeft: 24, [presets.lg]: { marginLeft: 0 } }}
+              >
+                <Logo />
+              </HeaderLink>
+            </Flex>
             <HeaderLinks links={links} />
           </HeaderInner>
         </Container>
