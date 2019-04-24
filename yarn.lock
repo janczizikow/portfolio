@@ -6051,10 +6051,10 @@ gatsby-plugin-google-tagmanager@^2.0.10:
   dependencies:
     "@babel/runtime" "^7.0.0"
 
-gatsby-plugin-layout@^1.0.4:
-  version "1.0.12"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-layout/-/gatsby-plugin-layout-1.0.12.tgz#dc57e58b6d0f57a24fc86eafa07fa15a04c0516e"
-  integrity sha512-RNppwUiuQ8HT66sA4K+LXTVn4058qRn3Cscte7/mW0/pd5+w6M2lG4RZGIttvy8CKTizMjcwrir73hVzPM5bRA==
+gatsby-plugin-layout@^1.0.15:
+  version "1.0.15"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-layout/-/gatsby-plugin-layout-1.0.15.tgz#bb46eacd0d38d1a60ed6e423f624d899486f7830"
+  integrity sha512-hAdnwnnc2kTO/bJoi8uQXPrT/+XnkAYXccCAMAzs4bG19f93IrXMG1QQPEoB0rH6AMYC+pgUXYcOQXowWfoq2w==
   dependencies:
     "@babel/runtime" "^7.0.0"
 
