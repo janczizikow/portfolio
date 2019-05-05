@@ -101,7 +101,7 @@
     "gatsby-plugin-eslint": "^2.0.4",
     "gatsby-plugin-remove-trailing-slashes": "^2.0.10",
     "identity-obj-proxy": "^3.0.0",
-    "jest": "^23.5.0",
+    "jest": "^24.8.0",
     "jest-emotion": "^10.0.7",
     "prettier": "^1.14.2",
     "stylelint": "^9.5.0",
