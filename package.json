@@ -103,7 +103,7 @@
     "identity-obj-proxy": "^3.0.0",
     "jest": "^23.5.0",
     "jest-emotion": "^10.0.7",
-    "prettier": "^1.14.2",
+    "prettier": "^1.17.1",
     "stylelint": "^9.5.0",
     "stylelint-config-prettier": "^5.0.0",
     "stylelint-config-recommended": "^2.1.0",
