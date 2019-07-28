@@ -98,6 +98,7 @@ exports[`<Footer /> renders with correct styles 1`] = `
     justifyContent="center"
   >
     <FooterLink
+      aria-label="Github"
       href="https://github.com/janczizikow/"
       rel="noopener noreferrer"
       target="_blank"
@@ -107,6 +108,7 @@ exports[`<Footer /> renders with correct styles 1`] = `
       />
     </FooterLink>
     <FooterLink
+      aria-label="Codepen"
       href="https://codepen.io/hollow3d/"
       rel="noopener noreferrer"
       target="_blank"
@@ -116,6 +118,7 @@ exports[`<Footer /> renders with correct styles 1`] = `
       />
     </FooterLink>
     <FooterLink
+      aria-label="Linkedin"
       href="https://www.linkedin.com/in/janczizikow/"
       rel="noopener noreferrer"
       target="_blank"

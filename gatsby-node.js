@@ -15,8 +15,8 @@ const { createRemoteFileNode } = require(`gatsby-source-filesystem`);
 exports.sourceNodes = ({ actions: { createNode }, createNodeId }) => {
   const baseApiUrl =
     process.env.NODE_ENV === 'production'
-      ? 'https://janczizikow-portfolio-api.herokuapp.com/api/v2/projects'
-      : 'http://localhost:3000/api/v2/projects';
+      ? 'https://janczizikow-portfolio-api.herokuapp.com/api/v2/projects/'
+      : 'http://localhost:3000/api/v2/projects/';
 
   const processProject = project => {
     const nodeId = createNodeId(`project-${project.name}-${project.id}`);
@@ -142,7 +142,7 @@ exports.createPages = ({ graphql, actions: { createPage } }) =>
         // Create pages for each project
         result.data.allProject.edges.forEach(({ node }) => {
           createPage({
-            path: `/projects/${node.slug}`,
+            path: `/projects/${node.slug}/`,
             component: projectTemplate,
             context: {
               id: node.id,

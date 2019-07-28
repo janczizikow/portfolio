@@ -14,8 +14,8 @@ const propTypes = {
 
 const links = [
   { to: '/', text: 'Projects' },
-  { to: '/about', text: 'About' },
-  { to: '/contact', text: 'Contact' },
+  { to: '/about/', text: 'About' },
+  { to: '/contact/', text: 'Contact' },
 ];
 
 const Layout = ({ children }) => {

@@ -2,17 +2,17 @@ require('dotenv').config({
   path: '.env',
 });
 
+const SITE_URL = 'https://www.janczizikow.com';
+
 module.exports = {
   siteMetadata: {
     title: 'Jan Czizikow',
-    siteUrl: 'https://www.janczizikow.com',
+    siteUrl: SITE_URL,
     description: `This is the site of Jan Czizikow, a Web Developer. The site is just a list of things he's been up to including blog and projects.`,
     author: `@jan_czizikow`,
   },
   plugins: [
-    'gatsby-plugin-remove-trailing-slashes',
     'gatsby-plugin-react-helmet',
-    'gatsby-plugin-eslint',
     'gatsby-plugin-emotion',
     {
       resolve: 'gatsby-plugin-typography',
@@ -88,20 +88,25 @@ module.exports = {
     'gatsby-plugin-remove-serviceworker',
     'gatsby-plugin-sitemap',
     {
+      resolve: 'gatsby-plugin-canonical-urls',
+      options: {
+        siteUrl: SITE_URL,
+        stripQueryString: true,
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-google-analytics',
+      options: {
+        trackingId: process.env.GA_TRACKING_ID,
+        anonymize: true,
+        siteSpeedSampleRate: 100,
+      },
+    },
+    {
       resolve: 'gatsby-plugin-google-tagmanager',
       options: {
         id: process.env.GTM_CONTAINER_ID,
         includeInDevelopment: false,
-      },
-    },
-    {
-      resolve: 'gatsby-plugin-sentry',
-      options: {
-        dsn: process.env.SENTRY_DSN,
-        // Optional settings, see https://docs.sentry.io/clients/node/config/#optional-settings
-        environment: process.env.NODE_ENV,
-        enabled: (() =>
-          ['production', 'stage'].indexOf(process.env.NODE_ENV) !== -1)(),
       },
     },
     {

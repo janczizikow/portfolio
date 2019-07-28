@@ -11,6 +11,10 @@ const propTypes = {
     name: PropTypes.string.isRequired,
     slug: PropTypes.string.isRequired,
     date: PropTypes.string,
+    thumbnail: PropTypes.shape({
+      bigThumbnails: PropTypes.object,
+      smallThumbnails: PropTypes.object,
+    }),
   }),
   bigThumbnail: PropTypes.bool,
 };
@@ -114,7 +118,7 @@ const ProjectInner = styled('figcaption')`
 `;
 
 const ProjectItem = ({ project, bigThumbnail }) => (
-  <ProjectItemLink to={`/projects/${project.slug}`}>
+  <ProjectItemLink to={`/projects/${project.slug}/`}>
     <ProjectThumbnail>
       <ProjectImage
         backgroundColor

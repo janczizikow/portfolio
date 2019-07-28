@@ -1,10 +1,6 @@
 const babelOptions = {
-  presets: ['@babel/react', '@babel/env'],
-  plugins: [
-    '@babel/plugin-proposal-optional-chaining',
-    '@babel/plugin-proposal-class-properties',
-    'babel-plugin-emotion',
-  ],
+  presets: ['babel-preset-gatsby'],
+  plugins: ['babel-plugin-emotion'],
 };
 
 // eslint-disable-next-line import/no-extraneous-dependencies

@@ -1,0 +1,448 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Footer /> renders with correct styles 1`] = `
+.emotion-10 {
+  padding-top: 58px;
+  padding-bottom: 58px;
+  color: white;
+  background-color: bgAlt;
+}
+
+.emotion-6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.emotion-0 {
+  padding: 0 15px;
+  color: inherit;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  opacity: 1;
+  -webkit-transition: opacity 0.2s;
+  transition: opacity 0.2s;
+  -webkit-transition: color 0.15s ease-in;
+  transition: color 0.15s ease-in;
+}
+
+.emotion-0:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  box-shadow: none;
+  opacity: 0.7;
+  -webkit-transition: opacity 0.2s;
+  transition: opacity 0.2s;
+}
+
+<Component>
+  <Clean.div
+    bg="bgAlt"
+    blacklist={
+      Array [
+        "m",
+        "mt",
+        "mr",
+        "mb",
+        "ml",
+        "mx",
+        "my",
+        "p",
+        "pt",
+        "pr",
+        "pb",
+        "pl",
+        "px",
+        "py",
+        "width",
+        "fontSize",
+        "color",
+        "bg",
+        "fontFamily",
+        "textAlign",
+        "lineHeight",
+        "fontWeight",
+        "fontStyle",
+        "letterSpacing",
+        "display",
+        "maxWidth",
+        "minWidth",
+        "height",
+        "maxHeight",
+        "minHeight",
+        "size",
+        "ratio",
+        "verticalAlign",
+        "alignItems",
+        "alignContent",
+        "justifyItems",
+        "justifyContent",
+        "flexWrap",
+        "flexBasis",
+        "flexDirection",
+        "flex",
+        "justifySelf",
+        "alignSelf",
+        "order",
+        "gridGap",
+        "gridColumnGap",
+        "gridRowGap",
+        "gridColumn",
+        "gridRow",
+        "gridAutoFlow",
+        "gridAutoColumns",
+        "gridAutoRows",
+        "gridTemplateColumns",
+        "gridTemplateRows",
+        "gridTemplateAreas",
+        "gridArea",
+        "border",
+        "borderTop",
+        "borderRight",
+        "borderBottom",
+        "borderLeft",
+        "borderColor",
+        "borderRadius",
+        "boxShadow",
+        "opacity",
+        "overflow",
+        "background",
+        "backgroundImage",
+        "backgroundPosition",
+        "backgroundRepeat",
+        "backgroundSize",
+        "position",
+        "zIndex",
+        "top",
+        "right",
+        "bottom",
+        "left",
+        "textStyle",
+        "colors",
+        "variant",
+        "theme",
+      ]
+    }
+    className="emotion-10 emotion-11"
+    color="white"
+    is="footer"
+    py={58}
+  >
+    <footer
+      className="emotion-10 emotion-11"
+    >
+      <Flex
+        alignItems="center"
+        display="flex"
+        justifyContent="center"
+      >
+        <Clean.div
+          alignItems="center"
+          blacklist={
+            Array [
+              "m",
+              "mt",
+              "mr",
+              "mb",
+              "ml",
+              "mx",
+              "my",
+              "p",
+              "pt",
+              "pr",
+              "pb",
+              "pl",
+              "px",
+              "py",
+              "width",
+              "fontSize",
+              "color",
+              "bg",
+              "fontFamily",
+              "textAlign",
+              "lineHeight",
+              "fontWeight",
+              "fontStyle",
+              "letterSpacing",
+              "display",
+              "maxWidth",
+              "minWidth",
+              "height",
+              "maxHeight",
+              "minHeight",
+              "size",
+              "ratio",
+              "verticalAlign",
+              "alignItems",
+              "alignContent",
+              "justifyItems",
+              "justifyContent",
+              "flexWrap",
+              "flexBasis",
+              "flexDirection",
+              "flex",
+              "justifySelf",
+              "alignSelf",
+              "order",
+              "gridGap",
+              "gridColumnGap",
+              "gridRowGap",
+              "gridColumn",
+              "gridRow",
+              "gridAutoFlow",
+              "gridAutoColumns",
+              "gridAutoRows",
+              "gridTemplateColumns",
+              "gridTemplateRows",
+              "gridTemplateAreas",
+              "gridArea",
+              "border",
+              "borderTop",
+              "borderRight",
+              "borderBottom",
+              "borderLeft",
+              "borderColor",
+              "borderRadius",
+              "boxShadow",
+              "opacity",
+              "overflow",
+              "background",
+              "backgroundImage",
+              "backgroundPosition",
+              "backgroundRepeat",
+              "backgroundSize",
+              "position",
+              "zIndex",
+              "top",
+              "right",
+              "bottom",
+              "left",
+              "textStyle",
+              "colors",
+              "variant",
+              "theme",
+            ]
+          }
+          className="emotion-6 emotion-7"
+          display="flex"
+          justifyContent="center"
+        >
+          <div
+            className="emotion-6 emotion-7"
+          >
+            <FooterLink
+              aria-label="Github"
+              href="https://github.com/janczizikow/"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <a
+                aria-label="Github"
+                className="emotion-0 emotion-1"
+                href="https://github.com/janczizikow/"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <FiGithub
+                  size={24}
+                >
+                  <IconBase
+                    attr={
+                      Object {
+                        "fill": "none",
+                        "stroke": "currentColor",
+                        "strokeLinecap": "round",
+                        "strokeLinejoin": "round",
+                        "strokeWidth": "2",
+                        "viewBox": "0 0 24 24",
+                      }
+                    }
+                    size={24}
+                  >
+                    <svg
+                      fill="none"
+                      height={24}
+                      size={24}
+                      stroke="currentColor"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      style={
+                        Object {
+                          "color": undefined,
+                        }
+                      }
+                      viewBox="0 0 24 24"
+                      width={24}
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
+                        key="0"
+                      />
+                    </svg>
+                  </IconBase>
+                </FiGithub>
+              </a>
+            </FooterLink>
+            <FooterLink
+              aria-label="Codepen"
+              href="https://codepen.io/hollow3d/"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <a
+                aria-label="Codepen"
+                className="emotion-0 emotion-1"
+                href="https://codepen.io/hollow3d/"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <FiCodepen
+                  size={24}
+                >
+                  <IconBase
+                    attr={
+                      Object {
+                        "fill": "none",
+                        "stroke": "currentColor",
+                        "strokeLinecap": "round",
+                        "strokeLinejoin": "round",
+                        "strokeWidth": "2",
+                        "viewBox": "0 0 24 24",
+                      }
+                    }
+                    size={24}
+                  >
+                    <svg
+                      fill="none"
+                      height={24}
+                      size={24}
+                      stroke="currentColor"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      style={
+                        Object {
+                          "color": undefined,
+                        }
+                      }
+                      viewBox="0 0 24 24"
+                      width={24}
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <polygon
+                        key="0"
+                        points="12 2 22 8.5 22 15.5 12 22 2 15.5 2 8.5 12 2"
+                      />
+                      <line
+                        key="1"
+                        x1="12"
+                        x2="12"
+                        y1="22"
+                        y2="15.5"
+                      />
+                      <polyline
+                        key="2"
+                        points="22 8.5 12 15.5 2 8.5"
+                      />
+                      <polyline
+                        key="3"
+                        points="2 15.5 12 8.5 22 15.5"
+                      />
+                      <line
+                        key="4"
+                        x1="12"
+                        x2="12"
+                        y1="2"
+                        y2="8.5"
+                      />
+                    </svg>
+                  </IconBase>
+                </FiCodepen>
+              </a>
+            </FooterLink>
+            <FooterLink
+              aria-label="Linkedin"
+              href="https://www.linkedin.com/in/janczizikow/"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <a
+                aria-label="Linkedin"
+                className="emotion-0 emotion-1"
+                href="https://www.linkedin.com/in/janczizikow/"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <FiLinkedin
+                  size={24}
+                >
+                  <IconBase
+                    attr={
+                      Object {
+                        "fill": "none",
+                        "stroke": "currentColor",
+                        "strokeLinecap": "round",
+                        "strokeLinejoin": "round",
+                        "strokeWidth": "2",
+                        "viewBox": "0 0 24 24",
+                      }
+                    }
+                    size={24}
+                  >
+                    <svg
+                      fill="none"
+                      height={24}
+                      size={24}
+                      stroke="currentColor"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      style={
+                        Object {
+                          "color": undefined,
+                        }
+                      }
+                      viewBox="0 0 24 24"
+                      width={24}
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
+                        key="0"
+                      />
+                      <rect
+                        height="12"
+                        key="1"
+                        width="4"
+                        x="2"
+                        y="9"
+                      />
+                      <circle
+                        cx="4"
+                        cy="4"
+                        key="2"
+                        r="2"
+                      />
+                    </svg>
+                  </IconBase>
+                </FiLinkedin>
+              </a>
+            </FooterLink>
+          </div>
+        </Clean.div>
+      </Flex>
+    </footer>
+  </Clean.div>
+</Component>
+`;

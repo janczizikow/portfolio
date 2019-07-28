@@ -25,7 +25,7 @@ const Controls = ({ prev, next }) => (
               <Text is="span" fontSize="14px">
                 Previous
               </Text>
-              <ControlLink prev to={`/projects/${prev.slug}`}>
+              <ControlLink prev to={`/projects/${prev.slug}/`}>
                 <FiChevronLeft size={24} />
                 {prev.name}
               </ControlLink>
@@ -38,7 +38,7 @@ const Controls = ({ prev, next }) => (
               <Text is="span" fontSize="14px">
                 Next
               </Text>
-              <ControlLink next to={`/projects/${next.slug}`}>
+              <ControlLink next to={`/projects/${next.slug}/`}>
                 {next.name}
                 <FiChevronRight size={24} />
               </ControlLink>
