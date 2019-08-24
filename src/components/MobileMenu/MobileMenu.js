@@ -13,6 +13,7 @@ import MobileMenuClose from './MobileMenuClose';
 import MobileMenuLink from './MobileMenuLink';
 import Logo from '../../assets/images/logo.svg';
 import useEventListener from '../../utils/useEventListener';
+import isClient from '../../utils/isClient';
 
 const propTypes = {
   isMobileMenuOpen: PropTypes.bool,
@@ -73,7 +74,7 @@ const MobileMenu = ({ isMobileMenuOpen, closeMobileMenu, links }) => {
       closeMobileMenu();
     }
   };
-  useEventListener('keydown', handleKeyDown, document);
+  useEventListener('keydown', handleKeyDown, isClient && document);
   useEffect(() => {
     if (isMobileMenuOpen) {
       disableBodyScroll(menuRef.current);
