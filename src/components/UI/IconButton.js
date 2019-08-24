@@ -5,7 +5,7 @@ import Flex from './Flex';
 
 const IconButton = ({ heightAuto, ...rest }) => (
   <Flex
-    is="button"
+    as="button"
     type="button"
     p={0}
     bg="transparent"

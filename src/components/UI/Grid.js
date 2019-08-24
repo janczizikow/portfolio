@@ -36,7 +36,7 @@ const Row = props => (
 );
 
 const Col = props => (
-  <Box px={3} width="100%" css={{ minHeight: 1 }} {...props} />
+  <Flex display="block" px={3} width="100%" minHeight="1px" {...props} />
 );
 
 export { Col, Container, Row };

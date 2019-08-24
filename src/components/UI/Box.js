@@ -1,36 +1,18 @@
 import styled from '@emotion/styled';
-import {
-  width,
-  height,
-  space,
-  flex,
-  alignSelf,
-  order,
-  color,
-  textAlign,
-} from 'styled-system';
-import tag from 'clean-tag';
+import { layout, space, color } from 'styled-system';
+import propTypes from '@styled-system/prop-types';
+import shouldForwardProp from '@styled-system/should-forward-prop';
 
-const Box = styled(tag)`
-  ${width}
-  ${height}
+const Box = styled('div', { shouldForwardProp })`
+  ${layout}
   ${space}
-  ${flex}
-  ${alignSelf}
-  ${order}
   ${color}
-  ${textAlign}
 `;
 
 Box.propTypes = {
-  ...width.propTypes,
-  ...height.propTypes,
-  ...space.propTypes,
-  ...flex.propTypes,
-  ...alignSelf.propTypes,
-  ...order.propTypes,
-  ...color.propTypes,
-  ...textAlign.propTypes,
+  ...propTypes.layout,
+  ...propTypes.space,
+  ...propTypes.color,
 };
 
 Box.displayName = 'Box';

@@ -27,14 +27,14 @@ const Layout = ({ children }) => {
   return (
     <ThemeProvider theme={theme}>
       <Global />
-      <Flex flexDirection="column" css={{ minHeight: '100vh' }}>
+      <Flex flexDirection="column" minHeight="100vh">
         <Header openMobileMenu={openMobileMenu} links={links} />
         <MobileMenu
           isMobileMenuOpen={isMobileMenuOpen}
           closeMobileMenu={closeMobileMenu}
           links={links}
         />
-        <Box is="main" flex={1}>
+        <Box as="main" css={{ flex: 1 }}>
           {children}
         </Box>
         <Footer />

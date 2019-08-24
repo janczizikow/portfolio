@@ -1,20 +1,18 @@
 import styled from '@emotion/styled';
-import { space, color, fontSize, textAlign, lineHeight } from 'styled-system';
-import tag from 'clean-tag';
+import { space, color, typography } from 'styled-system';
+import shouldForwardProp from '@styled-system/should-forward-prop';
+import propTypes from '@styled-system/prop-types';
 
-const Text = styled(tag.p)`
+const Text = styled('p', { shouldForwardProp })`
   ${space}
   ${color}
-  ${fontSize}
-  ${textAlign}
-  ${lineHeight}
+  ${typography}
 `;
 
 Text.propTypes = {
-  ...space.propTypes,
-  ...color.propTypes,
-  ...fontSize.propTypes,
-  ...textAlign.propTypes,
+  ...propTypes.space,
+  ...propTypes.color,
+  ...propTypes.typography,
 };
 Text.defaultProps = {
   color: 'textColor',

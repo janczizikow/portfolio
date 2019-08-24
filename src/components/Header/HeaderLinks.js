@@ -30,7 +30,7 @@ const HeaderLinks = ({ links }) => {
 
   return (
     <Flex css={{ height: '100%' }}>
-      <HeaderLinksNav is="nav">
+      <HeaderLinksNav as="nav">
         {links &&
           links.map(link => (
             <HeaderLink key={link.text} to={link.to}>

@@ -48,7 +48,7 @@ const ProjectPage = ({
   <>
     <SEO title={name} description={description} />
     <Container>
-      <Box py={5} mx="auto" textAlign="center" css={{ maxWidth: '720px' }}>
+      <Box py={5} mx="auto" css={{ maxWidth: '720px', textAlign: 'center' }}>
         <Heading css={projectTitleStyles}>{name}</Heading>
         <Text>{description}</Text>
         {links &&
@@ -61,7 +61,7 @@ const ProjectPage = ({
     </Container>
     <Box bg="bgGreyColor" py={5}>
       <Container>
-        <Box textAlign="center" mx="auto" css={{ maxWidth: '720px' }}>
+        <Box mx="auto" css={{ maxWidth: '720px' }}>
           {photos.map((photo, i) => (
             <Image
               key={photo.id}

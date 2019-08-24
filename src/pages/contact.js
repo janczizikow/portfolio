@@ -18,7 +18,7 @@ const Contact = () => (
     <Container>
       <Row>
         <Col>
-          <Heading is="h3">Let&apos;s build something awesome!</Heading>
+          <Heading as="h3">Let&apos;s build something awesome!</Heading>
           <Text>
             Fill in the form or{' '}
             <Link href="mailto:jan.czizikow@gmail.com">email me</Link> to get in
@@ -41,11 +41,11 @@ const Contact = () => (
           order={[-1, null, null, 0]}
           flex={['0 0 100%', null, null, `0 0 ${((5 / 12) * 100).toFixed(4)}%`]}
         >
-          <Heading is="h4" mb={2}>
+          <Heading as="h4" mb={2}>
             email
           </Heading>
           <Text>jan.czizikow@gmail.com</Text>
-          <Heading is="h4" mb={2}>
+          <Heading as="h4" mb={2}>
             location
           </Heading>
           <Text>Berlin, Germany</Text>

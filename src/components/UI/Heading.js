@@ -1,30 +1,18 @@
 import styled from '@emotion/styled';
-import {
-  space,
-  color,
-  fontSize,
-  textAlign,
-  lineHeight,
-  letterSpacing,
-} from 'styled-system';
-import tag from 'clean-tag';
+import { space, color, typography } from 'styled-system';
+import shouldForwardProp from '@styled-system/should-forward-prop';
+import propTypes from '@styled-system/prop-types';
 
-const Heading = styled(tag.h2)`
+const Heading = styled('h2', { shouldForwardProp })`
   ${space}
   ${color}
-  ${fontSize}
-  ${textAlign}
-  ${lineHeight}
-  ${letterSpacing}
+  ${typography}
 `;
 
 Heading.propTypes = {
-  ...space.propTypes,
-  ...color.propTypes,
-  ...fontSize.propTypes,
-  ...textAlign.propTypes,
-  ...lineHeight.propTypes,
-  ...letterSpacing.propTypes,
+  ...propTypes.space,
+  ...propTypes.color,
+  ...propTypes.typography,
 };
 Heading.defaultProps = {
   color: 'headingColor',
