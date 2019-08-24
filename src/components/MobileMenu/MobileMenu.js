@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
 import styled from '@emotion/styled';
@@ -12,6 +12,7 @@ import { Flex, Container } from '../UI';
 import MobileMenuClose from './MobileMenuClose';
 import MobileMenuLink from './MobileMenuLink';
 import Logo from '../../assets/images/logo.svg';
+import useEventListener from '../../utils/useEventListener';
 
 const propTypes = {
   isMobileMenuOpen: PropTypes.bool,
@@ -65,81 +66,66 @@ const Box = styled(LinkTransitionContainer)`
   width: 100%;
 `;
 
-class MobileMenu extends React.Component {
-  menuRef = React.createRef();
-
-  shouldComponentUpdate(nextProps) {
-    const { isMobileMenuOpen } = this.props;
-    return isMobileMenuOpen !== nextProps.isMobileMenuOpen;
-  }
-
-  componentDidUpdate() {
-    const { isMobileMenuOpen } = this.props;
-
-    if (isMobileMenuOpen) {
-      document.addEventListener('keydown', this.handleKeyDown);
-      disableBodyScroll(this.menuRef.current);
-    } else {
-      document.removeEventListener('keydown', this.handleKeyDown);
-      enableBodyScroll(this.menuRef.current);
-    }
-  }
-
-  componentWillUnmount() {
-    clearAllBodyScrollLocks();
-  }
-
-  handleKeyDown = e => {
-    const { closeMobileMenu } = this.props;
-
-    if (e.keyCode === 27) {
+const MobileMenu = ({ isMobileMenuOpen, closeMobileMenu, links }) => {
+  const menuRef = useRef();
+  const handleKeyDown = e => {
+    if (e.keyCode === 27 && closeMobileMenu) {
       closeMobileMenu();
     }
   };
+  useEventListener('keydown', handleKeyDown, document);
+  useEffect(() => {
+    if (isMobileMenuOpen) {
+      disableBodyScroll(menuRef.current);
+    } else {
+      enableBodyScroll(menuRef.current);
+    }
 
-  render() {
-    const { isMobileMenuOpen, closeMobileMenu, links } = this.props;
-    return (
-      <PoseGroup flipMove={false}>
-        {isMobileMenuOpen && (
-          <StyledMenu key="mobileMenu" ref={this.menuRef} pose>
-            <Container fluid>
-              <MenuTop
-                alignItems="center"
-                justifyContent="space-between"
-                color="white"
-              >
-                <Link onClick={closeMobileMenu} css={{ color: '#fff' }} to="/">
-                  <Logo />
-                </Link>
-                <MobileMenuClose onClick={closeMobileMenu} />
-              </MenuTop>
-            </Container>
-            <MenuLinks alignItems="center" width="100%">
-              <Box>
-                {links.map(link => (
-                  <LinkTransition
-                    key={link.text}
-                    style={{ opacity: 0, transform: 'translateY(-24px)' }}
+    return () => {
+      clearAllBodyScrollLocks();
+    };
+  }, [isMobileMenuOpen, menuRef]);
+
+  return (
+    <PoseGroup flipMove={false}>
+      {isMobileMenuOpen && (
+        <StyledMenu key="mobileMenu" ref={menuRef} pose>
+          <Container fluid>
+            <MenuTop
+              alignItems="center"
+              justifyContent="space-between"
+              color="white"
+            >
+              <Link onClick={closeMobileMenu} css={{ color: '#fff' }} to="/">
+                <Logo />
+              </Link>
+              <MobileMenuClose onClick={closeMobileMenu} />
+            </MenuTop>
+          </Container>
+          <MenuLinks alignItems="center" width="100%">
+            <Box>
+              {links.map(link => (
+                <LinkTransition
+                  key={link.text}
+                  style={{ opacity: 0, transform: 'translateY(-24px)' }}
+                >
+                  <MobileMenuLink
+                    onClick={closeMobileMenu}
+                    activeStyle={{ opacity: 1 }}
+                    to={link.to}
                   >
-                    <MobileMenuLink
-                      onClick={closeMobileMenu}
-                      activeStyle={{ opacity: 1 }}
-                      to={link.to}
-                    >
-                      {link.text}
-                    </MobileMenuLink>
-                  </LinkTransition>
-                ))}
-              </Box>
-            </MenuLinks>
-          </StyledMenu>
-        )}
-      </PoseGroup>
-    );
-  }
-}
+                    {link.text}
+                  </MobileMenuLink>
+                </LinkTransition>
+              ))}
+            </Box>
+          </MenuLinks>
+        </StyledMenu>
+      )}
+    </PoseGroup>
+  );
+};
 
 MobileMenu.propTypes = propTypes;
 
-export default MobileMenu;
+export default React.memo(MobileMenu);

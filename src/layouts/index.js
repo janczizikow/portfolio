@@ -1,7 +1,7 @@
-import React, { useState, useContext } from 'react';
+import React, { useState, useContext, useCallback } from 'react';
 import PropTypes from 'prop-types';
 import { ThemeProvider } from 'emotion-theming';
-import Global from './injectGlobal';
+import Global from '../components/Global';
 import ThemeContext from '../context/ThemeContext';
 import { Box, Flex } from '../components/UI';
 import Header from '../components/Header';
@@ -21,8 +21,8 @@ const links = [
 const Layout = ({ children }) => {
   const { theme } = useContext(ThemeContext);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const openMobileMenu = () => setIsMobileMenuOpen(true);
-  const closeMobileMenu = () => setIsMobileMenuOpen(false);
+  const openMobileMenu = useCallback(() => setIsMobileMenuOpen(true), []);
+  const closeMobileMenu = useCallback(() => setIsMobileMenuOpen(false), []);
 
   return (
     <ThemeProvider theme={theme}>
