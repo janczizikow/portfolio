@@ -1,48 +1,61 @@
-import React, { Component } from 'react';
-import { Heading, Modal } from '../../UI';
+import React from 'react';
+import { Heading, Modal, Text } from '../../UI';
 import ContactForm from './ContactForm';
 
-class Form extends Component {
+class Form extends React.PureComponent {
   state = {
     isModalOpen: false,
+    name: null,
+    error: null,
   };
 
-  displayMessage = payload => {
+  handleSubmitSuccess = name => {
     this.setState({
       isModalOpen: true,
-      message: payload,
+      name,
+    });
+  };
+
+  handleSubmitFail = error => {
+    this.setState({
+      isModalOpen: true,
+      error,
     });
   };
 
   handleModalClose = () => {
     this.setState({
       isModalOpen: false,
+      name: null,
+      error: null,
     });
   };
 
   render() {
-    const { isModalOpen, message } = this.state;
+    const { isModalOpen, name, error } = this.state;
+    const heading = error ? error.name : name ? `Thanks ${name}!` : `Thanks!`; // eslint-disable-line no-nested-ternary
+    const message = error
+      ? "Sorry, it's seems like something went wrong. Please try again or send me an email directly."
+      : 'Your message was successfully sent! Will get back to you soon.';
 
     return (
-      <div>
-        <ContactForm onSubmission={this.displayMessage} />
+      <>
+        <ContactForm
+          onSubmissionSuccess={this.handleSubmitSuccess}
+          onSubmissionFailed={this.handleSubmitFail}
+        />
         <Modal
           isOpen={isModalOpen}
           onClose={this.handleModalClose}
           header={
             <Heading color="dark" m={0}>
-              {message &&
-                (message.error
-                  ? message.error.name
-                  : `Thanks ${message.name}!`)}
+              {heading}
             </Heading>
           }
         >
-          {message && message.error
-            ? "Sorry, it's seems like something went wrong. Please try again or send me an email directly."
-            : 'Your message was successfully sent! Will get back to you soon.'}
+          <Text>{message}</Text>
         </Modal>
-      </div>
+      </>
     );
   }
 }
