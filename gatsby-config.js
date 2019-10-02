@@ -103,13 +103,6 @@ module.exports = {
       },
     },
     {
-      resolve: 'gatsby-plugin-google-tagmanager',
-      options: {
-        id: process.env.GTM_CONTAINER_ID,
-        includeInDevelopment: false,
-      },
-    },
-    {
       resolve: 'gatsby-plugin-webpack-bundle-analyzer',
       options: {
         analyzerPort: 5050,
