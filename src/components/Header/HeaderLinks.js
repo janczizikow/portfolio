@@ -38,7 +38,12 @@ const HeaderLinks = ({ links }) => {
             </HeaderLink>
           ))}
       </HeaderLinksNav>
-      <IconButton color="headingColor" pl={3} onClick={toggleTheme}>
+      <IconButton
+        aria-label="Toggle dark theme"
+        color="headingColor"
+        pl={3}
+        onClick={toggleTheme}
+      >
         {activeTheme === 'light' ? <FiMoon size={24} /> : <FiSun size={24} />}
       </IconButton>
     </Flex>
