@@ -12,10 +12,20 @@ const propTypes = {
   pageContext: PropTypes.shape({
     name: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
+    prev: PropTypes.shape({
+      name: PropTypes.string,
+      slug: PropTypes.string,
+    }),
     next: PropTypes.shape({
       name: PropTypes.string,
       slug: PropTypes.string,
     }),
+    links: PropTypes.arrayOf(
+      PropTypes.shape({
+        text: PropTypes.string,
+        url: PropTypes.string,
+      })
+    ),
   }),
   data: PropTypes.shape({
     ProjectImages: PropTypes.shape({

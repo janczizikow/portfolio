@@ -1,5 +1,14 @@
 {
   "parser": "babel-eslint",
+  "extends": ["airbnb", "prettier", "prettier/react"],
+  "plugins": ["react-hooks", "prettier", "emotion"],
+  "parserOptions": {
+    "ecmaVersion": 2016,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
   "env": {
     "browser": true,
     "jest": true,
@@ -15,45 +24,35 @@
     "mount": true
   },
   "rules": {
-    "strict": 0,
-    "import/no-extraneous-dependencies": 0,
     "react/require-default-props": 0,
     "react/jsx-filename-extension": 0,
     "react/jsx-one-expression-per-line": 0,
-    "react/jsx-wrap-multilines": ["error", {
-      "declaration": false
-    }],
+    "react/jsx-props-no-spreading": 0,
+    "react/state-in-constructor": 0,
+    "react/static-property-placement": 0,
     "jsx-a11y/accessible-emoji": 0,
-    "no-underscore-dangle": ["error", {
-      "allow": ["_isMounted"]
-    }],
-    "no-unused-expressions": [2, {
-      "allowShortCircuit": true,
-      "allowTaggedTemplates": true
-    }],
-    "prettier/prettier": ["error", {
-      "semi": true,
-      "singleQuote": true,
-      "trailingComma": "es5"
-    }],
+    "react/jsx-wrap-multilines": [
+      "error",
+      {
+        "declaration": false
+      }
+    ],
+    "no-unused-expressions": [
+      2,
+      {
+        "allowShortCircuit": true,
+        "allowTaggedTemplates": true
+      }
+    ],
+    "prettier/prettier": [
+      "error",
+      {
+        "semi": true,
+        "singleQuote": true,
+        "trailingComma": "es5"
+      }
+    ],
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn"
-  },
-  "extends": [
-    "airbnb",
-    "prettier",
-    "prettier/react"
-  ],
-  "plugins": [
-    "react-hooks",
-    "prettier",
-    "emotion"
-  ],
-  "parserOptions": {
-    "ecmaVersion": 2016,
-    "sourceType": "module",
-    "ecmaFeatures": {
-      "jsx": true
-    }
   }
 }
