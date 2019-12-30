@@ -36,8 +36,8 @@ module.exports = {
         name: 'Jan Czizikow // Web Developer',
         short_name: 'Jan Czizikow',
         start_url: '/',
-        background_color: '#277cea',
-        theme_color: '#277cea',
+        background_color: '#313237',
+        // theme_color: '#277cea',
         display: 'minimal-ui',
         icon: 'src/assets/images/favicon.png',
       },
@@ -63,7 +63,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-layout`,
       options: {
-        component: require.resolve(`./src/layouts/index.js`),
+        component: require.resolve(`${__dirname}/src/layouts/index.js`),
       },
     },
     {
