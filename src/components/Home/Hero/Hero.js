@@ -5,6 +5,7 @@ import AnchorLink from 'react-anchor-link-smooth-scroll';
 import { FiChevronDown } from 'react-icons/fi';
 import { Box, Container, Row, Col, Heading, Text } from '../../UI';
 import HeroImg from '../../../assets/illustrations/illustration.svg';
+import theme from '../../../utils/theme';
 
 const scrollDownAnimation = keyframes`
   0% { transform: translateY(-16px) }
@@ -60,7 +61,18 @@ const Hero = () => (
           </ScrollDownLink>
         </Col>
         <ColMd flex={['0 0 100%', null, null, '0 0 50%']}>
-          <img src={HeroImg} alt="illustration" css={{ minHeight: 453 }} />
+          <picture>
+            <source
+              media={`(max-width: ${parseInt(theme.breakpoints[2], 10) - 1}px)`}
+              sizes="1px"
+              srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAUEBAAAACwAAAAAAQABAAACAkQBADs="
+            />
+            <source
+              media={`(min-width: ${theme.breakpoints[2]})`}
+              srcSet={HeroImg}
+            />
+            <img src={HeroImg} alt="illustration" css={{ minHeight: 453 }} />
+          </picture>
         </ColMd>
       </Row>
     </Container>
