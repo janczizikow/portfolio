@@ -34,7 +34,7 @@ const Layout = ({ children }) => {
           closeMobileMenu={closeMobileMenu}
           links={links}
         />
-        <Box as="main" css={{ flex: 1 }}>
+        <Box as="main" css={{ flex: '1 0 auto' }}>
           {children}
         </Box>
         <Footer />
