@@ -43,7 +43,7 @@ const Hero = () => (
   <Box py={4}>
     <Container>
       <Row alignItems="center" flexWrap="wrap">
-        <Col flex={['0 0 100%', null, null, '0 0 50%']}>
+        <Col width={[1, null, null, 1 / 2]}>
           <Heading as="h1" fontSize="2rem">
             Just a simple dude who wants to build cool stuff.
           </Heading>
@@ -60,7 +60,7 @@ const Hero = () => (
             </ScrollDown>
           </ScrollDownLink>
         </Col>
-        <ColMd flex={['0 0 100%', null, null, '0 0 50%']}>
+        <ColMd width={[1, null, null, 1 / 2]}>
           <picture>
             <source
               media={`(max-width: ${parseInt(theme.breakpoints[2], 10) - 1}px)`}

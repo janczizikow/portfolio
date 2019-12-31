@@ -29,7 +29,7 @@ const About = ({
     <SEO title="About" />
     <Container>
       <Row alignItems="center" flexWrap="wrap">
-        <Col flex={['0 0 100%', null, null, '0 0 50%']}>
+        <Col width={[1, null, null, 1 / 2]}>
           <Heading mt={[4, null, null, 0]}>
             Hey, nice to meet you! <Emoji label="waving-hand">👋</Emoji>
           </Heading>
@@ -52,10 +52,7 @@ const About = ({
             View CV
           </Button>
         </Col>
-        <Col
-          order={[-1, null, null, 1]}
-          flex={['0 0 100%', null, null, '0 0 50%']}
-        >
+        <Col order={[-1, null, null, 1]} width={[1, null, null, 1 / 2]}>
           <Image fluid={aboutImg} />
         </Col>
       </Row>

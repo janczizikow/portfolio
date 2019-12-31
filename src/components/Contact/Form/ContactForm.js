@@ -21,10 +21,10 @@ const ContactFormSchema = Yup.object().shape({
 const Form = ({ isValid, isSubmitting }) => (
   <FormikForm>
     <Row>
-      <Col flex={['0 0 100%', '0 0 100%', '0 0 50%']}>
+      <Col width={[1, 1, 1 / 2]}>
         <Field label="Name" name="name" type="text" component={FormInput} />
       </Col>
-      <Col flex={['0 0 100%', '0 0 100%', '0 0 50%']}>
+      <Col width={[1, 1, 1 / 2]}>
         <Field label="Email" name="email" type="email" component={FormInput} />
       </Col>
     </Row>

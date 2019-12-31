@@ -32,14 +32,12 @@ const Contact = () => (
         </Col>
       </Row>
       <Row alignItems="flex-start">
-        <Col
-          flex={['0 0 100%', null, null, `0 0 ${((7 / 12) * 100).toFixed(4)}%`]}
-        >
+        <Col width={[1, null, null, `${((7 / 12) * 100).toFixed(4)}%`]}>
           <Form />
         </Col>
         <Col
           order={[-1, null, null, 0]}
-          flex={['0 0 100%', null, null, `0 0 ${((5 / 12) * 100).toFixed(4)}%`]}
+          width={[1, null, null, `${((5 / 12) * 100).toFixed(4)}%`]}
         >
           <Heading as="h4" mb={2}>
             email
