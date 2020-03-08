@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import { withFormik, Form as FormikForm, Field } from 'formik';
 import * as Yup from 'yup';
 import { Row, Col, FormInput, Button } from '../../UI';
-import api from '../../../utils/axios';
 
 const propTypes = {
   isValid: PropTypes.bool,
@@ -18,8 +17,20 @@ const ContactFormSchema = Yup.object().shape({
   message: Yup.string().required('This field is required'),
 });
 
+function encode(data) {
+  return Object.keys(data)
+    .map(key => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`)
+    .join('&');
+}
+
 const Form = ({ isValid, isSubmitting }) => (
-  <FormikForm>
+  <FormikForm
+    name="contact"
+    method="POST"
+    data-netlify="true"
+    data-netlify-honeypot="bot-field"
+  >
+    <input name="bot-field" hidden />
     <Row>
       <Col width={[1, 1, 1 / 2]}>
         <Field label="Name" name="name" type="text" component={FormInput} />
@@ -57,15 +68,13 @@ export default withFormik({
   mapPropsToValues: () => ({ name: '', email: '', message: '' }),
   validationSchema: ContactFormSchema,
   handleSubmit: (values, bag) => {
-    api
-      .post('/submissions/', {
-        submission: {
-          ...values,
-        },
-      })
-      .then(response => {
-        const { name } = response.data;
-        bag.props.onSubmissionSuccess(name);
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: encode({ 'form-name': 'contact', ...values }),
+    })
+      .then(() => {
+        bag.props.onSubmissionSuccess(values.name);
         bag.resetForm();
         bag.setSubmitting(false);
       })
