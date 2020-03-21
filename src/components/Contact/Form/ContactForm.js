@@ -10,6 +10,7 @@ const propTypes = {
 };
 
 const ContactFormSchema = Yup.object().shape({
+  'bot-field': Yup.string(),
   name: Yup.string().required('This filed is required'),
   email: Yup.string()
     .required('This field is required')
@@ -30,7 +31,7 @@ const Form = ({ isValid, isSubmitting }) => (
     data-netlify="true"
     data-netlify-honeypot="bot-field"
   >
-    <input name="bot-field" hidden />
+    <Field name="bot-field" hidden />
     <Row>
       <Col width={[1, 1, 1 / 2]}>
         <Field label="Name" name="name" type="text" component={FormInput} />
@@ -65,7 +66,12 @@ Form.propTypes = propTypes;
 
 export default withFormik({
   displayName: 'ContactForm',
-  mapPropsToValues: () => ({ name: '', email: '', message: '' }),
+  mapPropsToValues: () => ({
+    'bot-field': '',
+    name: '',
+    email: '',
+    message: '',
+  }),
   validationSchema: ContactFormSchema,
   handleSubmit: (values, bag) => {
     fetch('/', {
