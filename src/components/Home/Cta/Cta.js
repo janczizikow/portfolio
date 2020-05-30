@@ -4,7 +4,7 @@ import { Box, Container, Heading, Button } from '../../UI';
 const Cta = () => (
   <Box py={5} bg="primary" css={{ textAlign: 'center' }}>
     <Container>
-      <Heading color="#fff">Hiring a web developer?</Heading>
+      <Heading color="#fff">Hiring a developer?</Heading>
       <Button color="success" rounded to="/contact/">
         Let&apos;s Talk
       </Button>

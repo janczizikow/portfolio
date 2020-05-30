@@ -8,7 +8,7 @@ module.exports = {
   siteMetadata: {
     title: 'Jan Czizikow',
     siteUrl: SITE_URL,
-    description: `This is the site of Jan Czizikow, a Web Developer. The site is just a list of things he's been up to including blog and projects.`,
+    description: `This is the site of Jan Czizikow, a Software Developer. The site is just a list of things he's been up to including blog and projects.`,
     author: `@jan_czizikow`,
   },
   plugins: [
@@ -33,7 +33,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
-        name: 'Jan Czizikow // Web Developer',
+        name: 'Jan Czizikow // Software Developer',
         short_name: 'Jan Czizikow',
         start_url: '/',
         background_color: '#313237',

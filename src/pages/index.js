@@ -14,7 +14,7 @@ const propTypes = {
 
 const Home = ({ data }) => (
   <>
-    <SEO title="Web Developer" />
+    <SEO title="Software Developer" />
     <Hero />
     <Projects projects={data.allProject.edges} />
     <Cta />

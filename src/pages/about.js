@@ -12,6 +12,7 @@ import {
   Text,
   Emoji,
   Button,
+  Link,
 } from '../components/UI';
 
 const propTypes = {
@@ -34,19 +35,26 @@ const About = ({
             Hey, nice to meet you! <Emoji label="waving-hand">👋</Emoji>
           </Heading>
           <Text>
-            I’m Jan, {new Date().getFullYear() - 1992} year old web developer
-            from Poland. I’m that guy on the picture enjoying Thai Wake Park and
-            trying to wakeboard for the first time - it was a blast! Anyways,
-            back to serious stuff, during my business studies at college I got
-            interested in building websites. After graduating I worked for
-            roughly a year as a UX Project Manager in an e-commerce company. As
-            my job involved working with UX designers and developers, my
-            interested in web development increased further - I started learning
-            more and more in my free time after work and at some point I decided
-            to change my career and pursue my passion - making great
-            experiences, this time as a developer. Currently I’m in Berlin,
-            Germany, where I joined a coding bootcamp and I’m looking for new
-            job opportunities.
+            I’m Jan, {new Date().getFullYear() - 1992} year old software
+            developer from Poland. I’m that guy on the picture enjoying Thai
+            Wake Park and trying to wakeboard for the first time - it was a
+            blast! Anyways, back to serious stuff, during my business studies at
+            college I got interested in building websites. After graduating I
+            worked for roughly a year as a UX Project Manager in an e-commerce
+            company. As my job involved working with UX designers and
+            developers, my interested in development increased further - I
+            started learning more and more in my free time after work and at
+            some point I decided to change my career and pursue my passion -
+            making great experiences, this time as a developer. Currently I’m in
+            Berlin, Germany, working as a Frontend Developer at{' '}
+            <Link
+              href="https://cara.care/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Cara Care
+            </Link>
+            .
           </Text>
           <Button rounded href="/CV.pdf">
             View CV

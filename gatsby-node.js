@@ -1,6 +1,5 @@
 /* eslint-disable
     import/newline-after-import,
-    iterators/generators,
     no-console,
     no-param-reassign,
     no-restricted-syntax,
@@ -14,9 +13,10 @@ const { createRemoteFileNode } = require(`gatsby-source-filesystem`);
 
 exports.sourceNodes = ({ actions: { createNode }, createNodeId }) => {
   const baseApiUrl =
-    process.env.NODE_ENV === 'production'
-      ? 'https://janczizikow-portfolio-api.herokuapp.com/api/v2/projects/'
-      : 'http://localhost:3000/api/v2/projects/';
+    'https://janczizikow-portfolio-api.herokuapp.com/api/v2/projects/';
+  // process.env.NODE_ENV === 'production'
+  //   ? 'https://janczizikow-portfolio-api.herokuapp.com/api/v2/projects/'
+  //   : 'http://localhost:3000/api/v2/projects/';
 
   const processProject = project => {
     const nodeId = createNodeId(`project-${project.name}-${project.id}`);
@@ -27,7 +27,8 @@ exports.sourceNodes = ({ actions: { createNode }, createNodeId }) => {
       .digest('hex');
 
     // create project nodes
-    const nodeData = Object.assign({}, project, {
+    const nodeData = {
+      ...project,
       id: nodeId,
       parent: null,
       children: [],
@@ -36,7 +37,7 @@ exports.sourceNodes = ({ actions: { createNode }, createNodeId }) => {
         content: nodeContent,
         contentDigest: nodeContentDigest,
       },
-    });
+    };
     return nodeData;
   };
 

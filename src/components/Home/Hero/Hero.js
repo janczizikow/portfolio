@@ -48,11 +48,8 @@ const Hero = () => (
             Just a simple dude who wants to build cool stuff.
           </Heading>
           <Text>
-            Previously UX Project manger at Motion Global - an e-commerce
-            retailer of eyewear and contact lenses. Now, a self-starting web
-            developer seeking to launch a career building web applications and
-            services. Familiar with development and deployment processes for
-            many web-based technologies.
+            Software developer based in Berlin, specializing in building
+            applications with React, React-Native, and TypeScript.
           </Text>
           <ScrollDownLink href="#projects" aria-label="Projects">
             <ScrollDown>
