@@ -10,8 +10,6 @@ import theme from '../utils/theme';
 
 const propTypes = {
   pageContext: PropTypes.shape({
-    name: PropTypes.string.isRequired,
-    description: PropTypes.string.isRequired,
     prev: PropTypes.shape({
       name: PropTypes.string,
       slug: PropTypes.string,
@@ -20,16 +18,18 @@ const propTypes = {
       name: PropTypes.string,
       slug: PropTypes.string,
     }),
-    links: PropTypes.arrayOf(
-      PropTypes.shape({
-        text: PropTypes.string,
-        url: PropTypes.string,
-      })
-    ),
   }),
   data: PropTypes.shape({
-    ProjectImages: PropTypes.shape({
-      childrenFile: PropTypes.array,
+    project: PropTypes.shape({
+      name: PropTypes.string.isRequired,
+      description: PropTypes.string,
+      links: PropTypes.arrayOf(
+        PropTypes.shape({
+          text: PropTypes.string,
+          url: PropTypes.string,
+        })
+      ),
+      photos: PropTypes.array,
     }),
   }),
 };
@@ -50,9 +50,9 @@ const projectTitleStyles = css`
 `;
 
 const ProjectPage = ({
-  pageContext: { name, description, links, next, prev },
+  pageContext: { next, prev },
   data: {
-    ProjectImages: { childrenFile: photos },
+    project: { name, description, links, photos },
   },
 }) => (
   <>
@@ -72,14 +72,15 @@ const ProjectPage = ({
     <Box bg="bgGreyColor" py={5}>
       <Container>
         <Box mx="auto" css={{ maxWidth: '720px' }}>
-          {photos.map((photo, i) => (
-            <Image
-              key={photo.id}
-              css={{ marginBottom: '1.5rem' }}
-              fluid={photo.childImageSharp.fluid}
-              alt={`${name}-${i}`}
-            />
-          ))}
+          {photos &&
+            photos.map((photo, i) => (
+              <Image
+                key={photo.id}
+                css={{ marginBottom: '1.5rem' }}
+                fluid={photo.childImageSharp.fluid}
+                alt={`${name}-${i}`}
+              />
+            ))}
         </Box>
       </Container>
     </Box>
@@ -91,9 +92,14 @@ ProjectPage.propTypes = propTypes;
 
 export const pageQuery = graphql`
   query($id: String!) {
-    ProjectImages: project(id: { eq: $id }) {
-      childrenFile {
-        id
+    project: strapiProject(id: { eq: $id }) {
+      name
+      description
+      links {
+        text
+        url
+      }
+      photos {
         childImageSharp {
           fluid(maxWidth: 720, quality: 85) {
             ...GatsbyImageSharpFluid

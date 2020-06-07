@@ -12,11 +12,11 @@ const propTypes = {
     slug: PropTypes.string.isRequired,
     date: PropTypes.string,
     thumbnail: PropTypes.shape({
-      bigThumbnails: PropTypes.object,
-      smallThumbnails: PropTypes.object,
+      bigThumbnail: PropTypes.object,
+      smallThumbnail: PropTypes.object,
     }),
   }),
-  bigThumbnail: PropTypes.bool,
+  isBigThumbnail: PropTypes.bool,
 };
 
 const ProjectItemLink = styled(Link)`
@@ -117,7 +117,7 @@ const ProjectInner = styled('figcaption')`
   z-index: 2;
 `;
 
-const ProjectItem = ({ project, bigThumbnail }) => (
+const ProjectItem = ({ project, isBigThumbnail }) => (
   <ProjectItemLink to={`/projects/${project.slug}/`}>
     <ProjectThumbnail>
       <ProjectImage
@@ -125,9 +125,9 @@ const ProjectItem = ({ project, bigThumbnail }) => (
         title={project.name}
         alt={project.name}
         fluid={
-          bigThumbnail
-            ? project.thumbnail.bigThumbnails.fluid
-            : project.thumbnail.smallThumbnails.fluid
+          isBigThumbnail
+            ? project.thumbnail.bigThumbnail.fluid
+            : project.thumbnail.smallThumbnail.fluid
         }
       />
       <ProjectInner>

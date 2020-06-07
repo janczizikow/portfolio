@@ -10,7 +10,6 @@ const propTypes = {
     PropTypes.shape({
       node: PropTypes.shape({
         id: PropTypes.string.isRequired,
-        category: PropTypes.string.isRequired,
         date: PropTypes.string.isRequired,
         name: PropTypes.string.isRequired,
         slug: PropTypes.string.isRequired,
@@ -57,7 +56,7 @@ const Projects = ({ projects }) => (
             <ProjectItem
               key={project.node.id}
               project={project.node}
-              bigThumbnail={i === 0}
+              isBigThumbnail={i === 0}
             />
           ))}
       </Box>

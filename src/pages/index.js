@@ -6,7 +6,7 @@ import { Hero, Projects, Cta } from '../components/Home';
 
 const propTypes = {
   data: PropTypes.shape({
-    allProject: PropTypes.shape({
+    allStrapiProject: PropTypes.shape({
       edges: PropTypes.array.isRequired,
     }),
   }),
@@ -16,7 +16,7 @@ const Home = ({ data }) => (
   <>
     <SEO title="Software Developer" />
     <Hero />
-    <Projects projects={data.allProject.edges} />
+    <Projects projects={data.allStrapiProject.edges} />
     <Cta />
   </>
 );
@@ -25,21 +25,20 @@ Home.propTypes = propTypes;
 
 export const pageQuery = graphql`
   query {
-    allProject {
+    allStrapiProject(sort: { fields: date, order: DESC }) {
       edges {
         node {
           id
           name
           slug
-          category
           date(formatString: "YYYY, MMM DD")
           thumbnail {
-            smallThumbnails: childImageSharp {
+            smallThumbnail: childImageSharp {
               fluid(maxWidth: 720) {
                 ...GatsbyImageSharpFluid
               }
             }
-            bigThumbnails: childImageSharp {
+            bigThumbnail: childImageSharp {
               fluid(maxWidth: 1140) {
                 ...GatsbyImageSharpFluid
               }
