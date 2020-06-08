@@ -16,8 +16,11 @@
 ## 🚀 Quick start
 
 ```sh
-yarn install
-yarn develop
+yarn install # install frontend dependencies
+cd server
+yarn install # install backend dependencies
+cp .example.env .env # create environment variables
+# run `yarn develop` in the `server` folder to spin up the backend & in the root of the project to start gatsby site
 ```
 
 ## 👨‍⚖️ License
