@@ -22,6 +22,7 @@
     "start": "yarn run dev",
     "develop": "yarn run dev",
     "dev": "gatsby develop",
+    "prebuild": "cd plugins/gatsby-source-strapi && npm i && npm run build",
     "build": "gatsby build",
     "serve": "gatsby serve",
     "format": "prettier --write 'src/**/*.{js,jsx}'",
