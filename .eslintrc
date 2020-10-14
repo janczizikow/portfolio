@@ -1,7 +1,7 @@
 {
   "parser": "babel-eslint",
   "extends": ["airbnb", "prettier", "prettier/react"],
-  "plugins": ["react-hooks", "prettier", "emotion"],
+  "plugins": ["react-hooks", "prettier"],
   "parserOptions": {
     "ecmaVersion": 2016,
     "sourceType": "module",
@@ -41,14 +41,7 @@
         "allowTaggedTemplates": true
       }
     ],
-    "prettier/prettier": [
-      "error",
-      {
-        "semi": true,
-        "singleQuote": true,
-        "trailingComma": "es5"
-      }
-    ],
+    "prettier/prettier": "error",
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn"
   }
