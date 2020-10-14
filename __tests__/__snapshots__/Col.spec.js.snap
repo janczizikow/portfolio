@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Col /> renders correctly with default styles 1`] = `
+.emotion-0 {
+  display: block;
+  width: 100%;
+  min-height: 1px;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+<div
+  className="emotion-0"
+/>
+`;

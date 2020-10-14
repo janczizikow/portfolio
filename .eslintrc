@@ -18,10 +18,7 @@
   "globals": {
     "graphql": true,
     "createSpyObj": true,
-    "React": true,
-    "shallow": true,
-    "render": true,
-    "mount": true
+    "React": true
   },
   "rules": {
     "react/require-default-props": 0,
