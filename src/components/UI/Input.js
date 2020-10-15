@@ -5,10 +5,12 @@ import styled from '@emotion/styled';
 const StyledInput = styled('input')`
   padding: 6px 0;
   display: block;
-  border: 0;
   width: 100%;
+  border: 0;
+  border-radius: 0;
   border-bottom: 2px solid
     ${p => (p.invalid ? p.theme.colors.error : p.theme.colors.grey)};
+  appearance: none;
   outline: none;
   font-family: ${p =>
     p.theme.typography.bodyFontFamily.map(font => `'${font}'`).join(', ')};
