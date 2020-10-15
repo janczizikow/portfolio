@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Container, Heading, Button } from '../../UI';
+import { Box, Container, Heading, Button } from '../UI';
 
 const Cta = () => (
   <Box py={5} bg="primary" css={{ textAlign: 'center' }}>

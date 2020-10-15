@@ -34,7 +34,7 @@ const StyledButton = styled.button`
     transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
   cursor: ${p => (p.disabled ? 'not-allowed' : 'pointer')};
 
-  @media only screen and (min-width: ${p => p.theme.breakpoints[2]}) {
+  @media (hover: hover) {
     &:not(:disabled) {
       &:hover {
         transform: translateY(-2px);

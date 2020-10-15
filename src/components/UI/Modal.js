@@ -3,7 +3,8 @@ import PropTypes from 'prop-types';
 import ReactModal from 'react-modal';
 import { FiX } from 'react-icons/fi';
 import { ClassNames, css, keyframes } from '@emotion/core';
-import { Box, IconButton } from './index';
+import Box from './Box';
+import IconButton from './IconButton';
 
 if (process.env.NODE_ENV !== 'test') ReactModal.setAppElement('#___gatsby');
 

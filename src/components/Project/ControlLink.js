@@ -1,7 +1,8 @@
 import { Link } from 'gatsby';
 import styled from '@emotion/styled';
+import shouldForwardProp from '@styled-system/should-forward-prop';
 
-const ControlLink = styled(Link)`
+const ControlLink = styled(Link, { shouldForwardProp })`
   margin-left: ${p => p.prev && '-0.5rem'};
   margin-right: ${p => p.next && '-0.5rem'};
   display: flex;

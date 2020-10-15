@@ -85,7 +85,7 @@ const MobileMenu = ({ isMobileMenuOpen, closeMobileMenu, links }) => {
     return () => {
       clearAllBodyScrollLocks();
     };
-  }, [isMobileMenuOpen, menuRef]);
+  }, [isMobileMenuOpen]);
 
   return (
     <PoseGroup flipMove={false}>

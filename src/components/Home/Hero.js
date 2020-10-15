@@ -3,9 +3,9 @@ import { keyframes } from '@emotion/core';
 import styled from '@emotion/styled';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 import { FiChevronDown } from 'react-icons/fi';
-import { Box, Container, Row, Col, Heading, Text } from '../../UI';
-import HeroImg from '../../../assets/illustrations/illustration.svg';
-import theme from '../../../utils/theme';
+import { Box, Container, Row, Col, Heading, Text } from '../UI';
+import HeroImg from '../../assets/illustrations/illustration.svg';
+import theme from '../../utils/theme';
 
 const scrollDownAnimation = keyframes`
   0% { transform: translateY(-16px) }

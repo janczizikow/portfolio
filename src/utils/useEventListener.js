@@ -2,7 +2,7 @@ import { useEffect, useRef } from 'react';
 
 export default function useEventListener(eventName, handler, element = window) {
   const handlerRef = useRef();
-  /* eslint-disable consistent-return */
+
   useEffect(() => {
     handlerRef.current = handler;
   }, [handler]);
@@ -14,6 +14,7 @@ export default function useEventListener(eventName, handler, element = window) {
     const eventListener = e => handlerRef.current(e);
     element.addEventListener(eventName, eventListener);
 
+    // eslint-disable-next-line consistent-return
     return () => {
       element.removeEventListener(eventName, eventListener);
     };
