@@ -12,8 +12,8 @@ const propTypes = {
     slug: PropTypes.string.isRequired,
     date: PropTypes.string,
     thumbnail: PropTypes.shape({
-      bigThumbnail: PropTypes.object,
-      smallThumbnail: PropTypes.object,
+      bigThumbnail: PropTypes.instanceOf(Object),
+      smallThumbnail: PropTypes.instanceOf(Object),
     }),
   }),
   isBigThumbnail: PropTypes.bool,

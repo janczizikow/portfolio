@@ -29,7 +29,7 @@ const propTypes = {
           url: PropTypes.string,
         })
       ),
-      photos: PropTypes.array,
+      photos: PropTypes.instanceOf(Array),
     }),
   }),
 };

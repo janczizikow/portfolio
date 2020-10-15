@@ -7,7 +7,7 @@ import { Hero, Projects, Cta } from '../components/Home';
 const propTypes = {
   data: PropTypes.shape({
     allStrapiProject: PropTypes.shape({
-      edges: PropTypes.array.isRequired,
+      edges: PropTypes.instanceOf(Array),
     }),
   }),
 };
