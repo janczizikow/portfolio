@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { withFormik, Form as FormikForm, Field } from 'formik';
 import * as Yup from 'yup';
-import { Row, Col, FormInput, Button } from '../../UI';
+import { Row, Col, FormInput, Button } from '../UI';
 
 const propTypes = {
   isValid: PropTypes.bool,

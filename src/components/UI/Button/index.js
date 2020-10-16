@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
 import StyledButton from './Styled';
@@ -15,14 +15,19 @@ const propTypes = {
   space: PropTypes.bool,
 };
 
-class Button extends Component {
-  static defaultProps = {
-    color: 'primary',
-  };
-
-  onClick = e => {
-    const { disabled, loading, onClick } = this.props;
-
+const Button = ({
+  to,
+  href,
+  disabled,
+  loading,
+  block,
+  rounded,
+  space,
+  color,
+  onClick,
+  ...atributes
+}) => {
+  const handleClick = e => {
     if (disabled || loading) {
       e.preventDefault();
     } else {
@@ -30,35 +35,24 @@ class Button extends Component {
     }
   };
 
-  render() {
-    const {
-      to,
-      href,
-      disabled,
-      loading,
-      block,
-      rounded,
-      space,
-      color,
-      ...atributes
-    } = this.props;
+  const Tag = to ? Link : href ? 'a' : 'button'; // eslint-disable-line
 
-    const Tag = to ? Link : href ? 'a' : 'button'; // eslint-disable-line
-
-    return (
-      <Tag
-        to={to}
-        href={href}
-        rel={href && 'noopener'}
-        target={href && '_blank'}
-        {...atributes}
-        disabled={disabled}
-        onClick={this.onClick}
-      />
-    );
-  }
-}
+  return (
+    <Tag
+      to={to}
+      href={href}
+      rel={href && 'noopener'}
+      target={href && '_blank'}
+      disabled={disabled}
+      onClick={handleClick}
+      {...atributes}
+    />
+  );
+};
 
 Button.propTypes = propTypes;
+Button.defaultProps = {
+  color: 'primary',
+};
 
 export default StyledButton.withComponent(Button);

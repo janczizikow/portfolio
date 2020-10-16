@@ -7,6 +7,7 @@ export const colorThemes = {
     bgGreyColor: '#f9f9f9',
     bgHeader: 'hsla(0,0%,100%,.96)',
     bgAlt: '#2a2a30',
+    overlay: 'rgba(38, 50, 56, 0.8)',
   },
   dark: {
     headingColor: '#fff',
@@ -15,6 +16,7 @@ export const colorThemes = {
     bgGreyColor: '#353535',
     bgHeader: '#27282a',
     bgAlt: '#27282a',
+    overlay: 'rgba(53, 53, 53, .8)',
   },
 };
 

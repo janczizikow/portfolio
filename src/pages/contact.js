@@ -1,6 +1,6 @@
 import React from 'react';
 import SEO from '../components/SEO';
-import Form from '../components/Contact/Form';
+import Form from '../components/Contact';
 import {
   Box,
   Container,
