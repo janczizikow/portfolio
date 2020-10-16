@@ -9,6 +9,7 @@ import HeaderToggle from './HeaderToggle';
 import HeaderLinks from './HeaderLinks';
 import Logo from '../../assets/images/logo.svg';
 import presets from '../../utils/presets';
+import supportsPassiveEvents from '../../utils/supportsPassiveEvents';
 
 const propTypes = {
   links: PropTypes.arrayOf(
@@ -40,15 +41,24 @@ const HeaderLink = styled(Link)`
 class Header extends Component {
   windowWidth = 0;
 
+  resizeEventOptions = false;
+
   state = {
     headroomActive: false,
   };
 
   componentDidMount = () => {
-    if (window.innerWidth > 992) {
-      this.getWindowWidth();
+    if (supportsPassiveEvents()) {
+      this.resizeEventOptions = { passive: true, capture: false };
     }
-    window.addEventListener('resize', this.getWindowWidth);
+
+    this.getWindowWidth();
+
+    window.addEventListener(
+      'resize',
+      this.getWindowWidth,
+      this.resizeEventOptions
+    );
   };
 
   shouldComponentUpdate(nextProps, nextState) {
@@ -66,7 +76,11 @@ class Header extends Component {
   }
 
   componentWillUnmount = () => {
-    window.removeEventListener('resize', this.getWindowWidth);
+    window.removeEventListener(
+      'resize',
+      this.getWindowWidth,
+      this.resizeEventOptions
+    );
   };
 
   getWindowWidth = () => {
