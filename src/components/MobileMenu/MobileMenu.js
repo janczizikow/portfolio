@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useRef, useEffect, useCallback } from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
 import styled from '@emotion/styled';
@@ -69,12 +69,17 @@ const Box = styled(LinkTransitionContainer)`
 
 const MobileMenu = ({ isMobileMenuOpen, closeMobileMenu, links }) => {
   const menuRef = useRef();
-  const handleKeyDown = e => {
-    if (e.keyCode === 27 && closeMobileMenu) {
-      closeMobileMenu();
-    }
-  };
+  const handleKeyDown = useCallback(
+    e => {
+      if (e.keyCode === 27 && closeMobileMenu) {
+        closeMobileMenu();
+      }
+    },
+    [closeMobileMenu]
+  );
+
   useEventListener('keydown', handleKeyDown, isClient && document);
+
   useEffect(() => {
     if (isMobileMenuOpen) {
       disableBodyScroll(menuRef.current);
