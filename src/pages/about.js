@@ -75,7 +75,7 @@ export const pageQuery = graphql`
     aboutImage: file(relativePath: { regex: "/thai_wake_park/" }) {
       childImageSharp {
         fluid(maxWidth: 564, maxHeight: 564) {
-          ...GatsbyImageSharpFluid
+          ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
