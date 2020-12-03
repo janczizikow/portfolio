@@ -98,9 +98,11 @@ class Header extends Component {
 
     return (
       <Headroom
+        tag="header"
         disable={!headroomActive}
         pinStart={500}
         downTolerance={5}
+        calcHeightOnResize={false}
         wrapperStyle={{
           width: '100%',
           height: 58,

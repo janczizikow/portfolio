@@ -82,9 +82,9 @@ const MobileMenu = ({ isMobileMenuOpen, closeMobileMenu, links }) => {
 
   useEffect(() => {
     if (isMobileMenuOpen) {
-      disableBodyScroll(menuRef.current);
+      menuRef.current && disableBodyScroll(menuRef.current);
     } else {
-      enableBodyScroll(menuRef.current);
+      menuRef.current && enableBodyScroll(menuRef.current);
     }
 
     return () => {
