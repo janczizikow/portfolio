@@ -48,11 +48,11 @@ const About = ({
             making great experiences, this time as a developer. Currently I’m in
             Berlin, Germany, working as a Frontend Developer at{' '}
             <Link
-              href="https://cara.care/"
+              href="https://hire.heyjobs.co/en-us/"
               target="_blank"
               rel="noopener noreferrer"
             >
-              Cara Care
+              HeyJobs
             </Link>
             .
           </Text>
