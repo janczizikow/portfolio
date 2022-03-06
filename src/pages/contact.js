@@ -26,7 +26,7 @@ const Contact = () => (
           </Text>
           <Text>
             I&apos;m currently not looking for job opportunities, but feel free
-            get in touch.
+            to contact me.
             <Emoji label="nerd-face">🤓</Emoji>
           </Text>
         </Col>
