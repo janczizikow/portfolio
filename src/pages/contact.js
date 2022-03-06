@@ -25,8 +25,8 @@ const Contact = () => (
             touch.
           </Text>
           <Text>
-            I&apos;m currently looking for job opportunities as a web developer.
-            If you like what you saw and you&apos;re hiring let&apos;s talk{' '}
+            I&apos;m currently not looking for job opportunities, but feel free
+            get in touch.
             <Emoji label="nerd-face">🤓</Emoji>
           </Text>
         </Col>
@@ -42,7 +42,7 @@ const Contact = () => (
           <Heading as="h4" mb={2}>
             email
           </Heading>
-          <Text>jan.czizikow@gmail.com</Text>
+          <Text>jan.czizikow[at]gmail.com</Text>
           <Heading as="h4" mb={2}>
             location
           </Heading>

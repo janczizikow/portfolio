@@ -35,9 +35,9 @@ const About = ({
             Hey, nice to meet you! <Emoji label="waving-hand">👋</Emoji>
           </Heading>
           <Text>
-            I’m Jan, {new Date().getFullYear() - 1992} year old software
-            developer from Poland. I’m that guy on the picture enjoying Thai
-            Wake Park and trying to wakeboard for the first time - it was a
+            I&apos;m Jan, {new Date().getFullYear() - 1992} year old software
+            developer from Poland. I&apos;m that guy on the picture enjoying
+            Thai Wake Park and trying to wakeboard for the first time - it was a
             blast! Anyways, back to serious stuff, during my business studies at
             college I got interested in building websites. After graduating I
             worked for roughly a year as a UX Project Manager in an e-commerce
@@ -45,14 +45,14 @@ const About = ({
             developers, my interested in development increased further - I
             started learning more and more in my free time after work and at
             some point I decided to change my career and pursue my passion -
-            making great experiences, this time as a developer. Currently I’m in
-            Berlin, Germany, working as a Frontend Developer at{' '}
+            making great experiences, this time as a developer. Currently
+            I&apos;m in Berlin, Germany, working as a Frontend Developer at{' '}
             <Link
-              href="https://hire.heyjobs.co/en-us/"
+              href="https://www.talon.one/"
               target="_blank"
               rel="noopener noreferrer"
             >
-              HeyJobs
+              Talon.One
             </Link>
             .
           </Text>
