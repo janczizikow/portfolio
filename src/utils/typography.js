@@ -1,10 +1,10 @@
 import Typography from 'typography';
 import bootstrapTheme from 'typography-theme-bootstrap';
-import theme from './theme';
+import { typography as themeTypograhpy } from './themes';
 
 const typography = new Typography({
   ...bootstrapTheme,
-  ...theme.typography,
+  ...themeTypograhpy,
 });
 
 export default typography;

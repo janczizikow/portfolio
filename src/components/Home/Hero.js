@@ -5,7 +5,8 @@ import AnchorLink from 'react-anchor-link-smooth-scroll';
 import { FiChevronDown } from 'react-icons/fi';
 import { Box, Container, Row, Col, Heading, Text } from '../UI';
 import HeroImg from '../../assets/illustrations/illustration.svg';
-import theme from '../../utils/theme';
+import presets from '../../utils/presets';
+import { grid } from '../../utils/themes';
 
 const scrollDownAnimation = keyframes`
   0% { transform: translateY(-16px) }
@@ -23,7 +24,7 @@ const ScrollDownLink = styled(AnchorLink)`
 const ScrollDown = styled('div')`
   display: none;
 
-  @media (min-width: ${p => p.theme.grid.breakpoints[2]}) {
+  ${presets.lg} {
     margin-top: ${p => p.theme.space[4]}px;
     display: block;
     opacity: 0.65;
@@ -34,7 +35,7 @@ const ScrollDown = styled('div')`
 const ColMd = styled(Col)`
   display: none;
 
-  @media (min-width: ${p => p.theme.grid.breakpoints[2]}) {
+  ${presets.lg} {
     display: block;
   }
 `;
@@ -60,12 +61,12 @@ const Hero = () => (
         <ColMd width={[1, null, null, 1 / 2]}>
           <picture>
             <source
-              media={`(max-width: ${parseInt(theme.breakpoints[2], 10) - 1}px)`}
+              media={`(max-width: ${parseInt(grid.breakpoints[2], 10) - 1}px)`}
               sizes="1px"
               srcSet="data:image/gif;base64,R0lGODlhAQABAIAAAAUEBAAAACwAAAAAAQABAAACAkQBADs="
             />
             <source
-              media={`(min-width: ${theme.breakpoints[2]})`}
+              media={`(min-width: ${grid.breakpoints[2]})`}
               srcSet={HeroImg}
             />
             <img src={HeroImg} alt="illustration" css={{ minHeight: 453 }} />

@@ -1,10 +1,10 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import styled from '@emotion/styled';
 import { FiMoon, FiSun } from 'react-icons/fi';
 import HeaderLink from './HeaderLink';
 import { Box, Flex, IconButton } from '../UI';
-import ThemeContext from '../../context/ThemeContext';
+import { useTheme } from '../../context/ThemeContext';
 
 const propTypes = {
   links: PropTypes.arrayOf(
@@ -26,7 +26,11 @@ const HeaderLinksNav = styled(Box)`
 `;
 
 const HeaderLinks = ({ links }) => {
-  const { activeTheme, toggleTheme } = useContext(ThemeContext);
+  const {
+    initalized,
+    theme: { mode },
+    toggleColorMode,
+  } = useTheme();
 
   return (
     <Flex css={{ height: '100%' }}>
@@ -38,14 +42,18 @@ const HeaderLinks = ({ links }) => {
             </HeaderLink>
           ))}
       </HeaderLinksNav>
-      <IconButton
-        aria-label="Toggle dark theme"
-        color="headingColor"
-        pl={3}
-        onClick={toggleTheme}
-      >
-        {activeTheme === 'light' ? <FiMoon size={24} /> : <FiSun size={24} />}
-      </IconButton>
+      {initalized ? (
+        <IconButton
+          aria-label="Toggle dark theme"
+          color="headingColor"
+          pl={3}
+          onClick={toggleColorMode}
+        >
+          {mode === 'light' ? <FiMoon size={24} /> : <FiSun size={24} />}
+        </IconButton>
+      ) : (
+        <Box pl={3} width={40} height="100%" />
+      )}
     </Flex>
   );
 };

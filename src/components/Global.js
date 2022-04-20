@@ -20,6 +20,24 @@ const Global = () => {
           -webkit-font-smoothing: antialiased;
         }
 
+        body.light {
+          --headingColor: #2a2a30;
+          --textColor: #696c7b;
+          --bgColor: #fff;
+          --bgGreyColor: #f9f9f9;
+          --bgHeader: hsla(0, 0%, 100%, 0.96);
+          --bgAlt: #2a2a30;
+        }
+
+        body.dark {
+          --headingColor: #fff;
+          --textColor: #adb7be;
+          --bgColor: #232323;
+          --bgGreyColor: #353535;
+          --bgHeader: #27282a;
+          --bgAlt: #27282a;
+        }
+
         .headroom {
           height: ${theme.headerHeight};
         }

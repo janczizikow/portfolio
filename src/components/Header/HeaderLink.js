@@ -3,13 +3,12 @@ import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
 import styled from '@emotion/styled';
 import { ClassNames, css } from '@emotion/core';
-import { withTheme } from 'emotion-theming';
-import colorTheme from '../../utils/theme';
+import { useTheme } from 'emotion-theming';
+import { PRIMARY_COLOR } from '../../utils/themes';
 
 const propTypes = {
   to: PropTypes.string.isRequired,
   children: PropTypes.string,
-  theme: PropTypes.instanceOf(Object),
 };
 
 const headerLinkItemStyles = css`
@@ -27,7 +26,7 @@ const headerLinkItemStyles = css`
     width: 0;
     height: 2px;
     height: 0.125rem;
-    background-color: ${colorTheme.colors.primary};
+    background-color: ${PRIMARY_COLOR};
     transition: width 0.24s ease-in-out;
   }
 `;
@@ -59,23 +58,26 @@ const StyledHeaderLink = styled(Link)`
   }
 `;
 
-const HeaderLink = ({ to, children, theme }) => (
-  <ClassNames>
-    {classNames => (
-      <StyledHeaderLink
-        to={to}
-        itemProp="url"
-        activeClassName={classNames.css`${activeLinkStyles}`}
-        activeStyle={{ color: theme.colors.headingColor }}
-      >
-        <span itemProp="name" css={headerLinkItemStyles}>
-          {children}
-        </span>
-      </StyledHeaderLink>
-    )}
-  </ClassNames>
-);
+const HeaderLink = ({ to, children }) => {
+  const theme = useTheme();
+  return (
+    <ClassNames>
+      {classNames => (
+        <StyledHeaderLink
+          to={to}
+          itemProp="url"
+          activeClassName={classNames.css`${activeLinkStyles}`}
+          activeStyle={{ color: theme.colors.headingColor }}
+        >
+          <span itemProp="name" css={headerLinkItemStyles}>
+            {children}
+          </span>
+        </StyledHeaderLink>
+      )}
+    </ClassNames>
+  );
+};
 
 HeaderLink.propTypes = propTypes;
 
-export default withTheme(HeaderLink);
+export default HeaderLink;

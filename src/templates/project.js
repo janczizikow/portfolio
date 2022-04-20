@@ -6,7 +6,7 @@ import { css } from '@emotion/core';
 import SEO from '../components/SEO';
 import { Box, Container, Heading, Text, Button } from '../components/UI';
 import Controls from '../components/Project/Controls';
-import theme from '../utils/theme';
+import { PRIMARY_COLOR } from '../utils/themes';
 
 const propTypes = {
   pageContext: PropTypes.shape({
@@ -45,7 +45,7 @@ const projectTitleStyles = css`
     width: 50px;
     height: 2px;
     transform: translateX(-50%);
-    background-color: ${theme.colors.primary};
+    background-color: ${PRIMARY_COLOR};
   }
 `;
 

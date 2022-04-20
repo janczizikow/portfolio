@@ -1,28 +1,28 @@
 // themes
-export const colorThemes = {
+export const colorModes = {
   light: {
-    headingColor: '#2a2a30',
-    textColor: '#696c7b',
-    bgColor: '#fff',
-    bgGreyColor: '#f9f9f9',
-    bgHeader: 'hsla(0,0%,100%,.96)',
-    bgAlt: '#2a2a30',
-    overlay: 'rgba(38, 50, 56, 0.8)',
+    headingColor: 'var(--headingColor, #2a2a30)',
+    textColor: 'var(--textColor, #696c7b)',
+    bgColor: 'var(--bgColor, #fff)',
+    bgGreyColor: 'var(--bgGreyColor, #f9f9f9)',
+    bgHeader: 'var(--bgHeader, hsla(0,0%,100%,.96))',
+    bgAlt: 'var(--bgAlt, #2a2a30)',
   },
   dark: {
-    headingColor: '#fff',
-    textColor: '#adb7be',
-    bgColor: '#232323',
-    bgGreyColor: '#353535',
-    bgHeader: '#27282a',
-    bgAlt: '#27282a',
-    overlay: 'rgba(53, 53, 53, .8)',
+    headingColor: 'var(--headingColor, #fff)',
+    textColor: 'var(--textColor, #adb7be)',
+    bgColor: 'var(--bgColor, #232323)',
+    bgGreyColor: 'var(--bgGreyColor, #353535)',
+    bgHeader: 'var(--bgHeader, #27282a)',
+    bgAlt: 'var(--bgAlt, #27282a)',
   },
 };
 
+export const PRIMARY_COLOR = '#277cea';
+
 // colors
 const colors = {
-  primary: '#277cea',
+  primary: PRIMARY_COLOR,
   primaryLight: '#68a4f1',
   success: '#8fd896',
   error: '#ff6161',
@@ -31,7 +31,6 @@ const colors = {
   grey: '#ededed',
   lightGrey: '#f9f9f9',
   white: '#fff',
-  ...colorThemes.light,
 };
 
 // typography
@@ -49,7 +48,7 @@ const fontStack = [
   'Segoe UI Symbol',
 ];
 
-const typography = {
+export const typography = {
   headerFontFamily: fontStack,
   bodyFontFamily: fontStack,
   overrideStyles: () => ({
@@ -67,12 +66,30 @@ const typography = {
 const space = [0, 4, 8, 16, 32, 64, 128, 256, 512];
 const breakpoints = ['576px', '768px', '992px', '1200px'];
 const containerWidths = ['100%', 540, 720, 960, 1200];
-const grid = { breakpoints, containerWidths };
+export const grid = { breakpoints, containerWidths };
 
 const headerHeight = '3.625rem';
 
-export default {
-  colors,
+export const lightTheme = {
+  mode: 'light',
+  colors: {
+    ...colors,
+    ...colorModes.light,
+  },
+  space,
+  typography,
+  breakpoints,
+  containerWidths,
+  grid,
+  headerHeight,
+};
+
+export const darkTheme = {
+  mode: 'dark',
+  colors: {
+    ...colors,
+    ...colorModes.dark,
+  },
   space,
   typography,
   breakpoints,

@@ -1,8 +1,8 @@
-import React, { useState, useContext, useCallback } from 'react';
+import React, { useState, useCallback } from 'react';
 import PropTypes from 'prop-types';
 import { ThemeProvider } from 'emotion-theming';
 import Global from '../components/Global';
-import ThemeContext from '../context/ThemeContext';
+import { useTheme } from '../context/ThemeContext';
 import { Box, Flex } from '../components/UI';
 import Header from '../components/Header';
 import MobileMenu from '../components/MobileMenu';
@@ -19,7 +19,7 @@ const links = [
 ];
 
 const Layout = ({ children }) => {
-  const { theme } = useContext(ThemeContext);
+  const { theme } = useTheme();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const openMobileMenu = useCallback(() => setIsMobileMenuOpen(true), []);
   const closeMobileMenu = useCallback(() => setIsMobileMenuOpen(false), []);

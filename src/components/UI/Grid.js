@@ -4,13 +4,13 @@ import { css } from '@emotion/core';
 import facepaint from 'facepaint';
 import Box from './Box';
 import Flex from './Flex';
-import theme from '../../utils/theme';
+import { grid } from '../../utils/themes';
 
 const propTypes = {
   fluid: PropTypes.bool,
 };
 
-const { breakpoints, containerWidths } = theme;
+const { breakpoints, containerWidths } = grid;
 const mq = facepaint(breakpoints.map(bp => `@media (min-width: ${bp})`));
 
 const Container = ({ fluid, ...rest }) => (

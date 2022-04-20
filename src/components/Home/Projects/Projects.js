@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { css } from '@emotion/core';
 import { Box, Container, Heading } from '../../UI';
 import ProjectItem from './ProjectItem';
-import theme from '../../../utils/theme';
+import presets from '../../../utils/presets';
 
 const propTypes = {
   projects: PropTypes.arrayOf(
@@ -19,14 +19,14 @@ const propTypes = {
 };
 
 const projectsInner = css`
-  @media only screen and (min-width: ${theme.breakpoints[1]}) {
+  ${presets.md} {
     display: flex;
     flex-wrap: wrap;
     margin: -20px;
   }
 
   @supports (display: grid) {
-    @media only screen and (min-width: ${theme.breakpoints[1]}) {
+    ${presets.md} {
       margin: 0;
       display: grid;
       grid-template: repeat(3, 1fr) / repeat(4, 1fr);
@@ -37,7 +37,7 @@ const projectsInner = css`
       grid-gap: 20px;
     }
 
-    @media only screen and (min-width: ${theme.breakpoints[2]}) {
+    ${presets.lg} {
       grid-template: repeat(2, 1fr) / repeat(4, 1fr);
       grid-template-areas:
         'one one two three'
